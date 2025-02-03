@@ -2,33 +2,38 @@
 *{
     margin: 0px;
     padding: 0px;
-   
-}
-body{
+    list-style: none;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: black;
 }
+
 header{
-    background-color: black;
-    width: Fill (1,440px);
-    height: Fixed (100px);
-    padding: 0px 80px 0px 80px;
-    gap: 0px;
-    justify: space-between;
-    opacity: 0px;
     display: flex;
-
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
-nav{
-    position: absolute;
-    top: 3rem;
-    right: 5rem;
 
+#menu{
+    display: flex;
 }
-nav>a{
-    color: white;
+#menu>li{
+    margin-left: 10px;
+}
+#menu>li>a{
+    display: block;
+    padding: 5px;
+}
+a{
     text-decoration: none;
-    margin-right: 12px;
+    color: white;
 }
+
+
+
+
 section{
     padding: 40px 80px 0px 80px;
 }
@@ -44,22 +49,31 @@ h2{
     color:  #27A8AD;
     padding: 30px 0px 30px 0px;
 }
-#menu-buscar{
+.search{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+margin: 0 auto;
 
+flex-wrap: wrap;
 background-color: #FFFFFF;
-width: Fill (1,287px)px;
-height: (201px)px;
+max-width: 1800px;
+margin: 0 auto;
+
 padding: 34px 28px 34px 28px;
-gap: 35px;
+
 border-radius: 10px ;
 
-display: flex ;
-row-gap: 100px;
-
 justify-content: space-between;
-flex-wrap: wrap;
-}
 
+}
+.search>div{
+    background-color: pink;
+    
+        display: block;
+        padding: 5px;
+        margin: 10px;
+    
+}
 
 .filter{
  
@@ -74,4 +88,19 @@ flex-wrap: wrap;
     flex: 50;
     
     
+}
+
+#grid{
+display: grid;
+grid-template-columns: repeat(3,  500px);
+gap: 20px 40px;
+justify-content: center;
+
+}
+
+.item{
+    background-color: aqua;
+    color: red;
+    padding: 30px;
+   
 }

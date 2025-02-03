@@ -1,11 +1,204 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proteção Animal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>  
+        <a href=""><img src="../galeria/proteção.png" alt="logo-prot-animal" id="logo" width="140px"></a>   
+        
+        <ul id="menu">
+            <li><a href="#">Pagina Inicial</a></li>
+            <li><a href="#">Quero Adotar</a></li>
+            <li><a href="#">Quero Ajudar</a></li>
+            <li><a href="#">Quem Somos</a></li>    
+        </ul>
+    </header>
     
+    <main>
+        <div id="hist">
+            <a href="#">Pagina Inicial</a> 
+            <a>/</a>
+            <a href="#">Adote</a>
+        </div>
+        <h2>Encontre seu novo amigo</h2>
+        <section class="search">              
+            <div class="menu-item">
+                    <select
+                    id="filter-select">
+                        <option value="all">Todas as espécies</option>
+                        <option value="done">Cachorro</option>
+                        <option value="todo">Gato</option>
+                    </select>
+                </div>
+            <div class="menu-item">
+                    <select
+                    id="filter-select">
+                        <option value="all">Todos os sexos</option>
+                        <option value="done">Macho</option>
+                        <option value="todo">Fêmea</option>
+                    </select>
+                </div>
+            <div class="menu-item">
+                    <select
+                    id="filter-select">
+                        <option value="all">Todos os portes</option>
+                        <option value="done">Grande</option>
+                        <option value="todo">Médio</option>
+                        <option value="todo">Pequeno</option>
+                    </select>
+                </div>            
+            <div class="menu-item">
+                    <select
+                    id="filter-select">
+                        <option value="all">Todos os locais</option>
+                        <option value="done">Centro</option>
+                        <option value="todo">Martinlândia</option>
+                        <option value="todo">Mocambo</option>
+                        <option value="todo">Morrinhos</option>
+                        <option value="todo">Varzea dos Espinhos</option>
+                    </select>
+                </div>
+            <div class="menu-item">
+                    <input type="text" id="filter-select" placeholder="Nome do bicho">
+                </div>
+            <div class="menu-item">
+                    <button id="search-button">
+                        Buscar
+                    </button>
+                </div>
+        </section>
+        <section class="galery">
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status">ADOTADO</p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status"></p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status">ADOTADO</p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status">ADOTADO</p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status"></p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status">ADOTADO</p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status">ADOTADO</p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status"></p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status">ADOTADO</p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status">ADOTADO</p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status"></p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status">ADOTADO</p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status">ADOTADO</p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status"></p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status">ADOTADO</p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+            <div class="card-animals">
+                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
+                <p class="card-status">ADOTADO</p>
+                <p class="card-name">Bibi</p>
+                <p class="card-local">Guaraciana do Norte</p>
+            </div>
+           
+        </section>
+        <div class="pagination">
+            <a href="#" id="seta" > &lt </a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#" id="seta">></a>
+        </div>
+    </main>
+    <div id="big-cat"></div>
+    <footer>
+        <div class="inf"><h3>Sobre a Proteção Animal</h3>
+        
+        <a href="#" class="footer-item">Sobre a Proteção Animall</a>
+        <a href="#"class="footer-item">Campanhas</a>
+        <a href="#"class="footer-item">Termos de Uso e Politica de Privacidade</a>
+        <a href="#"class="footer-item">Pagina Inicial</a></div>
+        <div class="inf"><h3>Colabore</h3>
+            <a href="#"class="footer-item">Doe qualquer valor</a>
+            <a href="#"class="footer-item">Seja uma empresa parceira</a>
+        </div>
+        <div class="inf"><h3>Contato</h3>
+        <p>Email:</p>
+        <a href="#"class="footer-item">protecaoanimal@gmail.com</a></div>
+        <div class="inf"><h3>Rede Sociais</h3></title></div>
+        <div id="rodape">
+            <a href=""><img src="../galeria/proteção.png" alt="logo-prot-animal" id="logo" width="140px"></a>
+        </div>
+    </footer>
 </body>
 </html>

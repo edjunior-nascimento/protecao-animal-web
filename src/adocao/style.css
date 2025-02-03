@@ -5,15 +5,18 @@
     list-style: none;
     font-size: 1.1rem;
     font-family: Arial, Helvetica, sans-serif;
+    
+}
+body{
     background-color: black;
 }
-
 header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 25px;
+    background-color: black;
 }
 
 #menu{
@@ -39,68 +42,145 @@ section{
 }
 #hist{
     color: white;
+    margin: 0 20px;  
 }
 #hist>a{
     color: white;
     text-decoration: none;
-    
+    margin-left: 10px;
 }
 h2{
     color:  #27A8AD;
     padding: 30px 0px 30px 0px;
+    margin-left: 30px;
 }
+
+
+
 .search{
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-margin: 0 auto;
+grid-template-columns: repeat(3, 1fr);
+gap: 5px;
+background-color: white;
 
-flex-wrap: wrap;
-background-color: #FFFFFF;
-max-width: 1800px;
-margin: 0 auto;
-
+margin: 0px 30px;
 padding: 34px 28px 34px 28px;
-
 border-radius: 10px ;
 
-justify-content: space-between;
-
-}
-.search>div{
-    background-color: pink;
-    
-        display: block;
-        padding: 5px;
-        margin: 10px;
-    
 }
 
-.filter{
- 
-    width: 25%;
-    
+.menu-item{
+    min-width:75%;
+    width: 80%;
+    height: 50px;
     display: flex;
     flex-direction: column;
-
-    
+       
 }
-#filter select{
-    flex: 50;
-    
-    
-}
-
-#grid{
-display: grid;
-grid-template-columns: repeat(3,  500px);
-gap: 20px 40px;
-justify-content: center;
-
+#filter-select{
+    flex: 1;
+    border: 0.15rem solid #eee;
+    padding: .3rem .6rem;
+    border-radius: 10px ;
 }
 
-.item{
-    background-color: aqua;
-    color: red;
-    padding: 30px;
+#search-button{
+    background-color: #27A8AD;
+    color: white;
+    border: 0.15rem solid ;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    border-radius: 10px ;
+    height: 48px;
+}
+#search-button:hover{
+    background-color: #1f8084;
+    color: #fff;
+}
+.galery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);    gap: 10px;
+    margin-top: 40px;
+    padding: 34px 28px 34px 28px;
    
+    
+    
 }
+.card-animals{
+background-color: white;
+min-width:75%;
+width: 80%;
+
+height: 420px;
+max-height: 75%;
+top: 1553px;
+left: 2028px;
+gap: 10px;
+border-radius: 10px;
+opacity: 0px;
+
+
+
+
+}
+img-promocoes{
+    border-radius: 10;
+}
+
+.pagination{
+    text-align: right;
+    padding: 25px;
+}
+.pagination a{
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+    border: 1px solid #27A8AD;
+}
+.pagination a.active{
+    background-color: #27A8AD;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active){
+    background-color: #27A8AD;
+    border-radius: 5px;
+}
+#seta{
+    border: none;
+}
+footer{
+    display: grid;
+    grid-template-areas:
+    "inf inf inf inf" 
+    "rodape rodape rodape rodape"
+    ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr auto;
+   
+    background-color: #27A8AD;
+}
+  .inf{
+    text-align: center;
+    margin-top: 100px;
+    display: grid;
+  }
+ h3{
+    font-weight: bolder;
+ }
+.footer-item{
+    color: black;
+    padding: 5px;
+ }
+     
+  #rodape{
+    grid-area: rodape;
+    text-align: center;
+  }
+ 

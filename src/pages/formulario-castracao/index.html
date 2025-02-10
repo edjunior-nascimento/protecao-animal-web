@@ -3,9 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proteção Animal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>  
+        <a href=""><img src="../galeria/proteção.png" alt="logo-prot-animal" id="logo" width="140px"></a>   
+        
+        <ul id="menu">
+            <li><a href="#">Pagina Inicial</a></li>
+            <li><a href="#">Quero Adotar</a></li>
+            <li><a href="#">Quero Ajudar</a></li>
+            <li><a href="#">Quem Somos</a></li>    
+        </ul>
+    </header>
+
+    <main>
+        <h1>Campanha de Castração</h1>
+        <div id="main-container">
+            <p>Cadastre o seu bichinho e fique atento as datas de castração na sua região, através das nossas Redes Sociais.</p>
+            
+            <div class="box-container info-tutor">
+                
+                <h2 class="box-header">Informações sobre o Tutor</h2>
+                
+                <div class="full-box">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="half-box spacing">
+                    <label for="cpf">CPF</label>
+                    <input type="number" name="cpf" id="cpf">
+                </div>
+                <div class="half-box">
+                    <label for="rg">RG</label>
+                    <input type="number" name="rg" id="rg">
+                </div>
+            </div>
+            <div class="box-container contato">
+                <h2 class="box-header">Contato</h2>
+                <div class="half-box spacing">
+                    <label for="tel">Telefone</label>
+                    <input type="number" name="tel" id="tel">
+                </div>
+                <div class="half-box">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+            </div>
+            <div class="box-container endereco">
+                <h2 class="box-header">Endereço</h2>
+                <div class="half-box spacing end">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco">
+                </div>
+                <div class="half-box num">
+                    <label for="numero">Número</label>
+                    <input type="numero" name="numero" id="numero">
+                </div>
+                <div class="half-box spacing">
+                    <label for="bairro">Bairro/Distrito</label>
+                    <input type="text" name="bairro" id="bairro">
+                </div>
+                <div class="half-box">
+                    <label for="cep">CEP</label>
+                    <input type="number" name="cep" id="cep">
+                </div>
+                <div class="half-box spacing">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade">
+                </div>
+                <div class="half-box">
+                    <label for="estado">Estado</label>
+                    <input type="number" name="estado" id="estado">
+                </div>
+                <div class="full-box">
+                    <label for="name">Complemento/Referência</label>
+                    <input type="text" name="name" id="name">
+                </div>
+            </div>
+            <div class="box-container info-animal">
+                <h2 class="box-header">Informações sobre os Animais</h2>
+                <div class="box-container dotted-box">
+                    <div class="full-box">
+                        <label for="nome-animal">Nome do Animal</label>
+                        <input type="text" name="nome-animal" id="nome-animalv">
+                    </div>
+                    <div class="half-box">
+                        <label for="especie-animal">Espécie</label>
+                        <select name="especie-animal" id="especie-animal" class="select-dotted">
+                            <option ></option>
+                            <option >Cachorro</option>
+                            <option >Gato</option>
+                        </select>
+                    </div>
+                    <div class="half-box">
+                        <label for="especie-animal">Sexo</label>
+                        <select name="sex-animal" id="sex-animal" class="select-dotted">
+                            <option ></option>
+                            <option >Masculino</option>
+                            <option >Feminino</option>
+                        </select>
+                    </div>
+                    <div class="half-box">
+                        <label for="porte-animal">Porte</label>
+                        <select name="porte-animal" id="porte-animal" class="select-dotted">
+                            <option ></option>
+                            <option >Pequeno</option>
+                            <option >Médio</option>
+                            <option >Grande</option>
+                        </select>
+                    </div>
+            
+                    <div class="half-box">
+                        <label for="date-animal">Nascimento</label>
+                        <input type="date" name="date-animal" id="date-animal">
+        
+                    </div>
+                    
+                </div>
+                <div class="box-container dotted-box">
+                    <div class="full-box">
+                        <label for="nome-animal">Nome do Animal</label>
+                        <input type="text" name="nome-animal" id="nome-animalv">
+                    </div>
+                    <div class="half-box">
+                        <label for="especie-animal">Espécie</label>
+                        <select name="especie-animal" id="especie-animal" class="select-dotted">
+                            <option ></option>
+                            <option >Cachorro</option>
+                            <option >Gato</option>
+                        </select>
+                    </div>
+                    <div class="half-box">
+                        <label for="especie-animal">Sexo</label>
+                        <select name="sex-animal" id="sex-animal" class="select-dotted">
+                            <option ></option>
+                            <option >Masculino</option>
+                            <option >Feminino</option>
+                        </select>
+                    </div>
+                    <div class="half-box">
+                        <label for="porte-animal">Porte</label>
+                        <select name="porte-animal" id="porte-animal" class="select-dotted">
+                            <option ></option>
+                            <option >Pequeno</option>
+                            <option >Médio</option>
+                            <option >Grande</option>
+                        </select>
+                    </div>
+            
+                    <div class="half-box">
+                        <label for="date-animal">Nascimento</label>
+                        <input type="date" name="date-animal" id="date-animal">
+        
+                    </div>
+                    
+                </div>
+                <div class="full-box button-reg">
+                    
+                    <button type="submit" id="btn-reg"><img src="../galeria/icons_add-outline.png" alt="add-button">Adicionar Animal</button>
+                     
+                 </div>
+            </div>
+            <div class="full-box button-cad">
+                    
+                <button type="submit" id="btn-cad">Cadastrar</button>
+                 
+             </div>
+        </div>
+    </main>
+    <div id="big-cat">
+        <img src="../galeria/gat1.png" alt="logo-prot-animal" id="big-gato">
+    </div>
+    <footer>
+        <div class="inf"><h3>Sobre a Proteção Animal</h3>
+        
+        <a href="#" class="footer-item">Sobre a Proteção Animall</a>
+        <a href="#"class="footer-item">Campanhas</a>
+        <a href="#"class="footer-item">Termos de Uso e Politica de Privacidade</a>
+        <a href="#"class="footer-item">Pagina Inicial</a></div>
+        <div class="inf"><h3>Colabore</h3>
+            <a href="#"class="footer-item">Doe qualquer valor</a>
+            <a href="#"class="footer-item">Seja uma empresa parceira</a>
+        </div>
+        <div class="inf"><h3>Contato</h3>
+        <p>Email:</p>
+        <a href="#"class="footer-item">protecaoanimal@gmail.com</a></div>
+        <div class="inf">
+            <h3>Rede Sociais</h3>
+            <div class="social-icons">
+                <div class="item-social">
+                  <a href=""><img src="../galeria/wpp.png" alt="wpp-img" /></a>
+                </div>
+                <div class="item-social">
+                  <a href=""><img src="../galeria/insta.png" alt="inst-img" /></a>
+                </div>
+              </div>  
+        </div>
+        <div id="rodape">
+            <a href=""><img src="../galeria/proteção.png" alt="logo-prot-animal" id="logo" width="140px"></a>
+        </div>
+    </footer>
 </body>
 </html>

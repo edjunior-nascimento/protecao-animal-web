@@ -7,6 +7,7 @@
   --card-title-color: #27a8ad;
   --footer-background: #27a8ad;
   --footer-font-color: #000000;
+  --box-pix-color: #A5A5A5;
 }
 
 * {
@@ -134,6 +135,59 @@ section {
   width: 331px;
   font-size: 22px;
   font-weight: 400;
+}
+.box-pix {
+  height: 334px;
+  width: 374px;
+  border-radius: 8px;
+  border: 5px solid var(--box-pix-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+}
+.card-primary-pix {
+  display: flex;
+}
+.card-title-pix {
+  color: var(--card-title-color);
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-family: "Arial", sans-serif;
+}
+.card-description-pix {
+  color: var(--subtitle-color);
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  margin-top: 18.20px;
+}
+.pix {
+  margin-top: 10px;
+}
+.chave {
+  color: var(--subtitle-color);
+  font-size: 22px;
+}
+.linha {
+  width: 90%;
+}
+.chave-pix {
+  background-color: var(--card-title-color);
+  width: 90%;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 3%;
+  color: var(--subtitle-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+.chave-pix h4 {
+  margin-left: 25%;
+  margin-top: 5px;
+  margin-bottom:5px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .gato {
   margin-left: 42%;

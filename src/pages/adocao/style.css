@@ -59,13 +59,14 @@ h2{
 
 .search{
 display: grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: 1fr 1fr 1fr ;
 gap: 5px;
 background-color: white;
 
 margin: 0px 30px;
 padding: 34px 28px 34px 28px;
 border-radius: 10px ;
+
 
 }
 
@@ -104,34 +105,69 @@ border-radius: 10px ;
 }
 .galery{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);    gap: 10px;
+    grid-template-columns: repeat(4, minmax(300px,1fr));    
+    gap: 10px;
     margin-top: 40px;
     padding: 34px 28px 34px 28px;
-   
-    
+    justify-content: center;
+    text-align: center;
     
 }
 .card-animals{
-background-color: white;
-min-width:75%;
-width: 80%;
+    background-color: white;
+    width: 300px;
+    height: 420px;
+    top: 1553px;
+    left: 2028px;
+    gap: 10px;
+    border-radius: 10px;
+    opacity: 0px;
+    border: 1px solid black;
 
-height: 420px;
-max-height: 75%;
-top: 1553px;
-left: 2028px;
+}
+.img-animal{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px 10px 0px 0px;
+}
+.card-name{
+
+    width: 300px;
+    height: 57px;
+    padding: 0px 10px 0px 10px;
+    gap: 10px;
+
+
+
+    color: #27A8AD;
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 28.75px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    margin-top: 10px;
+
+}
+.card-local{
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20.7px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+width: 300px;
+height: 51px;
+padding: 0px 10px 0px 10px;
 gap: 10px;
-border-radius: 10px;
 opacity: 0px;
 
 
-
-
 }
-img-promocoes{
-    border-radius: 10;
-}
-
 .pagination{
     text-align: right;
     padding: 25px;
@@ -155,10 +191,29 @@ img-promocoes{
 #seta{
     border: none;
 }
+#big-cat{
+   height: 300px;
+   padding-bottom: 0px;
+   margin-bottom: 0px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+  
+}
+#big-gato{
+   width: 264.08px;
+   height: 291px;
+   gap: 0px;
+   opacity: 0px;
+   position: absolute;
+   bottom: -50px;
+
+}
+
 footer{
     display: grid;
     grid-template-areas:
-    "inf inf inf inf" 
+    "inf inf inf inf"
     "rodape rodape rodape rodape"
     ;
     grid-template-columns: repeat(4, 1fr);
@@ -166,21 +221,41 @@ footer{
    
     background-color: #27A8AD;
 }
-  .inf{
+.inf{
     text-align: center;
     margin-top: 100px;
     display: grid;
+    
   }
  h3{
     font-weight: bolder;
+    
  }
 .footer-item{
     color: black;
     padding: 5px;
  }
-     
-  #rodape{
+
+#rodape{
     grid-area: rodape;
     text-align: center;
   }
+.social-icons{
+    display: flex;
+   justify-content: center;
+
+    height: 100px;
+   
+       
+}
+.item-social{
+    margin-left: 20px;
+}
  
+@media(max-width:1000px){
+    .galery{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px,1fr))
+    }
+}
+    

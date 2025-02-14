@@ -65,12 +65,11 @@
 
 
 
-  .gato {
+  gato {
     margin-left: 42%;
     margin-bottom: -25px;
     height: 265px;
-    max-width: auto;}
-
+    width: auto;
   footer {
     height: 500px;
     max-height: auto;

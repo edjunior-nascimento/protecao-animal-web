@@ -7,7 +7,6 @@
     --card-title-color: #27a8ad;
     --footer-background: #27a8ad;
     --footer-font-color: #000000;
-    --maim-color: #EFEFEF;
   }
   
   * {
@@ -61,7 +60,7 @@
     font-weight: 400;
   }
 main {
-  background-color:var(--maim-color) ;
+  
 }
 
 

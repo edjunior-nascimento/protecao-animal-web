@@ -61,7 +61,7 @@
     font-weight: 400;
   }
 main {
-  background-color:var(--maim-color) ;
+  background-color:(var(--maim-color)) ;
 }
 
 

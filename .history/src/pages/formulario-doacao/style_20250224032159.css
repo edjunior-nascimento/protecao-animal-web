@@ -8,7 +8,7 @@
     --footer-background: #27a8ad;
     --footer-font-color: #000000;
     --maim-color: #EFEFEF;
-    --card-nav-color:#B0AFAF;
+    --card-nav-color:var(#27a8ad);
   }
   
   * {
@@ -55,25 +55,19 @@
     display: flex;
     gap: 40px;
   }
+  
   nav ul li a {
-     
     color: var(--link-nav-color);
     font-size: 20px;
-    background-color: var(--card-nav-color);
+    font-weight: 400;
   }
-
-
 main {
-  background-color:var(--main-bg-color) ;
-}
-.container {
-  background-color: var(--card-nav-color);
-  height: 1274px;
-  width: 2114px;
+  background-color:var(--maim-color) ;
 }
 .title {
   color: var(--subtitle-color);
 }
+nav li {background-color: ;}
 
 
 

@@ -55,21 +55,17 @@
     display: flex;
     gap: 40px;
   }
+  nav ul li {
+    
+  }
   nav ul li a {
-     
+
     color: var(--link-nav-color);
-    font-size: 20px;
+   
     background-color: var(--card-nav-color);
   }
-
-
 main {
-  background-color:var(--main-bg-color) ;
-}
-.container {
-  background-color: var(--card-nav-color);
-  height: 1274px;
-  width: 2114px;
+  background-color:var(--maim-color) ;
 }
 .title {
   color: var(--subtitle-color);

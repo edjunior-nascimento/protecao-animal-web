@@ -63,8 +63,11 @@
   }
 
 
+.container {
+  background-color: var();
+}
 main {
-  background-color:var(--main-bg-color) ;
+  background-color:var() ;
 }
 .container {
   background-color: var(--card-nav-color);

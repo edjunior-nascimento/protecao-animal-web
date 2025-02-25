@@ -44,8 +44,8 @@
     width: auto;
   }
   nav {
-    width: auto;
-    height: 100px;
+    width: 1090px;
+    height: 156.55px;
     display: flex;
     align-items: center;
   }
@@ -55,21 +55,17 @@
     display: flex;
     gap: 40px;
   }
+  .valor {
+    
+  }
   nav ul li a {
-     
+     height: 150px;
     color: var(--link-nav-color);
     font-size: 20px;
     background-color: var(--card-nav-color);
   }
-
-
 main {
-  background-color:var(--main-bg-color) ;
-}
-.container {
-  background-color: var(--card-nav-color);
-  height: 1274px;
-  width: 2114px;
+  background-color:var(--maim-color) ;
 }
 .title {
   color: var(--subtitle-color);

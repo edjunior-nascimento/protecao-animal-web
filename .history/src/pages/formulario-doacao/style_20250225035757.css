@@ -63,6 +63,9 @@
   }
 
 
+.container {
+  background-color: var();
+}
 main {
   background-color:var(--main-bg-color) ;
 }

@@ -63,13 +63,15 @@
   }
 
 
+.container {
+  background-color: var();
+}
 main {
-  background-color:var(--main-bg-color) ;
+  background-color:var(--maim-color) ;
 }
 .container {
   background-color: var(--card-nav-color);
-  height: 1274px;
-  width: 2114px;
+  mar
 }
 .title {
   color: var(--subtitle-color);

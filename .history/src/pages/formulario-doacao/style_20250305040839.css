@@ -63,13 +63,9 @@ main {
   padding-right: 80px;
 }
 .cota-inicial a {
-  color: var(--footer-font-color);
-  
-}
-.cota-inicial li {
+  color: #000000;
+  width: 162px;162
   height: 56px;
-  width: 162px;
-  background-color: aquamarine;
 }
 .container {
   background-color: var(--maim-color);
@@ -78,7 +74,7 @@ main {
   color: var(--subtitle-color);
 }
 .valor {
-  margin-left: 50px;
+  margin-left: 80px;
   margin-right: 50px;
   background-color: var(--card-nav-color);
 }

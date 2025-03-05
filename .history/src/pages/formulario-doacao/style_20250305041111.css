@@ -64,6 +64,7 @@ main {
 }
 .cota-inicial a {
   color: var(--footer-font-color);
+
   
 }
 .cota-inicial li {
@@ -78,7 +79,7 @@ main {
   color: var(--subtitle-color);
 }
 .valor {
-  margin-left: 50px;
+  margin-left: 80px;
   margin-right: 50px;
   background-color: var(--card-nav-color);
 }

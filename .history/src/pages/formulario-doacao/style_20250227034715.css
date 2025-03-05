@@ -8,16 +8,20 @@
     --footer-background: #27a8ad;
     --footer-font-color: #000000;
     --maim-color: #EFEFEF;
-    --card-nav-color:#D9D9D9;
-    --nav-valor:#B0AFAF;
+    --card-nav-color:#B0AFAF;
   }
+  
   body {
     height: max-content;
     font-family: "Jockey One", serif;
     font-style: normal;
     margin: 0px;
     padding: 0px;
+  }
+  
+  body {
     background-color: var(--main-bg-color);
+  
   }
   
   a {
@@ -45,13 +49,15 @@
     display: flex;
     align-items: center;
   }
+  
   nav ul {
     list-style-type: none;
     display: flex;
     gap: 40px;
   }
   nav ul li a {
-    color: var(--nav-valor);
+     
+    color: var(--link-nav-color);
     font-size: 20px;
     background-color: var(--card-nav-color);
   }
@@ -60,35 +66,19 @@
 main {
   background-color:var(--main-bg-color) ;
   padding-left: 80px;
-  padding-right: 80px;
-}
-.cota-inicial a {
-  color: var(--footer-font-color);
-  
-}
-.cota-inicial li {
-  height: 56px;
-  width: 162px;
-  background-color: aquamarine;
 }
 .container {
-  background-color: var(--maim-color);
+  background-color: var(--card-nav-color);
+  height: 1274px;
+  width: 2114px;
 }
 .title {
   color: var(--subtitle-color);
 }
 .valor {
-  margin-left: 50px;
-  margin-right: 50px;
-  background-color: var(--card-nav-color);
+  width: 1174;
+  width: 339;
 }
-.valor nav {
-  width: 100%;
-}
-.card {
-  background-color: var(--box-color);
-}
-
 
 
 

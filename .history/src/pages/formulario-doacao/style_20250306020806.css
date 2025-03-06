@@ -10,7 +10,6 @@
     --maim-color: #EFEFEF;
     --card-nav-color:#D9D9D9;
     --nav-valor:#B0AFAF;
-    --asterisco-color: red;
   }
   body {
     height: max-content;
@@ -63,45 +62,23 @@ main {
   padding-left: 80px;
   padding-right: 80px;
 }
-  .sub-title {
-    margin-left: 50px;
-  }
 .cota-inicial a {
   color: var(--footer-font-color);
   width: 128px;
-  height: 50px;
+  height: 55px;
   display: inline-block;
   text-align: center;
-  line-height: 50px;
+  line-height: 50px
   background-color: var(--nav-valor);
   margin-left: 20px;
-  border-radius: 5px;
+  margin-top: ;
 }
 .cota-inicial li {
-  height: 50px;
+  height: 56px;
   width: 162px;
+  background-color: var(--nav-valor);
+  
 }
-.cota-inicial li :hover {
-  background-color: var(--footer-background);
-  color: var(--box-color);
-}
-.res {
-  margin-top: 48px;
-  padding-bottom: 36px;
-}
-  .pri-line {
-    margin-top: 60px;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  .card {
-    margin-top: 60px;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  .ast {
-    color: var(--asterisco-color);
-  }
 .container {
   background-color: var(--maim-color);
 }

@@ -10,7 +10,6 @@
     --maim-color: #EFEFEF;
     --card-nav-color:#D9D9D9;
     --nav-valor:#B0AFAF;
-    --asterisco-color: red;
   }
   body {
     height: max-content;
@@ -63,9 +62,8 @@ main {
   padding-left: 80px;
   padding-right: 80px;
 }
-  .sub-title {
-    margin-left: 50px;
-  }
+.cota {
+}
 .cota-inicial a {
   color: var(--footer-font-color);
   width: 128px;
@@ -85,23 +83,6 @@ main {
   background-color: var(--footer-background);
   color: var(--box-color);
 }
-.res {
-  margin-top: 48px;
-  padding-bottom: 36px;
-}
-  .pri-line {
-    margin-top: 60px;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  .card {
-    margin-top: 60px;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  .ast {
-    color: var(--asterisco-color);
-  }
 .container {
   background-color: var(--maim-color);
 }

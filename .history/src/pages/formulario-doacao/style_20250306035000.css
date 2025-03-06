@@ -63,9 +63,7 @@ main {
   padding-left: 80px;
   padding-right: 80px;
 }
-  .sub-title {
-    margin-left: 50px;
-  }
+  .sub-title 
 .cota-inicial a {
   color: var(--footer-font-color);
   width: 128px;

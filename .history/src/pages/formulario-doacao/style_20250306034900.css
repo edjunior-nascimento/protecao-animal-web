@@ -63,9 +63,6 @@ main {
   padding-left: 80px;
   padding-right: 80px;
 }
-  .sub-title {
-    margin-left: 50px;
-  }
 .cota-inicial a {
   color: var(--footer-font-color);
   width: 128px;
@@ -92,7 +89,7 @@ main {
   .pri-line {
     margin-top: 60px;
     margin-left: 50px;
-    margin-right: 50px;
+    margin-right: 50pc;
   }
   .card {
     margin-top: 60px;

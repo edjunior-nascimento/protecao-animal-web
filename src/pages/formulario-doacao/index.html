@@ -79,7 +79,7 @@
                 </div>
             </div>
             <hr class="pri-line">
-            <div class="card"> 
+            <div class="card">
                 <div class="sub-title">
                     <p>Para fazer parte da nossa história, conte-nos um pouco sobre você:</p>
                 </div>
@@ -96,13 +96,15 @@
                         </label>
                     </form>
                 </div>
-                <div class="card">
+            </div>
+            <div class="card">
+                <div class="sub-dados">
                     <div class="sub-title">
                         <p>Escolha a forma de doação:</p>
                     </div>
                     <hr>
-                    <form action="/send" method="post" target="_blank">
-                        <label>
+                    <form class="dados-pag" action="/send" method="post" target="_blank">
+                        <label class="box">
                             <p>CPF<span class="ast">*</span></p>
                             <input type="number" name="cpf" id="cpf" class="cadastro">
                         </label>
@@ -120,25 +122,25 @@
                         </label>
                         <label>
                             <p>Validade do cartão<span class="ast">*</span></p>
-                            <input type="text" name="" id="cartao" class="cadastro">
+                            <input type="date" name="" id="cartao" class="cadastro">
                         </label>
                         <label>
                             <p>Dia da doação<span class="ast">*</span></p>
-                            <input type="number" name="data" id="data" class="cadastro">
+                            <input type="date" name="data" id="data" class="cadastro">
                         </label>
                     </form>
-                    <div class="resultado">
-                        <div class="retorno">
-                            <div class="res/doacao">
-                                <p>R$10,00</p>
-                            </div>
-                            <div class="forma/pagamento">
-                                <p>cartão de crédito</p>
-                            </div>
-                        </div>
-                        <button>Doar</button>
+                </div>
+            </div>
+            <div class="resultado">
+                <div class="retorno">
+                    <div class="res/doacao">
+                        <p>R$10,00</p>
+                    </div>
+                    <div class="forma-pagamento">
+                        <p>cartão de crédito</p>
                     </div>
                 </div>
+                <button type="submit" id="btn-doar">Doar</button>
             </div>
         </div>
     </main>

@@ -104,7 +104,6 @@ main {
   }
 .container {
   background-color: var(--maim-color);
-  padding-bottom: 70px;
 }
 .title {
   color: var(--subtitle-color);
@@ -144,6 +143,7 @@ main {
   margin-top: 60px;
   margin-left: 50px;
   margin-right: 50px;
+  margin-bottom: 70px;
 }
 #btn-doar {
   width: 206px;
@@ -163,6 +163,7 @@ main {
 }
 
   .gato {
+    
     margin-left: 42%;
     margin-bottom: -25px;
     height: 265px;

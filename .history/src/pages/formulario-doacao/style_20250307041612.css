@@ -104,7 +104,6 @@ main {
   }
 .container {
   background-color: var(--maim-color);
-  padding-bottom: 70px;
 }
 .title {
   color: var(--subtitle-color);
@@ -136,31 +135,11 @@ main {
 }
 .dados-pag {
   margin-top: 30px;
-  margin-left: 20px;
 }
 .resultado {
-  background-color: var(--card-nav-color);
-  display: flex;
-  margin-top: 60px;
-  margin-left: 50px;
-  margin-right: 50px;
+  
 }
-#btn-doar {
-  width: 206px;
-  height: 52px;
-  background-color: var(--footer-background);
-  color: var(--box-color);
-  margin-top: 50px;
-  margin-left: 75%;
-  margin-bottom: 50px;
-}
-.retorno {
-  margin-left: 20px;
-  margin-bottom: 12px;
-}
-.forma-pagamento {
-  margin-top: 50px;
-}
+
 
   .gato {
     margin-left: 42%;

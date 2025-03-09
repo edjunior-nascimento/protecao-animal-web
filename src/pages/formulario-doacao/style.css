@@ -1,4 +1,4 @@
-:root {
+ :root {
     --main-bg-color: #1e1e1e;
     --title-color: #27a8ad;
     --subtitle-color: #ffffff;
@@ -11,6 +11,13 @@
     --card-nav-color:#D9D9D9;
     --nav-valor:#B0AFAF;
     --asterisco-color: red;
+  }
+  * {
+    height: max-content;
+    font-family: "Jockey One", serif;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
   }
   body {
     height: max-content;
@@ -30,7 +37,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-inline: 80px
+    padding-inline: 80px;
   }
   header div {
     display: flex;
@@ -52,8 +59,8 @@
     gap: 40px;
   }
   nav ul li a {
-    color: var(--nav-valor);
-    font-size: 20px;
+    color:var(--maim-color);
+    font-size: 18px;
     background-color: var(--card-nav-color);
   }
 
@@ -62,9 +69,13 @@ main {
   background-color:var(--main-bg-color) ;
   padding-left: 80px;
   padding-right: 80px;
+  margin-top: 136px;
 }
   .sub-title {
     margin-left: 50px;
+    padding-top: 58px;
+    font-size: 25px;
+    font-family: "jokey-one";
   }
 .cota-inicial a {
   color: var(--footer-font-color);
@@ -89,6 +100,16 @@ main {
   margin-top: 48px;
   padding-bottom: 36px;
 }
+  .sub-title2 {
+    margin-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 25px;
+  }
+  .sub-title3 {
+    margin-bottom: 15px;
+    font-family: kantrumruy;
+  }
   .pri-line {
     margin-top: 60px;
     margin-left: 50px;
@@ -98,7 +119,16 @@ main {
     margin-top: 60px;
     margin-left: 50px;
     margin-right: 50px;
+    background-color: var(--box-color);
+    font-size: 16px;
   }
+  .sub-title3 {
+    font-size: 25px;
+    margin-left: 18px;
+    padding-top: 15PX;
+    padding-right: 15px;
+  }
+
   .ast {
     color: var(--asterisco-color);
   }
@@ -117,16 +147,19 @@ main {
 .valor nav {
   width: 100%;
 }
-.card {
-  background-color: var(--box-color);
-}
 .dados {
   margin-left: 20px;
+  margin-top: 30px;
+  font-size: 16px;
+}
+.tele p{
+  padding-top: 20px;
 }
 .cadastro {
   width: 586px;
   height: 50px;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 .sub-dados {
   margin-top: 60px;

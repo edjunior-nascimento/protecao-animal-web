@@ -104,7 +104,10 @@ border-radius: 10px ;
 }
 .galery{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    
+    gap: 10px;
     margin-top: 40px;
     padding: 34px 28px 34px 28px;
    
@@ -155,18 +158,34 @@ img-promocoes{
 #seta{
     border: none;
 }
+#big-cat{
+    height: 300px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+   
+ }
+ #big-gato{
+    width: 264.08px;
+    height: 291px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+    bottom: -50px;
+ 
+ }
 footer{
     display: grid;
-    grid-template-areas:
-    "inf inf inf inf" 
-    "rodape rodape rodape rodape"
-    ;
+    
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr auto;
    
     background-color: #27A8AD;
 }
   .inf{
+    
     text-align: center;
     margin-top: 100px;
     display: grid;
@@ -180,7 +199,72 @@ footer{
  }
      
   #rodape{
-    grid-area: rodape;
+   background-color: #27A8AD;
     text-align: center;
   }
- 
+  .social-icons{
+    display: flex;
+    justify-content: center;
+
+    height: 100px;
+   
+       
+}
+.item-social{
+    margin-left: 20px;
+}
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+.mobile-menu div {
+width: 32px;
+height: 2px;
+background: #fff;
+margin: 8px;
+} 
+@media screen and (max-width: 780px){
+#menu{
+    display: none;
+}
+.mobile-menu{
+    display: block;
+}
+.search{
+    display: grid;
+    grid-template-columns:1fr;
+    padding: auto;
+    
+}
+.menu-item{
+    width: 100%;
+}
+.galery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   place-items: center;
+  
+}
+.pagination{
+    text-align: center;}
+
+#big-gato{
+        width: 204.08px;
+        height: 201px;
+        bottom: -35px;}
+
+footer{
+        display: grid;
+            
+        grid-template-columns: 1fr;
+            
+  
+    }
+
+    .icones{
+        width: 60px;
+        margin-top: 20px;
+        margin-right: 20px;
+           
+    }
+}

@@ -47,9 +47,10 @@
                 </p>
             </div>
             <div class="valor">
-                <div class="cota">
-                    <input type="text">
-                </div>
+                <select name="cota" id="cota" class="cota">
+                    <option>Única</option>
+                    <option>Mensal</option>
+                <select>
                 <nav class="cota-inicial">
                     <ul>
                         <li>
@@ -107,8 +108,12 @@
                         </label>
                         <label>
                             <p>Formas de doação<span class="ast">*</span></p>
-                            <input type="text" name="forme-doacao" id="forme-doacao" class="cadastro"></p>
                         </label>
+                        <select name="form-animal" id="form-animal" class="cadastro">
+                            <option></option>
+                            <option>Pix</option>
+                            <option>Cartão de crédito</option>
+                        </select>
                         <label>
                             <p>Número do cartão<span class="ast">*</span></p>
                             <input type="number" name="cartao" id="cartao" class="cadastro">
@@ -130,11 +135,11 @@
             </div>
             <div class="resultado">
                 <div class="retorno">
-                    <div class="res/doacao">
-                        <p>R$10,00</p>
+                    <div class="res-doacao">
+                        <p>R$10,00 Mensáis</p>
                     </div>
                     <div class="forma-pagamento">
-                        <p>cartão de crédito</p>
+                        <p>Via cartão de crédito</p>
                     </div>
                 </div>
                 <button type="submit" id="btn-doar">Doar</button>

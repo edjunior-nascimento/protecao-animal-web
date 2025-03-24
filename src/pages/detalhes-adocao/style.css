@@ -38,7 +38,7 @@ p{
     color: white;
 }
 
-h2{
+ h2{
     color: white;
     font-weight: bold;
     font-size: larger;
@@ -180,7 +180,7 @@ gap: 10px;
 }
 #button-contact{
     
- 
+    min-width: 400px;
     height: 48px;
     background-color: #27A8AD;
     color: white;
@@ -350,6 +350,13 @@ margin: 8px;
 .menu-item{
     width: 100%;
 }
+.animal-details{
+    
+    display: grid;
+}
+
+
+
 .galery{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

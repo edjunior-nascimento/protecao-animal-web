@@ -301,10 +301,7 @@ input{
  
  footer{
      display: grid;
-     grid-template-areas:
-     "inf inf inf inf"
-     "rodape rodape rodape rodape"
-     ;
+    
      grid-template-columns: repeat(4, 1fr);
      grid-template-rows: 1fr auto;
     
@@ -326,7 +323,7 @@ input{
   }
  
  #rodape{
-     grid-area: rodape;
+     background-color: #27A8AD;
      text-align: center;
    }
  .social-icons{
@@ -340,7 +337,16 @@ input{
  .item-social{
      margin-left: 20px;
  }
-  
+ .mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+.mobile-menu div {
+width: 32px;
+height: 2px;
+background: #fff;
+margin: 8px;
+}
  @media(max-width:1000px){
      .galery{
          display: grid;

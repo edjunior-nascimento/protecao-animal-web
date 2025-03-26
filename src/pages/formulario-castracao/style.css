@@ -38,14 +38,17 @@ a{
     color: white;
 }
 
-main{
-    width: Fixed 1437px;
-    height: Fill 3106px;
-    padding: 15px 67px 200px 67px;
-    gap: 30px;
-    opacity: 0px;
-       
+#path{
+    color: white;
+    margin: 0 15px 40px;  
 }
+
+#path a{
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
 h1{
     color:  #27A8AD;
     font-family: 'Jockey One';
@@ -66,15 +69,14 @@ h1{
 
 
 }
+
 #main-container{
     background: #EFEFEF;
-
-    width: 1400px;
-
-    margin: auto;
-    padding: 58px 50px 40px 50px;
-    gap: 30px;
-    opacity: 0px;
+   
+    margin: 0px 40px 0px 40px;
+    padding: 58px 15px 40px 15px;
+  
+    
 
 }
 #main-container>p{
@@ -222,7 +224,7 @@ input{
     color: #27A8AD;
     border: 2px solid #27A8AD;
     border-radius: 10px;
-    width: 256px;
+    width: 300px;
     height: 56px;
     cursor: pointer;
 
@@ -298,7 +300,6 @@ input{
     bottom: -50px;
  
  }
- 
  footer{
      display: grid;
     
@@ -306,6 +307,7 @@ input{
      grid-template-rows: 1fr auto;
     
      background-color: #27A8AD;
+     
  }
  .inf{
      text-align: center;
@@ -325,6 +327,7 @@ input{
  #rodape{
      background-color: #27A8AD;
      text-align: center;
+     
    }
  .social-icons{
      display: flex;
@@ -347,9 +350,44 @@ height: 2px;
 background: #fff;
 margin: 8px;
 }
- @media(max-width:1000px){
-     .galery{
-         display: grid;
-         grid-template-columns: repeat(3, minmax(300px,1fr))
-     }
- }
+
+@media screen and (max-width: 1080px){
+    #menu{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    
+    #main-container{
+        width: 80%;
+        
+    }
+    #main-container>p{
+        width: 100%;
+        text-align: justify;
+        margin-bottom: 60px;
+    }
+    .half-box{
+        flex: 1 1 100%;
+        position: relative;
+    }
+     
+    #big-gato{
+            width: 204.08px;
+            height: 201px;
+            bottom: -35px;}
+    footer{
+            display: grid;
+                
+            grid-template-columns: 1fr;
+                
+      
+        }
+    .icones{
+            width: 60px;
+            margin-top: 20px;
+            margin-right: 20px;
+               
+        }
+    }

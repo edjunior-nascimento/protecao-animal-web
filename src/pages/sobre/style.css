@@ -19,7 +19,7 @@
   
   body {
     background-color: var(--main-bg-color);
-  
+    
   }
   
   a {
@@ -59,9 +59,16 @@
     font-size: 20px;
     font-weight: 400;
   }
-
-
-
+    .dog-cat {
+      width: 90%;
+      margin-top: 88px;
+      margin-left: 80px;
+      background-image: url(/src/assets/images/background_black.png);
+    }
+  .img-dog {
+    margin-top: 52px;
+    margin-left: 20%;
+  }
 
 
 

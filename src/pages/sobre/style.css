@@ -59,11 +59,30 @@
     font-size: 20px;
     font-weight: 400;
   }
-    .dog-cat {
+    .dog-cat1 {
       width: 90%;
-      margin-top: 88px;
+      margin-top: 100px;
       margin-left: 80px;
       background-image: url(/src/assets/images/background_black.png);
+    }
+    .img-dog {
+      padding-top: 52px;
+      padding-bottom: 46px;
+    }
+    .dog-cat2 {
+      width: 90%;
+      margin-top: 70px;
+      margin-left: 80px;
+      background-image: url(/src/assets/images/background_black.png);
+      display: flex;
+    }
+    .sub-title {
+      margin-top: 52px;
+      margin-bottom: 28px;
+    }
+    .text {
+      margin-left: 72px;
+      margin-right: 70px;
     }
   .img-dog {
     margin-top: 52px;

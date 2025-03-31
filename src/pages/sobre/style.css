@@ -75,6 +75,7 @@
       margin-left: 80px;
       background-image: url(/src/assets/images/background_black.png);
       display: flex;
+      box-shadow: 10px 5px 20px  var(--footer-font-color)
     }
     .sub-title {
       margin-top: 52px;
@@ -83,6 +84,34 @@
     .text {
       margin-left: 72px;
       margin-right: 70px;
+      width:50%;
+    }
+    .grupo {
+      margin-left: 70px;
+    }
+    .photo {
+      margin-top: 30px;
+    padding-bottom: 30px;
+    }
+    .parceiros {
+      margin-top: 70px;
+      margin-left: 80px;
+    }
+    .parceiros h2 {
+      margin-left: 48%;
+    }
+    .parceiros {
+      margin-left: 120px;
+    }
+    .parceria {
+      margin-top: 80px;
+    }
+    .parceria li {
+      background-color: var(--link-nav-color);
+      height: 80px;
+      width: 80px;
+      border-radius: 50px;
+      margin-left:40px;
     }
   .img-dog {
     margin-top: 52px;

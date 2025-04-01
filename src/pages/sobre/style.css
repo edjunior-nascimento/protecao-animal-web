@@ -7,6 +7,7 @@
     --card-title-color: #27a8ad;
     --footer-background: #27a8ad;
     --footer-font-color: #000000;
+    --border-color: rgb(153, 73, 0);
   }
   
   * {
@@ -107,7 +108,7 @@
       margin-top: 80px;
     }
     .parceria li {
-      background-color: var(--link-nav-color);
+      background-color: var(--subtitle-color);
       height: 80px;
       width: 80px;
       border-radius: 50px;
@@ -117,10 +118,30 @@
     margin-top: 52px;
     margin-left: 20%;
   }
-
-
-
-
+  .junte-se {
+    border: solid var(--border-color);
+    margin-top: 70px;
+    margin-left: 80px;
+    margin-right: 80px;
+    border-radius: 50px;
+  }
+  .junte-se {
+    padding-top: 76px;
+  }
+  .text-vol {
+    margin-top: 76px;
+  }
+  .container {
+    margin-top: 76px;
+    margin-bottom: 76px;
+  }
+  .contatos {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+.agrade {
+  margin-bottom: 76px;
+}
 
 
   .gato {

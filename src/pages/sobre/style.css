@@ -8,6 +8,7 @@
     --footer-background: #27a8ad;
     --footer-font-color: #000000;
     --border-color: rgb(153, 73, 0);
+    --text-color: rgb(119, 117, 117, 1);
   }
   
   * {
@@ -69,6 +70,8 @@
     .img-dog {
       padding-top: 52px;
       padding-bottom: 46px;
+      
+      justify-content: center;
     }
     .dog-cat2 {
       width: 90%;
@@ -102,13 +105,10 @@
     }
     .parceiros {
       margin-top: 70px;
-      margin-left: 80px;
       color: var(--card-title-color);
-    }
-    .parceiros h2 {
-      margin-left: 48%;
-    }
-    .parceiros {
+      font-size: 30px;
+      justify-content: center;
+      justify-items: center;
       margin-left: 120px;
     }
     .parceria {
@@ -131,12 +131,22 @@
     margin-left: 80px;
     margin-right: 80px;
     border-radius: 50px;
-  }
-  .junte-se {
     padding-top: 76px;
+  }
+  .junte-se h2 {
+    justify-content: center;
+    justify-items: center;
+    color: var(--link-nav-color);
+    display: flex;
+    font-size: 40px;
   }
   .text-vol {
     margin-top: 76px;
+    color: var(--title-color);
+    font-size: 25px;
+    margin-left: 52px;
+    margin-right: 52px;
+    text-align: center;
   }
   .container {
     margin-top: 76px;
@@ -157,13 +167,38 @@
   margin-left: 10px;
   padding-right: 118px;
 }
+.sub-text1 ul {
+  margin-top: 20px;
+}
+.sub-text2 ul {
+    margin-top: 20px;
+  }
+.sub-text1 h3 {
+  color: var(--subtitle-color);
+}
+.sub-text2 h3 {
+  color: var(--subtitle-color);
+}
+li {
+  color: var(--text-color);
+  margin-left: 25px;
+}
 .convite {
   margin-top: 86px;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 25px;
   margin-left: 100px;
+  margin-right: 100px;
+}
+.contatos a {
+  color: var(--link-nav-color);
+  font-size: 20px;
 }
 .contatos {
-  margin-left: 268px;
   display: flex;
+  justify-content: center;
+  margin-left: 5%;
 }
 .whats img {
 margin-right: 16px;
@@ -174,6 +209,7 @@ margin-left: 16px;
 }
 .agrade {
   margin-left: 100px;
+  font-size: 30px;
 }
 
   .gato {
@@ -181,6 +217,7 @@ margin-left: 16px;
     margin-bottom: -25px;
     height: 265px;
     width: auto;
+    margin-top: 80px;
   }
   footer {
     height: 500px;

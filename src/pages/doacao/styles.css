@@ -16,11 +16,12 @@
   font-style: normal;
   margin: 0px;
   padding: 0px;
+
 }
 
 body {
   background-color: var(--main-bg-color);
-
+  max-width: 100%;
 }
 
 a {
@@ -34,14 +35,17 @@ header {
   justify-content: space-between;
   padding-inline: 80px
 }
+
 header div {
   display: flex;
   align-items: center;
 }
+
 .logo {
   height: 95px;
   width: auto;
 }
+
 nav {
   width: auto;
   height: 100px;
@@ -53,6 +57,7 @@ nav ul {
   list-style-type: none;
   display: flex;
   gap: 40px;
+  justify-content: flex-end;
 }
 
 nav ul li a {
@@ -65,6 +70,7 @@ section {
   padding-bottom: 100vh;
   padding-inline: 80px;
 }
+
 .title-container {
   width: 100%;
   display: flex;
@@ -136,6 +142,7 @@ section {
   font-size: 22px;
   font-weight: 400;
 }
+
 .box-pix {
   height: 334px;
   width: 374px;
@@ -146,9 +153,11 @@ section {
   align-items: center;
   padding: 32px;
 }
+
 .card-primary-pix {
   display: flex;
 }
+
 .card-title-pix {
   color: var(--card-title-color);
   font-size: 25px;
@@ -157,22 +166,27 @@ section {
   margin-top: 20px;
   font-family: "Arial", sans-serif;
 }
+
 .card-description-pix {
   color: var(--subtitle-color);
   font-family: "Arial", sans-serif;
   font-size: 20px;
   margin-top: 18.20px;
 }
+
 .pix {
   margin-top: 10px;
 }
+
 .chave {
   color: var(--subtitle-color);
   font-size: 22px;
 }
+
 .linha {
   width: 90%;
 }
+
 .chave-pix {
   background-color: var(--card-title-color);
   width: 90%;
@@ -183,18 +197,21 @@ section {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
 }
+
 .chave-pix h4 {
   margin-left: 25%;
   margin-top: 5px;
-  margin-bottom:5px;
+  margin-bottom: 5px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .gato {
-  margin-left: 42%;
+  text-align: center;
   margin-bottom: -25px;
   height: 265px;
   width: auto;
 }
+
 footer {
   height: 500px;
   max-height: auto;
@@ -203,11 +220,11 @@ footer {
 }
 
 .footer-container {
-    width: auto;
-    height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: auto;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-primary {
@@ -219,8 +236,8 @@ footer {
 }
 
 .footer-primary p a {
-    color: var(--footer-font-color);
-    font-family: "Arial", sans-serif;
+  color: var(--footer-font-color);
+  font-family: "Arial", sans-serif;
 }
 
 .footer-primary h4 {
@@ -229,9 +246,9 @@ footer {
 }
 
 .footer-primary p {
-    font-size: 18px;
-    font-weight: 400;
-    font-family: "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Arial", sans-serif;
 }
 
 .footer-secondary {
@@ -243,23 +260,102 @@ footer {
 }
 
 .footer-secondary img {
-    height: 145px;
-    width: auto
+  height: 145px;
+  width: auto
 }
 
-.footer-section-1, .footer-section-2, .footer-section-3, .footer-section-4 {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 12px;
+.footer-section-1,
+.footer-section-2,
+.footer-section-3,
+.footer-section-4 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
 }
 
 .footer-section-4 {
-    align-items: center;
+  align-items: center;
 }
 
 .social-icons {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.mobile-menu {
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+}
+
+
+@media screen and (max-width: 1030px) {
+  #menu {
+    display: none;
+  }
+  header {
+    padding-inline: 0px;
+    }
+
+  .mobile-menu {
+    display: block;
+    margin-left: 100%;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .title {
+    margin-bottom: 26px;
+  }
+
+  #main {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 60px;
+  }
+
+  .half-box {
+    flex: 1 1 100%;
+    position: relative;
+  }
+
+  .container-box {
+    display: block;
+  }
+  .box {
+    margin-bottom: 20px;
+  }
+  section {
+    margin-bottom: 1000px;
+  }
+  .box {
+    width: 65%;
+    align-items: center;
+  }
+  .box-pix {
+    width: 65%;
+  }
+  .title-footer {
+    margin-bottom: 20px;
+  }
+  .footer-primary {
+    margin-top: 200px;
+  }
+  .footer-primary {
+    display: block;
+  }
+  .footer-secondary {
+    margin-top: 200px;
+  }
+  
 }

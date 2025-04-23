@@ -40,9 +40,10 @@
     justify-content: space-between;
     padding-inline: 80px;
   }
-  header div {
+  .logo-inicial {
     display: flex;
     align-items: center;
+    
   }
   .logo {
     height: 95px;
@@ -230,8 +231,7 @@ select {
 
   .gato {
     margin-left: 42%;
-    margin-bottom: -25px;
-    height: 265px;
+    margin-bottom: -55px;
     max-width: auto;}
 
   footer {

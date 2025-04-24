@@ -16,7 +16,6 @@
   font-style: normal;
   margin: 0px;
   padding: 0px;
-
 }
 
 body {
@@ -33,12 +32,13 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-inline: 80px
+  padding-inline: 80px;
 }
 
 header div {
   display: flex;
   align-items: center;
+  
 }
 
 .logo {
@@ -51,6 +51,7 @@ nav {
   height: 100px;
   display: flex;
   align-items: center;
+  margin-left: 55em;
 }
 
 nav ul {
@@ -64,6 +65,14 @@ nav ul li a {
   color: var(--link-nav-color);
   font-size: 20px;
   font-weight: 400;
+}
+
+.inicial {
+  margin-left: 66px;
+  margin-top: 90px;
+}
+.inicial a {
+  color: var(--link-nav-color);
 }
 
 section {
@@ -302,12 +311,12 @@ footer {
     display: none;
   }
   header {
-    padding-inline: 0px;
+    padding-inline: 40px;
     }
 
   .mobile-menu {
     display: block;
-    margin-left: 100%;
+    margin-left: 15rem;
   }
 
   header nav {
@@ -332,30 +341,43 @@ footer {
   .container-box {
     display: block;
   }
+
   .box {
     margin-bottom: 20px;
   }
+
   section {
     margin-bottom: 1000px;
   }
+
   .box {
     width: 65%;
     align-items: center;
   }
+
   .box-pix {
     width: 65%;
   }
+
+  .chave-pix {
+    height: 70px;
+  }
+
   .title-footer {
     margin-bottom: 20px;
   }
+
   .footer-primary {
     margin-top: 200px;
   }
+
   .footer-primary {
     display: block;
   }
-  .footer-secondary {
-    margin-top: 200px;
+
+  footer {
+    height: 1000px;
+    margin-bottom: 0%;
   }
   
 }

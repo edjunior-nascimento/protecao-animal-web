@@ -107,8 +107,8 @@ border-radius: 10px ;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
-    
     gap: 10px;
+    
     margin-top: 40px;
     padding: 34px 28px 34px 28px;
     justify-content: center;

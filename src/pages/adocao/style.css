@@ -1,4 +1,12 @@
 @charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -15,7 +23,7 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
+    margin: 0 2rem;
     background-color: black;
 }
 
@@ -27,22 +35,33 @@ header{
 }
 #menu>li>a{
     display: block;
-    padding: 5px;
 }
 a{
     text-decoration: none;
     color: white;
+    font-family: 'Jockey One';
+
+    
+
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
 }
 
 
-
-
-section{
-    padding: 40px 80px 0px 80px;
-}
 #hist{
     color: white;
-    margin: 0 20px;  
+    margin: 40px 20px 0px;  
+
+
+    font-family: 'Jockey One';
+font-weight: 400;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+
 }
 #hist>a{
     color: white;
@@ -53,6 +72,13 @@ h2{
     color:  #27A8AD;
     padding: 30px 0px 30px 0px;
     margin-left: 30px;
+
+    font-family: 'Jockey One';
+font-weight: 400;
+font-size: 30px;
+line-height: 100%;
+letter-spacing: 4%;
+
 }
 
 
@@ -62,8 +88,8 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr ;
 gap: 5px;
 background-color: white;
+margin: 0 2rem;
 
-margin: 0px 30px;
 padding: 34px 28px 34px 28px;
 border-radius: 10px ;
 
@@ -71,18 +97,19 @@ border-radius: 10px ;
 }
 
 .menu-item{
-    min-width:75%;
+    min-width:95%;
     width: 80%;
     height: 50px;
     display: flex;
     flex-direction: column;
-       
+    
 }
 #filter-select{
     flex: 1;
     border: 0.15rem solid #eee;
     padding: .3rem .6rem;
     border-radius: 10px ;
+    font-family: Arial;
 }
 
 #search-button{
@@ -106,37 +133,29 @@ border-radius: 10px ;
 .galery{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    place-items: center;
-    gap: 10px;
-    
-    margin-top: 40px;
-    padding: 34px 28px 34px 28px;
-    justify-content: center;
-    text-align: center;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 1rem;
     
 }
 .card-animals{
     background-color: white;
-    width: 300px;
-    height: 420px;
-    top: 1553px;
-    left: 2028px;
-    gap: 10px;
     border-radius: 10px;
-    opacity: 0px;
     border: 1px solid black;
-
+    height: 420px;
+  min-width: 150px;
 }
 .img-animal{
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
     border-radius: 10px 10px 0px 0px;
+  
+
 }
 .card-name{
-
-    width: 300px;
-    height: 57px;
-    padding: 0px 10px 0px 10px;
+   
+    padding: 0px 10px;
     gap: 10px;
 
 
@@ -147,10 +166,9 @@ border-radius: 10px ;
     font-weight: 700;
     line-height: 28.75px;
     text-align: center;
-    text-underline-position: from-font;
     text-decoration-skip-ink: none;
-
     margin-top: 10px;
+    margin-bottom: 40px;
 
 }
 .card-local{
@@ -159,17 +177,17 @@ border-radius: 10px ;
     font-weight: 400;
     line-height: 20.7px;
     text-align: center;
-    text-underline-position: from-font;
     text-decoration-skip-ink: none;
 
-width: 300px;
-height: 51px;
-padding: 0px 10px 0px 10px;
-gap: 10px;
-opacity: 0px;
+
+    padding: 0px 10px 0px 10px;
+    gap: 10px;
+    opacity: 0px;
 
 
 }
+
+
 .pagination{
     text-align: right;
     padding: 25px;
@@ -177,9 +195,13 @@ opacity: 0px;
 .pagination a{
     color: white;
     text-decoration: none;
-    padding: 8px 15px;
+    padding: 12px;
     display: inline-block;
-    border: 1px solid #27A8AD;
+    border: 0.2px solid #27A8AD;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
 }
 .pagination a.active{
     background-color: #27A8AD;
@@ -192,6 +214,7 @@ opacity: 0px;
 }
 #seta{
     border: none;
+    color: #27A8AD;
 }
 #big-cat{
     height: 300px;
@@ -202,7 +225,7 @@ opacity: 0px;
     justify-content: center;
    
  }
- #big-gato{
+#big-gato{
     width: 264.08px;
     height: 291px;
     gap: 0px;
@@ -211,37 +234,42 @@ opacity: 0px;
     bottom: -50px;
  
  }
+
 footer{
+    background-color: #27A8AD;
+}
+#footer-primary{
     display: grid;
     
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr auto;
    
-    background-color: #27A8AD;
+    
 }
-  .inf{
+.inf{
     
     text-align: center;
     margin-top: 100px;
     display: grid;
+    font-family: 'Jockey One'
+    
     
     
   }
- h3{
-    font-weight: bolder;
-    
-    
- }
+.inf>a{
+    font-family: arial;
+}
 .footer-item{
     color: black;
     padding: 5px;
  }
      
-  #rodape{
-   background-color: #27A8AD;
+#footer-secondary{
+    background-color: #27A8AD;
     text-align: center;
+    margin-top: 1.5rem;
   }
-  .social-icons{
+.social-icons{
     display: flex;
     justify-content: center;
 
@@ -284,6 +312,32 @@ margin: 8px;
    place-items: center;
   
 }
+
+.card-animals{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 250px;
+  
+}
+.img-animal{
+    width: 100%;
+    height: 60%;
+
+}
+.card-name{
+    margin-top: 2px;
+    margin-bottom: 16px;
+
+}
+.card-local{
+    
+    font-size: 1rem;
+  
+    
+
+
+}
 .pagination{
     text-align: center;}
 
@@ -292,7 +346,7 @@ margin: 8px;
         height: 201px;
         bottom: -35px;}
 
-footer{
+#footer-primary{
         display: grid;
             
         grid-template-columns: 1fr;

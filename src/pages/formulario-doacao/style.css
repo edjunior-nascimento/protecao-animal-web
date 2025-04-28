@@ -229,9 +229,14 @@ select {
 
 
   .gato {
+<<<<<<< Updated upstream
     margin-left: 42%;
     margin-bottom: -25px;
     height: 265px;
+=======
+    align-items: center;
+    margin-bottom: -55px;
+>>>>>>> Stashed changes
     max-width: auto;}
 
   footer {
@@ -302,3 +307,72 @@ select {
       flex-direction: row;
       gap: 20px;
   }
+  .mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+.mobile-menu div {
+width: 32px;
+height: 2px;
+background: #fff;
+margin: 8px;
+}
+@media screen and (max-width: 1080px){
+  header nav {
+      display: none;
+  }
+  .mobile-menu{
+      display: block;
+  }
+  .container {
+  width: 100%;
+  }
+  .valor {
+    display: block;
+    height: 550px;
+  }
+  .quantia {
+    display: flex;
+   gap: 10px;
+   flex-direction: column;
+   margin-top: 200px;
+  margin-left: -15%; 
+  
+  }
+  .quantia a {
+     flex-basis: 100%;
+     width: 74px;
+     height: 56px;
+  }
+  #cota {
+    width: 80%;
+    height: 10%;
+    margin-left: 15px;
+  }
+  .res {
+    margin-top: 160%;
+  }
+  .cadastro {
+    width: 100px;
+  }
+  .resultado {
+    display: block;
+    justify-content: center;
+  }
+  #btn-doar {
+   margin-left: 0%;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .gato {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+.footer-primary {
+  display: block;
+}
+.footer-primary {
+  margin-top: 50%;
+}
+}

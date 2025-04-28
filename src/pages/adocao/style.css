@@ -50,7 +50,6 @@ text-align: center;
 
 }
 
-
 #hist{
     color: white;
     margin: 40px 20px 0px;  
@@ -68,6 +67,7 @@ letter-spacing: 0%;
     text-decoration: none;
     margin-left: 10px;
 }
+
 h2{
     color:  #27A8AD;
     padding: 30px 0px 30px 0px;
@@ -246,6 +246,11 @@ footer{
    
     
 }
+#footer-secondary{
+    background-color: #27A8AD;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
 .inf{
     
     text-align: center;
@@ -262,13 +267,7 @@ footer{
 .footer-item{
     color: black;
     padding: 5px;
- }
-     
-#footer-secondary{
-    background-color: #27A8AD;
-    text-align: center;
-    margin-top: 1.5rem;
-  }
+ }     
 .social-icons{
     display: flex;
     justify-content: center;

@@ -229,14 +229,8 @@ select {
 
 
   .gato {
-<<<<<<< Updated upstream
-    margin-left: 42%;
-    margin-bottom: -25px;
-    height: 265px;
-=======
     align-items: center;
     margin-bottom: -55px;
->>>>>>> Stashed changes
     max-width: auto;}
 
   footer {

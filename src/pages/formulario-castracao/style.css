@@ -108,9 +108,11 @@ h1{
     text-align: left;
     text-underline-position: auto;
     text-decoration-skip-ink: none;
+    text-align: justify;
+
 
     
-    width: 1203px;
+    width: 1303px;
     height: 83px;
     gap: 0px;
     opacity: 0px;

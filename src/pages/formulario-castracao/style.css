@@ -13,15 +13,14 @@
     
 }
 body{
-    background-color: black;
+    background-color:  #1e1e1e;
 }
 header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
-    background-color: black;
+    margin: 0 2rem;
 }
 #menu{
     display: flex;
@@ -31,19 +30,36 @@ header{
 }
 #menu>li>a{
     display: block;
-    padding: 5px;
+    color: #ffffff;
 }
 a{
     text-decoration: none;
-    color: white;
+    color: var(--link-nav-color);
+
+    font-family: 'Jockey One';
+
+    
+
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
 }
 
-#path{
+#hist{
     color: white;
-    margin: 0 15px 40px;  
-}
+    margin: 40px 30px 0px;  
 
-#path a{
+
+    font-family: 'Jockey One';
+font-weight: 400;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+#hist>a{
     color: white;
     text-decoration: none;
     margin-left: 10px;
@@ -75,14 +91,18 @@ h1{
    
     margin: 0px 40px 0px 40px;
     padding: 58px 15px 40px 15px;
-  
+    
     
 
+}
+#div-main-container{
+    display: flex;
+    justify-content: center;
 }
 #main-container>p{
     color: #1E1E1E;
     font-family: Arial;
-    font-size: 25px;
+    font-size: 1.2em;
     font-weight: 700;
     line-height: 28.75px;
     text-align: left;
@@ -301,46 +321,50 @@ input{
  
  }
  footer{
-     display: grid;
+    background-color: #27A8AD;
+}
+#footer-primary{
+    display: grid;
     
-     grid-template-columns: repeat(4, 1fr);
-     grid-template-rows: 1fr auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr auto;
+   
     
-     background-color: #27A8AD;
-     
- }
- .inf{
-     text-align: center;
-     margin-top: 100px;
-     display: grid;
-     
-   }
-  h3{
-     font-weight: bolder;
-     
+}
+#footer-secondary{
+    background-color: #27A8AD;
+    text-align: center;
+    margin-top: 1.5rem;
   }
- .footer-item{
-     color: black;
-     padding: 5px;
+.inf{
+    
+    text-align: center;
+    margin-top: 100px;
+    display: grid;
+    font-family: 'Jockey One'
+    
+    
+    
   }
- 
- #rodape{
-     background-color: #27A8AD;
-     text-align: center;
-     
-   }
- .social-icons{
-     display: flex;
+.inf>a{
+    font-family: arial;
+}
+.footer-item{
+    color: black;
+    padding: 5px;
+ }     
+.social-icons{
+    display: flex;
     justify-content: center;
- 
-     height: 100px;
-    
-        
- }
- .item-social{
-     margin-left: 20px;
- }
- .mobile-menu{
+
+    height: 100px;
+   
+       
+}
+.item-social{
+    margin-left: 20px;
+}
+.mobile-menu{
     cursor: pointer;
     display: none;
 }
@@ -366,7 +390,7 @@ margin: 8px;
     #main-container>p{
         width: 100%;
         text-align: justify;
-        margin-bottom: 60px;
+        margin-bottom: 80px;
     }
     .half-box{
         flex: 1 1 100%;
@@ -377,17 +401,18 @@ margin: 8px;
             width: 204.08px;
             height: 201px;
             bottom: -35px;}
-    footer{
-            display: grid;
-                
-            grid-template-columns: 1fr;
-                
-      
-        }
-    .icones{
-            width: 60px;
-            margin-top: 20px;
-            margin-right: 20px;
-               
-        }
+            #footer-primary{
+                display: grid;
+                    
+                grid-template-columns: 1fr;
+                    
+          
+            }
+        
+            .icones{
+                width: 60px;
+                margin-top: 20px;
+                margin-right: 20px;
+                   
+            }
     }

@@ -15,7 +15,7 @@
     
 }
 body{
-    background-color: black;
+    background-color:  #1e1e1e;
 }
 header{
     display: flex;
@@ -23,7 +23,6 @@ header{
     justify-content: space-between;
     align-items: center;
     margin: 0 2rem;
-    background-color: black;
 }
 #menu{
     display: flex;
@@ -213,8 +212,9 @@ letter-spacing: 4%;
 padding-left: 30px;
 }
 .galery{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     margin: 2rem;
     padding: 1rem;
@@ -402,7 +402,11 @@ margin: 8px;
 }
 
 .card-animals{
-    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #1e1e1e;
+    height: 18rem;
+    width: 12rem;
   
 }
 .img-animal{
@@ -415,11 +419,14 @@ margin: 8px;
     margin-bottom: 16px;
 
 }
-.card-local{  
+.card-local{
+    
     font-size: 1rem;
   
-}
+    
 
+
+}
 .pagination{
     text-align: center;}
 

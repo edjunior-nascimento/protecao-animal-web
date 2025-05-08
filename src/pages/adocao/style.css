@@ -4,7 +4,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 
-
+:root {
+    --main-bg-color: #1e1e1e;
+    --title-color: #27a8ad;
+    --subtitle-color: #ffffff;
+    --box-color: #ffffff;
+    --link-nav-color: #ffffff;
+    --card-title-color: #27a8ad;
+    --footer-background: #27a8ad;
+    --footer-font-color: #000000;
+    --box-pix-color: #A5A5A5;
+  }
 
 
 *{
@@ -16,16 +26,14 @@
     
 }
 body{
-    background-color: black;
-}
+    background-color: var(--main-bg-color);}
 header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 0 2rem;
-    background-color: black;
-}
+    }
 
 #menu{
     display: flex;
@@ -38,7 +46,8 @@ header{
 }
 a{
     text-decoration: none;
-    color: white;
+    color: var(--link-nav-color);
+
     font-family: 'Jockey One';
 
     
@@ -131,8 +140,10 @@ border-radius: 10px ;
     color: #fff;
 }
 .galery{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+    
     gap: 1rem;
     margin: 2rem;
     padding: 1rem;
@@ -218,8 +229,6 @@ border-radius: 10px ;
 }
 #big-cat{
     height: 300px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -228,8 +237,6 @@ border-radius: 10px ;
 #big-gato{
     width: 264.08px;
     height: 291px;
-    gap: 0px;
-    opacity: 0px;
     position: absolute;
     bottom: -50px;
  
@@ -315,8 +322,9 @@ margin: 8px;
 .card-animals{
     background-color: white;
     border-radius: 10px;
-    border: 1px solid black;
-    height: 250px;
+    border: 1px solid #1e1e1e;
+    height: 18rem;
+    width: 12rem;
   
 }
 .img-animal{

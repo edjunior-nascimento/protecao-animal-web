@@ -204,6 +204,12 @@ select {
   margin-left: 30px;
   margin-right: 30px;
 }
+#data {
+  font-size: 25px;
+}
+#cartao {
+  font-size: 25px;
+}
 #btn-doar {
   width: 206px;
   height: 50px;
@@ -318,6 +324,10 @@ background: #fff;
 margin: 8px;
 }
 @media screen and (max-width: 1080px){
+body {
+  margin-right:-25px;
+}
+
   header nav {
       display: none;
   }
@@ -395,8 +405,7 @@ margin: 8px;
   padding-top: 30px;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  margin-left: 25%;
-  
+  margin-left: 3%;
   }
 
   #btn-doar {
@@ -407,6 +416,7 @@ margin: 8px;
 
   .gato {
     align-items: center;
+    margin-bottom: -20px;
     }
 
     .gato img {
@@ -421,6 +431,11 @@ margin: 8px;
 
 .footer-secondary {
  margin-top: 16px;
+}
+
+.icons  {
+  height: 36px;
+  width: 36px;
 }
 
 footer {

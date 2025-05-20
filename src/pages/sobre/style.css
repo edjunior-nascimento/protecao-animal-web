@@ -312,7 +312,8 @@ margin-left: 16px;
     }
     .mobile-menu{
         display: block;
-        margin-left: 80%;
+        margin-left: 110%;
+        margin-top: 10px;
     }
     .img-dog {
       width: 100%;

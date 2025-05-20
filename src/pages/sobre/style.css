@@ -213,7 +213,7 @@ margin-left: 16px;
 }
 
   .gato {
-    margin-left: 42%;
+    text-align: center;
     margin-bottom: -25px;
     height: 265px;
     width: auto;
@@ -286,4 +286,126 @@ margin-left: 16px;
       display: flex;
       flex-direction: row;
       gap: 20px;
+  }
+
+  .mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
+.photo-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1080px){
+  body {
+    width: 100vw;
+    margin-left: -10%;
+  }  
+  #menu{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+        margin-left: 80%;
+    }
+    .img-dog {
+      width: 100%;
+    }
+    .img-dog img {
+      width: 280px;
+      height: 127px;
+      margin-left: -8%;
+    }
+    .dog-cat2 {
+      display: block;
+      width: 100%;
+    }
+    .photo-mobile {
+      display: block;
+    }
+    .grupo {
+      display: none;
+      
+    }
+    .photo-mobile img {
+      width: 260px;
+      height: 208px;
+      margin-left: 16.5%;
+      margin-top: 20px;
+    }
+    .parceria ul {
+      display: grid;
+      grid-template-columns: repeat(4, 70px);
+      gap: 10px;
+       justify-content: center;
+       margin-left: -15%;
+    } 
+    .container {
+      display: block;
+    }
+    .parceria {
+      width: 90%;
+    }
+    .parceria nav ul li {
+      width: 40px;
+      height: 40px;
+    }
+    .contatos {
+      display: block;
+    }
+    .junte-se{
+      width: 100%;
+    }
+    .junte-se h2 {
+      text-align: center;
+    }
+    .email {
+      display: flex;
+    }
+    .whats {
+      display: flex;
+    }
+    .agrade h2{
+      text-align: center;
+      display: block;
+      margin-left: -70%;
+    }
+    
+
+
+     .gato {
+    margin-left: 40%;
+    margin-bottom: -193px;}
+    
+
+    .gato img {
+      width: 80px;
+      height: 88px;
+    }
+
+.footer-primary {
+  display: block; 
+  margin-top: 50%;
+}
+
+.footer-secondary {
+ margin-top: 16px;
+}
+
+.icons  {
+  height: 36px;
+  width: 36px;
+}
+
+footer {
+  height: 100%;
+  width: 90%;
+}
+
   }

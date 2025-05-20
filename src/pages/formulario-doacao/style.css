@@ -40,9 +40,10 @@
     justify-content: space-between;
     padding-inline: 80px;
   }
-  header div {
+  .logo-inicial {
     display: flex;
     align-items: center;
+    
   }
   .logo {
     height: 95px;

@@ -14,10 +14,24 @@
 <body>
   <header>
     <div><img class="logo" src="/src/pages/images/logo.png" alt="logo Protecao animal" />
-      <div class="mobile-menu">
+      <div class="mobile-menu"  onclick="abrirModal()">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
+      </div>
+      <div class="modal">
+        <div class="textModal"><img src="../../assets/icons/casa.png" alt="">
+          <p> Pagina Inicial</p>
+        </div>
+        <div class="textModal"><img src="../../assets/icons/pata.png" alt="">
+        <p>Quero Adotar</p>
+        </div>
+        <div class="textModal"><img src="../../assets/icons/doar.png" alt="">
+          <p>Quero Doar</p>
+        </div>
+        <div class="textModal"><img src="../../assets/icons/quemSomos.png" alt="">
+          <p>Quem Somos</p>
+        </div>
       </div>
       <nav>
         <ul>
@@ -46,9 +60,10 @@
   </header>
   <div class="inicial">
     <a href="">
-    <p>Página inicial / Doação</p></a>
+      <p>Página inicial / Doação</p>
+    </a>
   </div>
-  <section>
+  <section id="overlay" onclick="fecharModal()">
     <div class="title-container">
       <h2 class="title">Faça sua doação</h2>
       <p class="subtitle">
@@ -203,6 +218,7 @@
       <img src="/src/pages/images/logo.png" alt="" />
     </div>
   </footer>
+  <script src="./script.js"></script>
 </body>
 
 </html>

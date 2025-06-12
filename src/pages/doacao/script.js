@@ -1,8 +1,6 @@
-function abrirModal(){
-    overlay.classList.add("active");
-}
+const button = document.querySelector(".mobile-menu");
+const modal = document.querySelector("dialog");
 
-function fecharModal(){
-    overlay.classList.remove("active");
-    
+button.onclick = function () {
+    modal.showModal() 
 }

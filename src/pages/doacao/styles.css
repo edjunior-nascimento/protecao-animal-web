@@ -294,35 +294,61 @@ footer {
   gap: 20px;
 }
 
-.mobile-menu {
+#open-modal {
   cursor: pointer;
   display: none;
   background-color: transparent;
   border: 0px;
 }
 
-.mobile-menu div {
+#open-modal div {
   width: 32px;
   height: 2px;
   background: #fff;
   margin: 8px;
 }
 
-dialog {
+#modal {
   background-color: var(--box-modal-mobile);
   display: block;
-
-    transition-duration: 200ms;
+  width: 9rem;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  display: none;
 }
 
-.modal p {
+#modal p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: var(--card-title-color);
   margin-left: 10px;
 }
 
+#modal.abrir {
+display: block;
+}
 
+#fade,
+#modal {
+ 
+  pointer-events: all;
+}
+
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 99;
+  display: none;
+}
+
+.hide {
+  display: none;
+}
 
 .textModal {
   margin: 10px;
@@ -340,9 +366,11 @@ dialog {
     padding-inline: 40px;
     }
 
-  .mobile-menu {
+  #open-modal {
     display: block;
-    margin-left: 13em;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
   header nav {

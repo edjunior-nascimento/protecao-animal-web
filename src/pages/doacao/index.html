@@ -14,12 +14,13 @@
 <body>
   <header>
     <div><img class="logo" src="/src/pages/images/logo.png" alt="logo Protecao animal" />
-      <button class="mobile-menu">
+      <button onclick="abrirModal()" id="open-modal" >
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </button>
-      <dialog class="modal">
+      <div id="fade" class="hide"></div>
+      <div id="modal"class="hide">
         <div class="textModal"><img src="../../assets/icons/casa.png" alt="">
           <p> Pagina Inicial</p>
         </div>
@@ -32,7 +33,7 @@
         <div class="textModal"><img src="../../assets/icons/quemSomos.png" alt="">
           <p>Quem Somos</p>
         </div>
-      </dialog>
+      </div>
       <nav>
         <ul>
           <li>
@@ -63,7 +64,7 @@
       <p>Página inicial / Doação</p>
     </a>
   </div>
-  <section id="overlay" onclick="fecharModal()">
+  <section>
     <div class="title-container">
       <h2 class="title">Faça sua doação</h2>
       <p class="subtitle">

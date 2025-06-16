@@ -1,6 +1,4 @@
-const button = document.querySelector(".mobile-menu");
-const modal = document.querySelector("dialog");
-
-button.onclick = function () {
-    modal.showModal() 
+function abrirModal() {
+  const modal = document.getElementById("open-modal");
+  modal.classList.add('abrir');
 }

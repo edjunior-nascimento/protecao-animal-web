@@ -1,0 +1,73 @@
+[
+    {
+        "id": 0,
+        "nome": "Feirinha de Adoção",
+        "fotos": [
+            "https://google.drive.com.br/fotos/dogs/asadasasddasd.png",
+            "https://google.drive.com.br/fotos/dogs/sasdasdasfasd.png",
+            "https://google.drive.com.br/fotos/dogs/1gdgfssdffg31.png",
+            "https://google.drive.com.br/fotos/dogs/dfgsasdadfsdf.png"
+        ]
+    },
+    {
+        "id": 1,
+        "nome": "Alimentando os cães de rua",
+        "fotos": [
+            "https://google.drive.com.br/fotos/dogs/bdfgqdfasffcv.png",
+            "https://google.drive.com.br/fotos/dogs/xcvxcvzxfcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/vxcvzxcvxcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/bdfgqdfasffcv.png",
+            "https://google.drive.com.br/fotos/dogs/xcvxcvzxfcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/vxcvzxcvxcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/trey5hggs45dg.png"
+        ]
+    },
+    {
+        "id": 2,
+        "nome": "Alimentando os cães de rua",
+        "fotos": [
+            "https://google.drive.com.br/fotos/dogs/bdfgqdfasffcv.png",
+            "https://google.drive.com.br/fotos/dogs/xcvxcvzxfcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/vxcvzxcvxcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/bdfgqdfasffcv.png",
+            "https://google.drive.com.br/fotos/dogs/xcvxcvzxfcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/vxcvzxcvxcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/trey5hggs45dg.png"
+        ]
+    },
+    {
+        "id": 3,
+        "nome": "Nossos Voluntários",
+        "fotos": [
+            "https://google.drive.com.br/fotos/dogs/bdfgqdfasffcv.png",
+            "https://google.drive.com.br/fotos/dogs/xcvxcvzxfcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/vxcvzxcvxcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/bdfgqdfasffcv.png",
+            "https://google.drive.com.br/fotos/dogs/xcvxcvzxfcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/vxcvzxcvxcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/trey5hggs45dg.png"
+        ]
+    },
+    {
+        "id": 4,
+        "nome": "Animais Adotados",
+        "fotos": [
+            "https://google.drive.com.br/fotos/dogs/bdfgqdfasffcv.png",
+            "https://google.drive.com.br/fotos/dogs/xcvxcvzxfcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/vxcvzxcvxcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/bdfgqdfasffcv.png",
+            "https://google.drive.com.br/fotos/dogs/xcvxcvzxfcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/vxcvzxcvxcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/trey5hggs45dg.png"
+        ]
+    },
+    {
+        "id": 5,
+        "nome": "Premiações",
+        "fotos": [
+            "https://google.drive.com.br/fotos/dogs/bdfgqdfasffcv.png",
+            "https://google.drive.com.br/fotos/dogs/xcvxcvzxfcvzx.png",
+            "https://google.drive.com.br/fotos/dogs/vxcvzxcvxcvzx.png"
+        ]
+    }
+]

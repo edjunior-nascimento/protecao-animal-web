@@ -79,7 +79,7 @@
       margin-left: 80px;
       background-image: url(/src/assets/images/background_black.png);
       display: flex;
-      box-shadow: 10px 5px 20px  var(--footer-font-color)
+      box-shadow: 4px 4px 10px  var(--footer-font-color)
     }
     .sub-title {
       margin-top: 52px;
@@ -304,28 +304,38 @@ margin-left: 16px;
 
 @media screen and (max-width: 1080px){
   body {
-    width: 100vw;
-    margin-left: -10%;
+    width: 100%;
   }  
   #menu{
         display: none;
     }
     .mobile-menu{
         display: block;
-        margin-left: 110%;
         margin-top: 10px;
+        position: absolute;
+        left: 28rem;
     }
     .img-dog {
       width: 100%;
+    }
+
+    section  {
+     margin-top: -30px; 
     }
     .img-dog img {
       width: 280px;
       height: 127px;
       margin-left: -8%;
     }
+    .dog-cat1 {
+      display: block;
+      width: 100%;
+      margin-top: -10px;
+    }
     .dog-cat2 {
       display: block;
       width: 100%;
+      margin-top: -10px;
     }
     .photo-mobile {
       display: block;
@@ -406,7 +416,7 @@ margin-left: 16px;
 
 footer {
   height: 100%;
-  width: 90%;
+  width: 100%;
 }
 
   }

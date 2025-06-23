@@ -132,11 +132,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 38px;
 }
 
 .card-primary img {
   height: 77.93px;
   width: 77.93px;
+  margin-bottom: 35px;
 }
 
 .card-title {

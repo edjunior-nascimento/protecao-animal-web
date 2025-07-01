@@ -1,0 +1,13 @@
+{
+  "name": "menu",
+  "version": "0.0.1",
+  "description": "Description of your project",
+  "scripts": {
+    "start": "node express-config.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

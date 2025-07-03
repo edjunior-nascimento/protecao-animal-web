@@ -368,3 +368,57 @@ margin: 8px;
            
     }
 }
+
+/*MODAL*/
+
+#fade, #modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+   z-index: 5;
+}
+
+#modal{
+    position: fixed;
+    left: 82%;
+    top: 10%;
+    transform: translate(-50%, -2%);
+    z-index: 10;
+    background-color: white;
+    width: 150px;
+    max-width: 90%;
+    padding: 0.5rem 0rem 0.5rem 1.2rem;
+
+}
+
+
+#modal.hide, #fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+#modal.hide{
+    top: 0;
+}
+
+#modal>li>a{
+    color: #27A8AD;
+    border-bottom: 1px solid #ccc;
+    font-size: 1rem;
+    
+}
+#modal>li{
+    text-align: left;
+    font-size: 0px;
+    margin: 1.5rem 0rem;
+
+}

@@ -13,12 +13,27 @@
 
 <body>
   <header>
-    <div><img class="logo" src="/src/pages/images/logo.png" alt="logo Protecao animal" />
-      <div class="mobile-menu">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
+  <div><img class="logo" src="/src/pages/images/logo.png" alt="logo Protecao animal" />
+        <button class="open-modal">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <div id="fade"></div>
+        <div class="modal">
+          <div class="textModal"><img src="../../assets/icons/game-icons_dog-house.png" alt="">
+            <p> Pagina Inicial</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/Vector.png" alt="">
+          <p>Quero Adotar</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/bxs_donate-heart.png" alt="">
+            <p>Quero Doar</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/ic_baseline-diversity-3.png" alt="">
+            <p>Quem Somos</p>
+          </div>
+        </div>
       <nav>
         <ul>
           <li>
@@ -46,7 +61,8 @@
   </header>
   <div class="inicial">
     <a href="">
-    <p>Página inicial / Doação</p></a>
+      <p>Página inicial / Doação</p>
+    </a>
   </div>
   <section>
     <div class="title-container">
@@ -203,6 +219,7 @@
       <img src="/src/pages/images/logo.png" alt="" />
     </div>
   </footer>
+  <script src="./script.js"></script>
 </body>
 
 </html>

@@ -25,42 +25,48 @@
   }
   
   a {
-    text-decoration: none;
-  }
+  text-decoration: none;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: 80px;
+}
+
+header div {
+  display: flex;
+  align-items: center;
   
-  header {
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-inline: 80px
-  }
-  header div {
-    display: flex;
-    align-items: center;
-  }
-  .logo {
-    height: 95px;
-    width: auto;
-  }
-  nav {
-    width: auto;
-    height: 100px;
-    display: flex;
-    align-items: center;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 40px;
-  }
-  
-  nav ul li a {
-    color: var(--link-nav-color);
-    font-size: 20px;
-    font-weight: 400;
-  }
+}
+
+.logo {
+  height: 95px;
+  width: auto;
+}
+
+nav {
+  width: auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-left: 55em;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+}
+
+nav ul li a {
+  color: var(--link-nav-color);
+  font-size: 20px;
+  font-weight: 400;
+}
     .dog-cat1 {
       width: 90%;
       margin-top: 100px;

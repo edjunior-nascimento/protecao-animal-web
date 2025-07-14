@@ -67,6 +67,15 @@ nav ul li a {
   font-size: 20px;
   font-weight: 400;
 }
+
+.pag-ini a {
+  color: var(--box-color);
+  
+}
+
+.pag-ini {
+  margin-bottom: 50px;
+}
     .dog-cat1 {
       width: 90%;
       margin-top: 100px;
@@ -115,17 +124,21 @@ nav ul li a {
       font-size: 30px;
       justify-content: center;
       justify-items: center;
-      margin-left: 120px;
     }
     .parceria {
       margin-top: 80px;
+      position: relative;;
     }
     .parceria li {
       background-color: var(--subtitle-color);
       height: 80px;
       width: 80px;
       border-radius: 50px;
-      margin-left:40px;
+    }
+    .parceria-nav {
+      justify-content: center;
+      gap: 20px;
+      margin-left: 20px;
     }
   .img-dog {
     margin-top: 52px;
@@ -399,6 +412,9 @@ margin-left: 16px;
   body {
     width: 100%;
   }  
+  header div {
+    width: 100%;
+  }
   .open-modal {
     display: block;
     position: absolute;
@@ -458,8 +474,7 @@ margin-left: 16px;
       display: grid;
       grid-template-columns: repeat(4, 70px);
       gap: 10px;
-       justify-content: center;
-       margin-left: -15%;
+      justify-content: center;
     } 
     .container {
       display: block;
@@ -467,9 +482,12 @@ margin-left: 16px;
     .parceria {
       width: 90%;
     }
+    .parceiros {margin-left: 80px;}
     .parceria nav ul li {
       width: 40px;
       height: 40px;
+      align-items: center;
+    
     }
     .contatos {
       display: block;

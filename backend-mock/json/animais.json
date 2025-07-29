@@ -2,7 +2,7 @@
     {
         "id": 0,
         "nome": "Pietro",
-        "historia": "Pietro é um cachorro alegre e cheio de energia, com um olhar que derrete corações. Apesar de viver no abrigo, ele nunca perdeu a esperança de encontrar uma família. Pietro adora brincar, é extremamente carinhoso e está sempre pronto para te acompanhar em qualquer aventura.", 
+        "historia": "Pietro é um gato alegre e cheio de energia, com um olhar que derrete corações. Apesar de viver no abrigo, ele nunca perdeu a esperança de encontrar uma família. Pietro adora brincar, é extremamente carinhoso e está sempre pronto para te acompanhar em qualquer aventura.", 
         "observacoes": "Se dá bem com outros cães e é ideal para famílias que buscam um companheiro ativo e leal. Pietro já está vacinado, castrado e pronto para encontrar um lar cheio de amor.",
         "especie": 1,
         "sexo": 0,
@@ -13,10 +13,10 @@
         "nascimento": "01-12-2022", 
         "adotado": false,
         "fotos": [
-            "https://google.drive.com.br/fotos/dogs/asadasasddasd.png",
-            "https://google.drive.com.br/fotos/dogs/sasdasdasfasd.png",
-            "https://google.drive.com.br/fotos/dogs/1gdgfssdffg31.png",
-            "https://google.drive.com.br/fotos/dogs/dfgsasdadfsdf.png"
+            "https://drive.usercontent.google.com/download?id=1fMIj8bNxDjtV24QUKpfRtQZ6hksNWDs6",
+            "https://drive.usercontent.google.com/download?id=1O5GOCGIeSd5fIPkDJIkVzMDjw_qxKZBY",
+            "https://drive.usercontent.google.com/download?id=1j6WnykZVaNX4m1gokssykcGsv5JVD9fC",
+            "https://drive.usercontent.google.com/download?id=1eu7ke7cQT24Q-Wem6dXzeA1RpQunQZrB"
         ]
     },
     {
@@ -33,8 +33,8 @@
         "nascimento": "15-03-2021",
         "adotado": false,
         "fotos": [
-        "https://google.drive.com.br/fotos/cats/luna1.png",
-        "https://google.drive.com.br/fotos/cats/luna2.png"
+            "https://drive.usercontent.google.com/download?id=1KwpnRwq6TC4SEEmDDDb2R50yk8PcsgqC",
+            "https://drive.usercontent.google.com/download?id=1fMIj8bNxDjtV24QUKpfRtQZ6hksNWDs6"
         ]
     },
     {
@@ -51,8 +51,8 @@
         "nascimento": "02-07-2020",
         "adotado": false,
         "fotos": [
-        "https://google.drive.com.br/fotos/dogs/thor1.png"
-        ]
+            "https://drive.usercontent.google.com/download?id=19VOwA3in8uhMFOtB2oRvJ6ccTTEWBRd_",
+            "https://drive.usercontent.google.com/download?id=1p2X0J-c2WenW3b1p79NY9q6JMpn95K1r"        ]
     },
     {
         "id": 3,
@@ -68,8 +68,8 @@
         "nascimento": "22-11-2021",
         "adotado": false,
         "fotos": [
-        "https://google.drive.com.br/fotos/cats/mia1.png",
-        "https://google.drive.com.br/fotos/cats/mia2.png"
+            "https://drive.usercontent.google.com/download?id=1O5GOCGIeSd5fIPkDJIkVzMDjw_qxKZBY",
+            "https://drive.usercontent.google.com/download?id=1fMIj8bNxDjtV24QUKpfRtQZ6hksNWDs6"
         ]
     },
     {
@@ -86,9 +86,10 @@
         "nascimento": "10-09-2019",
         "adotado": true,
         "fotos": [
-        "https://google.drive.com.br/fotos/dogs/max1.png",
-        "https://google.drive.com.br/fotos/dogs/max2.png",
-        "https://google.drive.com.br/fotos/dogs/max3.png"
+            "https://drive.usercontent.google.com/download?id=1p2X0J-c2WenW3b1p79NY9q6JMpn95K1r",
+            "https://drive.usercontent.google.com/download?id=1Pr2wZeTmrsYCrISRURKWL-rORcC8UUBE",            
+            "https://drive.usercontent.google.com/download?id=16HIzEg2m1bYHL3toonKAxc6_WQDhosTG",
+            "https://drive.usercontent.google.com/download?id=1ySxJJoQrY0diUasmfvQPfQjWo6QNuDqo"
         ]
     },
     {
@@ -105,8 +106,8 @@
         "nascimento": "12-05-2022",
         "adotado": true,
         "fotos": [
-        "https://google.drive.com.br/fotos/cats/nina1.png",
-        "https://google.drive.com.br/fotos/cats/nina2.png"
+            "https://drive.usercontent.google.com/download?id=1j6WnykZVaNX4m1gokssykcGsv5JVD9fC",
+            "https://drive.usercontent.google.com/download?id=1eu7ke7cQT24Q-Wem6dXzeA1RpQunQZrB"
         ]
     },
     {
@@ -122,7 +123,9 @@
         "local": 2,
         "nascimento": "20-04-2022",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/bidu1.png"]
+        "fotos": [
+            "https://drive.usercontent.google.com/download?id=1ySxJJoQrY0diUasmfvQPfQjWo6QNuDqo"        
+        ]
     },
     {
         "id": 7,
@@ -137,7 +140,8 @@
         "local": 6,
         "nascimento": "01-01-2020",
         "adotado": true,
-        "fotos": ["https://google.drive.com.br/fotos/cats/tigrao1.png"]
+        "fotos": [            "https://drive.usercontent.google.com/download?id=1eu7ke7cQT24Q-Wem6dXzeA1RpQunQZrB"        
+]
     },
     {
         "id": 8,
@@ -152,7 +156,8 @@
         "local": 8,
         "nascimento": "05-08-2021",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/mel1.png"]
+        "fotos": [            "https://drive.usercontent.google.com/download?id=1UQVwtiMUy4rp4yKwM4QwuOFWA1UL8O0-"        
+]
     },
     {
         "id": 9,
@@ -167,7 +172,9 @@
         "local": 1,
         "nascimento": "18-06-2022",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/cats/ziggy1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1KwpnRwq6TC4SEEmDDDb2R50yk8PcsgqC"        
+        ]
     },
     {
         "id": 10,
@@ -182,7 +189,9 @@
         "local": 0,
         "nascimento": "22-12-2020",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/leo1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1IIntbGQa9VzhfWeLzD7z3eWxwgmswIxx"        
+        ]
     },
     {
         "id": 11,
@@ -197,7 +206,9 @@
         "local": 4,
         "nascimento": "30-07-2022",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/cats/jade1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1fI-IYWYfbiFWlvKmRXVcDPFAjIZlc3Ye"        
+        ]
     },
     {
         "id": 12,
@@ -212,7 +223,9 @@
         "local": 9,
         "nascimento": "10-10-2021",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/bolt1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1EwaDRp1a9JxYPHtLOJroBNruHShlhil2"        
+        ]
     },
     {
         "id": 13,
@@ -226,7 +239,9 @@
         "situacao": [0, 2],
         "local": 3,
         "nascimento": "11-05-2021",
-        "fotos": ["https://google.drive.com.br/fotos/dogs/lola1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1Ibe_88Gnh3YhZ3uDeQ8p7OS_vRiYWh2b"        
+        ]
     },
     {
         "id": 14,
@@ -241,7 +256,9 @@
         "local": 7,
         "nascimento": "02-02-2021",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/cats/frajola1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1hYokVem0mSLkPlVBsAz4aizqqOhZTEFQ"        
+        ]
     },
     {
         "id": 15,
@@ -256,7 +273,9 @@
         "local": 6,
         "nascimento": "09-09-2020",
         "adotado": true,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/bela1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1S5HTCqU0edVgGSkkwKb3ZS-Qjz5i37DI"        
+        ]
     },
     {
         "id": 16,
@@ -271,7 +290,7 @@
         "local": 5,
         "nascimento": "03-03-2022",
         "adotado": true,
-        "fotos": ["https://google.drive.com.br/fotos/cats/simba1.png"]
+        "fotos": ["https://drive.usercontent.google.com/download?id=1OjxIOo5zrIpHLMyFiXyS28C2_GzkQCu1"]
     },
     {
         "id": 17,
@@ -286,7 +305,9 @@
         "local": 2,
         "nascimento": "14-04-2019",
         "adotado": true,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/nico1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=13DZOXRFFWYipog51GzHhHYlopnUwoH-R"        
+        ]
     },
     {
         "id": 18,
@@ -301,7 +322,9 @@
         "local": 1,
         "nascimento": "08-08-2020",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/cats/amora1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1ASb9g4DS1YhNkNG0IIy_WSjyWn_rxxt0"        
+        ]
     },
     {
         "id": 19,
@@ -316,7 +339,9 @@
         "local": 8,
         "nascimento": "27-11-2022",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/spike1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1cBJHrewSlzMwtJ4ng_hFP50-y9Kche9L"        
+        ]
     },
     {
         "id": 20,
@@ -331,7 +356,9 @@
         "local": 0,
         "nascimento": "17-06-2023",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/cats/mimi1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1LndiEk8dzsPtWeoNV-5V878d8ShQ4QGc"        
+        ]
     },
     {
         "id": 21,
@@ -346,7 +373,9 @@
         "local": 5,
         "nascimento": "10-01-2018",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/bob1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=19plLr3076MGHmKP2GnN5yTYDiNmlotTa"        
+        ]
     },
     {
         "id": 22,
@@ -361,7 +390,9 @@
         "local": 3,
         "nascimento": "13-10-2022",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/tina1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1kXjJ4uoTm7Jql-gBlVW8-YLSBOLSiDhJ"        
+        ]
     },
     {
         "id": 23,
@@ -376,7 +407,9 @@
         "local": 6,
         "nascimento": "23-04-2023",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/cats/tom1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1FX9GN15WDBHrPenVFlAu-EFUXZdgHX5B"        
+        ]
     },
     {
         "id": 24,
@@ -391,7 +424,9 @@
         "local": 9,
         "nascimento": "05-12-2019",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/kira1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1AzMcsi_dEUketCHRKap_Q2Z68HtBhPZK"        
+        ]
     },
     {
         "id": 25,
@@ -406,7 +441,9 @@
         "local": 4,
         "nascimento": "20-03-2016",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/chico1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1f--EfPCQMkiFn8n_j3A2nvzniVy9S5Fb"        
+        ]
     },
     {
         "id": 26,
@@ -421,7 +458,9 @@
         "local": 0,
         "nascimento": "01-01-2017",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/rex1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1enB79vaCIKBT3J34Gz1nTFhwMVMobxDG"        
+        ]
     },
     {
         "id": 27,
@@ -436,7 +475,9 @@
         "local": 1,
         "nascimento": "15-09-2021",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/teca1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1wCVCDrlWPbzCJtcnCahil8E_C5kzcwf3"        
+        ]
     },
     {
         "id": 28,
@@ -451,7 +492,9 @@
         "local": 2,
         "nascimento": "07-11-2022",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/cats/nina2.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=19PGXmYLU4RQacdPwm-WRGk8usQetPqtN"        
+        ]
     },
     {
         "id": 29,
@@ -466,7 +509,9 @@
         "local": 3,
         "nascimento": "12-06-2020",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/fred1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1cB5Ge7KMpZqI9gOhrHU5rVj2vkvD4qM3"        
+        ]
     },
     {
         "id": 30,
@@ -481,7 +526,9 @@
         "local": 4,
         "nascimento": "30-08-2021",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/zara1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1p7xikdGnKM3WeLstdhj1g5Tb7QalcTXH"        
+        ]
     },
     {
         "id": 31,
@@ -496,7 +543,9 @@
         "local": 5,
         "nascimento": "11-03-2020",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/cats/malu1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1JtdyWwKijHUNcp3wkLhBxqAe9ZmLEI0b"        
+        ]
     },
     {
         "id": 32,
@@ -511,7 +560,9 @@
         "local": 6,
         "nascimento": "25-05-2019",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/zeus1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1QquGo1xnUsJQXhJIo3aoYJm954dN-4Oh"        
+        ]
     },
     {
         "id": 33,
@@ -526,7 +577,9 @@
         "local": 7,
         "nascimento": "18-02-2022",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/sofia1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1VennMN7BHTZZUGeJfbxavm4voWCgfFi8"        
+        ]
     },
     {
         "id": 34,
@@ -541,7 +594,9 @@
         "local": 8,
         "nascimento": "05-04-2021",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/toby1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1N8mwICaQd0OEh7NC529KTzie-PANkTQj"        
+        ]
     },
     {
         "id": 35,
@@ -556,7 +611,9 @@
         "local": 9,
         "nascimento": "14-09-2021",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/cats/pandora1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1kYKeMJ964Z-XT3dvecp3PjaicVcpqMqy"        
+        ]
     },
     {
         "id": 36,
@@ -571,7 +628,9 @@
         "local": 0,
         "nascimento": "20-06-2016",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/barto1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1Bz6GKtIvQFvXjrczYyNqYZDJ7knrARqy"        
+        ]
     },
     {
         "id": 37,
@@ -586,7 +645,9 @@
         "local": 1,
         "nascimento": "09-07-2020",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/cats/lia1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1Wb8Kffnazilz0txtY0o736b3DJ-6NX1D"        
+        ]
     },
     {
         "id": 38,
@@ -601,7 +662,9 @@
         "local": 2,
         "nascimento": "10-10-2021",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/mike1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1r21sqNU-SrUjwXyxSacsWyY4Ler_Z4VQ"        
+        ]
     },
     {
         "id": 39,
@@ -616,7 +679,9 @@
         "local": 3,
         "nascimento": "02-12-2022",
         "adotado": true,
-        "fotos": ["https://google.drive.com.br/fotos/cats/suri1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1VQEMybKxNPOa2GXVTgbZAXWny9iw9aV5"        
+        ]
     },
     {
         "id": 40,
@@ -631,7 +696,9 @@
         "local": 4,
         "nascimento": "25-12-2019",
         "adotado": true,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/apolo1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1wDoAZXmtIPMQNncuaz3T3h85zVgxVP_M"        
+        ]
     },
     {
         "id": 41,
@@ -646,7 +713,9 @@
         "local": 5,
         "nascimento": "19-09-2021",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/lola2.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1q60QhP6e4U0yGsqg4bTdTcQad6q_romb"        
+        ]
     },
     {
         "id": 42,
@@ -661,7 +730,9 @@
         "local": 6,
         "nascimento": "04-05-2023",
         "adotado": true,
-        "fotos": ["https://google.drive.com.br/fotos/cats/romeu1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1fMIj8bNxDjtV24QUKpfRtQZ6hksNWDs6"        
+        ]
     },
     {
         "id": 43,
@@ -676,7 +747,9 @@
         "local": 7,
         "nascimento": "17-11-2022",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/cats/sol1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1O5GOCGIeSd5fIPkDJIkVzMDjw_qxKZBY"        
+        ]
     },
     {
         "id": 44,
@@ -691,7 +764,9 @@
         "local": 8,
         "nascimento": "10-10-2021",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/pluto1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=12jHPAE4KER9oSEOzWts8YD7s7gy7ex_q"        
+        ]
     },
     {
         "id": 45,
@@ -706,6 +781,8 @@
         "local": 9,
         "nascimento": "01-08-2020",
         "adotado": false,
-        "fotos": ["https://google.drive.com.br/fotos/dogs/lulu1.png"]
+        "fotos": [            
+            "https://drive.usercontent.google.com/download?id=1-YdiGqYKGpB2lo3Ln7dMa79mQ-KBifgK"        
+        ]
     }
 ]

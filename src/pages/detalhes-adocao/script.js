@@ -1,32 +1,81 @@
-import { animals } from "./data.animals.js"
-
 let galery = document.querySelector(".galery")
 const openModal = document.querySelector('.mobile-menu')
 const modal = document.querySelector('#modal')
 const fade = document.querySelector('#fade')
 
-mostrarCards()
-
-function criarCards(item){
-    galery.innerHTML += `
-    <div class="card-animals">
-            <img src="../../assets/images/${item.imagem}" alt="animal-photo" class="img-animal">
-            <p class="card-name">${item.nome}</p>
-            <p class="card-local">${item.local}</p>
-        </div>
-`
+function listarAnimaisAxios() {
+    axios.get("http://localhost:3001/api/animais")
+        .then(response => {
+            const animais = response.data;
+            listarAnimais(animais);
+            return animais;
+        })
+        .catch(error => {
+            console.error("Falha ao carregar json:", error);
+        });    
 }
+listarAnimaisAxios()
 
-function mostrarCards(){
-    for(let k in animals){
-        let pet = animals[k]
-
-        criarCards(pet)
-
+function listarAnimais(animais) {
+    for(let k = 0; k < animais.data.length; k++){
+        var animal = animais.data[k];
+        criarCards(animal);
     }
-
 }
 
+function criarCards(animal) {
+    const foto = animal.fotos && animal.fotos.length > 0 ? animal.fotos[0] : "default.jpg";
+
+    galery.innerHTML += `
+    <div style="
+        background:#fff;
+        border-radius:12px;
+        overflow:hidden;
+        box-shadow:0 4px 12px rgba(0,0,0,0.15);
+        width:100%;
+        max-width:250px;
+        display:flex;
+        flex-direction:column;
+        transition:transform 0.2s ease, box-shadow 0.2s ease;
+        margin:auto;
+    "
+    onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'"
+    onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'"
+    >
+        <img src="${foto}" alt="animal-photo" style="
+            width:100%;
+            height:200px;
+            object-fit:cover;
+        ">
+
+        <p style="
+            font-size:16px;
+            font-weight:bold;
+            color:#2196f3;
+            margin:10px 0 4px 0;
+            text-align:center;
+        ">${animal.nome}</p>
+
+        <p style="
+            font-size:14px;
+            color:#555;
+            margin-bottom:12px;
+            text-align:center;
+        ">${animal.local}</p>
+    </div>
+    `;
+}
+
+// aplica estilo ao container também
+Object.assign(galery.style, {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+    gap: "20px",
+    padding: "20px",
+    justifyItems: "center"
+});
+
+//function para abrir o modal
 const toggleModal = () => {
     modal.classList.toggle('hide')
     fade.classList.toggle('hide')

@@ -24,7 +24,8 @@ function listarAnimais(animais) {
 }
 
 function criarCards(animal) {
-    const foto = animal.fotos && animal.fotos.length > 0 ? animal.fotos[0] : "default.jpg";
+    const foto = animal.fotos && animal.fotos.length > 0 ? animal.fotos[0] : 
+    "https://thumbs.dreamstime.com/b/no-image-available-icon-vector-illustration-flat-design-140476186.jpg";
 
     galery.innerHTML += `
     <div style="

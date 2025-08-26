@@ -85,3 +85,20 @@ const toggleModal = () => {
 openModal.addEventListener('click', toggleModal)
 fade.addEventListener('click',toggleModal)
 
+function selectPage(event){
+    const pages = document.querySelectorAll('.pagination span')
+    pages.forEach((page) => {
+        page.classList.remove('active')
+    })  
+    event.target.classList.add('active')
+}
+
+function clickLeft() {
+
+
+}
+
+function clickRight() {
+
+    
+}

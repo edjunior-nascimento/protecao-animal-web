@@ -2,30 +2,41 @@ let galery = document.querySelector(".galery")
 const openModal = document.querySelector('.mobile-menu')
 const modal = document.querySelector('#modal')
 const fade = document.querySelector('#fade')
+const paginationContainer = document.querySelector('.pagination')
+
+let animaisCache = []      // guarda todos os animais recebidos da API
+let paginaAtual = 1        // começa na página 1
+const limite = 6           // quantidade de cards por página
 
 function listarAnimaisAxios() {
     axios.get("http://localhost:3001/api/animais")
         .then(response => {
-            const animais = response.data;
-            listarAnimais(animais);
-            return animais;
+            animaisCache = response.data.data
+            renderizarPagina()
+            renderizarPaginacao()
         })
         .catch(error => {
-            console.error("Falha ao carregar json:", error);
-        });    
+            console.error("Falha ao carregar json:", error)
+        })    
 }
 listarAnimaisAxios()
 
-function listarAnimais(animais) {
-    for(let k = 0; k < animais.data.length; k++){
-        var animal = animais.data[k];
-        criarCards(animal);
-    }
+
+// Renderizar cards da página atual
+function renderizarPagina() {
+    galery.innerHTML = ""
+
+    const start = (paginaAtual - 1) * limite
+    const end = start + limite
+    const pagina = animaisCache.slice(start, end)
+
+    pagina.forEach(animal => criarCards(animal))
 }
 
+// Criar um card
 function criarCards(animal) {
     const foto = animal.fotos && animal.fotos.length > 0 ? animal.fotos[0] : 
-    "https://thumbs.dreamstime.com/b/no-image-available-icon-vector-illustration-flat-design-140476186.jpg";
+    "https://thumbs.dreamstime.com/b/no-image-available-icon-vector-illustration-flat-design-140476186.jpg"
 
     galery.innerHTML += `
     <div style="
@@ -64,41 +75,82 @@ function criarCards(animal) {
             text-align:center;
         ">${animal.local}</p>
     </div>
-    `;
+    `
 }
 
-// aplica estilo ao container também
+// Estilo da galeria
 Object.assign(galery.style, {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
     gap: "20px",
     padding: "20px",
     justifyItems: "center"
-});
+})
 
-//function para abrir o modal
+// Função para abrir modal
 const toggleModal = () => {
     modal.classList.toggle('hide')
     fade.classList.toggle('hide')
 }
-
 openModal.addEventListener('click', toggleModal)
-fade.addEventListener('click',toggleModal)
+fade.addEventListener('click', toggleModal)
 
+// ---------------- PAGINAÇÃO DINÂMICA ----------------
+function renderizarPaginacao() {
+    paginationContainer.innerHTML = "" // limpa antes
+
+    // Botão esquerda
+    const left = document.createElement("span")
+    left.innerHTML = "&lt;"
+    left.onclick = clickLeft
+    paginationContainer.appendChild(left)
+
+    const totalPaginas = Math.ceil(animaisCache.length / limite)
+
+    // Botões numéricos
+    for (let i = 1; i <= totalPaginas; i++) {
+        const pageBtn = document.createElement("span")
+        pageBtn.innerText = i
+        pageBtn.dataset.page = i
+
+        if (i === paginaAtual) {
+            pageBtn.classList.add("active")
+        }
+
+        pageBtn.onclick = selectPage
+        paginationContainer.appendChild(pageBtn)
+    }
+
+    // Botão direita
+    const right = document.createElement("span")
+    right.innerHTML = "&gt;"
+    right.onclick = clickRight
+    paginationContainer.appendChild(right)
+}
+
+// Seleção direta
 function selectPage(event){
-    const pages = document.querySelectorAll('.pagination span')
-    pages.forEach((page) => {
-        page.classList.remove('active')
-    })  
-    event.target.classList.add('active')
+    paginaAtual = parseInt(event.target.dataset.page)
+    renderizarPagina()
+    renderizarPaginacao() // atualiza active
 }
 
+// Botão Esquerda
 function clickLeft() {
-
-
+    if (paginaAtual > 1) {
+        paginaAtual--
+        renderizarPagina()
+        renderizarPaginacao()
+    }
 }
 
+// Botão Direita
 function clickRight() {
-
-    
+    const totalPaginas = Math.ceil(animaisCache.length / limite)
+    if (paginaAtual < totalPaginas) {
+        paginaAtual++
+        renderizarPagina()
+        renderizarPaginacao()
+    }
 }
+

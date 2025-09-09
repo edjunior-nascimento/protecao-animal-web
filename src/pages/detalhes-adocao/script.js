@@ -6,7 +6,7 @@ const paginationContainer = document.querySelector('.pagination')
 
 let animaisCache = []      // guarda todos os animais recebidos da API
 let paginaAtual = 1        // começa na página 1
-const limite = 6           // quantidade de cards por página
+const limite = 10           // quantidade de cards por página
 
 function listarAnimaisAxios() {
     axios.get("http://localhost:3001/api/animais")
@@ -35,57 +35,17 @@ function renderizarPagina() {
 
 // Criar um card
 function criarCards(animal) {
-    const foto = animal.fotos && animal.fotos.length > 0 ? animal.fotos[0] : 
-    "https://thumbs.dreamstime.com/b/no-image-available-icon-vector-illustration-flat-design-140476186.jpg"
+    const foto = animal.fotos && animal.fotos.length > 0 && animal.fotos[0]!== ""? animal.fotos[0] : 
+    "../../assets/images/erro.png"
 
     galery.innerHTML += `
-    <div style="
-        background:#fff;
-        border-radius:12px;
-        overflow:hidden;
-        box-shadow:0 4px 12px rgba(0,0,0,0.15);
-        width:100%;
-        max-width:250px;
-        display:flex;
-        flex-direction:column;
-        transition:transform 0.2s ease, box-shadow 0.2s ease;
-        margin:auto;
-    "
-    onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'"
-    onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'"
-    >
-        <img src="${foto}" alt="animal-photo" style="
-            width:100%;
-            height:200px;
-            object-fit:cover;
-        ">
-
-        <p style="
-            font-size:16px;
-            font-weight:bold;
-            color:#2196f3;
-            margin:10px 0 4px 0;
-            text-align:center;
-        ">${animal.nome}</p>
-
-        <p style="
-            font-size:14px;
-            color:#555;
-            margin-bottom:12px;
-            text-align:center;
-        ">${animal.local}</p>
-    </div>
-    `
+        <div class="card-animals">
+                <img src="${foto}" alt="animal-photo" class="img-animal">
+                <p class="card-name">${animal.nome}</p>
+                <p class="card-local">${animal.local}</p>
+            </div>`
 }
 
-// Estilo da galeria
-Object.assign(galery.style, {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
-    gap: "20px",
-    padding: "20px",
-    justifyItems: "center"
-})
 
 // Função para abrir modal
 const toggleModal = () => {

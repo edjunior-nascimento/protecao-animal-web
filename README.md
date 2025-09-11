@@ -34,7 +34,18 @@ Conectar pessoas apaixonadas por animais com ONGs e projetos que promovem sua pr
    npm start
    ```
 4. Acesse no navegador: `http://localhost:3000`
-
+### rodar Backend Mockado
+1. Instale as dependências:
+   ```bash
+   cd backend-mock
+   npm install
+   cd..
+   ```
+2. Inicie o servidor:
+   ```bash
+   npm run start:back
+   ```
+3. Acesse no navegador: `http://localhost:3001`
 <!-- ## Estrutura do Projeto
 
 ```plaintext

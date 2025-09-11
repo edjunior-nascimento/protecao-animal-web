@@ -27,6 +27,8 @@ function mostrarCards(){
 
 }
 
+
+//MODAL MENU
 const toggleModal = () => {
     modal.classList.toggle('hide')
     fade.classList.toggle('hide')
@@ -35,3 +37,10 @@ const toggleModal = () => {
 openModal.addEventListener('click', toggleModal)
 fade.addEventListener('click',toggleModal)
 
+
+
+let pagi = querySelector(".pages")
+pagi.addEventListener('click', function(){
+  pagi.style.backgroundColor = 'yellow'
+})
+ 

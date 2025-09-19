@@ -4,24 +4,55 @@ const modal = document.querySelector('#modal')
 const fade = document.querySelector('#fade')
 const paginationContainer = document.querySelector('.pagination')
 
-let animaisCache = []      // guarda todos os animais recebidos da API
+let animaisCache = []       // guarda todos os animais recebidos da API
+let locaisCache = []    // guarda todos os locais recebidos da API
 let paginaAtual = 1        // começa na página 1
 const limite = 10           // quantidade de cards por página
+
+listarAnimaisAxios()
 
 function listarAnimaisAxios() {
     axios.get("http://localhost:3001/api/animais")
         .then(response => {
             animaisCache = response.data.data
+            listarLocaisAxios()
+           
+        })
+        .catch(error => {
+            console.error("Falha ao carregar json:", error)
+        })
+}
+
+
+function listarLocaisAxios() {
+    axios.get("http://localhost:3001/api/locais")
+        .then(response => {
+            locaisCache = response.data.data
+             converterAnimaisLocais()
             renderizarPagina()
             renderizarPaginacao()
         })
         .catch(error => {
             console.error("Falha ao carregar json:", error)
-        })    
+        })
 }
-listarAnimaisAxios()
 
 
+function getLocalNomeById(id) {
+    for (let i = 0; i < locaisCache.length; i++) {
+        if (locaisCache[i].id === id) {
+            return locaisCache[i].nome
+        }
+    }
+}
+
+function converterAnimaisLocais() {
+    for (let i = 0; i < animaisCache.length; i++) {
+        const localId = animaisCache[i].id
+        const localNome = getLocalNomeById(localId)
+        animaisCache[i].local = localNome
+    }
+}
 // Renderizar cards da página atual
 function renderizarPagina() {
     galery.innerHTML = ""
@@ -35,8 +66,8 @@ function renderizarPagina() {
 
 // Criar um card
 function criarCards(animal) {
-    const foto = animal.fotos && animal.fotos.length > 0 && animal.fotos[0]!== ""? animal.fotos[0] : 
-    "../../assets/images/erro.png"
+    const foto = animal.fotos && animal.fotos.length > 0 && animal.fotos[0] !== "" ? animal.fotos[0] :
+        "../../assets/images/erro.png"
 
     galery.innerHTML += `
         <div class="card-animals">
@@ -89,7 +120,7 @@ function renderizarPaginacao() {
 }
 
 // Seleção direta
-function selectPage(event){
+function selectPage(event) {
     paginaAtual = parseInt(event.target.dataset.page)
     renderizarPagina()
     renderizarPaginacao() // atualiza active
@@ -113,4 +144,7 @@ function clickRight() {
         renderizarPaginacao()
     }
 }
+
+// ----------------------------------------------------------------
+
 

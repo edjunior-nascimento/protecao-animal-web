@@ -56,26 +56,30 @@ let indice = 0
 let tamanho = 3
 
 function botaoAfter(){
-    let visivel = []
-
-    
-    let init = indice 
-    let fim = indice + tamanho
-
-    visivel = fotosArray.slice(init,fim)
-    console.log(visivel)
-    indice ++
+    if((indice + tamanho) != fotosArray.length){
+       indice ++
+        exibirGaleria()
+  }   
 }
 
 function botaoPrev(){
-    
-    let visivel = [] 
-    let init = indice
-    let fim = indice + tamanho 
+
+    if(indice > 0){
+       indice --
+       exibirGaleria()
+   }
+
+}
+
+function exibirGaleria(){
+    let visivel = []
+     let init = indice 
+    let fim = indice + tamanho
+
     visivel = fotosArray.slice(init,fim)
+    
     console.log(visivel)
-    indice --
 }
 
 
-
+exibirGaleria()

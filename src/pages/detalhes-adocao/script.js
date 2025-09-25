@@ -53,6 +53,7 @@ function converterAnimaisLocais() {
         animaisCache[i].local = localNome
     }
 }
+
 // Renderizar cards da página atual
 function renderizarPagina() {
     galery.innerHTML = ""
@@ -72,6 +73,8 @@ function criarCards(animal) {
     galery.innerHTML += `
         <div class="card-animals">
                 <img src="${foto}" alt="animal-photo" class="img-animal">
+                <div class="card-adotado"> <p >${animal.adotado ? "Adotado" : "Disponível"}</p>
+                </div>
                 <p class="card-name">${animal.nome}</p>
                 <p class="card-local">${animal.local}</p>
             </div>`

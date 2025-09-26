@@ -11,75 +11,65 @@ fade.addEventListener('click',toggleModal)
 
 
 // Requisição Usando Axios
+let galeriaGlobal = [] // variável global
+let indice = 0
+let tamanho = 3
+listarAnimaisAxios()
+
 function listarAnimaisAxios() {
     axios.get("http://localhost:3001/api/galeria")
         .then(response => {
-            let galeriaGlobal = response.data;
-          
-            listaGaleria(galeriaGlobal);
-                    }
-    )
-        
+            galeriaGlobal = response.data.data // agora atualiza a variável global corretamente
+             
+            cardColecao() // chama sem argumentos, pois usará a variável global
+        })
         .catch(error => {
-            console.error("Falha ao carregar json:", error);
-        });    
+            console.error("Falha ao carregar json:", error)
+        })
 }
-function listaGaleria(listaItem){
-    for(let k = 0; k < 3; k++){
-        var colecao = listaItem.data[k]
-        cardColecao(colecao)
-        
+
+function botaoAfter() {
+    if (indice + tamanho < galeriaGlobal.length) {
+        indice += tamanho
+        cardColecao()
     }
-
-
-   
-}
-function cardColecao(galeria){
-    var divFotos = document.querySelector(".fotos");
-     divFotos.innerHTML+=
-     `  <div style="width: 300px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); padding: 16px; margin: 20px auto; font-family: Arial, sans-serif;">
-            <img style="display: block; width: 100%;" src="${galeria.fotos[0]}" alt="Imagem do Google Drive">
-            <h2 style="margin: 10px 0 5px;">Nome: ${galeria.nome}</h2>
-            <p style="margin: 5px 0;">Espécie: ${galeria.nome}</p>
-            <p style="margin: 5px 0;">Obs: ${galeria.observacoes}</p>
-        </div>
-     `;
 }
 
-listarAnimaisAxios()
+function botaoPrev() {
+    if (indice - tamanho >= 0) {
+        indice -= tamanho
+        cardColecao()
+    }
+}
+
+function cardColecao() {
+    let init = indice
+    let fim = indice + tamanho
+    let visivel = galeriaGlobal.slice(init, fim)
+
+    let divFotos = document.querySelector(".fotos")
+    divFotos.innerHTML = "" // limpa antes de exibir nova página
+
+    visivel.forEach(galeria => {
+        divFotos.innerHTML += `
+            <div style="width: 300px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); padding: 16px; margin: 20px auto; font-family: Arial, sans-serif;">
+                <img style="display: block; width: 100%; height: 10rem" src="${galeria.fotos[0]}" alt="Imagem doa.nome}</h2>
+                <p style="margin: 5px 0;">Espécie: ${galeria.nome}</p>
+                <p style="margin: 5px 0;">Obs: ${galeria.observacoes}</p>
+            </div>
+        `
+    })
+}
+
+// inicia o carregamento
+
 
 // pagination
 
-const fotosArray = ["a",'b','c','d','e','f','g','h','i','j','k','l','m']
 
-let indice = 0
-let tamanho = 3
 
-function botaoAfter(){
-    if((indice + tamanho) != fotosArray.length){
-       indice ++
-        exibirGaleria()
-  }   
-}
 
-function botaoPrev(){
 
-    if(indice > 0){
-       indice --
-       exibirGaleria()
-   }
 
-}
 
-function exibirGaleria(){
-    let visivel = []
-     let init = indice 
-    let fim = indice + tamanho
-
-    visivel = fotosArray.slice(init,fim)
     
-    console.log(visivel)
-}
-
-
-exibirGaleria()

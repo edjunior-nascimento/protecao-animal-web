@@ -8,16 +8,37 @@
   
 </head>
 <body>
-  <header class="topo">
-    <div class="logo">ONG Animal</div>
-    <nav>
-      <ul>
-        <li><a href="#">Pagina inicial</a></li>
+  <header>
+  <div>
+    <img class="logo" src="../../assets/images/logo_protecao.png" alt="logo Protecao animal" />
+        <button class="open-modal">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <div id="fade"></div>
+        <div class="modal">
+          <div class="textModal"><img src="../../assets/icons/game-icons_dog-house.png" alt="">
+            <p> Pagina Inicial</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/Vector.png" alt="">
+          <p>Quero Adotar</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/bxs_donate-heart.png" alt="">
+            <p>Quero Doar</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/ic_baseline-diversity-3.png" alt="">
+            <p>Quem Somos</p>
+          </div>
+        </div>
+      <nav>
+        <ul>
+        <li><a href="../inicial/index.html">Pagina inicial</a></li>
         <li><a href="../doacao/index.html">Quero ajudar</a></li>
         <li><a href="../adocao/index.html">Quero adotar</a></li>
         <li><a href="../sobre/index.html">Quem somos</a></li>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
   </header>
 
   <section class="lista"></section>
@@ -62,6 +83,8 @@
   <section class="galeria">
     <a href="../galeria/index.html"><h2>Galeria de fotos</h2></a>
     <div class="fotos">
+      <div class="setas">
+      <img class="setas "src="../../assets/icons/lucide_chevron-left.png" alt=""></div>
       <div class="foto">
         <img src="../../assets/images/Santo-Andre-promove-segunda-edicao-do-ano-da-feira-de-adocao-de-animais.jpg" alt="Feira de adoção">
         <p>Feira de adoção</p>
@@ -74,45 +97,72 @@
         <img src="../../assets/images/cao-dominio-petlove4.jpeg" alt="Voluntários">
         <p>Voluntários</p>
       </div>
+      <div class="setas">
+      <img  src="../../assets/icons/lucide_chevron-right.png" alt=""></div>
     </div>
+      
   </section>
+    <div class="gato">
+    <img src="../../assets/images/gato_footer.png" alt="">
+  </div>
 
-  <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Sobre a Proteção Animal</h3>
-                <p>Nosso compromisso é proteger e ajudar animais em situação de vulnerabilidade.</p>
-            </div>
-
-            <div class="footer-column">
-                <h3>Colabore</h3>
-                <ul>
-                    <li><a href="../doacao/index.html">Doe agora</a></li>
-                    <li><a href="../sobre/index.html">Seja um voluntário</a></li>
-                    <li><a href="../adocao/index.html">Adote um pet</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Contato</h3>
-                <ul>
-                    <li>Email: contato@protecaoanimal.org</li>
-                    <li>Telefone: (88) 9999-9999</li>
-                    <li>Endereço: Rua Senador Catunda, N 123 CE</li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Redes Sociais</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/protecaoanimalgba/"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
+ <footer>
+    <div class="footer-container">
+      <div class="footer-primary">
+        <div class="footer-section-1">
+          <div class="title-footer">
+            <h4>Sobre a Proteção Animal</h4>
+          </div>
+          <div>
+            <p><a href="../sobre/index.html">Sobre a proteção animal</a></p>
+          </div>
+          <div>
+            <p><a href="../formulario-castracao/index.html">Campanhas</a></p>
+          </div>
+          <div>
+            <p><a href="#">Termos de uso e politica de privacidade</a></p>
+          </div>
         </div>
-    </footer>
+        <div class="footer-section-2">
+          <div class="title-footer">
+            <h4 c>Colabore</h4>
+          </div>
+          <div>
+            <p><a href="../doacao/index.html">Doe qualquer valor</a></p>
+          </div>
+          <div>
+            <p><a href="#">Seja uma Empresa Parceira</a></p>
+          </div>
+        </div>
+        <div class="footer-section-3">
+          <div class="title-footer">
+            <h4>Contato</h4>
+          </div>
+          <div>
+            <p>Email</p>
+            <p><a href="mailto:protecaoanimal@gmail.com">protecaoanimal@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="footer-section-4">
+          <div class="title-footer">
+            <h4>Redes Sociais</h4>
+          </div>
+          <div class="social-icons">
+            <div>
+              <a href="#"><img src="../../assets/icons/ic_whatsapp_black.png" alt="" /></a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/protecaoanimalgba/"><img src="../../assets/icons/ic_instagram_black.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-secondary">
+      <img src="../../assets/images/logo_protecao.png"" alt="img-logo" />
+    </div>
+  </footer>
+  <script src="./script.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="../../services/exemplo-request.js"></script>

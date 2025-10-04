@@ -28,7 +28,7 @@ function listarLocaisAxios() {
     axios.get("http://localhost:3001/api/locais")
         .then(response => {
             locaisCache = response.data.data
-             converterAnimaisLocais()
+            converterAnimaisLocais()
             renderizarPagina()
             renderizarPaginacao()
         })

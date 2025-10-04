@@ -84,6 +84,39 @@ app.get('/api/galeria', (req, res) => {
   });
 });
 
+app.get('/api/locais', (req, res) => {      
+  const filePath = path.join(__dirname, 'json/locais.json');
+
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).json({
+        code: 500,
+        status: "error",
+        message: "Erro ao carregar os dados dos locais",
+        data: null
+      });
+    }
+
+    try {
+      const locais = JSON.parse(data);
+      return res.status(200).json({
+        code: 200,
+        status: "success",
+        message: "locais retornada com sucesso",
+        data: locais
+      });
+
+    } catch (parseError) {
+       return res.status(500).json({
+        code: 500,
+        status: "error",
+        message: "Erro ao interpretar locais",
+        data: null
+      });
+    }
+  });
+});
+
 app.post('/api/doacao/doar', (req, res) => {
     const data = req.body;
     try {

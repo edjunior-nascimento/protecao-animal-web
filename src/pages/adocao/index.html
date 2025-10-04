@@ -97,14 +97,21 @@
             
             -->
         </section>
+
+
         <div class="pagination">
-            <a href="#" id="seta" > &lt </a>
+            
+            
+            <button id="Prev" class="seta" onclick="botaoPrev()">&lt</button>
+
             <a href="#" class="active">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">5</a>
-            <a href="#" id="seta">></a>
+            
+
+             <button id="After"class="seta" onclick="botaoAfter()">></button>
         </div>
     </main>
     <div id="big-cat">
@@ -146,6 +153,9 @@
         </div>
     </footer>
     
-<script src="script.js" type="module"></script>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+
 </html>

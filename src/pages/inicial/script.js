@@ -1,13 +1,18 @@
-const openModal = document.querySelector('.mobile-menu')
-const modal = document.querySelector('#modal')
-const fade = document.querySelector('#fade')
+const openBtn = document.querySelector('.open-modal');
+const modal = document.querySelector('.modal');
+const fade = document.getElementById('fade');
 
-const toggleModal = () => {
-    modal.classList.toggle('hide')
-    fade.classList.toggle('hide')
+// Função para abrir e fechar modal
+function toggleModal() {
+  modal.classList.toggle('show');
+  fade.classList.toggle('show');
 }
-openModal.addEventListener('click', toggleModal)
-fade.addEventListener('click',toggleModal)
+
+// Abrir modal
+openBtn.addEventListener('click', toggleModal);
+
+// Fechar modal ao clicar fora
+fade.addEventListener('click', toggleModal);
 
 
 // Requisição Usando Axios
@@ -52,11 +57,13 @@ function cardColecao() {
 
     visivel.forEach(galeria => {
         divFotos.innerHTML += `
+        <a href="../galeria/index.html?id=${galeria.id}">
+        
             <div style="width: 300px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); padding: 16px; margin: 20px auto; font-family: Arial, sans-serif;">
-                <img style="display: block; width: 100%; height: 10rem" src="${galeria.fotos[0]}" alt="Imagem doa.nome}</h2>
-                <p style="margin: 5px 0;">Espécie: ${galeria.nome}</p>
-                <p style="margin: 5px 0;">Obs: ${galeria.observacoes}</p>
+                <img style="display: block; width: 100%; height: 10rem" src="${galeria.fotos[0]}" alt="Imagem do animal"</h2>
+                <p style="margin: 5px 0;"> ${galeria.nome}</p>
             </div>
+        </a>
         `
     })
 }

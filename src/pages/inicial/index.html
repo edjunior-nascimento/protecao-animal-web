@@ -10,20 +10,28 @@
 <body>
   <header>  
         <a href=""><img src="../../assets/images/logo_protecao.png" alt="logo-prot-animal" id="logo" width="140px"></a>
-        <!--MODAL-->
+         <!--MODAL-->
         <div id="fade" class="hide"></div>
-        <ul id="modal"class="hide">
-            <li><a href="../inicial/index.html">Pagina inicial</a></li>
-            <li><a href="../doacao/index.html">Quero ajudar</a></li>
-            <li><a href="../adocao/index.html">Quero adotar</a></li>
-            <li><a href="../sobre/index.html">Quem somos</a></li>
-        </ul>
-         <!--MODAL-->   
-        <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <div class="modal">
+       <div class="textModal"><img src="../../assets/icons/game-icons_dog-house.png" alt="">
+            <p> Pagina Inicial</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/Vector.png" alt="">
+          <p>Quero Adotar</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/bxs_donate-heart.png" alt="">
+            <p>Quero Doar</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/ic_baseline-diversity-3.png" alt="">
+            <p>Quem Somos</p>
+          </div>
         </div>
+          
+        <button class="open-modal">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
         <ul id="menu">
             <li><a href="../inicial/index.html">Pagina inicial</a></li>
             <li><a href="../doacao/index.html">Quero ajudar</a></li>
@@ -32,8 +40,9 @@
         </ul>
 
          <section class="hero">
-    <h1>"Doe esperanças, doe para salvar vidas!"</h1>
-    <a href="../formulario-castracao/index.html"> <button>Ver campanhas</button></a>
+    <h1>"Doe esperanças, doe para <br> salvar vidas."</h1>
+    <a href="../formulario-castracao/index.html">
+       <button>Ver campanhas</button></a>
    
   </section>
     </header>
@@ -79,22 +88,7 @@
   <div class="galeria">
     <button id = "prev" class="botao" onclick="botaoPrev()">&lt</button>
     <div class="fotos">
-      <div class="setas">
-      <img class="setas "src="../../assets/icons/lucide_chevron-left.png" alt=""></div>
-      <div class="foto">
-        <img src="../../assets/images/Santo-Andre-promove-segunda-edicao-do-ano-da-feira-de-adocao-de-animais.jpg" alt="Feira de adoção">
-        <p>Feira de adoção</p>
-      </div>
-      <div class="foto">
-        <img src="../../assets/images/20200502003451912817o.jpg" alt="Resgatado nas ruas">
-        <p>Resgatado nas ruas</p>
-      </div>
-      <div class="foto">
-        <img src="../../assets/images/cao-dominio-petlove4.jpeg" alt="Voluntários">
-        <p>Voluntários</p>
-      </div>
-      <div class="setas">
-      <img  src="../../assets/icons/lucide_chevron-right.png" alt=""></div>
+    <!-- As fotos serão inseridas aqui via JavaScript -->
     </div>
     <button id="after" class="botao" onclick="botaoAfter()">&gt</button>
   </div>

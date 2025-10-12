@@ -67,18 +67,26 @@ function renderizarPagina() {
 
 // Criar um card
 function criarCards(animal) {
-    const foto = animal.fotos && animal.fotos.length > 0 && animal.fotos[0] !== "" ? animal.fotos[0] :
-        "../../assets/images/erro.png"
+    const foto = animal.fotos && animal.fotos.length > 0 && animal.fotos[0] !== "" 
+        ? animal.fotos[0] 
+        : "../../assets/images/erro.png";
 
     galery.innerHTML += `
         <div class="card-animals">
-                <img src="${foto}" alt="animal-photo" class="img-animal">
-                <div class="card-adotado"> <p >${animal.adotado ? "Adotado" : "Disponível"}</p>
+            <img src="${foto}" alt="animal-photo" class="img-animal">
+            
+            ${animal.adotado ? `
+                <div class="card-adotado">
+                    <p>Adotado</p>
                 </div>
-                <p class="card-name">${animal.nome}</p>
-                <p class="card-local">${animal.local}</p>
-            </div>`
+            ` : ""}
+
+            <p class="card-name">${animal.nome}</p>
+            <p class="card-local">${animal.local}</p>
+        </div>
+    `;
 }
+
 
 
 // Função para abrir modal

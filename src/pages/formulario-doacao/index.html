@@ -1,11 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proteção Animal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link>
 </head>
+
 <body>
-    
+    <header>
+  <div><img class="logo" src="../../assets/images/logo_protecao.png" />
+        <button class="open-modal">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <div id="fade"></div>
+        <div class="modal">
+          <div class="textModal"><img src="../../assets/icons/game-icons_dog-house.png" alt="">
+            <p> Pagina Inicial</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/Vector.png" alt="">
+          <p>Quero Adotar</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/bxs_donate-heart.png" alt="">
+            <p>Quero Doar</p>
+          </div>
+          <div class="textModal"><img src="../../assets/icons/ic_baseline-diversity-3.png" alt="">
+            <p>Quem Somos</p>
+          </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../inicial/index.html">
+                        <p>Pagina Inicial</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../doacao/index.html">
+                        <p>Quero adotar</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../adocao/index.html">
+                        <p>Quero ajudar</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../sobre/index.html">
+                        <p>Quem somos</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="pag-ini">
+          <a href="../inicial/index.html">
+          <p>Página inicial / Doação/ Pagamento</p>
+        </a>
+      </div>
+        <div class="container">
+            <div class="sub-title">
+                <p>Além da opção de doação única, você pode escolher a opção de apoiar nossos projetos mensalmente!
+                </p>
+            </div>
+            <div class="valor">
+                <select name="cota" id="cota" class="cota">
+                    <option>Única</option>
+                    <option>Mensal</option>
+                    <select>
+                        <nav class="cota-inicial">
+                            <ul class="quantia">
+                                <li>
+                                    <a href="#">R$10,00</a>
+                                </li>
+                                <li>
+                                    <a href="#">R$20,00</a>
+                                </li>
+                                <li>
+                                    <a href="#">R$50,00</a>
+                                </li>
+                                <li>
+                                    <a href="#">R$100,00</a>
+                                </li>
+                                <li>
+                                    <a href="#">R$200,00</a>
+                                </li>
+                                <li class="outro-valor">
+                                    <a href="#">Outro valor</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="res"><span>Faça uma doação de 10,00</span>
+                        </div>
+            </div>
+            <hr class="pri-line">
+            <div class="card">
+                <div class="sub-title2">
+                    <p>Para fazer parte da nossa história, conte-nos um pouco sobre você:</p>
+                </div>
+                <hr>
+                <div class="dados">
+                    <form action="/send" method="post" target="_blank">
+                        <label>
+                            <p>Nome<span class="ast">*</span></p>
+                            <input type="text" name="nome" id="nome" class="cadastro">
+                        </label>
+                        <label class="tele">
+                            <p>Numero de telefone<span class="ast">*</span></p>
+                            <input type="text" name="telefone" id="telefone" class="cadastro">
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="card">
+                <div class="sub-dados">
+                    <div class="sub-title3">
+                        <p>Escolha a forma de doação:</p>
+                    </div>
+                    <hr>
+                    <form class="dados-pag" action="/send" method="post" target="_blank">
+                        <label class="box">
+                            <p>CPF<span class="ast">*</span></p>
+                            <input type="number" name="cpf" id="cpf" class="cadastro">
+                        </label>
+                        <label>
+                            <p>Formas de doação<span class="ast">*</span></p>
+                        </label>
+                        <select name="form-animal" id="form-animal" class="cadastro">
+                            <option></option>
+                            <option>Pix</option>
+                            <option>Cartão de crédito</option>
+                        </select>
+                        <label>
+                            <p>Número do cartão<span class="ast">*</span></p>
+                            <input type="number" name="cartao" id="cartao" class="cadastro">
+                        </label>
+                        <label>
+                            <p>Nome do cartão<span class="ast">*</span></p>
+                            <input type="text" name="nome-cartao" id="nome-cartao" class="cadastro">
+                        </label>
+                        <label>
+                            <p>Validade do cartão<span class="ast">*</span></p>
+                            <input type="date" name="" id="cartao" class="cadastro">
+                        </label>
+                        <label>
+                            <p>Dia da doação<span class="ast">*</span></p>
+                            <input type="date" name="data" id="data" class="cadastro">
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="resultado">
+                <div class="retorno">
+                    <div class="res-doacao">
+                        <p>R$10,00 Mensáis</p>
+                    </div>
+                    <div class="forma-pagamento">
+                        <p>Via cartão de crédito</p>
+                    </div>
+                </div>
+                <button type="submit" id="btn-doar">Doar</button>
+            </div>
+        </div>
+    </main>
+    <div class="gato"><img src="../../assets/images/gato_footer.png" alt=""></div>
+    <footer>
+    <div class="footer-container">
+      <div class="footer-primary">
+        <div class="footer-section-1">
+          <div class="title-footer">
+            <h4>Sobre a Proteção Animal</h4>
+          </div>
+          <div>
+            <p><a href="../sobre/index.html">Sobre a proteção animal</a></p>
+          </div>
+          <div>
+            <p><a href="../formulario-castracao/index.html">Campanhas</a></p>
+          </div>
+          <div>
+            <p><a href="#">Termos de uso e politica de privacidade</a></p>
+          </div>
+        </div>
+        <div class="footer-section-2">
+          <div class="title-footer">
+            <h4 c>Colabore</h4>
+          </div>
+          <div>
+            <p><a href="../doacao/index.html">Doe qualquer valor</a></p>
+          </div>
+          <div>
+            <p><a href="#">Seja uma Empresa Parceira</a></p>
+          </div>
+        </div>
+        <div class="footer-section-3">
+          <div class="title-footer">
+            <h4>Contato</h4>
+          </div>
+          <div>
+            <p>Email</p>
+            <p><a href="mailto:protecaoanimal@gmail.com">protecaoanimal@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="footer-section-4">
+          <div class="title-footer">
+            <h4>Redes Sociais</h4>
+          </div>
+          <div class="social-icons">
+            <div>
+              <a href="#"><img src="../../assets/icons/ic_whatsapp_black.png" alt="" /></a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/protecaoanimalgba/"><img src="../../assets/icons/ic_instagram_black.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-secondary">
+      <img src="../../assets/images/logo_protecao.png" alt="img-logo" />
+    </div>
+  </footer>
+  <script src="./script.js"></script>
 </body>
+
 </html>

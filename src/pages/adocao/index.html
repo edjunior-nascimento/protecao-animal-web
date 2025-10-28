@@ -1,26 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proteção Animal</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+    
 <body>
     <header>  
-        <a href=""><img src="../galeria/proteção.png" alt="logo-prot-animal" id="logo" width="140px"></a>   
-        
+        <a href=""><img src="../../assets/images/logo_protecao.png" alt="logo-prot-animal" id="logo" width="140px"></a>
+         <!--MODAL-->
+        <div id="fade" class="hide"></div>
+        <ul id="modal"class="hide">
+            <li><a href="../inicial/index.html">Pagina inicial</a></li>
+            <li><a href="../doacao/index.html">Quero ajudar</a></li>
+            <li><a href="../adocao/index.html">Quero adotar</a></li>
+            <li><a href="../sobre/index.html">Quem somos</a></li>
+        </ul>
+         <!--MODAL-->      
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
         <ul id="menu">
-            <li><a href="#">Pagina Inicial</a></li>
-            <li><a href="#">Quero Adotar</a></li>
-            <li><a href="#">Quero Ajudar</a></li>
-            <li><a href="#">Quem Somos</a></li>    
+        <li><a href="../inicial/index.html">Pagina inicial</a></li>
+        <li><a href="../doacao/index.html">Quero ajudar</a></li>
+        <li><a href="../adocao/index.html">Quero adotar</a></li>
+        <li><a href="../sobre/index.html">Quem somos</a></li>    
         </ul>
     </header>
     
     <main>
         <div id="hist">
-            <a href="#">Pagina Inicial</a> 
+            <a href="../inicial/index.html">Pagina Inicial</a> 
             <a>/</a>
             <a href="#">Adote</a>
         </div>
@@ -72,133 +87,75 @@
                 </div>
         </section>
         <section class="galery">
+            <!-- Itens implementado via javascript 
+            
             <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status">ADOTADO</p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status"></p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status">ADOTADO</p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status">ADOTADO</p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status"></p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status">ADOTADO</p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status">ADOTADO</p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status"></p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status">ADOTADO</p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status">ADOTADO</p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status"></p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status">ADOTADO</p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status">ADOTADO</p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status"></p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status">ADOTADO</p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-            <div class="card-animals">
-                <img src="imagens/${prato.imagem}" alt="${prato.nome}" class="img-animal">
-                <p class="card-status">ADOTADO</p>
-                <p class="card-name">Bibi</p>
-                <p class="card-local">Guaraciana do Norte</p>
-            </div>
-           
+                <img src="../../assets/images/img04-card-animal.png" alt="animal-photo" class="img-animal">
+                <p class="card-name">Totó</p>
+                <p class="card-local">Guaraciaba do Norte</p>
+            </div> 
+            
+            -->
         </section>
+
+
         <div class="pagination">
-            <a href="#" id="seta" > &lt </a>
+            
+            
+            <button id="Prev" class="seta" onclick="botaoPrev()">&lt</button>
+
             <a href="#" class="active">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">5</a>
-            <a href="#" id="seta">></a>
+            
+
+             <button id="After"class="seta" onclick="botaoAfter()">></button>
         </div>
     </main>
-    <div id="big-cat"></div>
+    <div id="big-cat">
+        <img src="../../assets/images/gato_footer.png" alt="logo-prot-animal" id="big-gato">
+    </div>
     <footer>
-        <div class="inf"><h3>Sobre a Proteção Animal</h3>
+        <div id="footer-primary">
+            <div class="inf">
+                <h3>Sobre a Proteção Animal</h3>
+                
+                <a href="../sobre/index.html"class="footer-item">Sobre a Proteção Animal</a>
+                <a href="../formulario-castracao/"class="footer-item">Campanhas</a>
+                <a href="#"class="footer-item">Termos de Uso e Politica de Privacidade</a>
+                </div>
         
-        <a href="#" class="footer-item">Sobre a Proteção Animall</a>
-        <a href="#"class="footer-item">Campanhas</a>
-        <a href="#"class="footer-item">Termos de Uso e Politica de Privacidade</a>
-        <a href="#"class="footer-item">Pagina Inicial</a></div>
-        <div class="inf"><h3>Colabore</h3>
-            <a href="#"class="footer-item">Doe qualquer valor</a>
-            <a href="#"class="footer-item">Seja uma empresa parceira</a>
+                <div class="inf"><h3>Colabore</h3>
+                    <a href="../doacao/index.html"class="footer-item">Doe qualquer valor</a>
+                    <a href="#"class="footer-item">Seja uma empresa parceira</a>
+                </div>
+        
+                <div class="inf"><h3>Contato</h3>
+                <p>Email:</p>
+                <a href="#"class="footer-item">protecaoanimal@gmail.com</a></div>
+        
+                <div class="inf">
+                    <h3>Rede Sociais</h3>
+                    <div class="social-icons">
+                        <div class="item-social">
+                          <a href=""><img src="../../assets/icons/ic_whatsapp_black.png" alt="wpp-img" class="icones"/></a>
+                        </div>
+                        <div class="item-social">
+                          <a href="https://www.instagram.com/protecaoanimalgba/"><img src="../../assets/icons/ic_instagram_black.png" alt="inst-img" class="icones" /></a>
+                        </div>
+                      </div>  
+                </div>
         </div>
-        <div class="inf"><h3>Contato</h3>
-        <p>Email:</p>
-        <a href="#"class="footer-item">protecaoanimal@gmail.com</a></div>
-        <div class="inf"><h3>Rede Sociais</h3></title></div>
-        <div id="rodape">
-            <a href=""><img src="../galeria/proteção.png" alt="logo-prot-animal" id="logo" width="140px"></a>
+        <div id="footer-secondary">
+            <a href=""><img src="../../assets/images/logo_protecao.png" alt="logo-prot-animal" id="logo" width="140px"></a>
         </div>
     </footer>
+    
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+
 </html>

@@ -1,0 +1,98 @@
+[33mcommit 64b0954dfb7500f0f1516fda3bf90eb8fd4224b4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m, [m[1;32m´r[m[33m, [m[1;32mstatus[m[33m, [m[1;32mfeature/formulario-doacao[m[33m)[m
+Merge: 7f2c890 712afc0
+Author: Edjúnior Nascimento <edjr.programmer@gmail.com>
+Date:   Mon Feb 10 20:16:21 2025 -0300
+
+    Merge pull request #3 from edjunior-nascimento/feature/formulario-castracao
+    
+    feature/formulario-castracao
+
+[33mcommit 712afc0402a99ff8b0e3e5e2bf031d428fe279dd[m
+Author: Edjofra Nascimento <113058980+edjofra@users.noreply.github.com>
+Date:   Mon Feb 10 16:37:08 2025 -0300
+
+    feature/formulario-castracao
+
+[33mcommit 7f2c890e3cfd2e58eab38c1cc1db943f4d22694a[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: enascime <edjunior.nascimento@capgemini.com>
+Date:   Wed Feb 5 14:15:54 2025 -0300
+
+    refactor(pastas): criar novas pastas para organização do projeto
+
+[33mcommit 8c66a9759a20b4d5db870ce93aa4c01613aef566[m
+Merge: c2538eb f785fe6
+Author: Edjúnior Nascimento <edjr.programmer@gmail.com>
+Date:   Mon Feb 3 19:49:51 2025 -0300
+
+    Merge pull request #1 from nilton99/feature/doacao
+    
+    Feature/doacao
+
+[33mcommit c2538ebae830b435edbe5d95052132394d365509[m
+Merge: 927045f a847de1
+Author: Edjúnior Nascimento <edjr.programmer@gmail.com>
+Date:   Mon Feb 3 19:49:30 2025 -0300
+
+    Merge pull request #2 from edjofra/main
+    
+    Adocao-page
+
+[33mcommit a847de1c1fe52dae6778d1508e9a551892ed020e[m
+Author: edjofra <113058980+edjofra@users.noreply.github.com>
+Date:   Mon Feb 3 18:21:03 2025 -0300
+
+    esqueleto-adocao-pag
+
+[33mcommit 258baed07dc40a9e375d438c3d6c943855ea63de[m
+Author: edjofra <113058980+edjofra@users.noreply.github.com>
+Date:   Mon Feb 3 09:03:30 2025 -0300
+
+    edit-header-menu
+
+[33mcommit f785fe6e64ca49850799ce1c1fed8eded5348d92[m
+Author: nilton almeida <niltonalmeida1999@gmail.com>
+Date:   Sun Feb 2 23:59:03 2025 -0300
+
+    tela de doacao
+
+[33mcommit a37f9b0077515f5b7b17e131d2f11a5695300719[m
+Author: nilton almeida <niltonalmeida1999@gmail.com>
+Date:   Sun Feb 2 20:57:56 2025 -0300
+
+    tela de doacao
+
+[33mcommit 760a13acb5f752dc0706bf76628a97215dce63a4[m
+Author: edjofra <113058980+edjofra@users.noreply.github.com>
+Date:   Thu Jan 30 09:34:54 2025 -0300
+
+    edit-menu
+
+[33mcommit 7c91ae322098355e29df0904bf026147bd6db9c4[m
+Author: edjofra <113058980+edjofra@users.noreply.github.com>
+Date:   Mon Jan 27 17:31:31 2025 -0300
+
+    adocao-header
+
+[33mcommit b0fcdb74c8660f5a148b9c626904949c28fadf60[m
+Author: edjofra <113058980+edjofra@users.noreply.github.com>
+Date:   Mon Jan 20 17:15:11 2025 -0300
+
+    Create index.html
+
+[33mcommit 927045f16c8ac580d975851f747f05b7b035dfd3[m
+Author: Edjunior Nascimento <edjr.programmer@gmail.com>
+Date:   Wed Jan 15 01:35:45 2025 -0300
+
+    Criação do repositorios das paginas
+
+[33mcommit 271a804721571bcef6b4eb32b00115f1bcfdb695[m
+Author: Edjunior Nascimento <edjr.programmer@gmail.com>
+Date:   Wed Jan 15 01:26:39 2025 -0300
+
+    Configuração no README.md, CONTRIBUTING.md e criação de repositorio das paginas
+
+[33mcommit 3be72f1101516b8f6f67c67b354e36e7e3759e79[m
+Author: Edjúnior Nascimento <edjr.programmer@gmail.com>
+Date:   Tue May 9 15:06:09 2023 -0300
+
+    Initial commit

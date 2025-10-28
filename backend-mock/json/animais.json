@@ -1,0 +1,797 @@
+[
+    {
+        "id": 0,
+        "nome": "Pietro",
+        "historia": "Pietro é um gato alegre e cheio de energia, com um olhar que derrete corações. Apesar de viver no abrigo, ele nunca perdeu a esperança de encontrar uma família. Pietro adora brincar, é extremamente carinhoso e está sempre pronto para te acompanhar em qualquer aventura.", 
+        "observacoes": "Se dá bem com outros cães e é ideal para famílias que buscam um companheiro ativo e leal. Pietro já está vacinado, castrado e pronto para encontrar um lar cheio de amor.",
+        "especie": 1,
+        "sexo": 0,
+        "porte": 0,
+        "temperamento": [ 11, 8, 5 ],
+        "situacao": [ 4, 0 ],
+        "local": 9,
+        "nascimento": "01-12-2022", 
+        "adotado": false,
+        "fotos": [
+            "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg",
+            "https://static.scientificamerican.com/sciam/cache/file/F766A67E-A8AA-4C90-A929C9AC67075D4B_source.jpg",
+            "https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg",
+            "https://cdn.mos.cms.futurecdn.net/KHQb3Ny62YxXnCEon4mm43.jpg"
+        ]
+    },
+    {
+        "id": 1,
+        "nome": "Luna",
+        "historia": "Luna foi resgatada das ruas e, desde então, tem mostrado ser uma gata muito dócil e carinhosa. Adora um colo e longas sonecas ao sol.",
+        "observacoes": "Ideal para apartamentos. Já está castrada, vacinada e vermifugada.",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [2, 4, 7],
+        "situacao": [0, 3],
+        "local": 3,
+        "nascimento": "15-03-2021",
+        "adotado": false,
+        "fotos": [
+            "https://static.scientificamerican.com/sciam/cache/file/F766A67E-A8AA-4C90-A929C9AC67075D4B_source.jpg",
+            "https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg",
+            "https://cdn.mos.cms.futurecdn.net/KHQb3Ny62YxXnCEon4mm43.jpg",
+            "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "nome": "Thor",
+        "historia": "Thor é um cão de porte grande, muito protetor e fiel. Adora correr ao ar livre e se dá bem com crianças.",
+        "observacoes": "Precisa de um espaço maior para viver e alguém que goste de passeios longos.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 2,
+        "temperamento": [1, 5, 8, 10],
+        "situacao": [],
+        "local": 5,
+        "nascimento": "02-07-2020",
+        "adotado": false,
+        "fotos": [
+            "https://i0.statig.com.br/bancodeimagens/2f/ym/i8/2fymi85z5vo5pcl5rsnsr3xgi.jpg",
+            "https://jpimg.com.br/uploads/2023/03/10-motivos-pelo-qual-o-vira-lata-caramelo-e-tao-amado-no-brasil.jpg",
+            "https://images.jota.info/wp-content/uploads/2023/04/pexels-rk-jajoria-1189673.jpg",
+            "https://blog.consuladoracao.com.br/wp-content/uploads/2024/12/vira-lata-caramelo.jpg"
+            ]
+    },
+    {
+        "id": 3,
+        "nome": "Mia",
+        "historia": "Mia foi encontrada com seus filhotes e levada ao abrigo. Muito meiga e inteligente, logo conquistou o coração dos voluntários.",
+        "observacoes": "Está castrada, vacinada e pronta para ser adotada.",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [0, 3, 6, 7],
+        "situacao": [2],
+        "local": 1,
+        "nascimento": "22-11-2021",
+        "adotado": false,
+        "fotos": [
+            "https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg",
+            "https://cdn.mos.cms.futurecdn.net/KHQb3Ny62YxXnCEon4mm43.jpg",
+            "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg"        ]
+        },
+    {
+        "id": 4,
+        "nome": "Max",
+        "historia": "Max é um cachorro brincalhão, adora correr no quintal e receber carinho. Foi deixado no abrigo por uma família que se mudou.",
+        "observacoes": "Recomendado para casas com quintal. Está com a saúde perfeita.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 1,
+        "temperamento": [2, 4, 6, 9, 10],
+        "situacao": [1, 4],
+        "local": 7,
+        "nascimento": "10-09-2019",
+        "adotado": true,
+        "fotos": [
+            "https://jpimg.com.br/uploads/2023/03/10-motivos-pelo-qual-o-vira-lata-caramelo-e-tao-amado-no-brasil.jpg",
+            "https://images.jota.info/wp-content/uploads/2023/04/pexels-rk-jajoria-1189673.jpg",
+            "https://blog.consuladoracao.com.br/wp-content/uploads/2024/12/vira-lata-caramelo.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "nome": "Nina",
+        "historia": "Nina é uma gatinha esperta que adora subir em móveis e observar tudo de cima. Foi resgatada de um terreno abandonado.",
+        "observacoes": "Muito curiosa e amigável com outros gatos.",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [1, 3, 5, 8],
+        "situacao": [0],
+        "local": 4,
+        "nascimento": "12-05-2022",
+        "adotado": true,
+        "fotos": [
+           "https://cdn.mos.cms.futurecdn.net/KHQb3Ny62YxXnCEon4mm43.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "nome": "Bidu",
+        "historia": "Bidu é um cãozinho cheio de energia e muito esperto. Foi encontrado em um parque, sozinho e faminto.",
+        "observacoes": "Ideal para famílias ativas. Já vacinado e castrado.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 0,
+        "temperamento": [1, 4, 5, 7],
+        "situacao": [0],
+        "local": 2,
+        "nascimento": "20-04-2022",
+        "adotado": false,
+        "fotos": [  
+            "https://images.jota.info/wp-content/uploads/2023/04/pexels-rk-jajoria-1189673.jpg",
+            "https://blog.consuladoracao.com.br/wp-content/uploads/2024/12/vira-lata-caramelo.jpg",
+            "https://jpimg.com.br/uploads/2023/03/10-motivos-pelo-qual-o-vira-lata-caramelo-e-tao-amado-no-brasil.jpg"       
+        ]
+    },
+    {
+        "id": 7,
+        "nome": "Tigrão",
+        "historia": "Tigrão é um gato grande, de pelos rajados, muito calmo e observador.",
+        "observacoes": "Perfeito para apartamentos e ambientes tranquilos.",
+        "especie": 1,
+        "sexo": 0,
+        "porte": 1,
+        "temperamento": [2, 3, 6],
+        "situacao": [],
+        "local": 6,
+        "nascimento": "01-01-2020",
+        "adotado": true,
+        "fotos": [
+            "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg"        
+        ]
+    },
+    {
+        "id": 8,
+        "nome": "Mel",
+        "historia": "Mel é uma cadelinha muito carinhosa, sempre abanana o rabo quando vê gente chegando.",
+        "observacoes": "Já vacinada, precisa de um lar com carinho.",
+        "especie": 2,
+        "sexo": 1,
+        "porte": 1,
+        "temperamento": [0, 5, 6],
+        "situacao": [1, 3],
+        "local": 8,
+        "nascimento": "05-08-2021",
+        "adotado": false,
+        "fotos": [            "https://www.petz.com.br/blog/wp-content/uploads/2020/01/vira-lata-caramelo-cao.jpg"        
+]
+    },
+    {
+        "id": 9,
+        "nome": "Ziggy",
+        "historia": "Ziggy é um gato muito inteligente que adora brincar com bolinhas.",
+        "observacoes": "Indicado para quem busca companhia divertida.",
+        "especie": 1,
+        "sexo": 0,
+        "porte": 0,
+        "temperamento": [2, 4, 9],
+        "situacao": [],
+        "local": 1,
+        "nascimento": "18-06-2022",
+        "adotado": false,
+        "fotos": [            
+            "https://vetmarlborough.co.nz/wp-content/uploads/cat-facts.jpg", 
+            "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg"        
+        ]
+    },
+    {
+        "id": 10,
+        "nome": "Léo",
+        "historia": "Léo foi abandonado filhote, mas nunca perdeu a alegria. Adora brincar com água.",
+        "observacoes": "Precisa de espaço e atenção diária.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 2,
+        "temperamento": [1, 3, 7, 10],
+        "situacao": [4],
+        "local": 0,
+        "nascimento": "22-12-2020",
+        "adotado": false,
+        "fotos": [ ""
+                  ]
+    },
+    {
+        "id": 11,
+        "nome": "Jade",
+        "historia": "Jade é uma gata muito meiga e companheira, sempre quer ficar no colo.",
+        "observacoes": "Ideal para idosos ou famílias calmas.",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [0, 4, 8],
+        "situacao": [1],
+        "local": 4,
+        "nascimento": "30-07-2022",
+        "adotado": false,
+        "fotos": [            
+            "https://image.petmd.com/files/styles/978x550/public/2023-09/how-smart-are-cats.jpg",       
+            "https://i.natgeofe.com/n/4cebbf38-5df4-4ed0-864a-4ebeb64d33a4/NationalGeographic_1468962.jpg"        
+        ]
+    },
+    {
+        "id": 12,
+        "nome": "Bolt",
+        "historia": "Bolt é rápido como um raio! Adora correr e brincar.",
+        "observacoes": "Excelente para quem gosta de atividades ao ar livre.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 1,
+        "temperamento": [5, 7, 10],
+        "situacao": [],
+        "local": 9,
+        "nascimento": "10-10-2021",
+        "adotado": false,
+        "fotos": [            
+            "https://msdelas.com.br/wp-content/uploads/2025/03/Feliz-Natal-2.png"        
+        ]
+    },
+    {
+        "id": 13,
+        "nome": "Lola",
+        "historia": "Lola é uma cadelinha tímida, mas muito carinhosa quando pega confiança.",
+        "observacoes": "Precisa de uma família paciente.",
+        "especie": 2,
+        "sexo": 1,
+        "porte": 1,
+        "temperamento": [1, 4, 6],
+        "situacao": [0, 2],
+        "local": 3,
+        "nascimento": "11-05-2021",
+        "fotos": [            
+            "https://upload.wikimedia.org/wikipedia/commons/7/70/Serena_REFON.jpg"        
+        ]
+    },
+    {
+        "id": 14,
+        "nome": "Frajola",
+        "historia": "Frajola é um gato esperto, que adora se esconder em caixas e brincar com barbantes.",
+        "observacoes": "Muito sociável com outros gatos.",
+        "especie": 1,
+        "sexo": 0,
+        "porte": 0,
+        "temperamento": [2, 3, 5],
+        "situacao": [],
+        "local": 7,
+        "nascimento": "02-02-2021",
+        "adotado": false,
+        "fotos": [            
+            "https://i.natgeofe.com/n/4cebbf38-5df4-4ed0-864a-4ebeb64d33a4/NationalGeographic_1468962.jpg",        
+            "https://www.rspcasa.org.au/wp-content/uploads/2024/08/Cat-Management-Act-Review-2.png"        
+        ]
+    },
+    {
+        "id": 15,
+        "nome": "Bela",
+        "historia": "Bela é uma cadelinha muito doce que ama ficar deitada perto das pessoas.",
+        "observacoes": "Calma e companheira, ideal para apartamento.",
+        "especie": 2,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [0, 3, 6],
+        "situacao": [3],
+        "local": 6,
+        "nascimento": "09-09-2020",
+        "adotado": true,
+        "fotos": [            
+            "https://love.doghero.com.br/wp-content/uploads/2018/09/ra%C3%A7a-de-cachorro-vira-lata-srd-1024x682.jpg"        
+        ]
+    },
+    {
+        "id": 16,
+        "nome": "Simba",
+        "historia": "Simba é curioso e muito aventureiro. Adora explorar qualquer canto da casa.",
+        "observacoes": "Precisa de brinquedos e estímulos.",
+        "especie": 1,
+        "sexo": 0,
+        "porte": 0,
+        "temperamento": [3, 5, 8],
+        "situacao": [0],
+        "local": 5,
+        "nascimento": "03-03-2022",
+        "adotado": true,
+        "fotos": ["https://media.4-paws.org/d/2/5/f/d25ff020556e4b5eae747c55576f3b50886c0b90/cut%20cat%20serhio%2002-1813x1811-720x719.jpg"]
+    },
+    {
+        "id": 17,
+        "nome": "Nico",
+        "historia": "Nico é um cachorro obediente e muito fiel, está sempre atento ao que acontece ao redor.",
+        "observacoes": "Ideal para vigilância.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 2,
+        "temperamento": [1, 6, 9],
+        "situacao": [],
+        "local": 2,
+        "nascimento": "14-04-2019",
+        "adotado": true,
+        "fotos": [            
+            "https://www.crmvpb.org.br/wp-content/uploads/2023/07/78ea8350-40ef-49b3-88e2-593819679159-1024x723.jpeg"        
+        ]
+    },
+    {
+        "id": 18,
+        "nome": "Amora",
+        "historia": "Amora tem um temperamento doce e adora dormir encolhidinha.",
+        "observacoes": "Ótima para quem mora sozinho.",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [0, 4, 7],
+        "situacao": [],
+        "local": 1,
+        "nascimento": "08-08-2020",
+        "adotado": false,
+        "fotos": [            
+            "https://catinaflat.blog/wp-content/uploads/2023/11/facts-about-cats.jpg"        
+        ]
+    },
+    {
+        "id": 19,
+        "nome": "Spike",
+        "historia": "Spike é um cão muito brincalhão, ama correr atrás de bolinhas e fazer bagunça.",
+        "observacoes": "Precisa de espaço e rotina ativa.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 1,
+        "temperamento": [1, 5, 8],
+        "situacao": [0, 2],
+        "local": 8,
+        "nascimento": "27-11-2022",
+        "adotado": false,
+        "fotos": [            
+            "https://www.shutterstock.com/image-photo/brown-mutt-dog-isolated-on-600nw-2324241801.jpg"        
+        ]
+    },
+    {
+        "id": 20,
+        "nome": "Mimi",
+        "historia": "Mimi é uma gatinha que adora carinho e dormir no colo.",
+        "observacoes": "Perfeita para famílias com crianças.",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [0, 2, 6],
+        "situacao": [],
+        "local": 0,
+        "nascimento": "17-06-2023",
+        "adotado": false,
+        "fotos": [            
+            "https://images.theconversation.com/files/651621/original/file-20250226-32-jxjhmy.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C5991%2C3997&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip"        
+        ]
+    },
+    {
+        "id": 21,
+        "nome": "Bob",
+        "historia": "Bob é um cão veterano, mas ainda muito ativo. Gosta de companhia humana.",
+        "observacoes": "Necessita atenção com a alimentação.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 2,
+        "temperamento": [1, 3, 6, 9],
+        "situacao": [1],
+        "local": 5,
+        "nascimento": "10-01-2018",
+        "adotado": false,
+        "fotos": [            
+            "https://www.adoropets.com.br/wp-content/uploads/2021/02/vira-lata-caramelo-tigrado.jpg"        
+        ]
+    },
+    {
+        "id": 22,
+        "nome": "Tina",
+        "historia": "Tina é alegre, muito sociável e sempre quer brincar com todo mundo.",
+        "observacoes": "Precisa de companhia e espaço para brincar.",
+        "especie": 2,
+        "sexo": 1,
+        "porte": 1,
+        "temperamento": [2, 5, 7, 10],
+        "situacao": [],
+        "local": 3,
+        "nascimento": "13-10-2022",
+        "adotado": false,
+        "fotos": [            
+            "https://img.freepik.com/fotos-premium/filhote-de-cachorro-tigrado-de-tamanho-medio-em-pe_772720-1567.jpg"        
+        ]
+    },
+    {
+        "id": 23,
+        "nome": "Tom",
+        "historia": "Tom é um gatinho muito esperto e curioso. Está sempre explorando cantos novos.",
+        "observacoes": "Adora brinquedos com penas e bolinhas.",
+        "especie": 1,
+        "sexo": 0,
+        "porte": 0,
+        "temperamento": [3, 4, 8],
+        "situacao": [],
+        "local": 6,
+        "nascimento": "23-04-2023",
+        "adotado": false,
+        "fotos": [            
+            "https://www.azhumane.org/wp-content/uploads/other_programs_hero-scaled.jpg"        
+        ]
+    },
+    {
+        "id": 24,
+        "nome": "Kira",
+        "historia": "Kira é uma cadelinha protetora e carinhosa, sempre alerta.",
+        "observacoes": "Ideal para quem busca uma companheira fiel.",
+        "especie": 2,
+        "sexo": 1,
+        "porte": 2,
+        "temperamento": [1, 6, 10],
+        "situacao": [0],
+        "local": 9,
+        "nascimento": "05-12-2019",
+        "adotado": false,
+        "fotos": [            
+            "https://blog-static.petlove.com.br/wp-content/uploads/2022/07/foto-de-vira-lata-com-boca-aberta-Petlove.jpg"        
+        ]
+    },
+    {
+        "id": 25,
+        "nome": "Chico",
+        "historia": "Chico é um cãozinho idoso, muito calmo e afetuoso.",
+        "observacoes": "Perfeito para ambientes tranquilos.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 1,
+        "temperamento": [0, 2, 6],
+        "situacao": [2, 3],
+        "local": 4,
+        "nascimento": "20-03-2016",
+        "adotado": false,
+        "fotos": [            
+            "https://www.agrosete.com.br/wp-content/uploads/2017/06/Vira-latas-conquistam-coracao-de-brasileiros.jpg"        
+        ]
+    },
+    {
+        "id": 26,
+        "nome": "Rex",
+        "historia": "Rex é um cão de guarda aposentado que ainda mantém seus instintos protetores.",
+        "observacoes": "Excelente com adultos, precisa de espaço.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 2,
+        "temperamento": [1, 6, 9],
+        "situacao": [0, 4],
+        "local": 0,
+        "nascimento": "01-01-2017",
+        "adotado": false,
+        "fotos": [            
+            "https://primeirapagina.com.br/wp-content/uploads/2024/07/cachorro-vira-lata.jpg"        
+        ]
+    },
+    {
+        "id": 27,
+        "nome": "Teca",
+        "historia": "Teca é uma cachorrinha muito dócil e sociável, resgatada com seus filhotes.",
+        "observacoes": "Muito amorosa e pronta para ser adotada.",
+        "especie": 2,
+        "sexo": 1,
+        "porte": 1,
+        "temperamento": [0, 4, 7],
+        "situacao": [2],
+        "local": 1,
+        "nascimento": "15-09-2021",
+        "adotado": false,
+        "fotos": [            
+            "https://blog.arbolez.com/wp-content/uploads/2018/07/adotar-um-cachorro-vira-lata.jpg"        
+        ]
+    },
+    {
+        "id": 28,
+        "nome": "Nina",
+        "historia": "Nina é uma gatinha muito curiosa que adora escalar móveis.",
+        "observacoes": "Recomendada para ambientes enriquecidos.",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [2, 3, 8],
+        "situacao": [],
+        "local": 2,
+        "nascimento": "07-11-2022",
+        "adotado": false,
+        "fotos": [            
+            "https://welovecatz.hu/media/images/2023_03_gettyimages-160959234-.2e16d0ba.fill-10000x10000.jpg",
+            "https://www.pdinsurance.co.nz/wp-content/uploads/2021/08/black-cats-history-folklore-facts.jpg"        
+        ]
+    },
+    {
+        "id": 29,
+        "nome": "Fred",
+        "historia": "Fred é um cachorro muito alegre, ama correr e brincar com crianças.",
+        "observacoes": "Ideal para famílias com quintal.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 1,
+        "temperamento": [1, 5, 7],
+        "situacao": [3],
+        "local": 3,
+        "nascimento": "12-06-2020",
+        "adotado": false,
+        "fotos": [            
+            "https://saude.abril.com.br/wp-content/uploads/2016/09/cachorro-vira-lata-9108.jpg"        
+        ]
+    },
+    {
+        "id": 30,
+        "nome": "Zara",
+        "historia": "Zara foi resgatada em estado de desnutrição e agora está saudável e ativa.",
+        "observacoes": "Precisa de uma família atenciosa.",
+        "especie": 2,
+        "sexo": 1,
+        "porte": 1,
+        "temperamento": [2, 4, 6],
+        "situacao": [],
+        "local": 4,
+        "nascimento": "30-08-2021",
+        "adotado": false,
+        "fotos": [            
+            "https://img.freepik.com/fotos-premium/filhote-de-cachorro-preto-vira-lata-rosto-de-cachorrinho-fofo-foto-de-alta-qualidade-rosto-de-cachorrinho-fofo_225753-2882.jpg"        
+        ]
+    },
+    {
+        "id": 31,
+        "nome": "Malu",
+        "historia": "Malu é uma gata independente e elegante, adora janelas ensolaradas.",
+        "observacoes": "Independente, mas carinhosa quando quer.",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [1, 3, 6],
+        "situacao": [0],
+        "local": 5,
+        "nascimento": "11-03-2020",
+        "adotado": false,
+        "fotos": [            
+            "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_0,w_2121,h_1193/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/mentalfloss/01h84ks8b3kn95ybj78q.jpg"        
+        ]
+    },
+    {
+        "id": 32,
+        "nome": "Zeus",
+        "historia": "Zeus é um cão forte, protetor e leal, mas adora um carinho.",
+        "observacoes": "Ideal para pessoas com experiência.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 2,
+        "temperamento": [1, 6, 10],
+        "situacao": [1, 3],
+        "local": 6,
+        "nascimento": "25-05-2019",
+        "adotado": false,
+        "fotos": [            
+            "https://i.pinimg.com/474x/b9/eb/d6/b9ebd6fb44012b3d7f2d1a343479da74.jpg"        
+        ]
+    },
+    {
+        "id": 33,
+        "nome": "Sofia",
+        "historia": "Sofia é muito gentil, adora crianças e gosta de ficar no colo.",
+        "observacoes": "Muito dócil, castrada e vacinada.",
+        "especie": 2,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [0, 3, 5],
+        "situacao": [],
+        "local": 7,
+        "nascimento": "18-02-2022",
+        "adotado": false,
+        "fotos": [            
+            "https://cuidadordecachorro.com.br/wp-content/uploads/2024/10/Cachorro-vira-lata.jpg"        
+        ]
+    },
+    {
+        "id": 34,
+        "nome": "Toby",
+        "historia": "Toby é um cão alegre e brincalhão, ama correr e buscar bolinhas.",
+        "observacoes": "Ótimo para famílias com crianças.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 1,
+        "temperamento": [1, 5, 8],
+        "situacao": [0],
+        "local": 8,
+        "nascimento": "05-04-2021",
+        "adotado": false,
+        "fotos": [            
+            "https://selecoes.ig.com.br/media/_versions/2024/07/raca-de-cachorro_widelg.jpeg"        
+        ]
+    },
+    {
+        "id": 35,
+        "nome": "Pandora",
+        "historia": "Pandora é muito esperta e independente, mas adora um carinho no tempo dela.",
+        "observacoes": "Gosta de ficar observando do alto.",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [2, 4, 7],
+        "situacao": [2],
+        "local": 9,
+        "nascimento": "14-09-2021",
+        "adotado": false,
+        "fotos": [            
+            "https://www.rover.com/blog/wp-content/uploads/cat-breathing-fast-orange-kitten.jpg"        
+        ]
+    },
+    {
+        "id": 36,
+        "nome": "Bartô",
+        "historia": "Bartô é um cão mais velho, muito calmo e companheiro.",
+        "observacoes": "Perfeito para idosos.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 1,
+        "temperamento": [0, 2, 6],
+        "situacao": [],
+        "local": 0,
+        "nascimento": "20-06-2016",
+        "adotado": false,
+        "fotos": [            
+            "https://tudosobrecachorros.com.br/wp-content/uploads/vira-lata.jpg"        
+        ]
+    },
+    {
+        "id": 37,
+        "nome": "Lia",
+        "historia": "Lia foi encontrada em uma árvore com seus filhotes, todos já adotados.",
+        "observacoes": "Agora é a vez dela ser adotada!",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [1, 3, 8],
+        "situacao": [1],
+        "local": 1,
+        "nascimento": "09-07-2020",
+        "adotado": false,
+        "fotos": [            
+            "https://images.litter-robot.com/media/wysiwyg/orange-tabby-outside.png"        
+        ]
+    },
+    {
+        "id": 38,
+        "nome": "Mike",
+        "historia": "Mike é um cachorro muito obediente, fácil de treinar.",
+        "observacoes": "Ideal para quem procura um pet inteligente.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 1,
+        "temperamento": [2, 5, 9],
+        "situacao": [],
+        "local": 2,
+        "nascimento": "10-10-2021",
+        "adotado": false,
+        "fotos": [            
+            "https://i.pinimg.com/originals/08/73/6e/08736e30c7ebcc03f50206f1dce6923f.jpg"        
+        ]
+    },
+    {
+        "id": 39,
+        "nome": "Suri",
+        "historia": "Suri é muito dócil e calma, ama ficar deitada no colo.",
+        "observacoes": "Perfeita para ambiente tranquilo.",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [0, 4, 6],
+        "situacao": [3],
+        "local": 3,
+        "nascimento": "02-12-2022",
+        "adotado": true,
+        "fotos": [            
+            "https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2025/05/07181055/capa-ilca-4.jpg"        
+        ]
+    },
+    {
+        "id": 40,
+        "nome": "Apolo",
+        "historia": "Apolo é forte e ativo, ama correr em espaços abertos.",
+        "observacoes": "Ideal para sítios ou casas com quintal.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 2,
+        "temperamento": [1, 6, 10],
+        "situacao": [],
+        "local": 4,
+        "nascimento": "25-12-2019",
+        "adotado": true,
+        "fotos": [            
+            "https://cobasiblog.blob.core.windows.net/production-ofc/2021/08/vira-lata-filhote-2.png"        
+        ]
+    },
+    {
+        "id": 41,
+        "nome": "Lola",
+        "historia": "Lola é uma cadela muito leal e afetuosa.",
+        "observacoes": "Já castrada e vermifugada.",
+        "especie": 2,
+        "sexo": 1,
+        "porte": 1,
+        "temperamento": [1, 3, 7],
+        "situacao": [],
+        "local": 5,
+        "nascimento": "19-09-2021",
+        "adotado": false,
+        "fotos": [            
+            "https://cdn.folhape.com.br/upload/dn_arquivo/2024/07/animal-e5fdea9e-55e4-40b8-897e-b68d6658dbe5-img1.jpg"        
+        ]
+    },
+    {
+        "id": 42,
+        "nome": "Romeu",
+        "historia": "Romeu é um gato aventureiro e carismático, sempre em busca de novas descobertas.",
+        "observacoes": "Recomenda-se brinquedos e espaço para explorar.",
+        "especie": 1,
+        "sexo": 0,
+        "porte": 0,
+        "temperamento": [2, 3, 9],
+        "situacao": [0],
+        "local": 6,
+        "nascimento": "04-05-2023",
+        "adotado": true,
+        "fotos": [            
+            "https://arcadenoe24h.vet.br/wp-content/uploads/2022/08/frajola-1024x683.jpg"        
+        ]
+    },
+    {
+        "id": 43,
+        "nome": "Sol",
+        "historia": "Sol tem uma pelagem brilhante e personalidade radiante, sempre quer estar por perto.",
+        "observacoes": "Muito sociável com todos os tipos de animais.",
+        "especie": 1,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [1, 5, 8],
+        "situacao": [2, 4],
+        "local": 7,
+        "nascimento": "17-11-2022",
+        "adotado": false,
+        "fotos": [            
+            "https://www.petz.com.br/blog/wp-content/uploads/2019/07/vida-de-gato.jpg"        
+        ]
+    },
+    {
+        "id": 44,
+        "nome": "Pluto",
+        "historia": "Pluto é um cão divertido, leal e bastante energético.",
+        "observacoes": "Vai precisar de passeios diários.",
+        "especie": 2,
+        "sexo": 0,
+        "porte": 2,
+        "temperamento": [5, 7, 10],
+        "situacao": [1],
+        "local": 8,
+        "nascimento": "10-10-2021",
+        "adotado": false,
+        "fotos": [            
+            "https://espacoanimalvet.com/wp-content/uploads/2015/03/vira-lata-cachorro.jpg"        
+        ]
+    },
+    {
+        "id": 45,
+        "nome": "Lulu",
+        "historia": "Lulu é uma cadelinha muito simpática e educada, que ama pessoas.",
+        "observacoes": "Muito calma e obediente.",
+        "especie": 2,
+        "sexo": 1,
+        "porte": 0,
+        "temperamento": [0, 3, 6],
+        "situacao": [],
+        "local": 9,
+        "nascimento": "01-08-2020",
+        "adotado": false,
+        "fotos": [            
+            "https://blog.arbolez.com/wp-content/uploads/2018/07/adotar-um-cachorro-vira-lata.jpg"        
+        ]
+    }
+]

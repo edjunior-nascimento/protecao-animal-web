@@ -73,11 +73,8 @@ function criarCards(animal) {
 
     galery.innerHTML += `
         <div class="card-animals">
-            <img src="${foto}" alt="animal-photo" class="img-animal">
-            
-            ${animal.adotado ? `
-                <div class="card-adotado">
-                    <p>Adotado</p>
+                <img src="${foto}" alt="animal-photo" class="img-animal">
+                <div class="card-adotado"> <p >${animal.adotado ? "Adotado" : '"Disponível"'}</p>
                 </div>
             ` : ""}
 

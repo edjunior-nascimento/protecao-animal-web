@@ -42,50 +42,48 @@
         <h2>Encontre seu novo amigo</h2>
         <section class="search">              
             <div class="menu-item">
-                    <select
-                    id="filter-select">
-                        <option value="all">Todas as espécies</option>
-                        <option value="done">Cachorro</option>
-                        <option value="todo">Gato</option>
+                    <select class="filter-select" id="filter-species">
+                        <option value="0">Todas as espécies</option>
+                        <option value="1">Gato</option>
+                        <option value="2">Cachorro</option>
+                    </select>
+                </div>
+            <div class="menu-item">
+                    <select class="filter-select" id="filter-sex" >
+                        <option value="0">Todos os sexos</option>
+                        <option value="1">Fêmea</option>
+                        <option value="2">Macho</option>
+                       
                     </select>
                 </div>
             <div class="menu-item">
                     <select
-                    id="filter-select">
-                        <option value="all">Todos os sexos</option>
-                        <option value="done">Macho</option>
-                        <option value="todo">Fêmea</option>
-                    </select>
-                </div>
-            <div class="menu-item">
-                    <select
-                    id="filter-select">
-                        <option value="all">Todos os portes</option>
-                        <option value="done">Grande</option>
-                        <option value="todo">Médio</option>
-                        <option value="todo">Pequeno</option>
+                    class="filter-select" id="filter-size">
+                        <option value="0">Todos os portes</option>
+                        <option value="1">Pequeno</option>
+                        <option value="2">Médio</option>
+                        <option value="3">Grande</option>
+                        
                     </select>
                 </div>            
             <div class="menu-item">
                     <select
-                    id="filter-select">
+                    class="filter-select" id="filter-local">
                         <option value="all">Todos os locais</option>
-                        <option value="done">Centro</option>
-                        <option value="todo">Martinlândia</option>
-                        <option value="todo">Mocambo</option>
-                        <option value="todo">Morrinhos</option>
-                        <option value="todo">Varzea dos Espinhos</option>
+                       
                     </select>
                 </div>
             <div class="menu-item">
-                    <input type="text" id="filter-select" placeholder="Nome do bicho">
-                </div>
+                    <input type="text" class="filter-select" placeholder="Nome do bicho" id="filter-name">
+            </div>
             <div class="menu-item">
-                    <button id="search-button">
+                    <button id="search-button" onclick="buttonSearch()">
                         Buscar
                     </button>
-                </div>
+            </div>
         </section>
+
+
         <section class="galery">
             <!-- Itens implementado via javascript 
             
@@ -101,17 +99,16 @@
 
         <div class="pagination">
             
+            <span id="Prev" onclick="clickLeft()"> &lt </span>
             
-            <button id="Prev" class="seta" onclick="botaoPrev()">&lt</button>
-
-            <a href="#" class="active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
             
-
-             <button id="After"class="seta" onclick="botaoAfter()">></button>
+            <span  class= "active " id="page1" onclick="selectPage(event)"> 1</span>
+            <span  id="page2"  onclick="selectPage(event)">2</span>
+            <span  id="page3"  onclick="selectPage(event)">3</span>
+            <span  id="page4"  onclick="selectPage(event)">4</span>
+            
+            <span  id="After" onclick="clickRight()">></a>
+           
         </div>
     </main>
     <div id="big-cat">

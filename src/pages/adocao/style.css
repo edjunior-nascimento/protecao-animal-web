@@ -113,7 +113,7 @@ border-radius: 10px ;
     flex-direction: column;
     
 }
-#filter-select{
+.filter-select{
     flex: 1;
     border: 0.15rem solid #eee;
     padding: .3rem .6rem;
@@ -197,13 +197,28 @@ border-radius: 10px ;
 
 
 }
+.card-adotado {
+    background-color: rgb(255, 172, 12);
+    color: white;   
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    margin-top: -2rem;
+    position: relative;
+    
+}
+.card-adotado p{
+    width: 100%;
+    font-size: 24px;
+    padding-top: 0.3rem;
+    }
 
 
 .pagination{
     text-align: right;
     padding: 25px;
 }
-.pagination a, .seta{
+.pagination span, .seta{
     color: white;
     text-decoration: none;
     padding: 12px;
@@ -214,12 +229,12 @@ border-radius: 10px ;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
 }
-.pagination a.active, .seta.active{
+.pagination span.active, .seta.active{
     background-color: #27A8AD;
     font-weight: bold;
     border-radius: 5px;
 }
-.pagination a:hover:not(.active){
+.pagination span:hover:not(.active){
     background-color: #27A8AD;
     border-radius: 5px;
 }

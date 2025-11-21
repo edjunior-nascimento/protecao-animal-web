@@ -2,66 +2,84 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria ONG</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria ONG</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-  <div>
-    <img class="logo" src="../../assets/images/logo_protecao.png" alt="logo Protecao animal" />
-        <button class="open-modal">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </button>
-        <div id="fade"></div>
-        <div class="modal">
-          <div class="textModal"><img src="../../assets/icons/game-icons_dog-house.png" alt="">
-            <p> Pagina Inicial</p>
-          </div>
-          <div class="textModal"><img src="../../assets/icons/Vector.png" alt="">
-          <p>Quero Adotar</p>
-          </div>
-          <div class="textModal"><img src="../../assets/icons/bxs_donate-heart.png" alt="">
-            <p>Quero Doar</p>
-          </div>
-          <div class="textModal"><img src="../../assets/icons/ic_baseline-diversity-3.png" alt="">
-            <p>Quem Somos</p>
-          </div>
+  <header>
+    <div>
+      <img class="logo" src="../../assets/images/logo_protecao.png" alt="logo Protecao animal" />
+      <button class="open-modal">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </button>
+      <div id="fade"></div>
+      <div class="modal">
+        <div class="textModal"><img src="../../assets/icons/game-icons_dog-house.png" alt="">
+          <p> Pagina Inicial</p>
         </div>
+        <div class="textModal"><img src="../../assets/icons/Vector.png" alt="">
+          <p>Quero Adotar</p>
+        </div>
+        <div class="textModal"><img src="../../assets/icons/bxs_donate-heart.png" alt="">
+          <p>Quero Doar</p>
+        </div>
+        <div class="textModal"><img src="../../assets/icons/ic_baseline-diversity-3.png" alt="">
+          <p>Quem Somos</p>
+        </div>
+      </div>
       <nav>
         <ul>
-        <li><a href="../inicial/index.html">Pagina inicial</a></li>
-        <li><a href="../doacao/index.html">Quero ajudar</a></li>
-        <li><a href="../adocao/index.html">Quero adotar</a></li>
-        <li><a href="../sobre/index.html">Quem somos</a></li>
+          <li><a href="../inicial/index.html">Pagina inicial</a></li>
+          <li><a href="../doacao/index.html">Quero ajudar</a></li>
+          <li><a href="../adocao/index.html">Quero adotar</a></li>
+          <li><a href="../sobre/index.html">Quem somos</a></li>
         </ul>
       </nav>
   </header>
   <div class="inicial">
-     
-            <a href="../inicial/index.html">Pagina Inicial</a> 
-            <a>/</a>
-            <a href="../galeria/index.html">Galeria de Fotos</a>
-              
+
+    <a href="../inicial/index.html">Pagina Inicial</a>
+    <a>/</a>
+    <a href="../galeria/index.html">Galeria de Fotos</a>
+
   </div>
 
-    <section class="galery">
-        <!-- Cards de fotos carregadas via JS -->
-    </section>
-    <div class="gato">
+  <section class="galery">
+    <!-- Cards de fotos carregadas via JS -->
+  </section>
+  <section class="primeiro-fade" id="modal-galeria">
+    <div class="segundo-fade">
+      <p class="modal-close" onclick="fecharModalImagem()">X</p>
+      <button class="modal-btn modal-prev" aria-label="Anterior">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="modal-content">
+        <img src="" alt="Imagem da galeria">
+      </div>
+      <button class="modal-btn modal-next" aria-label="Próximo" onclick="proximaImagem()">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+
+  </div>
+  <div class="gato">
     <img src="../../assets/images/gato_footer.png" alt="">
   </div>
-   <footer>
+  <footer>
     <div class="footer-container">
       <div class="footer-primary">
         <div class="footer-section-1">
@@ -107,7 +125,8 @@
               <a href="#"><img src="../../assets/icons/ic_whatsapp_black.png" alt="" /></a>
             </div>
             <div>
-              <a href="https://www.instagram.com/protecaoanimalgba/"><img src="../../assets/icons/ic_instagram_black.png" alt="" /></a>
+              <a href="https://www.instagram.com/protecaoanimalgba/"><img
+                  src="../../assets/icons/ic_instagram_black.png" alt="" /></a>
             </div>
           </div>
         </div>
@@ -117,7 +136,7 @@
       <img src="../../assets/images/logo_protecao.png" alt="img-logo" />
     </div>
   </footer>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="script.js"></script>
 </body>
 

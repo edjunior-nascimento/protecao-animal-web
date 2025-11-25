@@ -44,17 +44,45 @@ function listarGaleriaAxios() {
 function listarFotosSelecionadas(id) {
   galeriaCache.forEach(galeria => {
     if (galeria.id == id) {
-      galeria.fotos.forEach(foto => {
-        criarCards(foto)
-      })
+     for (let i = 0; i < galeria.fotos.length; i++) {
+      criarCards(i, galeria.fotos)
+     }
     }
   })
 }
 
-function criarCards(foto) {
-
-    galery.innerHTML += `
-        <div class="card-animals">
+function criarCards(index, fotos) {
+const foto = getFoto(index, fotos);
+  galery.innerHTML += `
+        <div class="card-animals" onclick="mostrarModalImagem(${index}, `+ fotos +`)">
                 <img src="${foto}" alt="foto-galeria" 
             </div>`
+}
+
+// funcao modal de imagem
+
+function mostrarModalImagem(index, fotos) {
+  const modalGaleria = document.getElementById('modal-galeria');
+  modalGaleria.style.display = 'block';
+  const modalImage = modalGaleria.querySelector('#modal-galeria .modal-content img');
+  modalImage.src = getFoto(index, fotos);
+}
+function fecharModalImagem() {
+  const modalGaleria = document.getElementById('modal-galeria');
+  modalGaleria.style.display = 'none';
+}
+
+function proximaImagem() {
+  // Lógica para mostrar a próxima imagem
+
+}
+
+function getFoto(index, fotos) {
+  for (let i = 0; i < fotos.length; i++) {
+    if (i == index) {
+      
+      return fotos[i];
+    }
+  }
+
 }

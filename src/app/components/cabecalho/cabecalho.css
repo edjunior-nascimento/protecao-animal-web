@@ -1,0 +1,82 @@
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1000;
+  display: none;
+}
+
+#fade.show {
+  display: block;
+}
+
+
+/* Modal do menu */
+.modal {
+  position: absolute;
+  top: 60px;
+  /* Ajuste conforme a posição do botão */
+  right: 20px;
+  background-color: #fff;
+  width: 220px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 1001;
+  padding: 10px 0;
+}
+
+.modal.show {
+  display: flex;
+
+}
+
+.textModal {
+  display: inline-flex;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding-right: 50%;
+}
+
+.textModal:hover {
+  background-color: #f0f0f0;
+}
+
+.textModal img {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.textModal p {
+  font-size: 14px;
+  color: #009999;
+  /* Cor parecida com a da imagem */
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  border-bottom: 1px solid #ccecec;
+  width: 100%;
+  padding-bottom: 5px;
+  width: 80px;
+}
+@media (max-width: 768px) {
+
+    
+      .open-modal {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .open-modal .line1,
+.open-modal .line2,
+.open-modal .line3 {
+    display: block;
+  }
+}

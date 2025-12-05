@@ -18,24 +18,24 @@
 <body>
   <header>
     <div>
-      <img class="logo" src="../../assets/images/logo_protecao.png" alt="logo Protecao animal" />
-      <button class="open-modal">
+      <img class="logo" src="../../../assets/images/logo_protecao.png" alt="logo Protecao animal" />
+      <button class="open-modal" onclick="toggleModalMenu()">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </button>
       <div id="fade"></div>
       <div class="modal">
-        <div class="textModal"><img src="../../assets/icons/game-icons_dog-house.png" alt="">
+        <div class="textModal"><img src="../../../assets/icons/game-icons_dog-house.png" alt="">
           <p> Pagina Inicial</p>
         </div>
-        <div class="textModal"><img src="../../assets/icons/Vector.png" alt="">
+        <div class="textModal"><img src="../../../assets/icons/Vector.png" alt="">
           <p>Quero Adotar</p>
         </div>
-        <div class="textModal"><img src="../../assets/icons/bxs_donate-heart.png" alt="">
+        <div class="textModal"><img src="../../../assets/icons/bxs_donate-heart.png" alt="">
           <p>Quero Doar</p>
         </div>
-        <div class="textModal"><img src="../../assets/icons/ic_baseline-diversity-3.png" alt="">
+        <div class="textModal"><img src="../../../assets/icons/ic_baseline-diversity-3.png" alt="">
           <p>Quem Somos</p>
         </div>
       </div>
@@ -62,7 +62,7 @@
   <section class="primeiro-fade" id="modal-galeria">
     <div class="segundo-fade">
       <p class="modal-close" onclick="fecharModalImagem()">X</p>
-      <button class="modal-btn modal-prev" aria-label="Anterior">
+      <button class="modal-btn modal-prev" aria-label="Anterior" onclick="imagemAnterior()">
         <i class="fa-solid fa-chevron-left"></i>
       </button>
       <div class="modal-content">
@@ -77,7 +77,7 @@
 
   </div>
   <div class="gato">
-    <img src="../../assets/images/gato_footer.png" alt="">
+    <img src="../../../assets/images/gato_footer.png" alt="">
   </div>
   <footer>
     <div class="footer-container">
@@ -122,22 +122,22 @@
           </div>
           <div class="social-icons">
             <div>
-              <a href="#"><img src="../../assets/icons/ic_whatsapp_black.png" alt="" /></a>
+              <a href="#"><img src="../../../assets/icons/ic_whatsapp_black.png" alt="" /></a>
             </div>
             <div>
               <a href="https://www.instagram.com/protecaoanimalgba/"><img
-                  src="../../assets/icons/ic_instagram_black.png" alt="" /></a>
+                  src="../../../assets/icons/ic_instagram_black.png" alt="" /></a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="footer-secondary">
-      <img src="../../assets/images/logo_protecao.png" alt="img-logo" />
+      <img src="../../../assets/images/logo_protecao.png" alt="img-logo" />
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js" type="module"></script>
 </body>
 
 </html>

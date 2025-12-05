@@ -9,20 +9,20 @@
 </head>
 <body>
   <header>  
-        <a href=""><img src="../../assets/images/logo_protecao.png" alt="logo-prot-animal" id="logo" width="140px"></a>
+        <a href=""><img src="../../../assets/images/logo_protecao.png" alt="logo-prot-animal" id="logo" width="140px"></a>
          <!--MODAL-->
         <div id="fade" class="hide"></div>
         <div class="modal">
-       <div class="textModal"><img src="../../assets/icons/game-icons_dog-house.png" alt="">
+          <div class="textModal"><img src="../../../assets/icons/game-icons_dog-house.png" alt="">
             <p> Pagina Inicial</p>
           </div>
-          <div class="textModal"><img src="../../assets/icons/Vector.png" alt="">
+          <div class="textModal"><img src="../../../assets/icons/Vector.png" alt="">
           <p>Quero Adotar</p>
           </div>
-          <div class="textModal"><img src="../../assets/icons/bxs_donate-heart.png" alt="">
+          <div class="textModal"><img src="../../../assets/icons/bxs_donate-heart.png" alt="">
             <p>Quero Doar</p>
           </div>
-          <div class="textModal"><img src="../../assets/icons/ic_baseline-diversity-3.png" alt="">
+          <div class="textModal"><img src="../../../assets/icons/ic_baseline-diversity-3.png" alt="">
             <p>Quem Somos</p>
           </div>
         </div>
@@ -32,6 +32,7 @@
           <div class="line2"></div>
           <div class="line3"></div>
         </button>
+        
         <ul id="menu">
             <li><a href="../inicial/index.html">Pagina inicial</a></li>
             <li><a href="../doacao/index.html">Quero ajudar</a></li>
@@ -60,7 +61,7 @@
     </p>
   </div>
 
-  <img src="../../assets/images/Cat-PNG-Photo-1.png" alt="Gato" class="gatopng img">
+  <img src="../../../assets/images/Cat-PNG-Photo-1.png" alt="Gato" class="gatopng img">
 </section>
 
 
@@ -68,15 +69,15 @@
     <h2>Quer Ajudar?</h2>
     <div class="patas">
       <a href="../adocao/index.html" class="pata-botao">
-        <img src="../../assets/images/botao_adote.png" alt="Adote">
+        <img src="../../../assets/images/botao_adote.png" alt="Adote">
         <p>Adote</p>
       </a>
       <a href="../doacao/index.html" class="pata-botao">
-        <img src="../../assets/images/botao_doe.png" alt="Doe">
+        <img src="../../../assets/images/botao_doe.png" alt="Doe">
         <p>Doe</p>
       </a>
       <a href="../sobre/index.html" class="pata-botao">
-        <img src="../../assets/images/botao_voluntario.png" alt="Seja voluntário">
+        <img src="../../../assets/images/botao_voluntario.png" alt="Seja voluntário">
         <p>Voluntário</p>
       </a>
     </div>
@@ -86,18 +87,18 @@
    <h2>Galeria de fotos</h2>
        
   <div class="galeria">
-    <button id = "prev" class="botao" onclick="botaoPrev()"><img src="../../assets/icons/lucide_chevron-left.png" alt=""></button>
+    <button id = "prev" class="botao" onclick="galeriaCarousel.botaoPrev()"><img src="../../../assets/icons/lucide_chevron-left.png" alt=""></button>
     <div class="fotos">
     <!-- As fotos serão inseridas aqui via JavaScript -->
     </div>
 
-    <button id = "after" class="botao" onclick="botaoAfter()"><img src="../../assets/icons/lucide_chevron-right.png" alt=""></button>
+    <button id = "after" class="botao" onclick="galeriaCarousel.botaoAfter()"><img src="../../../assets/icons/lucide_chevron-right.png" alt=""></button>
   </div>
   
   </section>
-  <img class="imgPatas" src="../../assets/images/paw print.png" alt="">
+  <img class="imgPatas" src="../../../assets/images/paw print.png" alt="">
   <div id="big-cat">
-        <img src="../../assets/images/gato_footer.png" alt="logo-prot-animal" id="big-gato">
+        <img src="../../../assets/images/gato_footer.png" alt="logo-prot-animal" id="big-gato">
     </div>
     <footer>
         <div id="footer-primary">
@@ -125,18 +126,18 @@
                 <h3>Rede Sociais</h3>
                 <div class="social-icons">
                     <div class="item-social">
-                        <a href=""><img src="../../assets/icons/ic_whatsapp_black.png" alt="wpp-img"
+                        <a href=""><img src="../../../assets/icons/ic_whatsapp_black.png" alt="wpp-img"
                                 class="icones" /></a>
                     </div>
                     <div class="item-social">
                         <a href="https://www.instagram.com/protecaoanimalgba/"><img
-                                src="../../assets/icons/ic_instagram_black.png" alt="inst-img" class="icones" /></a>
+                                src="../../../assets/icons/ic_instagram_black.png" alt="inst-img" class="icones" /></a>
                     </div>
                 </div>
             </div>
         </div>
         <div id="footer-secondary">
-            <a href=""><img src="../../assets/images/logo_protecao.png" alt="logo-prot-animal" id="logo"
+            <a href=""><img src="../../../assets/images/logo_protecao.png" alt="logo-prot-animal" id="logo"
                     width="140px"></a>
         </div>
     </footer>
@@ -144,5 +145,5 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-<script src="script.js"></script>
+<script src="script.js" type="module"></script>
 </html>

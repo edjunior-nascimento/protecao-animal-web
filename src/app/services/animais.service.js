@@ -7,7 +7,6 @@ export class AnimaisService {
       } catch(error) {
       console.error('erro no axio' + error)
     }
-    
   }
 
 }

@@ -1,4 +1,6 @@
-import { GaleriaService } from "../../services/galeria.service.js";
+import { AnimaisUsecase} from "../../use-case/animais.usecase.js";
+import { PorteEnum } from "../../enums/porte.enum.js";
+import { CabecalhoComponent } from "../../components/cabecalho/cabecalho.component.js";
 
 const openBtn = document.querySelector('.open-modal');
 const modal = document.querySelector('.modal');
@@ -9,10 +11,17 @@ let indexAtual = 0;
 let idUrl = null;
 let listaFotos = [];
 
-let galeriaService = new GaleriaService();
+let animaisUsecase = new AnimaisUsecase();
 
 
-console.log(await galeriaService.listarGaleria());
+//console.log(await galeriaUsecase.listarFotosAlbum(0));
+console.log(await PorteEnum.PEQUENO);
+console.log(await animaisUsecase.listAnimais());
+console.log(await animaisUsecase.getNomeLocalAnimal(1));
+
+
+new CabecalhoComponent("teste");
+
 
 //init();
 

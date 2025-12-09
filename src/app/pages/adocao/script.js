@@ -1,5 +1,19 @@
+import { CabecalhoComponent} from '../../components/cabecalho.component.js'
+import { CardAdocaoComponent } from '../../components/card-adocao.component.js'
 
 const paginationContainer = document.querySelector('.pagination')
+
+new CabecalhoComponent("cabecalho");
+let cardAdocaoComponent = new CardAdocaoComponent("lista-card-adocao");
+
+cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
+cardAdocaoComponent.criar(2, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
+cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
+cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
+cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
+cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
+cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
+cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
 
 
 let animaisGlobal = [] // todos os animais via API
@@ -247,21 +261,4 @@ function filtrarNome(filtroNome, listaAnimal){
     )
 
 }
-
-
-
-   
-/*MODAL*/
-const openModal = document.querySelector('.mobile-menu')
-const modal = document.querySelector('#modal')
-const fade = document.querySelector('#fade')
-
-const toggleModal = () => {
-    modal.classList.toggle('hide')
-    fade.classList.toggle('hide')
-}
-
-openModal.addEventListener('click', toggleModal)
-fade.addEventListener('click',toggleModal)
-
 

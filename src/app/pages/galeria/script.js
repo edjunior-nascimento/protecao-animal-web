@@ -1,6 +1,6 @@
 import { AnimaisUsecase} from "../../use-case/animais.usecase.js";
 import { PorteEnum } from "../../enums/porte.enum.js";
-import { CabecalhoComponent } from "../../components/cabecalho/cabecalho.component.js";
+import { CabecalhoComponent } from "../../components/cabecalho.component.js";
 
 const openBtn = document.querySelector('.open-modal');
 const modal = document.querySelector('.modal');

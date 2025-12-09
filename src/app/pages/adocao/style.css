@@ -27,13 +27,6 @@
 }
 body{
     background-color: var(--main-bg-color);}
-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 2rem;
-    }
 
 #menu{
     display: flex;
@@ -308,32 +301,15 @@ footer{
     margin-left: 20px;
 }
 
-.mobile-menu{
-    cursor: pointer;
-    display: none;
-}
-.mobile-menu div {
-width: 32px;
-height: 2px;
-background: #fff;
-margin: 8px;
-} 
 @media screen and (max-width: 780px){
-#menu{
-    display: none;
-}
-.mobile-menu{
-    display: block;
-}
+
 .search{
     display: grid;
     grid-template-columns:1fr;
     padding: auto;
     
 }
-.menu-item{
-    width: 100%;
-}
+
 .galery{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -391,56 +367,3 @@ margin: 8px;
     }
 }
 
-/*MODAL*/
-
-#fade, #modal {
-    transition: 0.5s;
-    opacity: 1;
-    pointer-events: all;
-}
-
-
-#fade{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-   z-index: 5;
-}
-
-#modal{
-    position: fixed;
-    left: 82%;
-    top: 10%;
-    transform: translate(-50%, -2%);
-    z-index: 10;
-    background-color: white;
-    width: 150px;
-    max-width: 90%;
-    padding: 0.5rem 0rem 0.5rem 1.2rem;
-
-}
-
-
-#modal.hide, #fade.hide{
-    opacity: 0;
-    pointer-events: none;
-}
-#modal.hide{
-    top: 0;
-}
-
-#modal>li>a{
-    color: #27A8AD;
-    border-bottom: 1px solid #ccc;
-    font-size: 1rem;
-    
-}
-#modal>li{
-    text-align: left;
-    font-size: 0px;
-    margin: 1.5rem 0rem;
-
-}

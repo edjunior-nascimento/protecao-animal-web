@@ -55,4 +55,8 @@ export class CardGaleriaComponent{
 
         document.getElementById(this.id).appendChild(wrapper);
     }
+
+    limpar() {
+        document.getElementById(this.id).innerHTML = '';
+    }
 }

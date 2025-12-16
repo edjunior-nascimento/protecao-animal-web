@@ -5,63 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   
 </head>
 <body>
-  <header>  
-        <a href=""><img src="../../../assets/images/logo_protecao.png" alt="logo-prot-animal" id="logo" width="140px"></a>
-         <!--MODAL-->
-        <div id="fade" class="hide"></div>
-        <div class="modal">
-          <div class="textModal"><img src="../../../assets/icons/game-icons_dog-house.png" alt="">
-            <p> Pagina Inicial</p>
-          </div>
-          <div class="textModal"><img src="../../../assets/icons/Vector.png" alt="">
-          <p>Quero Adotar</p>
-          </div>
-          <div class="textModal"><img src="../../../assets/icons/bxs_donate-heart.png" alt="">
-            <p>Quero Doar</p>
-          </div>
-          <div class="textModal"><img src="../../../assets/icons/ic_baseline-diversity-3.png" alt="">
-            <p>Quem Somos</p>
-          </div>
-        </div>
-          
-        <button class="open-modal">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </button>
-        
-        <ul id="menu">
-            <li><a href="../inicial/index.html">Pagina inicial</a></li>
-            <li><a href="../doacao/index.html">Quero ajudar</a></li>
-            <li><a href="../adocao/index.html">Quero adotar</a></li>
-            <li><a href="../sobre/index.html">Quem somos</a></li>   
-        </ul>
 
-         <section class="hero">
-    <h1>"Doe esperanças, doe para <br> salvar vidas."</h1>
-    <a href="../formulario-castracao/index.html">
-       <button>Ver campanhas</button></a>
-   
-  </section>
-    </header>
+  <header>  
+    <div id="cabecalho"></div>
+
+    <section class="hero">
+      <h1>"Doe esperanças, doe para <br> salvar vidas."</h1>
+      <a href="../formulario-castracao/index.html">
+      <button>Ver campanhas</button></a>
+    </section>
+  </header>
 
   <section class="lista"></section>
 
  
 
 <section class="sobre-nos">
-  <div class="caixa-texto">
     <p>
       Nossa ONG promove a conscientização sobre o abandono animal,
       resgatando cães e gatos em situação de risco. Acreditamos em um
       futuro mais digno para todos os animais.
     </p>
-  </div>
+    <img src="../../../assets/images/gatosobrenos.png" alt="Gato" class="gatopng img">
 
-  <img src="../../../assets/images/Cat-PNG-Photo-1.png" alt="Gato" class="gatopng img">
 </section>
 
 
@@ -83,19 +54,15 @@
     </div>
   </section>
 
-     <div id="lista-galeria"></div>
 
 
   <section class="galery">
    <h2>Galeria de fotos</h2>
        
   <div class="galeria">
-    <button id = "prev" class="botao" onclick="botaoPrev()"><img src="../../../assets/icons/lucide_chevron-left.png" alt=""></button>
-    <div class="fotos">
-    <!-- As fotos serão inseridas aqui via JavaScript -->
-    </div>
-
-    <button id = "after" class="botao" onclick="botaoAfter()"><img src="../../../assets/icons/lucide_chevron-right.png" alt=""></button>
+    <i class="setas fa-solid fa-angle-left" onclick="window.inicialView.botaoAnterior()"></i>
+    <div id="lista-galeria"></div>
+    <i class="setas fa-solid fa-angle-right" onclick="window.inicialView.botaoProximo()"></i>
   </div>
   
   </section>

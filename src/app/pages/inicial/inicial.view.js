@@ -1,13 +1,50 @@
+import { CabecalhoComponent} from '../../components/cabecalho.component.js'
 import { CardGaleriaComponent } from "../../components/card-galeria.component.js";
-
+import { GaleriaUsecase } from '../../use-case/galeria.usecase.js';
 class InicialView {
 
+    listaGaleria = []
+    indice = 0
+    tamanho = window.innerWidth <= 768 ? 1 : 3;
+
     constructor() {
-        this.cardGaleria = new CardGaleriaComponent('lista-galeria');
-        this.cardGaleria.criar(1, "https://poa.sp.gov.br/wp-content/uploads/2023/01/Feira-de-adocao-na-Praca-da-Biblia_Edem-Juniro-2.jpeg", "Galeria Exemplo");
+        new CabecalhoComponent("cabecalho");
+        this.#init();
     }
 
+    async #init(){
+        this.cardGaleria = new CardGaleriaComponent('lista-galeria');
+        this.listaGaleria = await new GaleriaUsecase().listAlbuns();
+        this.#cardColecao();
+    }
+
+    botaoProximo() {
+        if (this.indice + this.tamanho < this.listaGaleria.length) {
+            this.indice += this.tamanho;
+            this.#cardColecao();
+        }
+    }
+
+    botaoAnterior() {
+        if (this.indice - this.tamanho >= 0) {
+            this.indice -= this.tamanho;
+            this.#cardColecao();
+        }
+    }
+
+    #cardColecao() {
+        this.cardGaleria.limpar(); // limpa antes de exibir nova página
+
+        let init = this.indice;
+        let fim = this.indice + this.tamanho;
+        let visivel = this.listaGaleria.slice(init, fim);
+
+        visivel.forEach(galeria => {
+            this.cardGaleria.criar(galeria.id, galeria.fotos[0], galeria.nome );
+        });
+    }
 
 }
 
-const inicialView = new InicialView();
+window.inicialView = new InicialView();
+

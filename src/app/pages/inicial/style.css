@@ -18,29 +18,13 @@ body {
 }
 
 header {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   height: 650px;
   padding: 0px 50px;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 25%), url(../../../assets/images/img-dog-initial-page.jpg);
-  background-size: 100% 120%;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-
-
-}
-
-#menu {
-  display: flex;
-}
-
-#menu>li {
-  margin-left: 10px;
-}
-
-#menu>li>a {
-  display: block;
-  margin: 40px 0px 20px 30px;
 }
 
 a {
@@ -61,56 +45,46 @@ a {
   color: white;
   text-align: center;
   font-size: 0.5rem;
-  padding: 180px 40px;
+  padding: 40px 40px;
   position: absolute;
-}
-
-.hero h1 {
-  color: #994900;
-  font-family: 'Jockey One';
-  font-weight: 40px;
-  font-size: 35px;
-  line-height: 115%;
-  margin: 80px 0px;
-}
-
-.hero button {
-  padding: 10px 20px;
-  background-color: #27A8AD;
-  border: none;
-  color: white;
-  font-size: 1em;
-  cursor: pointer;
+  h1 {
+    color: #994900;
+    font-family: 'Jockey One';
+    font-weight: 40px;
+    font-size: 35px;
+    line-height: 115%;
+    margin: 80px 0px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #27A8AD;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+  }
 }
 
 .sobre-nos {
-  position: relative;
-  padding: 60px;
-  background-color: #222;
-  min-height: 300px;
-  background-color: var(--main-bg-color);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  p {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+  }
+  img {
+    flex: 1;
+    max-width: 690px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+  }
 }
 
-.caixa-texto {
-  max-width: 400px;
-  background-color: #222;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  position: relative;
-  z-index: 2;
-}
-
-.gatopng img {
-  position: absolute;
-  right: 30px;
-  bottom: 20px;
-  width: 200px;
-  height: auto;
-  object-fit: contain;
-  z-index: 1;
-  pointer-events: none;
-}
 
 .ajuda {
   background-color: #222;
@@ -151,10 +125,20 @@ a {
 .galeria {
   background-color: #1e1e1e;
   padding: 20px 30px;
- display: flex;
-  align-items: center;   /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .setas {
+    font-size: 35px;
+    color: #27A8AD;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .setas:hover {
+      transform: scale(1.4);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
 }
 .galery h2 {
   color: #27A8AD;
@@ -163,43 +147,15 @@ a {
   font-size: 40px;
 }
 
-.galeria #prev{
-    background-color: transparent;
-    border: none;
-}
-
-.galeria #after{
-    background-color: transparent;
-    border: none;
-    
-}
 
 
 
-.fotos {
+#lista-galeria {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
 
-.fotos p{
-  color: black;
-  
-}
-
-.galeria #prev,
-.galeria #after {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-}
-
-.galeria #prev img,
-.galeria #after img {
-  width: 32px;  /* ajuste o tamanho conforme o design */
-  height: 32px;
-}
 
 #big-cat{
     height: 300px;
@@ -272,130 +228,11 @@ a {
     margin-left: 20px;
 }
 
-
-.open-modal {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1002;
-}
-
-.open-modal .line1,
-.open-modal .line2,
-.open-modal .line3 {
-  width: 30px;
-  height: 3px;
-  background-color: #ffffff;
-  margin: 6px 0;
-  transition: 0.4s;
-  display: none;
-}
-
-/* Fundo escurecido */
-#fade {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: 1000;
-  display: none;
-}
-
-#fade.show {
-  display: block;
-}
-
-
-
-/* Modal do menu */
-.modal {
-  position: absolute;
-  top: 60px;
-  /* Ajuste conforme a posição do botão */
-  right: 20px;
-  background-color: #fff;
-  width: 220px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  display: none;
-  flex-direction: column;
-  z-index: 1001;
-  padding: 10px 0;
-}
-
-.modal.show {
-  display: flex;
-
-}
-
-.textModal {
-  display: inline-flex;
-  gap: 10px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  padding-right: 50%;
-}
-
-.textModal:hover {
-  background-color: #f0f0f0;
-}
-
-.textModal img {
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-}
-
-.textModal p {
-  font-size: 14px;
-  color: #009999;
-  /* Cor parecida com a da imagem */
-  font-weight: 500;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  border-bottom: 1px solid #ccecec;
-  width: 100%;
-  padding-bottom: 5px;
-  width: 80px;
-}
-
 @media (max-width: 768px) {
 
-  #menu {
-    display: none;
-  }
-  header {
-    padding-inline: 40px;
-    }
-
-  .open-modal {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  .open-modal .line1,
-.open-modal .line2,
-.open-modal .line3 {
-    display: block;
-  }
-
-  header nav {
-    display: none;
-  }
 .galeria {
   width: 85%;
   justify-content: center;
-}
-
-img {
-    width: 150px;
-    height: 150px;
 }
 
 .foto {
@@ -403,24 +240,8 @@ img {
   height: 120px;
 }
 
-.fotos img {
-  width: 120px;
-  height: auto;
-  transition: transform 0.5s ease;
-  border-radius: 7px;
-}
-
-.fotos img:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
 .h2 {
   color: #f2f2f2;
-}
-
-#after {
-  margin-left: -1.5%;
 }
 .imgPatas{
     width: 120px;

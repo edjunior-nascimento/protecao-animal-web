@@ -6,10 +6,11 @@ export class CabecalhoComponent{
         wrapper.innerHTML = `
             <style>
                 .ptc-header {
+                    width: 100%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    padding:20px;
+                    padding:5px 20px;
 
                     .logo {
                         width: 141px;

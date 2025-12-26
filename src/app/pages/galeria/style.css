@@ -17,63 +17,44 @@
   font-style: normal;
   margin: 0px;
   padding: 0px;
+ 
 }
 
 body {
   background-color: var(--main-bg-color);
-  max-width: 100%;
+  
+}
+
+header {
+  justify-content: space-between;
+  height: auto;
+  padding: 0px 50px;
 }
 
 a {
   text-decoration: none;
-}
+  color: white;
+  font-family: 'Jockey One';
 
-header {
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-inline: 80px;
-}
 
-header div {
-  display: flex;
-  align-items: center;
-  
-}
 
-.logo {
-  height: 95px;
-  width: auto;
-}
-
-nav {
-  width: auto;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  margin-left: 55em;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  gap: 40px;
-  justify-content: flex-end;
-}
-
-nav ul li a {
-  color: var(--link-nav-color);
   font-size: 20px;
-  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+
 }
 
 .inicial {
-  margin-left: 66px;
-  margin-top: 90px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
-.inicial a {
-  color: var(--link-nav-color);
+
+.inicial h1 {
+   text-align: start;
+   font-family: "Roboto", serif;
+   color: var(--footer-background);
+    
 }
 
 h1 {
@@ -112,13 +93,12 @@ img:hover {
   gap: 10px; /* Ajuste este valor conforme desejar */
 }
 .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-  
-  display: block;
+   margin-left: 20px;
+    margin-right: 20px;
+      grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+      gap: 10px; /* espaço entre os cards */
+      display:  flex;
+      flex-wrap: wrap;
 }
 
 .card-animals {
@@ -132,10 +112,14 @@ img:hover {
     cursor: pointer;
 }
 
-.card-animals img {
-    width: 100% ; 
-    height: auto;
+a img {
+  width: 100%;   /* Faz a imagem ocupar toda a largura da tag <a> */
+  height: 100%;  /* Faz a imagem ocupar toda a altura da tag <a> */
+  object-fit: cover; /* Ajusta a proporção sem distorcer */
+  display: block;  
 }
+
+
 
 ul li a:hover {
     color: blue;
@@ -278,7 +262,7 @@ footer {
   height: 100%;
   background: transparent;
   z-index: 1000;
-  display: none;
+  
 }
 
 #fade.show {
@@ -293,7 +277,7 @@ footer {
   width: 220px;
   border-radius: 5px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  display: none;
+  
   flex-direction: column;
   z-index: 1001;
   padding: 10px 0;
@@ -346,7 +330,7 @@ footer {
 }
 
 #modal-galeria {
-  display: none;
+  
 }
 
 .show {
@@ -447,9 +431,6 @@ footer {
  #menu {
     display: none;
   }
-  header {
-    padding-inline: 40px;
-    }
 
   .open-modal {
     display: block;
@@ -463,9 +444,6 @@ footer {
     display: block;
   }
 
-  header nav {
-    display: none;
-  }
 
   .´primeiro-fade´ {
     display: none;

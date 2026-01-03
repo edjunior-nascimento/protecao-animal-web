@@ -58,22 +58,23 @@ async function init(){
 //    return listaFotos;
 // }
 
-function criarCards(foto, index) {
-  galery.innerHTML += `
-        <div class="card-animals" onclick="mostrarModalImagem(${index})">
-            <img src="${foto}" alt="foto-galeria" 
-        </div>`
+
+
+function atualizarImagemModal(src) {
+  const modalImage = document.querySelector('.modal-content img');
+  if (modalImage) {
+    modalImage.src = src;
+  }
 }
 
 function mostrarModalImagem(index) {
   const modalGaleria = document.getElementById('modal-galeria');
   modalGaleria.style.display = 'block';
-  const modalImage = modalGaleria.querySelector('#modal-galeria .modal-content img');
   
   listaFotos.forEach((foto, i) => {
     if(i == index){
       console.log(foto);
-      modalImage.src = foto;
+      atualizarImagemModal(foto);
     }
   })
   

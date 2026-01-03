@@ -101,16 +101,6 @@ img:hover {
       flex-wrap: wrap;
 }
 
-.card-animals {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    width: 80% ;
-    height: 350px;
-    cursor: pointer;
-}
 
 a img {
   width: 100%;   /* Faz a imagem ocupar toda a largura da tag <a> */
@@ -263,6 +253,7 @@ footer {
   background: transparent;
   z-index: 1000;
   
+  
 }
 
 #fade.show {
@@ -330,7 +321,7 @@ footer {
 }
 
 #modal-galeria {
-  
+  display: none;
 }
 
 .show {
@@ -339,7 +330,7 @@ footer {
 
 .segundo-fade {
   position: fixed;
-  width: 75%;
+  width: 80%;
   height: 100%;
   top: 50%;
   left: 50%;

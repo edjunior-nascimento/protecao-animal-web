@@ -22,7 +22,7 @@ class GaleriaView {
 
   #criarCard() {
     this.listaFotos.forEach((foto, index) => {
-       this.#cardFotos.criar(index, foto);
+      this.#cardFotos.criar(index, foto);
     });
   }
 
@@ -31,20 +31,20 @@ class GaleriaView {
     if (modalImage) {
       modalImage.src = src;
     }
- }
+  }
 
   mostrarModalImagem(index) {
     console.log('mostrarModalImagem index:', index);
     const modalGaleria = document.getElementById('modal-galeria');
     modalGaleria.style.display = 'block';
-    
+
     this.listaFotos.forEach((foto, i) => {
-      if(i == index){
+      if (i == index) {
         console.log(foto);
-        atualizarImagemModal(foto);
+        this.#atualizarImagemModal(foto);
       }
     })
-    
+
     this.indexAtual = index;
   }
 
@@ -54,14 +54,14 @@ class GaleriaView {
   }
 
   proximaImagem() {
-    if(this.indexAtual <= this.listaFotos.length -1){
+    if (this.indexAtual <= this.listaFotos.length - 1) {
       this.indexAtual++;
       this.mostrarModalImagem(this.indexAtual)
     }
   }
 
   imagemAnterior() {
-    if(this.indexAtual >= 0){
+    if (this.indexAtual >= 0) {
       this.indexAtual--;
       this.mostrarModalImagem(this.indexAtual)
     }

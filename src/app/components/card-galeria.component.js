@@ -40,6 +40,7 @@ export class CardGaleriaComponent{
                 .card-galeria > a > div:hover {
                     transform: scale(1.05); /* aumenta 5% */
                     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* sombra mais forte */
+                    cursor: pointer;
                 }
 
             </style>

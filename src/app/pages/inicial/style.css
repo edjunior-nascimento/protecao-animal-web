@@ -2,68 +2,44 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 
-
-
-  * {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    font-size: 1.1rem;
-    font-family: Arial, Helvetica, sans-serif;
-
-  }
-
-  body {
-    background-color: #1e1e1e;
-  }
-
-  header {
+  .cabecalho {
     justify-content: space-between;
     height: 650px;
-    padding: 0px 50px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 25%), url(../../../assets/images/img-dog-initial-page.jpg);
+    background-image: url(../../../assets/images/img-dog-initial-page.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Jockey One';
-
-
-
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-
+  .cabecalho-degrader {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
   }
 
-  .hero {
+  .capa {
+    width: 30%;
     color: white;
     text-align: center;
-    font-size: 0.5rem;
-    padding: 40px 40px;
-    position: absolute;
+    padding: 100px 20px;
 
     h1 {
       color: #994900;
       font-family: 'Jockey One';
-      font-weight: 40px;
-      font-size: 35px;
-      line-height: 115%;
-      margin: 80px 0px;
+      font-weight: 400;
+      font-size: 1.8rem;
+      margin-bottom: 40px;
     }
 
     button {
-      padding: 10px 20px;
+      font-family: 'Jockey One';
+      font-weight: 200;
+      padding: 10px 30px;
       background-color: #27A8AD;
       border: none;
       color: white;
-      font-size: 1em;
+      font-size: 1rem;
       cursor: pointer;
+      border-radius: 8px;
+      box-shadow: #aeaeae 0px 4px 6px -1px, rgba(0, 0, 0, 0.5) 0px 2px 4px -1px;
     }
   }
 
@@ -74,13 +50,13 @@
 
     p {
       flex: 1;
-      padding: 20px;
+      padding: 10px 74px 10px 74px;
       color: white;
-      font-size: 30px;
+      font-size: 1.8rem;
+      font-weight: 400;
     }
 
     img {
-      flex: 1;
       max-width: 690px;
       background-size: cover;
       background-position: center;
@@ -89,73 +65,67 @@
     }
   }
 
-
   .ajuda {
-    background-color: #222;
-    color: white;
     text-align: center;
     padding: 40px 20px;
+    background-image: url(../../../assets/images/background_black.png);
+    background-size: inherit;
+    background-position: center;
+    background-repeat: repeat;
+    
+    > div {
+      display: flex;
+      height: 400px;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 20px;
+
+      a {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.2s;
+
+        img {
+          max-width: 200px;
+        }
+
+      }
+
+      a:hover {
+          transform: scale(1.1);
+      }
+    }
+  
   }
 
-  .patas {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 20px;
-  }
 
-  .pata-botao {
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    transition: transform 0.2s;
-  }
-
-  .pata-botao img {
-    width: 100px;
-    height: auto;
-  }
-
-  .pata-botao:hover {
-    transform: scale(1.1);
-  }
-
-  .pata-botao p {
-    margin-top: 10px;
-    font-weight: bold;
-  }
 
   .galeria {
-    background-color: #1e1e1e;
-    padding: 20px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .setas {
-      font-size: 35px;
-      color: #27A8AD;
-      cursor: pointer;
-      margin: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .setas:hover {
-      transform: scale(1.4);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-  }
-
-  .galery h2 {
-    color: #27A8AD;
     text-align: center;
-    margin-top: 2rem;
-    font-size: 40px;
+
+    > div {
+      background-color: #1e1e1e;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .setas {
+        font-size: 35px;
+        color: #27A8AD;
+        cursor: pointer;
+        margin: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .setas:hover {
+        transform: scale(1.4);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
   }
-
-
-
 
   #lista-galeria {
     display: flex;
@@ -183,8 +153,34 @@
 
   @media (max-width: 768px) {
 
+    .capa {
+      width: 60%;
+    }
+
+    .cabecalho {
+      height: 550px;
+      background-position: -80px;
+    }
+    
+    .sobre-nos {
+      display: block;
+      p {
+        padding: 20px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .ajuda {
+      > div {
+        display: block;
+        height: auto;
+      }
+    }
+
     .galeria {
-      width: 85%;
       justify-content: center;
     }
 

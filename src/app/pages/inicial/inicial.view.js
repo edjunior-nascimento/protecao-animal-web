@@ -9,7 +9,7 @@ class InicialView {
     tamanho = window.innerWidth <= 768 ? 1 : 3;
 
     constructor() {
-        new CabecalhoComponent("cabecalho");
+        new CabecalhoComponent("menu-cabecalho");
         new RodapeComponent("rodape");
         this.#init();
     }

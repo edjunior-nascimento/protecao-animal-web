@@ -9,34 +9,37 @@ export class CardGaleriaComponent{
 
         wrapper.innerHTML = `
             <style>
-                .card-galeria > a > div{
-                    position: relative; 
-                    max-width: 300px;
-                    aspect-ratio: 1 / 1;
-                    background-color: #fff;
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                    text-align: center;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease;
-                    cursor: pointer;
-                    padding: 20px;
-
-                    > img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        display: block;
+                .card-galeria {
+                    > a {
+                        text-decoration: none;
+                        list-style: none;
                     }
+                    
+                    > a > div {
+                        position: relative; 
+                        max-width: 300px;
+                        aspect-ratio: 1 / 1;
+                        background-color: #fff;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                        text-align: center;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        cursor: pointer;
+                        padding: 20px;
 
-                    .card-nome {
-                        color: black;
-                        font-family: Arial;
-                        font-weight: 400;
-                        font-size: 18px;
-                        line-height: 1.35;
-                        -webkit-line-clamp: 2;          /* limita a 2 linhas */
-                        padding: 20px 0px 10px 20px;
-                    }
-                } 
+                        > img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            display: block;
+                        }
+
+                        p {
+                            color: black;
+                            font-weight: 200;
+                            font-size: 1.2rem;
+                        }
+                    } 
+                }
                 .card-galeria > a > div:hover {
                     transform: scale(1.05); /* aumenta 5% */
                     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* sombra mais forte */

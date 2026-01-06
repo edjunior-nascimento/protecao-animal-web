@@ -5,63 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
+  <link rel="stylesheet" href="../../../styles/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <div id="cabecalho"></div>
+  <header class="cabecalho">
+    <div class="cabecalho-degrader">
+      <div id="menu-cabecalho"></div>
+    </div>
 
-    <section class="hero">
-      <h1>"Doe esperanças, doe para <br> salvar vidas."</h1>
-      <a href="../formulario-castracao/index.html">
-        <button>Ver campanhas</button></a>
+    <section class="capa">
+        <h1>"Doe esperanças, doe para salvar vidas."</h1>
+        <a href="../formulario-castracao/index.html">
+          <button>FAÇA SUA DOAÇÃO</button>
+        </a>
     </section>
   </header>
 
-  <section class="lista"></section>
-
-
-
   <section class="sobre-nos">
     <p>
-      Nossa ONG promove a conscientização sobre o abandono animal,
-      resgatando cães e gatos em situação de risco. Acreditamos em um
-      futuro mais digno para todos os animais.
+      Nossa ONG sobrevive graças à generosidade de 
+      pessoas como você, que acreditam no poder da 
+      solidariedade. Seja adotando, doando ou se 
+      voluntariando, cada gesto faz a diferença na 
+      construção de um futuro mais digno para os 
+      animais.
     </p>
-    <img src="../../../assets/images/gatosobrenos.png" alt="Gato" class="gatopng img">
+    <img src="../../../assets/images/gatosobrenos.png" alt="Gato" />
 
   </section>
 
 
   <section class="ajuda">
-    <h2>Quer Ajudar?</h2>
-    <div class="patas">
-      <a href="../adocao/index.html" class="pata-botao">
+    <h2 class="pro-titulo">Quer Ajudar?</h2>
+    <div>
+      <a href="../adocao/index.html" style="align-content: end">
         <img src="../../../assets/images/botao_adote.png" alt="Adote">
-        <p>Adote</p>
       </a>
-      <a href="../doacao/index.html" class="pata-botao">
+      <a href="../doacao/index.html" style="align-content: start">
         <img src="../../../assets/images/botao_doe.png" alt="Doe">
-        <p>Doe</p>
       </a>
-      <a href="../sobre/index.html" class="pata-botao">
+      <a href="../sobre/index.html" style="align-content: end">
         <img src="../../../assets/images/botao_voluntario.png" alt="Seja voluntário">
-        <p>Voluntário</p>
       </a>
     </div>
   </section>
 
 
 
-  <section class="galery">
-    <h2>Galeria de fotos</h2>
+  <section class="galeria">
+    <h2 class="pro-titulo">Galeria de fotos</h2>
 
-    <div class="galeria">
+    <div>
       <i class="setas fa-solid fa-angle-left" onclick="window.inicialView.botaoAnterior()"></i>
       <div id="lista-galeria"></div>
       <i class="setas fa-solid fa-angle-right" onclick="window.inicialView.botaoProximo()"></i>

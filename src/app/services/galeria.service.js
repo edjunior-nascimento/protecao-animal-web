@@ -1,3 +1,4 @@
+import axios from "https://cdn.skypack.dev/axios";
 export class GaleriaService {
 
   async listarGaleria(){

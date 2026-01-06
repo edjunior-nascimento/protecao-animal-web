@@ -1,5 +1,6 @@
-import { CabecalhoComponent} from '../../components/cabecalho.component.js'
+import { CabecalhoComponent } from '../../components/cabecalho.component.js'
 import { CardGaleriaComponent } from "../../components/card-galeria.component.js";
+import { RodapeComponent } from '../../components/rodape.component.js';
 import { GaleriaUsecase } from '../../use-case/galeria.usecase.js';
 class InicialView {
 
@@ -9,10 +10,11 @@ class InicialView {
 
     constructor() {
         new CabecalhoComponent("cabecalho");
+        new RodapeComponent("rodape");
         this.#init();
     }
 
-    async #init(){
+    async #init() {
         this.cardGaleria = new CardGaleriaComponent('lista-galeria');
         this.listaGaleria = await new GaleriaUsecase().listAlbuns();
         this.#cardColecao();
@@ -40,7 +42,7 @@ class InicialView {
         let visivel = this.listaGaleria.slice(init, fim);
 
         visivel.forEach(galeria => {
-            this.cardGaleria.criar(galeria.id, galeria.fotos[0], galeria.nome );
+            this.cardGaleria.criar(galeria.id, galeria.fotos[0], galeria.nome);
         });
     }
 

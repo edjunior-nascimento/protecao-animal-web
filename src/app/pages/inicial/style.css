@@ -1,272 +1,207 @@
-@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
-
-
-
-* {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  font-size: 1.1rem;
-  font-family: Arial, Helvetica, sans-serif;
-
-}
-
-body {
-  background-color: #1e1e1e;
-}
-
-header {
-  justify-content: space-between;
-  height: 650px;
-  padding: 0px 50px;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 25%), url(../../../assets/images/img-dog-initial-page.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  font-family: 'Jockey One';
+  @import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 
 
 
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  text-align: center;
+  * {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
 
-}
-
-.hero {
-  color: white;
-  text-align: center;
-  font-size: 0.5rem;
-  padding: 40px 40px;
-  position: absolute;
-  h1 {
-    color: #994900;
-    font-family: 'Jockey One';
-    font-weight: 40px;
-    font-size: 35px;
-    line-height: 115%;
-    margin: 80px 0px;
   }
-  button {
-    padding: 10px 20px;
-    background-color: #27A8AD;
-    border: none;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-  }
-}
 
-.sobre-nos {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  p {
-    flex: 1;
-    padding: 20px;
-    color: white;
-    font-size: 30px;
+  body {
+    background-color: #1e1e1e;
   }
-  img {
-    flex: 1;
-    max-width: 690px;
+
+  header {
+    justify-content: space-between;
+    height: 650px;
+    padding: 0px 50px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 25%), url(../../../assets/images/img-dog-initial-page.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-repeat: no-repeat;
   }
-}
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Jockey One';
 
 
-.ajuda {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
 
-.patas {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 20px;
-}
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
 
-.pata-botao {
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.2s;
-}
-
-.pata-botao img {
-  width: 100px;
-  height: auto;
-}
-
-.pata-botao:hover {
-  transform: scale(1.1);
-}
-
-.pata-botao p {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.galeria {
-  background-color: #1e1e1e;
-  padding: 20px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .setas {
-    font-size: 35px;
-    color: #27A8AD;
-    cursor: pointer;
-    margin: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
   }
-  .setas:hover {
+
+  .hero {
+    color: white;
+    text-align: center;
+    font-size: 0.5rem;
+    padding: 40px 40px;
+    position: absolute;
+
+    h1 {
+      color: #994900;
+      font-family: 'Jockey One';
+      font-weight: 40px;
+      font-size: 35px;
+      line-height: 115%;
+      margin: 80px 0px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #27A8AD;
+      border: none;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  }
+
+  .sobre-nos {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    p {
+      flex: 1;
+      padding: 20px;
+      color: white;
+      font-size: 30px;
+    }
+
+    img {
+      flex: 1;
+      max-width: 690px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+    }
+  }
+
+
+  .ajuda {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .patas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+  }
+
+  .pata-botao {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s;
+  }
+
+  .pata-botao img {
+    width: 100px;
+    height: auto;
+  }
+
+  .pata-botao:hover {
+    transform: scale(1.1);
+  }
+
+  .pata-botao p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .galeria {
+    background-color: #1e1e1e;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .setas {
+      font-size: 35px;
+      color: #27A8AD;
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .setas:hover {
       transform: scale(1.4);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
   }
-}
-.galery h2 {
-  color: #27A8AD;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 40px;
-}
+
+  .galery h2 {
+    color: #27A8AD;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 40px;
+  }
 
 
 
 
-#lista-galeria {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
+  #lista-galeria {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
 
 
-#big-cat{
+  #big-cat {
     height: 300px;
     padding-bottom: 0px;
     margin-bottom: 0px;
     position: relative;
     display: flex;
     justify-content: center;
-   margin-top: -150px;
- }
+    margin-top: -150px;
+  }
 
- .imgPatas{
+  .imgPatas {
     width: 196px;
     height: 250px;
     margin-left: 80%;
     transform: rotate(20deg);
- }
-#big-gato{
-    width: 264.08px;
-    height: 291px;
-    gap: 0px;
-    opacity: 0px;
-    position: absolute;
-    bottom: -50px;
- 
- }
- 
- footer{
-    background-color: #27A8AD;
-}
-#footer-primary{
-    display: grid;
-    
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr auto;
-   
-    
-}
-#footer-secondary{
-    background-color: #27A8AD;
-    text-align: center;
-    margin-top: 1.5rem;
   }
-.inf{
-    
-    text-align: center;
-    margin-top: 100px;
-    display: grid;
-    font-family: 'Jockey One'
-    
-    
-    
-  }
-.inf>a{
-    font-family: arial;
-}
-.footer-item{
-    color: black;
-    padding: 5px;
- }     
-.social-icons{
-    display: flex;
-    justify-content: center;
 
-    height: 100px;
-   
-       
-}
-.item-social{
-    margin-left: 20px;
-}
+  @media (max-width: 768px) {
 
-@media (max-width: 768px) {
-
-.galeria {
-  width: 85%;
-  justify-content: center;
-}
-
-.foto {
-  width: 120px;
-  height: 120px;
-}
-
-.h2 {
-  color: #f2f2f2;
-}
-.imgPatas{
-    width: 120px;
-    height: 150px;
-    margin-left: 65%;
-    transform: rotate(20deg);
- }
-
-#big-gato{
-        width: 204.08px;
-        height: 201px;
-        bottom: -35px;}
-
-#footer-primary{
-            display: grid;
-                
-            grid-template-columns: 1fr;
-                
-      
-        }
-
-.icones{
-        width: 60px;
-        margin-top: 20px;
-        margin-right: 20px;
-           
+    .galeria {
+      width: 85%;
+      justify-content: center;
     }
-}
+
+    .foto {
+      width: 120px;
+      height: 120px;
+    }
+
+    .h2 {
+      color: #f2f2f2;
+    }
+
+    .imgPatas {
+      width: 120px;
+      height: 150px;
+      margin-left: 65%;
+      transform: rotate(20deg);
+    }
+
+  }

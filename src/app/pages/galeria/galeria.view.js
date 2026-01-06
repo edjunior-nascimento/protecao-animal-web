@@ -44,7 +44,6 @@ class GaleriaView {
         this.#atualizarImagemModal(foto);
       }
     })
-
     this.indexAtual = index;
   }
 

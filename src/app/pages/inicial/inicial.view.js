@@ -3,15 +3,18 @@ import { CardGaleriaComponent } from "../../components/card-galeria.component.js
 import { GaleriaUsecase } from '../../use-case/galeria.usecase.js';
 class InicialView {
 
-    listaGaleria = []
-    indice = 0
-    tamanho = window.innerWidth <= 768 ? 1 : 3;
-
+   
+    
     constructor() {
         new CabecalhoComponent("cabecalho");
         this.#init();
     }
 
+    listaGaleria = []
+    indice = 0
+    tamanho = window.innerWidth <= 768 ? 1 : 3;
+
+   
     async #init(){
         this.cardGaleria = new CardGaleriaComponent('lista-galeria');
         this.listaGaleria = await new GaleriaUsecase().listAlbuns();

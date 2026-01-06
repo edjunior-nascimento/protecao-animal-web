@@ -3,17 +3,6 @@ import { CardAdocaoComponent } from '../../components/card-adocao.component.js'
 
 const paginationContainer = document.querySelector('.pagination')
 
-new CabecalhoComponent("cabecalho");
-let cardAdocaoComponent = new CardAdocaoComponent("lista-card-adocao");
-
-cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
-cardAdocaoComponent.criar(2, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
-cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
-cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
-cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
-cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
-cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
-cardAdocaoComponent.criar(1, "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_16x9.jpg", "Rex", "Guaraciaba do Norte", false);
 
 
 let animaisGlobal = [] // todos os animais via API
@@ -33,15 +22,7 @@ async function init(){
 
 }
 
-async function listarAnimaisAxios(){
-   try {  
-    const resposta = await axios.get("http://localhost:3001/api/animais")
-    return  resposta.data.data
-    } catch(error) {
-    console.error('erro no axio' + error)
-   }
-   
-}
+
 
 function listarAnimals(){
     
@@ -108,7 +89,7 @@ function renderizarPaginacao() {
     // Botão esquerda
     const left = document.createElement("span")
     left.innerHTML = "&lt;"
-    left.onclick = clickLeft
+    left.onclick = clickLeft //tira
     paginationContainer.appendChild(left)
   
     
@@ -155,7 +136,6 @@ function clickLeft() {
 
   
 }
-
 // Botão Direita
 function clickRight() {
     const totalPaginas = Math.ceil(animaisGlobal.length / tamanho)

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMM - Proteção Animal</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+    
+<body>
+
+
+    <header id="cabecalho"></header>
+
+    
+    <main>
+        <div id="hist">
+            <a href="../inicial/index.html">Pagina Inicial</a> 
+            <a>/</a>
+            <a href="#">Adote</a>
+        </div>
+        <h2>Encontre seu novo amigo</h2>
+        <section class="search">              
+            <div class="menu-item">
+                    <select class="filter-select" id="filter-species">
+                        <option value="0">Todas as espécies</option>
+                        <option value="1">Gato</option>
+                        <option value="2">Cachorro</option>
+                    </select>
+                </div>
+            <div class="menu-item">
+                    <select class="filter-select" id="filter-sex" >
+                        <option value="0">Todos os sexos</option>
+                        <option value="1">Fêmea</option>
+                        <option value="2">Macho</option>
+                       
+                    </select>
+                </div>
+            <div class="menu-item">
+                    <select
+                    class="filter-select" id="filter-size">
+                        <option value="0">Todos os portes</option>
+                        <option value="1">Pequeno</option>
+                        <option value="2">Médio</option>
+                        <option value="3">Grande</option>
+                        
+                    </select>
+                </div>            
+            <div class="menu-item">
+                    <select
+                    class="filter-select" id="filter-local">
+                        <option value="all">Todos os locais</option>
+                       
+                    </select>
+                </div>
+            <div class="menu-item">
+                    <input type="text" class="filter-select" placeholder="Nome do bicho" id="filter-name">
+            </div>
+            <div class="menu-item">
+                    <button id="search-button" onclick="buttonSearch()">
+                        Buscar
+                    </button>
+            </div>
+        </section>
+
+        <div id="lista-card-adocao"></div>
+
+        <section class="galery">
+            <!-- Itens implementado via javascript 
+            
+            <div class="card-animals">
+                <img src="../../../assets/images/img04-card-animal.png" alt="animal-photo" class="img-animal">
+                <p class="card-name">Totó</p>
+                <p class="card-local">Guaraciaba do Norte</p>
+            </div> 
+            
+            -->
+        </section>
+
+
+        <div id="pagination">
+            
+            <span id="Prev" onclick="clickLeft()"> &lt </span>
+            
+            
+            <span  class= "active " id="page1" onclick="selectPage(event)"> 1</span>
+            <span  id="page2"  onclick="selectPage(event)">2</span>
+            <span  id="page3"  onclick="selectPage(event)">3</span>
+           
+            
+            <span  id="After" onclick="clickRight()">></a>
+           
+        </div>
+    </main>
+    <div id="big-cat">
+        <img src="../../../assets/images/gato_footer.png" alt="logo-prot-animal" id="big-gato">
+    </div>
+    <footer>
+        <div id="footer-primary">
+            <div class="inf">
+                <h3>Sobre a Proteção Animal</h3>
+                
+                <a href="../sobre/index.html"class="footer-item">Sobre a Proteção Animal</a>
+                <a href="../formulario-castracao/"class="footer-item">Campanhas</a>
+                <a href="#"class="footer-item">Termos de Uso e Politica de Privacidade</a>
+                </div>
+        
+                <div class="inf"><h3>Colabore</h3>
+                    <a href="../doacao/index.html"class="footer-item">Doe qualquer valor</a>
+                    <a href="#"class="footer-item">Seja uma empresa parceira</a>
+                </div>
+        
+                <div class="inf"><h3>Contato</h3>
+                <p>Email:</p>
+                <a href="#"class="footer-item">protecaoanimal@gmail.com</a></div>
+        
+                <div class="inf">
+                    <h3>Rede Sociais</h3>
+                    <div class="social-icons">
+                        <div class="item-social">
+                          <a href=""><img src="../../../assets/icons/ic_whatsapp_black.png" alt="wpp-img" class="icones"/></a>
+                        </div>
+                        <div class="item-social">
+                          <a href="https://www.instagram.com/protecaoanimalgba/"><img src="../../../assets/icons/ic_instagram_black.png" alt="inst-img" class="icones" /></a>
+                        </div>
+                      </div>  
+                </div>
+        </div>
+        <div id="footer-secondary">
+            <a href=""><img src="../../../assets/images/logo_protecao.png" alt="logo-prot-animal" id="logo" width="140px"></a>
+        </div>
+    </footer>
+    
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="m-script.js" type="module"></script>
+
+</html>

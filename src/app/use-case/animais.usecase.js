@@ -7,40 +7,34 @@ export class AnimaisUsecase {
     animaisService = new AnimaisService();
     locaisUsecase = new LocaisUsecase();
 
-    listaAnimais = [];
 
-    constructor() {       
-        this.init();
-    }
-        
-
-    async init(){
-        this.listaAnimais = await this.animaisService.listarAnimais();
-    }
-
-    async listAnimais(){
+      //OK  
+    async listaAnimais(){
         let resposta = []
-        
-        let promessas = this.listaAnimais.map(async (animal) => {
-            const nomeLocal = await this.locaisUsecase.getNome(animal.local);
-            return { ...animal, local: nomeLocal };
-        });
 
-        resposta = await Promise.all(promessas);
+        const listaAnimais = await this.animaisService.listarAnimais()
+      
+       for(const animal of listaAnimais){
+            const nomeLocal = await this.locaisUsecase.getNome(animal.local)
+            resposta.push({...animal,local:nomeLocal})
+        }
+        
         
         return resposta;
     }
+    //ANALISA
 
+    //object objetct (OK)
     async getAnimal(idAnimal){
         let resposta = {};
 
-        const listaAnimais =  await this.listAnimais();
+        const listaAnimais =  await this.listaAnimais();
 
         resposta = listaAnimais.find(animal => animal.id == idAnimal);
 
         return resposta
     }
-    
+    ///error
     async listFotosAnimal(idAnimal){
         let resposta = [];
 
@@ -51,7 +45,7 @@ export class AnimaisUsecase {
         });
         return resposta
     }
-
+    //error
     async getNomeAnimal(idAnimal){
         let resposta = [];
 
@@ -63,10 +57,11 @@ export class AnimaisUsecase {
         return resposta
     }
 
+    // OK
     async getNomeLocalAnimal(idAnimal){
         let resposta = {};
 
-        const listaAnimais =  await this.listAnimais();
+        const listaAnimais =  await this.listaAnimais();
 
         resposta = listaAnimais.find(animal => animal.id == idAnimal) || {};
 

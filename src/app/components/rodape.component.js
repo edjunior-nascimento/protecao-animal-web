@@ -50,7 +50,10 @@ export class RodapeComponent extends HTMLElement{
                                 text-decoration: none;
                                 color: black;
                             }
-                            
+                            a:hover {
+                                color: #444444;
+                                transform: scale(1.05);
+                            }
                         }
                     }
                     .redes-sociais{
@@ -58,8 +61,11 @@ export class RodapeComponent extends HTMLElement{
                         display: flex;
                         justify-self: center;
                         gap: 20px;
-                       }
 
+                        > div:hover {
+                            transform: scale(1.05);
+                        }
+                       }
                     }
                 }
                 @media (max-width: 768px) {

@@ -41,6 +41,12 @@
       border-radius: 8px;
       box-shadow: #aeaeae 0px 4px 6px -1px, rgba(0, 0, 0, 0.5) 0px 2px 4px -1px;
     }
+
+    button:hover {
+      background-color: #1f8084;
+      transform: scale(1.05); /* aumenta 5% */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* sombra mais forte */
+    }
   }
 
   .sobre-nos {

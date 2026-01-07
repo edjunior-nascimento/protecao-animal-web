@@ -100,8 +100,6 @@
   
   }
 
-
-
   .galeria {
     text-align: center;
 
@@ -131,24 +129,6 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-  }
-
-
-  #big-cat {
-    height: 300px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-top: -150px;
-  }
-
-  .imgPatas {
-    width: 196px;
-    height: 250px;
-    margin-left: 80%;
-    transform: rotate(20deg);
   }
 
   @media (max-width: 768px) {
@@ -182,22 +162,6 @@
 
     .galeria {
       justify-content: center;
-    }
-
-    .foto {
-      width: 120px;
-      height: 120px;
-    }
-
-    .h2 {
-      color: #f2f2f2;
-    }
-
-    .imgPatas {
-      width: 120px;
-      height: 150px;
-      margin-left: 65%;
-      transform: rotate(20deg);
     }
 
   }

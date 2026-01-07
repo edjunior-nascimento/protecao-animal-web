@@ -42,11 +42,10 @@ class InicialView {
         let visivel = this.listaGaleria.slice(init, fim);
 
         visivel.forEach(galeria => {
-            this.cardGaleria.criar(galeria.id, galeria.fotos[0], galeria.nome);
+            this.cardGaleria.criar(galeria.getId(), galeria.getFotoCapa(), galeria.getNomeEvento());
         });
     }
 
 }
 
 window.inicialView = new InicialView();
-

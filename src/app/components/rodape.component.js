@@ -46,6 +46,7 @@ export class RodapeComponent {
                     font-family: arial;
                 }
                 .footer-item{
+                    text-decoration: none;
                     color: black;
                     padding: 5px;
                 }     

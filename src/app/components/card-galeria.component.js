@@ -1,13 +1,33 @@
-export class CardGaleriaComponent{
-    id = '';
-    constructor(idListaAnimal) {
-        this.id = idListaAnimal;
+export class CardGaleriaComponent extends HTMLElement{
+
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
     }
 
-    criar(id, foto, nome) {
-        const wrapper = document.createElement('card-galeria-wrapper');
+    // Define quais atributos o componente observa
+    static get observedAttributes() {
+        return ['codigo', 'foto', 'nome'];
+    }
 
-        wrapper.innerHTML = `
+    // Chamado quando atributos mudam
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (oldValue !== newValue) {
+            this.render();
+        }
+    }
+
+    // Chamado quando conecta ao DOM
+    connectedCallback() {
+        this.render();
+    }
+
+    render() {
+        const codigo = this.getAttribute('codigo') || '';
+        const foto = this.getAttribute('foto') || '';
+        const nome = this.getAttribute('nome') || 'Nome não informado';
+
+        this.shadowRoot.innerHTML = `
             <style>
                 .card-galeria {
                     > a {
@@ -47,7 +67,7 @@ export class CardGaleriaComponent{
 
             </style>
             <div class="card-galeria">
-                <a href="../galeria/index.html?id=${id}">
+                <a href="../galeria/index.html?id=${codigo}">
                     <div>
                         <img src="${foto}" alt="Galeria Image"/>
                         <p class="card-nome">${nome}</p>
@@ -56,10 +76,7 @@ export class CardGaleriaComponent{
             </div>
         `;
 
-        document.getElementById(this.id).appendChild(wrapper);
     }
-
-    limpar() {
-        document.getElementById(this.id).innerHTML = '';
-    }
+    
 }
+customElements.define('card-galeria-component', CardGaleriaComponent);

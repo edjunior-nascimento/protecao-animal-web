@@ -125,7 +125,7 @@
     }
   }
 
-  #lista-galeria {
+  #colecao-galeria {
     display: flex;
     justify-content: center;
     gap: 30px;

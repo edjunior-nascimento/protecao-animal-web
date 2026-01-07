@@ -17,33 +17,45 @@ class InicialView {
     async #init() {
         this.cardGaleria = new CardGaleriaComponent('lista-galeria');
         this.listaGaleria = await new GaleriaUsecase().listAlbuns();
-        this.#cardColecao();
+        this.#carregarGalerias()
     }
 
     botaoProximo() {
         if (this.indice + this.tamanho < this.listaGaleria.length) {
             this.indice += this.tamanho;
-            this.#cardColecao();
+            this.#carregarGalerias()
         }
     }
 
     botaoAnterior() {
         if (this.indice - this.tamanho >= 0) {
             this.indice -= this.tamanho;
-            this.#cardColecao();
+            this.#carregarGalerias()
         }
     }
 
-    #cardColecao() {
-        this.cardGaleria.limpar(); // limpa antes de exibir nova página
+    #carregarGalerias() {
+        
+        let colecaoGaleria = document.getElementById('colecao-galeria');
+        
+        //Limpar a colecao existente
+        colecaoGaleria.innerHTML = ''; 
 
         let init = this.indice;
         let fim = this.indice + this.tamanho;
-        let visivel = this.listaGaleria.slice(init, fim);
+        let listaGaleriaVisivel = this.listaGaleria.slice(init, fim);
 
-        visivel.forEach(galeria => {
-            this.cardGaleria.criar(galeria.getId(), galeria.getFotoCapa(), galeria.getNomeEvento());
+        listaGaleriaVisivel.forEach(galeria => {
+            colecaoGaleria.appendChild(this.#criarCard(galeria));
         });
+    }
+
+    #criarCard(galeriaModel) {
+        const card = document.createElement('card-galeria-component');
+        card.setAttribute('codigo', galeriaModel.getId());
+        card.setAttribute('foto', galeriaModel.getFotoCapa());
+        card.setAttribute('nome', galeriaModel.getNomeEvento());
+        return card;
     }
 
 }

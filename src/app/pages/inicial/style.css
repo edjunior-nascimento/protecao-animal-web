@@ -9,11 +9,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
 
-  .cabecalho-degrader {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-  }
+    .cabecalho-degrader {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+  } 
 
   .capa {
     width: 30%;
@@ -58,8 +59,9 @@
       flex: 1;
       padding: 10px 74px 10px 74px;
       color: white;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       font-weight: 400;
+      line-height: 1.5;
     }
 
     img {

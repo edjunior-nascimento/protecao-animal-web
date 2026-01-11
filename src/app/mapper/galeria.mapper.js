@@ -2,7 +2,7 @@ import { GaleriaModel } from "../models/galeria.model.js";
 
 export default class GaleriaMapper {
 
-    static paraGaleria(jsonDto) {
+    static paraGaleriaModel(jsonDto) {
         let listaRetorno = [];
         jsonDto.forEach(dto => {
             const galeriaModel = new GaleriaModel();

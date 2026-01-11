@@ -7,9 +7,9 @@ export class GaleriaService {
       let listaGaleria = [];   
       try {  
         const resposta = await axios.get("http://localhost:3001/api/galeria/")
-        listaGaleria =  GaleriaMapper.paraGaleria(resposta.data.data)
+        listaGaleria =  GaleriaMapper.paraGaleriaModel(resposta.data.data)
       } catch(error) {
-      console.error('erro no axio' + error)
+        console.error('erro no axio' + error)
       }
       return listaGaleria;
   }

@@ -6,7 +6,7 @@ export default class GaleriaMapper {
         let listaRetorno = [];
         jsonDto.forEach(dto => {
             const galeriaModel = new GaleriaModel();
-            
+
             galeriaModel.setId(dto.id);
             galeriaModel.setNomeEvento(dto.nome);
             galeriaModel.setFotoCapa(dto.fotos[0]);

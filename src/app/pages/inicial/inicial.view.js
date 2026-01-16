@@ -10,7 +10,6 @@ class InicialView {
 
     constructor() {
         new CabecalhoComponent("menu-cabecalho");
-        new RodapeComponent("rodape");
         this.#init();
     }
 

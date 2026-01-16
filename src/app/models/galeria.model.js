@@ -3,24 +3,20 @@ export class GaleriaModel {
     #nomeEvento;
     #fotoCapa;
 
-    getId() {
-        return this.#id;
-    }
-
     setId(value) {
         this.#id = value;
     }
 
-    getNomeEvento() {
-        return this.#nomeEvento;
+    getId() {
+        return this.#id;
     }
 
     setNomeEvento(value) {
         this.#nomeEvento = value;
     }
 
-    getFotoCapa() {
-        return this.#fotoCapa;
+    getNomeEvento() {
+        return this.#nomeEvento;
     }
 
     setFotoCapa(value) {
@@ -31,4 +27,7 @@ export class GaleriaModel {
         }
     }
 
+    getFotoCapa() {
+        return this.#fotoCapa;
+    }
 }

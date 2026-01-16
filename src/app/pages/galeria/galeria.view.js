@@ -53,14 +53,14 @@ class GaleriaView {
   }
 
   proximaImagem() {
-    if (this.indexAtual <= this.listaFotos.length - 1) {
+    if (this.indexAtual < this.listaFotos.length - 1) {
       this.indexAtual++;
       this.mostrarModalImagem(this.indexAtual)
     }
   }
 
   imagemAnterior() {
-    if (this.indexAtual >= 0) {
+    if (this.indexAtual > 0) {
       this.indexAtual--;
       this.mostrarModalImagem(this.indexAtual)
     }

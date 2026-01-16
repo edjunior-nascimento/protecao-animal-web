@@ -6,11 +6,16 @@ export class CabecalhoComponent{
         wrapper.innerHTML = `
             <style>
                 .ptc-header {
-                    width: 100%;
+
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    padding:5px 20px;
+                    padding:0px 20px 0px 20px ;
+                
+                    a {
+                        text-decoration: none;
+                        font-family: 'Jockey One';
+                    }
 
                     .logo {
                         width: 141px;
@@ -23,7 +28,6 @@ export class CabecalhoComponent{
 
                     .nav-links {
                         .menu-web {
-                            
                             ul {
                                 list-style: none;
                                 display: flex;
@@ -54,18 +58,33 @@ export class CabecalhoComponent{
                             border-radius: 2px;
                             position: absolute;
                             right: 20px;
+                            padding: 10px;
 
-                            > div {
+                            > a {
                                 display: flex;
                                 padding: 10px 15px 10px 15px;
                                 color: #27A8AD;
-                                font-size: 14px;
+                                font-size: 1rem;
                                 gap:20px;
                                 border-bottom: 1px solid #ccc;
                                 cursor: pointer;
+                                place-items: center;
+
+                                img {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                                p {
+                                    margin: 5px;
+                                    white-space: nowrap;
+                                }
                             }
 
-                            > div:hover {
+                            >a:last-child {
+                                border-bottom: none;
+                            }
+
+                            > a:hover {
                                 background-color: #f0f0f0;
                             }
                         }
@@ -78,6 +97,10 @@ export class CabecalhoComponent{
 
                 @media (max-width: 768px) {
                     .ptc-header {
+
+                        .logo {
+                            width: 120px;
+                        }
 
                         .nav-links {
                             .menu-web {
@@ -110,22 +133,22 @@ export class CabecalhoComponent{
                         <i class="fa-solid fa-bars"></i>
                     </div>
                     <div class="menu-mobile">
-                        <div>
+                        <a href="../inicial/index.html">
                             <img src="../../../assets/icons/game-icons_dog-house.png">
                             <p> Pagina Inicial</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a href="../doacao/index.html">
                             <img src="../../../assets/icons/Vector.png">
                             <p>Quero Adotar</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a href="../adocao/index.html">
                             <img src="../../../assets/icons/bxs_donate-heart.png">
                             <p>Quero Doar</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a href="../sobre/index.html">
                             <img src="../../../assets/icons/ic_baseline-diversity-3.png">
                             <p>Quem Somos</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -142,6 +165,17 @@ export class CabecalhoComponent{
 
         iconMenuMobile.onclick = () => {
             menuMobile.classList.toggle('show-menu-mobile');
+
+            //Alterar o ícone do menu para um "X" quando o menu estiver aberto
+            if (menuMobile.classList.contains('show-menu-mobile')) {
+                iconMenuMobile.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                iconMenuMobile.style.transition = 'transform 0.3s';
+                iconMenuMobile.style.transform = 'rotate(90deg)';
+            } else {
+                iconMenuMobile.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                iconMenuMobile.style.transition = 'transform 0.3s';
+                iconMenuMobile.style.transform = 'rotate(0deg)';
+            }
         }
     }
 }

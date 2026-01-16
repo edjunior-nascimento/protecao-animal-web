@@ -16,59 +16,29 @@
 </head>
 
 <body>
-  <header>
-    <div>
-      <img class="logo" src="../../../assets/images/logo_protecao.png" alt="logo Protecao animal" />
-      <button class="open-modal" onclick="toggleModalMenu()">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </button>
-      <div id="fade"></div>
-      <div class="modal">
-        <div class="textModal"><img src="../../../assets/icons/game-icons_dog-house.png" alt="">
-          <p> Pagina Inicial</p>
-        </div>
-        <div class="textModal"><img src="../../../assets/icons/Vector.png" alt="">
-          <p>Quero Adotar</p>
-        </div>
-        <div class="textModal"><img src="../../../assets/icons/bxs_donate-heart.png" alt="">
-          <p>Quero Doar</p>
-        </div>
-        <div class="textModal"><img src="../../../assets/icons/ic_baseline-diversity-3.png" alt="">
-          <p>Quem Somos</p>
-        </div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../inicial/index.html">Pagina inicial</a></li>
-          <li><a href="../doacao/index.html">Quero ajudar</a></li>
-          <li><a href="../adocao/index.html">Quero adotar</a></li>
-          <li><a href="../sobre/index.html">Quem somos</a></li>
-        </ul>
-      </nav>
+  <header>  
+    <div id="cabecalho"></div>
   </header>
   <div class="inicial">
-
     <a href="../inicial/index.html">Pagina Inicial</a>
     <a>/</a>
     <a href="../galeria/index.html">Galeria de Fotos</a>
-
+    <h1>Feiras De Adoção</h1>
   </div>
 
-  <section class="galery">
+  <section id="lista-fotos""" class="galeria">
     <!-- Cards de fotos carregadas via JS -->
   </section>
   <section class="primeiro-fade" id="modal-galeria">
     <div class="segundo-fade">
-      <p class="modal-close" onclick="fecharModalImagem()">X</p>
-      <button class="modal-btn modal-prev" aria-label="Anterior" onclick="imagemAnterior()">
+      <p class="modal-close" onclick="window.galeriaView.fecharModalImagem()">X</p>
+      <button class="modal-btn modal-prev" aria-label="Anterior" onclick="window.galeriaView.imagemAnterior()">
         <i class="fa-solid fa-chevron-left"></i>
       </button>
       <div class="modal-content">
         <img src="" alt="Imagem da galeria">
       </div>
-      <button class="modal-btn modal-next" aria-label="Próximo" onclick="proximaImagem()">
+      <button class="modal-btn modal-next" aria-label="Próximo" onclick="window.galeriaView.proximaImagem()">
         <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
@@ -138,9 +108,8 @@
   </footer>
 
   <div id="teste"></div>
-
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="script.js" type="module"></script>
+  <script src="galeria.view.js" type="module"></script>
 </body>
 
 </html>

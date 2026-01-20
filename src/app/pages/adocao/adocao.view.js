@@ -1,6 +1,7 @@
 import { CabecalhoComponent} from '../../components/cabecalho.component.js'
 import {CardAdocaoComponent} from '../../components/card-adocao.component.js'
 import { AnimaisUsecase } from '../../use-case/animais.usecase.js';
+import { LocaisUsecase } from '../../use-case/locais.usecase.js';
 
 
 class AdocaoView{
@@ -12,6 +13,8 @@ class AdocaoView{
     indice = 0
     itensPaginas = 6
 
+    listaLocais = []
+
     constructor() {
         new CabecalhoComponent("cabecalho");
         this.#init();
@@ -22,11 +25,13 @@ class AdocaoView{
     async #init(){
         this.cardAdocaoComponent =  new CardAdocaoComponent("lista-card-adocao");
         this.listaAnimais = await new AnimaisUsecase().listaAnimais()
+        this.listaLocais = await new LocaisUsecase().listLocais()
+
         this.#cardAdocao()
         this.#renderizarPaginacao()
+        this.#carregarFiltrosLocais()
+        this.#buttonSearch()
         
-        //this.teste = await new AnimaisUsecase().getNomeAnimal()
-        //console.log('TESTE ' + this.teste)
     }
 
     #cardAdocao(){
@@ -115,6 +120,77 @@ class AdocaoView{
         this.#cardAdocao();
         this.#renderizarPaginacao();
     };
+
+    //FILTROS
+    #carregarFiltrosLocais(){
+        const filtroLocais =  document.querySelector('#filter-local')
+        this.listaLocais.forEach(local => {
+        filtroLocais.innerHTML += `
+           <option value="${local.nome}">${local.nome}</option>
+            `;
+        })
+
+    }
+
+    #buttonSearch(){
+      let botao = document.querySelector('#search-button')
+      botao.addEventListener('click', this.clicarBotao)
+    }
+
+    clicarBotao = () => {
+
+    const filterSpecies = document.querySelector('#filter-species')
+    const filterSex = document.querySelector('#filter-sex')
+    const filterSize = document.querySelector('#filter-size')
+    const filterLocal = document.querySelector('#filter-local')
+    const filterName = document.querySelector('#filter-name')
+
+    let animaisResultado = this.listaAnimais
+
+    animaisResultado = this.filtrarEspecie(filterSpecies.value, animaisResultado)
+    animaisResultado = this.filtrarSex(filterSex.value, animaisResultado)
+    animaisResultado = this.filtrarSize(filterSize.value, animaisResultado)
+    animaisResultado = this.filtrarLocal(filterLocal.value, animaisResultado)
+    animaisResultado = this.filtrarNome(filterName.value, animaisResultado)
+
+   
+    this.cardAdocaoComponent.limpar()
+    let galeria = document.querySelector(".galery")
+    galeria.innerHTML = ""
+
+    animaisResultado.forEach(animal => {
+        this.cardAdocaoComponent.criar(animal.id, animal.fotos[0], animal.nome, animal.local, animal.adotado);
+        }) 
+    }
+    
+    filtrarEspecie(tipoEspecie, listaAnimal){
+        return listaAnimal.filter(animal =>
+            Number(tipoEspecie) !== 0 ? animal.especie == tipoEspecie : true
+        )   
+    }
+    filtrarSex(tipoSex, listaAnimal){
+        return listaAnimal.filter(animal =>
+            Number(tipoSex) !== 0 ? animal.sexo == tipoSex : true
+        )
+    }
+    filtrarSize(tipoSize, listaAnimal){
+        return listaAnimal.filter(animal =>
+            Number(tipoSize) !== 0 ? animal.porte == tipoSize : true
+        )
+    }
+    filtrarLocal(tipoLocal, listaAnimal){
+        return listaAnimal.filter(animal =>
+            tipoLocal !== 'all' ? animal.local == tipoLocal : true
+        )
+    }
+    filtrarNome(filtroNome, listaAnimal){
+    return listaAnimal.filter(animal =>
+       filtroNome !== '' ? animal.nome.toUpperCase() == filtroNome.toUpperCase() : true
+   
+    )
+
+    }
+
   
 }
 

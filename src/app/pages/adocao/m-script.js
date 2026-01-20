@@ -149,7 +149,8 @@ function clickRight() {
     
 }
 
-/// FILTROS
+
+//////        FILTROS
 
 function carregarFiltrosLocais(listaLocais){
     const filtroLocais =  document.querySelector('#filter-local')
@@ -169,9 +170,8 @@ function buttonSearch(){
     const filterLocal = document.querySelector('#filter-local')
     const filterName = document.querySelector('#filter-name')
     
-   
-
     let animaisResultado = animaisGlobal
+    
     animaisResultado = filtrarEspecie(filterSpecies.value, animaisResultado)
    
     animaisResultado = filtrarNome(filterName.value, animaisResultado)
@@ -181,7 +181,7 @@ function buttonSearch(){
     animaisResultado = filtrarSize(filterSize.value, animaisResultado)
    
     animaisResultado = filtrarLocal(filterLocal.value, animaisResultado)
-     console.log(`este é: ${animaisResultado.length}`)
+     
         
     var pets = document.querySelector(".galery")
     pets.innerHTML = ""
@@ -202,12 +202,11 @@ function buttonSearch(){
                 <p class="card-local">${getLocalById(card.local)}</p>
             </div>
             `; 
-        })
+    })
 
         
        
 }
-
 // functions dos filtros
 function filtrarEspecie(tipoEspecie, listaAnimal){
 
@@ -232,8 +231,6 @@ function filtrarLocal(tipoLocal, listaAnimal){
     tipoLocal !== 'all' ? animal.local == Number(tipoLocal) : true
     )
 }
-
-
 function filtrarNome(filtroNome, listaAnimal){
     return listaAnimal.filter(animal =>
        filtroNome !== '' ? animal.nome.toUpperCase() == filtroNome.toUpperCase() : true

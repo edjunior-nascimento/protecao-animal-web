@@ -10,13 +10,12 @@ export class GaleriaUsecase {
         return listaAlbuns;
     }
 
-    async listFotosAlbum(idAlbum){
+    async listarGaleriaPorId(idAlbum){
         let resposta = [];
-        let listaAlbuns = await this.galeriaService.listarGaleria();
-        
-        listaAlbuns.forEach(album => {
-            if(album.id == idAlbum){
-                resposta = album.fotos;
+        let listaGaleriaModel = await this.galeriaService.listarGaleria();
+        listaGaleriaModel.forEach(galeriaModel => {
+            if(galeriaModel.getId() == idAlbum){
+                resposta = galeriaModel;
             }
         })
 

@@ -10,6 +10,7 @@ export default class GaleriaMapper {
             galeriaModel.setId(dto.id);
             galeriaModel.setNomeEvento(dto.nome);
             galeriaModel.setFotoCapa(dto.fotos[0]);
+            galeriaModel.setFotos(dto.fotos);
 
             listaRetorno.push(galeriaModel);
         });  

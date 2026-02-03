@@ -1,5 +1,5 @@
-//import { CabecalhoComponente } from '../../components/cabecalho.componente.js';
-import { CabecalhoComponent } from '../../components/cabecalho.component.js'
+import { CabecalhoComponente } from '../../components/cabecalho.componente.js';
+//import { CabecalhoComponent } from '../../components/cabecalho.component.js'
 import { GaleriaUsecase } from '../../use-case/galeria.usecase.js';
 import { CardFotoComponent } from '../../components/card-foto.component.js';
 import { RodapeComponent } from '../../components/rodape.component.js';
@@ -9,7 +9,7 @@ class GaleriaView {
   indexAtual = 0;
 
   constructor() {
-    new CabecalhoComponent("cabecalho");
+  
     this.#init();
     this.#cardFotos = new CardFotoComponent('lista-fotos');
 

@@ -134,7 +134,9 @@ export class CabecalhoComponente extends HTMLElement {
                         </ul>
                     </div> 
                     <div class="icon-menu-mobile">
-                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-bars">
+                        <img src="../../../assets/icons/casa.png" alt="">
+                        </i>
                     </div>
                     <div class="menu-mobile">
                         <a href="../inicial/index.html">

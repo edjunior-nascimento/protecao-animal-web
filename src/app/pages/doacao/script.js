@@ -1,3 +1,4 @@
+import { CabecalhoComponente } from '../../components/cabecalho.componente.js';
 const openBtn = document.querySelector('.open-modal');
 const modal = document.querySelector('.modal');
 const fade = document.getElementById('fade');

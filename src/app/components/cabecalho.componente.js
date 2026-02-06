@@ -8,6 +8,8 @@ export class CabecalhoComponente extends HTMLElement {
 
     render() {
         this.shadowRoot.innerHTML = `
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
           <style>
                 .ptc-header {
 
@@ -134,9 +136,7 @@ export class CabecalhoComponente extends HTMLElement {
                         </ul>
                     </div> 
                     <div class="icon-menu-mobile">
-                        <i class="fa-solid fa-bars">
-                        <img src="../../../assets/icons/casa.png" alt="">
-                        </i>
+                        <i class="fa-solid fa-bars"></i>
                     </div>
                     <div class="menu-mobile">
                         <a href="../inicial/index.html">
@@ -160,12 +160,12 @@ export class CabecalhoComponente extends HTMLElement {
             </div>
         `;
 
-       // this._initEventos();
+        this._initEventos();
     }
 
     _initEventos() {
-        const iconMenuMobile = document.querySelector('.icon-menu-mobile');
-        const menuMobile = document.querySelector('.menu-mobile');
+        const iconMenuMobile = this.shadowRoot.querySelector('.icon-menu-mobile');
+        const menuMobile = this.shadowRoot.querySelector('.menu-mobile');
 
         iconMenuMobile.onclick = () => {
             menuMobile.classList.toggle('show-menu-mobile');

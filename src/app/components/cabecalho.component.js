@@ -1,4 +1,4 @@
-export class CabecalhoComponente extends HTMLElement {
+export class CabecalhoComponent extends HTMLElement {
 
     constructor() {
         super();
@@ -186,4 +186,4 @@ export class CabecalhoComponente extends HTMLElement {
 
 
 
-customElements.define('cabecalho-componente', CabecalhoComponente);
+customElements.define('cabecalho-component', CabecalhoComponent);

@@ -1,7 +1,6 @@
-import { CabecalhoComponente } from '../../components/cabecalho.componente.js';
-//import { CabecalhoComponent } from '../../components/cabecalho.component.js'
-import { CardGaleriaComponent } from "../../components/card-galeria.component.js";
+import { CabecalhoComponent } from '../../components/cabecalho.component.js';
 import { RodapeComponent } from '../../components/rodape.component.js';
+import { CardGaleriaComponent } from "../../components/card-galeria.component.js";
 import { GaleriaUsecase } from '../../use-case/galeria.usecase.js';
 class InicialView {
 

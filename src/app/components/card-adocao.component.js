@@ -89,6 +89,9 @@ export class CardAdocaoComponent{
         idElemento.style.gridTemplateColumns = "repeat( auto-fit, minmax(max(200px, 20%), 1fr))";
         idElemento.style.padding = "10px";
     }
+    limpar() {
+        document.getElementById(this.id).innerHTML = '';
+    }
 
 }
 

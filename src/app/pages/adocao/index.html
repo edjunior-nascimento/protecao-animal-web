@@ -66,7 +66,7 @@
                     <input type="text" class="filter-select" placeholder="Nome do bicho" id="filter-name">
             </div>
             <div class="menu-item">
-                    <button id="search-button" onclick="buttonSearch()">
+                    <button id="search-button">
                         Buscar
                     </button>
             </div>
@@ -87,7 +87,7 @@
         </section>
 
 
-        <div class="pagination">
+        <div id="pagination">
             
             <span id="Prev" onclick="clickLeft()"> &lt </span>
             
@@ -95,7 +95,7 @@
             <span  class= "active " id="page1" onclick="selectPage(event)"> 1</span>
             <span  id="page2"  onclick="selectPage(event)">2</span>
             <span  id="page3"  onclick="selectPage(event)">3</span>
-            <span  id="page4"  onclick="selectPage(event)">4</span>
+           
             
             <span  id="After" onclick="clickRight()">></a>
            
@@ -143,6 +143,6 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="script.js" type="module"></script>
+<script src="adocao.view.js" type="module"></script>
 
 </html>

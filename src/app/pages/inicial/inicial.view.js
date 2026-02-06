@@ -4,10 +4,8 @@ import { CardGaleriaComponent } from "../../components/card-galeria.component.js
 import { GaleriaUsecase } from '../../use-case/galeria.usecase.js';
 class InicialView {
 
-    listaGaleria = []
-    indice = 0
-    tamanho = window.innerWidth <= 768 ? 1 : 3;
-
+   
+    
     constructor() {
         this.#init();
     }

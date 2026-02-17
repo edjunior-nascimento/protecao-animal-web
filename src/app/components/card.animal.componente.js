@@ -9,7 +9,7 @@ export class CardAnimalComponent extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['animal-id', 'nome', 'especie', 'sexo', 'idade', 'local', 'foto'];
+        return ['codico', 'nome', 'especie', 'sexo', 'idade', 'local', 'foto'];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
@@ -18,7 +18,7 @@ export class CardAnimalComponent extends HTMLElement {
         }
     }
 
-    set animal(data) {
+  /*  set animal(data) {
         this._animal = data;
         this.render();
     }
@@ -43,15 +43,36 @@ export class CardAnimalComponent extends HTMLElement {
         const nascimento = new Date(ano, mes, dia);
         const hoje = new Date();
         
+        // Calcula anos
         let anos = hoje.getFullYear() - nascimento.getFullYear();
         const mesAtual = hoje.getMonth();
         const diaAtual = hoje.getDate();
         
+        // Ajusta se ainda não fez aniversário este ano
         if (mesAtual < mes || (mesAtual === mes && diaAtual < dia)) {
             anos--;
         }
         
-        return anos > 0 ? `${anos} ${anos === 1 ? 'ano' : 'anos'}` : 'Menos de 1 ano';
+        // Calcula meses
+        let meses = mesAtual - mes;
+        if (diaAtual < dia) {
+            meses--;
+        }
+        if (meses < 0) {
+            meses += 12;
+        }
+        
+        // Retorna a idade formatada
+        if (anos > 0) {
+            if (meses > 0) {
+                return `${anos} ${anos === 1 ? 'ano' : 'anos'} e ${meses} ${meses === 1 ? 'mês' : 'meses'}`;
+            }
+            return `${anos} ${anos === 1 ? 'ano' : 'anos'}`;
+        } else if (meses > 0) {
+            return `${meses} ${meses === 1 ? 'mês' : 'meses'}`;
+        } else {
+            return 'Menos de 1 mês';
+        }
     }
 
     _obterEspecie() {
@@ -101,9 +122,18 @@ export class CardAnimalComponent extends HTMLElement {
             bubbles: true,
             composed: true
         }));
-    }
+    }*/
 
-    render() {
+    render() {   
+
+        const codigo = this.getAttribute('codigo') || ''; 
+        const nome = this.getAttribute('nome') || 'Nome não informado';
+        const especie = this.getAttribute('especie') || '';
+        const sexo = this.getAttribute('sexo') || '';
+        const idade = this.getAttribute('idade') || '';
+        const local = this.getAttribute('local') || '';
+        const foto = this.getAttribute('foto') || '';
+
         this.shadowRoot.innerHTML = `
             <style>
                 .pet-card {
@@ -196,21 +226,21 @@ export class CardAnimalComponent extends HTMLElement {
                 }
             </style>
 
-            <div class="pet-card">
+            <div class="pet-card" id="${codigo}">
                 <div class="pet-image">
-                    <img src="${this._obterFoto()}" alt="${this._obterNome()}">
+                    <img src="${foto}" alt="${nome}">
                 </div>
                 
                 <div class="pet-info">
-                    <h2 class="pet-name">${this._obterNome()}</h2>
-                    <p class="pet-details">${this._obterEspecie()} | ${this._obterSexo()} | ${this._obterIdade()}</p>
+                    <h2 class="pet-name">${nome}</h2>
+                    <p class="pet-details">${especie} | ${sexo} | ${idade}</p>
                     
                     <div class="pet-location">
                         <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
-                        <span>Está em ${this._obterLocal()}</span>
+                        <span>${local}</span>
                     </div>
                 </div>
                 

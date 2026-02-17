@@ -1,0 +1,236 @@
+export class CardAnimalComponent extends HTMLElement {
+
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+        this._animal = null;
+        this._localNome = '';
+        this.render();
+    }
+
+    static get observedAttributes() {
+        return ['animal-id', 'nome', 'especie', 'sexo', 'idade', 'local', 'foto'];
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (oldValue !== newValue) {
+            this.render();
+        }
+    }
+
+    set animal(data) {
+        this._animal = data;
+        this.render();
+    }
+
+    get animal() {
+        return this._animal;
+    }
+
+    set localNome(nome) {
+        this._localNome = nome;
+        this.render();
+    }
+
+    _calcularIdade(dataNascimento) {
+        if (!dataNascimento) return 'Idade desconhecida';
+        
+        const partes = dataNascimento.split('-');
+        const dia = parseInt(partes[0]);
+        const mes = parseInt(partes[1]) - 1;
+        const ano = parseInt(partes[2]);
+        
+        const nascimento = new Date(ano, mes, dia);
+        const hoje = new Date();
+        
+        let anos = hoje.getFullYear() - nascimento.getFullYear();
+        const mesAtual = hoje.getMonth();
+        const diaAtual = hoje.getDate();
+        
+        if (mesAtual < mes || (mesAtual === mes && diaAtual < dia)) {
+            anos--;
+        }
+        
+        return anos > 0 ? `${anos} ${anos === 1 ? 'ano' : 'anos'}` : 'Menos de 1 ano';
+    }
+
+    _obterEspecie() {
+        if (this._animal) {
+            return this._animal.especie === 1 ? 'Gato' : 'Cão';
+        }
+        return this.getAttribute('especie') || 'Animal';
+    }
+
+    _obterSexo() {
+        if (this._animal) {
+            return this._animal.sexo === 1 ? 'Fêmea' : 'Macho';
+        }
+        return this.getAttribute('sexo') || '';
+    }
+
+    _obterNome() {
+        if (this._animal) {
+            return this._animal.nome;
+        }
+        return this.getAttribute('nome') || 'Sem nome';
+    }
+
+    _obterIdade() {
+        if (this._animal && this._animal.nascimento) {
+            return this._calcularIdade(this._animal.nascimento);
+        }
+        return this.getAttribute('idade') || 'Idade desconhecida';
+    }
+
+    _obterLocal() {
+        if (this._localNome) {
+            return this._localNome;
+        }
+        return this.getAttribute('local') || 'Local desconhecido';
+    }
+
+    _obterFoto() {
+        if (this._animal && this._animal.fotos && this._animal.fotos.length > 0) {
+            return this._animal.fotos[0];
+        }
+        return this.getAttribute('foto') || '../../../assets/images/imagens adoção (2).jpeg';
+    }
+
+    _fecharCard() {
+        this.dispatchEvent(new CustomEvent('fechar-card', {
+            bubbles: true,
+            composed: true
+        }));
+    }
+
+    render() {
+        this.shadowRoot.innerHTML = `
+            <style>
+                .pet-card {
+                    display: flex;
+                    align-items: center;
+                    font-family: 'Lexend', sans-serif;
+                    border: 1px solid #d1d5db;
+                    border-radius: 4px;
+                    padding: 12px;
+                    max-width: 90%;
+                    background-color: #fff;
+                    margin: 20px auto;
+                    position: relative;
+                }
+
+                .pet-image img {
+                    width: 120px;
+                    height: 120px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    display: block;
+                }
+
+                .pet-info {
+                    margin-left: 20px;
+                    flex: 1;
+                }
+
+                .pet-name {
+                    color: #12999d;
+                    font-size: 1.5rem;
+                    margin: 0 0 8px 0;
+                    font-weight: 600;
+                }
+
+                .pet-details {
+                    color: #333;
+                    font-size: 0.95rem;
+                    margin: 0 0 12px 0;
+                }
+
+                .pet-location {
+                    display: flex;
+                    align-items: center;
+                    color: #444;
+                    font-size: 0.9rem;
+                }
+
+                .location-icon {
+                    width: 18px;
+                    height: 18px;
+                    color: #12999d;
+                    margin-right: 8px;
+                }
+
+                .close-button {
+                    position: absolute;
+                    top: 12px;
+                    right: 12px;
+                    background: none;
+                    border: none;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    color: #666;
+                    padding: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: color 0.2s;
+                }
+
+                .close-button:hover {
+                    color: #12999d;
+                }
+
+                @media (max-width: 768px) {
+                    .pet-card {
+                        flex-direction: column;
+                        text-align: center;
+                    }
+
+                    .pet-info {
+                        margin-left: 0;
+                        margin-top: 12px;
+                    }
+
+                    .pet-location {
+                        justify-content: center;
+                    }
+                }
+            </style>
+
+            <div class="pet-card">
+                <div class="pet-image">
+                    <img src="${this._obterFoto()}" alt="${this._obterNome()}">
+                </div>
+                
+                <div class="pet-info">
+                    <h2 class="pet-name">${this._obterNome()}</h2>
+                    <p class="pet-details">${this._obterEspecie()} | ${this._obterSexo()} | ${this._obterIdade()}</p>
+                    
+                    <div class="pet-location">
+                        <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Está em ${this._obterLocal()}</span>
+                    </div>
+                </div>
+                
+                <button class="close-button" aria-label="Fechar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        `;
+
+        // Adicionar event listener ao botão de fechar
+        const closeButton = this.shadowRoot.querySelector('.close-button');
+        if (closeButton) {
+            closeButton.addEventListener('click', () => this._fecharCard());
+        }
+    }
+}
+
+// Registrar o componente
+customElements.define('card-animal-component', CardAnimalComponent);
+
+
+
+

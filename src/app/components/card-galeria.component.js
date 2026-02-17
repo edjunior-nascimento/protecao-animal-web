@@ -17,7 +17,6 @@ export class CardGaleriaComponent extends HTMLElement{
         }
     }
 
-    // Chamado quando conecta ao DOM
     connectedCallback() {
         this.render();
     }

@@ -2,5 +2,6 @@
 .history/
 dg
 tash appy
-/backend-mock/node_modules
+/legacy/backend-mock/node_modules
 /node_modules
+/react-app/node_modules

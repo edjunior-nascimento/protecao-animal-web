@@ -1,7 +1,8 @@
 import { CabecalhoComponent } from '../../components/cabecalho.component.js';
 import { RodapeComponent } from '../../components/rodape.component.js';
+// Importamos a classe do arquivo que acabamos de criar
+import { PataComponent } from '../../components/card-patas.componente.js';
 import { CardGaleriaComponent } from "../../components/card-galeria.component.js";
-import { CardAnimalComponent } from "../../components/card.animal.componente.js";
 import { GaleriaUsecase } from '../../use-case/galeria.usecase.js';
 import { AnimaisUsecase } from '../../use-case/animais.usecase.js';
 

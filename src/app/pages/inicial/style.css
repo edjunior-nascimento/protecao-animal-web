@@ -80,33 +80,16 @@
     background-size: inherit;
     background-position: center;
     background-repeat: repeat;
-    
-    > div {
-      display: flex;
-      height: 400px;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      margin-top: 20px;
-
-      a {
-        text-align: center;
-        text-decoration: none;
-        color: white;
-        transition: transform 0.2s;
-
-        img {
-          max-width: 200px;
-        }
-
-      }
-
-      a:hover {
-          transform: scale(1.1);
-      }
-    }
-  
   }
+    
+  /* ...existing code... */
+
+.pata-alta {
+  position: relative;      /* tira o absolute */
+ margin-bottom: 10%;
+}
+
+
 
   .galeria {
     text-align: center;

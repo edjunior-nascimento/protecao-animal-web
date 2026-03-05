@@ -1,4 +1,6 @@
 import { CabecalhoComponente } from '../../components/cabecalho.componente.js';
+import { CardDoacaoComponent } from '../../components/card.doacao.componente .js';
+import { RodapeComponent } from '../../components/rodape.component.js';
 const openBtn = document.querySelector('.open-modal');
 const modal = document.querySelector('.modal');
 const fade = document.getElementById('fade');

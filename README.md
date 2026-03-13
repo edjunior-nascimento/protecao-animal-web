@@ -14,7 +14,8 @@ Conectar pessoas apaixonadas por animais com ONGs e projetos que promovem sua pr
 
 ## Tecnologias Utilizadas
 
-- **Frontend**: Angular
+- **Frontend**: React
+- **Framework CSS**: Tailwind CSS
 - **Backend**: Java
 - **Banco de Dados**: MySql
 - **Hospedagem**: HostGator
@@ -46,16 +47,79 @@ Conectar pessoas apaixonadas por animais com ONGs e projetos que promovem sua pr
    npm run start:back
    ```
 3. Acesse no navegador: `http://localhost:3001`
-<!-- ## Estrutura do Projeto
+<!-- ## Estrutura de Pastas Proposta
 
 ```plaintext
-/src
-   /components      # Componentes reutilizáveis
-   /pages           # Páginas principais
-   /services        # Serviços para chamadas de API
-   /assets          # Imagens e arquivos estáticos
-README.md          # Documentação do projeto
-CONTRIBUTING.md    # Guia para contribuidores
+src/
+├── components/              # Componentes reutilizáveis
+│   ├── ui/                 # Componentes básicos
+│   │   ├── Button/
+│   │   ├── Card/
+│   │   ├── Input/
+│   │   └── Modal/
+│   ├── layout/             # Layout components
+│   │   ├── Header/         # cabecalho.component.js → Header
+│   │   ├── Footer/         # rodape.component.js → Footer
+│   │   └── Navigation/
+│   └── features/           # Componentes específicos por feature
+│       ├── adocao/
+│       │   ├── CardAdocao/ # card-adocao.component.js
+│       │   ├── ListaAnimais/
+│       │   └── FiltrosAdocao/
+│       └── galeria/
+│           ├── CardFoto/   # card-foto.component.js
+│           ├── CardGaleria/ # card-galeria.component.js
+│           └── GridGaleria/
+├── pages/                  # Views principais
+│   ├── InicialPage/        # inicial/
+│   ├── AdocaoPage/         # adocao/
+│   ├── DetalhesAdocaoPage/ # detalhes-adocao/
+│   ├── GaleriaPage/        # galeria/
+│   ├── DoacaoPage/         # doacao/
+│   ├── SobrePage/          # sobre/
+│   ├── FormularioAdocaoPage/     # formulario-adocao/
+│   ├── FormularioCastracaoPage/  # formulario-castracao/
+│   └── FormularioDoacaoPage/     # formulario-doacao/
+├── domain/                 # Lógica de negócio (mantém estrutura legacy)
+│   ├── entities/          # models/
+│   │   ├── Adocao.ts      # adocao.model.js
+│   │   ├── Animal.ts      # animal.model.js
+│   │   └── Galeria.ts     # galeria.model.js
+│   ├── enums/             # enums/ (mantém igual)
+│   │   └── porte.enum.ts  # porte.enum.js
+│   └── use-cases/         # use-case/ (mantém lógica)
+│       ├── animais.usecase.ts
+│       ├── galeria.usecase.ts
+│       └── locais.usecase.ts
+├── infrastructure/         # Services e adapters externos
+│   ├── services/          # services/ (mantém estrutura)
+│   │   ├── animais.service.ts
+│   │   ├── galeria.service.ts
+│   │   └── locais.service.ts
+│   ├── mappers/           # mapper/ (mantém)
+│   │   ├── adocao.mapper.ts
+│   │   └── galeria.mapper.ts
+│   └── api/               # Configurações de API
+│       └── client.ts
+├── hooks/                 # Custom hooks React
+│   ├── useAnimais.ts
+│   ├── useGaleria.ts
+│   └── usePaginacao.ts
+├── context/               # Context API para estados globais
+│   ├── AnimaisContext.tsx
+│   └── AppContext.tsx
+├── types/                 # TypeScript definitions
+│   ├── api.types.ts
+│   └── common.types.ts
+├── utils/                 # Utilitários
+│   └── helpers.ts
+├── styles/               # Estilos globais
+│   ├── globals.css
+│   ├── variables.css
+│   └── components.css
+└── assets/               # Recursos estáticos
+    ├── images/
+    └── icons/
 ``` -->
 
 ## Contribuidores

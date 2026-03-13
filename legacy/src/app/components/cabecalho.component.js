@@ -184,6 +184,4 @@ export class CabecalhoComponent extends HTMLElement {
     }
 }
 
-
-
 customElements.define('cabecalho-component', CabecalhoComponent);

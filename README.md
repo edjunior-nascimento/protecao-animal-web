@@ -61,17 +61,15 @@ src/
 │   │   ├── Header/         # cabecalho.component.js → Header
 │   │   ├── Footer/         # rodape.component.js → Footer
 │   │   └── Navigation/
-│   ├── features/           # Componentes específicos por feature
-│   │   ├── adocao/
-│   │   │   ├── CardAdocao/ # card-adocao.component.js
-│   │   │   ├── ListaAnimais/
-│   │   │   └── FiltrosAdocao/
-│   │   └── galeria/
-│   │       ├── CardFoto/   # card-foto.component.js
-│   │       ├── CardGaleria/ # card-galeria.component.js
-│   │       └── GridGaleria/
-│   └── shared/             # Componentes compartilhados
-│       └── Paginacao/      # paginacao.js → Paginacao
+│   └── features/           # Componentes específicos por feature
+│       ├── adocao/
+│       │   ├── CardAdocao/ # card-adocao.component.js
+│       │   ├── ListaAnimais/
+│       │   └── FiltrosAdocao/
+│       └── galeria/
+│           ├── CardFoto/   # card-foto.component.js
+│           ├── CardGaleria/ # card-galeria.component.js
+│           └── GridGaleria/
 ├── pages/                  # Views principais
 │   ├── InicialPage/        # inicial/
 │   ├── AdocaoPage/         # adocao/
@@ -79,10 +77,9 @@ src/
 │   ├── GaleriaPage/        # galeria/
 │   ├── DoacaoPage/         # doacao/
 │   ├── SobrePage/          # sobre/
-│   └── forms/              # Páginas de formulários
-│       ├── FormularioAdocaoPage/     # formulario-adocao/
-│       ├── FormularioCastracaoPage/  # formulario-castracao/
-│       └── FormularioDoacaoPage/     # formulario-doacao/
+│   ├── FormularioAdocaoPage/     # formulario-adocao/
+│   ├── FormularioCastracaoPage/  # formulario-castracao/
+│   └── FormularioDoacaoPage/     # formulario-doacao/
 ├── domain/                 # Lógica de negócio (mantém estrutura legacy)
 │   ├── entities/          # models/
 │   │   ├── Adocao.ts      # adocao.model.js

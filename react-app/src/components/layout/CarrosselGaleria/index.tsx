@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import {
   Box,
   Button,
@@ -7,39 +7,29 @@ import {
 import {ChevronRight, ChevronLeft, } from '@mui/icons-material';
 import { CardGaleria } from '../../features/CardGaleria';
 
-let indice:number = 0;
-let tamanho:number = 3;
-
 export const CarrosselGaleria: React.FC<{ galeria: any[] }> = ({galeria}) => {
   
-  const [galeriaState, setGaleriaState] = React.useState(galeria);
-  const [isMobile] = React.useState(window.innerWidth < 800);
-    
-  useEffect(() => {
-    carregarGaleria();
-  });
-
-  useEffect(() => {
-   tamanho = isMobile ? 1 : 3;
-    carregarGaleria();
-  }, [isMobile]);
+  const [indice, setIndice] = useState(0);
+  const isMobile = useMemo(() => window.innerWidth < 800, []);
+  const tamanho = isMobile ? 1 : 3;
   
-  function botaoProximo() {
-    indice++;
-    carregarGaleria();
-  }
+  const galeriaVisivel = useMemo(() => {
+    const inicio = indice;
+    const fim = indice + tamanho;
+    return galeria.slice(inicio, fim);
+  }, [galeria, indice, tamanho]);
+  
+  const botaoProximo = useCallback(() => {
+    setIndice(prevIndice => prevIndice + 1);
+  }, []);
 
-  function botaoAnterior() {
-    indice--;
-    carregarGaleria();
-  }
+  const botaoAnterior = useCallback(() => {
+    setIndice(prevIndice => prevIndice - 1);
+  }, []);
 
-  function carregarGaleria() {
-    let inicio = indice;
-    let fim = indice + tamanho;
-    let listaGaleriaVisivel = galeria.slice(inicio, fim);
-    setGaleriaState(listaGaleriaVisivel);
-  }
+  useEffect(() => {
+    setIndice(0);
+  }, [galeria]);
   
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2 }}>
@@ -48,7 +38,7 @@ export const CarrosselGaleria: React.FC<{ galeria: any[] }> = ({galeria}) => {
       </Button>  
       <Box sx={{display: 'flex', gap:3}}> 
         {
-          galeriaState.map((item) => (
+          galeriaVisivel.map((item) => (
             <CardGaleria key={item.codigo} codigo={item.codigo} nome={item.nome} foto={item.foto}></CardGaleria>
           ))
         }

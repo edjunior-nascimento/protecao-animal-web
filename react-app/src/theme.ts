@@ -15,7 +15,7 @@ const theme = createTheme({
       dark: '#777575',
     },
     background: {
-      default: '#000000',
+      default: '#1e1e1e',
       paper: '#efefef',
     },
     text: {
@@ -25,12 +25,16 @@ const theme = createTheme({
   },
   components: {
     MuiContainer: {
+      defaultProps: {
+        maxWidth: false,
+      },
       styleOverrides: {
         root: {
+          padding: 0,
           marginTop: 150,
           marginLeft: 50,
           marginRight: 50,
-        }
+        },
       },
     },
     MuiTypography: {

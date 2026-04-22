@@ -32,8 +32,8 @@ const theme = createTheme({
         root: {
           padding: 0,
           marginTop: 150,
-          marginLeft: 50,
-          marginRight: 50,
+          marginLeft: 0,
+          marginRight: 0,
         },
       },
     },

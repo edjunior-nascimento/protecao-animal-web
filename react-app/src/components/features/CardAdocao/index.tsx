@@ -11,24 +11,24 @@ import { CloseOutlined, RoomOutlined } from '@mui/icons-material';
 export function CardAdocao(){
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'row'}}> 
+        <Box sx={{ display: 'flex', flexDirection: 'row', marginTop: '10px', border: '1px solid #ccc', borderRadius: '8px', padding: '16px', backgroundColor: '#fff' }}> 
             <Box component= "img" sx={{ width: 200, height: 200 }} src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Imagem de Adoção">
             </Box>
-            <Box>
+            <Box sx={{marginLeft: '20px', marginmTop: '19.5px'}}>
                 <Typography variant="h5" component="h5">
                     Pietro
                 </Typography>
-                <Typography variant="body1" component="p" color='black'>
+                <Typography sx={{marginTop: '23px'}} variant="body1" component="p" color='black'>
                     Cachorro  | Golden | Macho | 2 anos | Porte grande 
                 </Typography>    
-                <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '5px' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '5px', marginTop:'24.5px' }}>
                     <RoomOutlined color="primary"/> 
                     <Typography variant="body1" component="p" color='black'>
                         Está Em Guaraciaba Do Norte 
                     </Typography>  
                 </Box>
             </Box>
-            <Box>
+            <Box sx={{ marginLeft: 'auto', marginRight: '20px', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
                 <CloseOutlined color='primary'/>
             </Box>
         </Box>

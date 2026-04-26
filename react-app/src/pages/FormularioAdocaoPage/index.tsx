@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Container, Divider, Typography } from "@mui/material";
+import { Box, Container, Divider, Input, Typography } from "@mui/material";
 import { CardAdocao } from "../../components/features/CardAdocao";
-import { AddCircleOutlined, AddCircleOutlineOutlined } from "@mui/icons-material";
+import { AddCircleOutlined, AddCircleOutlineOutlined, Margin } from "@mui/icons-material";
 
 export const FormularioAdocaoPage: React.FC = () => { 
   return (
@@ -17,7 +17,7 @@ export const FormularioAdocaoPage: React.FC = () => {
         <Typography sx={{ marginBottom: '30px', marginLeft: "50px", marginRight: "50px", paddingTop: "58px", fontSize: "25px", fontWeight: "bold"}} component="p" color= "black">
           Preencha a ficha de adoção com as suas informações, para que possamos conhecer você melhor e garantir a combinação perfeita com o seu novo amigo.
         </Typography>
-        <Box sx={{ backgroundColor:"white",padding: "20px", marginLeft: "81px", marginRight: "81px", marginBottom: "26px"}}>
+        <Box sx={{ backgroundColor:"white", marginLeft: "81px", marginRight: "81px", paddingBottom: "26px", paddingTop: "10px"}}>
           <Typography sx={{fontSize: "25px", fontWeight: "bold"}} component="p" color= "black"> 
             Adoções
           </Typography>
@@ -28,18 +28,123 @@ export const FormularioAdocaoPage: React.FC = () => {
           <Box>
             <CardAdocao/>
           </Box>
-        </Box>
-        <Box sx={{border: "solid 2px #27A8AD", display: "flex", justifyContent: "center", alignItems: "center", width: "200px", height: "50px", borderRadius: "10px", cursor: "pointer", margin: "auto", marginBottom: "30px"}}>
+            <Box sx={{border: "solid 2px #27A8AD", display: "flex", justifyContent: "center", alignItems: "center", width: "200px", height: "50px", borderRadius: "10px", cursor: "pointer", margin: "auto", marginTop: "40px",}}>
           <AddCircleOutlineOutlined sx={{color: "#27A8AD"}}/>
               <Typography sx={{ color: "#27A8AD", fontSize: "18px", fontWeight: "bold"}} component="p">
                 Incluir Animal
               </Typography>
+            </Box>
         </Box>
-        <Box>
-        <Typography sx={{ marginBottom: '30px', marginLeft: "50px", marginRight: "50px", paddingTop: "58px", fontSize: "25px", fontWeight: "bold"}} component="p" color= "black">
+        
+        <Box sx={{marginTop: "26px", backgroundColor:"white", marginLeft: "81px", marginRight: "81px", marginBottom: "26px", paddingTop: "10px"}}>
+        <Typography sx={{ marginLeft: "18px",marginTop:"15px", marginRight: "50px",marginBottom: "15px", fontSize: "25px", fontWeight: "bold"}} component="p" color= "black">
           Informações sobre o Tutor
           </Typography>
-      </Box>
+          <hr/>
+          <Typography sx={{ marginLeft: "18px",marginTop:"15px", marginRight: "50px", fontSize: "18px", display: "flex"}} component="p" color= "black" >
+            Nome Completo    <Typography sx={{color: "red", marginLeft: "5px"}}>*</Typography>
+          </Typography>
+          
+          <Input sx={{ marginLeft: "20px",marginTop:"10px", marginRight: "20px",marginBottom: "20px", width: "auto", height: "40px", color: "#C6C6C6", border: "solid 1px", display: "flex" , borderRadius: "5px"}}  />
+
+          <Box sx={{ display: "flex", justifyContent: "space-between", marginLeft: "20px",marginTop:"20px", marginRight: "20px",marginBottom: "30px"}}>
+            <Box sx={{ width: "100%", marginRight: "22px"}}>
+              <Typography sx={{ marginBottom: "10px", fontSize: "18px", display: "flex"}} component="p" color= "black" >
+                CPF
+              </Typography>
+              <Input sx={{ marginTop:"10px",marginBottom: "20px", width: "100%", color: "black", border: "solid 1px #C6C6C6", display: "flex", borderRadius: "5px" }}/>
+            </Box>
+            <Box sx={{ width: "100%"}}>
+              <Typography sx={{ marginBottom: "10px", fontSize: "18px"}} component="p" color= "black" >
+                RG
+              </Typography>
+              <Input sx={{ marginTop:"10px",marginBottom: "20px", width: "100%", color: "black", border: "solid 1px #C6C6C6", display: "flex", borderRadius: "5px" }}></Input>
+            </Box>
+          </Box>
+        </Box>
+        <Box sx={{marginTop: "26px", backgroundColor:"white", marginLeft: "81px", marginRight: "81px", marginBottom: "26px", paddingTop: "10px"}}>
+            <Typography sx={{ marginLeft: "18px",marginTop:"15px", marginRight: "50px",marginBottom: "15px", fontSize: "25px", fontWeight: "bold"}} component="p" color= "black">
+          Contato
+          </Typography>
+          <hr/>
+          <Box sx={{ display: "flex", justifyContent: "space-between", marginLeft: "20px",marginTop:"20px", marginRight: "20px",marginBottom: "30px"}}>
+              <Box sx={{ width: "100%", marginRight: "22px"}}>
+              <Typography sx={{ marginBottom: "10px", fontSize: "18px", display:"flex"}} component="p" color= "black" >
+                Telefone <Typography sx={{color: "red", marginLeft: "5px"}}>*</Typography>
+              </Typography>
+              <Input sx={{ marginTop:"10px",marginBottom: "20px", width: "100%", color: "black", border: "solid 1px #C6C6C6", display: "flex", borderRadius: "5px" }}></Input>
+            </Box>
+
+              <Box sx={{ width: "100%"}}>
+              <Typography sx={{ marginBottom: "10px", fontSize: "18px"}} component="p" color= "black" >
+                Email
+              </Typography>
+              <Input sx={{ marginTop:"10px",marginBottom: "20px", width: "100%", color: "black", border: "solid 1px #C6C6C6", display: "flex", borderRadius: "5px" }}></Input>
+            </Box>
+          </Box>
+          </Box>
+          <Box sx={{marginTop: "26px", backgroundColor:"white", marginLeft: "81px", marginRight: "81px", marginBottom: "26px", paddingTop: "10px", paddingBottom: "35px"}}>
+            <Typography sx={{ marginLeft: "18px",marginTop:"15px", marginRight: "50px",marginBottom: "15px", fontSize: "25px", fontWeight: "bold"}} component="p" color= "black">
+              Endereço
+            </Typography>
+            <hr />
+            <Box sx={{ display: "flex", justifyContent: "space-between", marginLeft: "20px",marginTop:"20px", marginRight: "20px",marginBottom: "30px"}}>
+              
+              <Box sx={{ width: "100%", marginRight: "22px"}}>
+              <Typography sx={{ marginBottom: "10px", fontSize: "18px", display:"flex"}} component="p" color= "black" >
+                Endereço  <Typography sx={{color: "red", marginLeft: "5px"}}>*</Typography>
+              </Typography>
+              <Input sx={{ marginTop:"10px",marginBottom: "20px", width: "100%", color: "black", border: "solid 1px #C6C6C6", display: "flex", borderRadius: "5px" }}></Input>
+            </Box>
+            <Box sx={{ width: "100%", marginRight: "22px"}}>
+              <Typography sx={{ marginBottom: "10px", fontSize: "18px", display:"flex"}} component="p" color= "black" >
+                Numero <Typography sx={{color: "red", marginLeft: "5px"}}>*</Typography>
+              </Typography>
+              <Input sx={{ marginTop:"10px",marginBottom: "20px", width: "100%", color: "black", border: "solid 1px #C6C6C6", display: "flex", borderRadius: "5px" }}></Input>
+              </Box>
+            </Box>
+
+            <Box sx={{ display: "flex", justifyContent: "space-between", marginLeft: "20px",marginTop:"20px", marginRight: "20px",marginBottom: "30px"}}>
+              <Box sx={{ width: "100%", marginRight: "22px"}}>
+              <Typography sx={{ marginBottom: "10px", fontSize: "18px", display:"flex"}} component="p" color= "black" >
+                Bairro/Distrito <Typography sx={{color: "red", marginLeft: "5px"}}>*</Typography>
+              </Typography>
+              <Input sx={{ marginTop:"10px",marginBottom: "20px", width: "100%", color: "black", border: "solid 1px #C6C6C6", display: "flex", borderRadius: "5px" }}></Input>
+            </Box>
+
+              <Box sx={{ width: "100%", marginRight: "22px"}}>
+              <Typography sx={{ marginBottom: "10px", fontSize: "18px", display:"flex"}} component="p" color= "black" >
+                CEP  <Typography sx={{color: "red", marginLeft: "5px"}}>*</Typography>
+              </Typography>
+              <Input sx={{ marginTop:"10px",marginBottom: "20px", width: "100%", color: "black", border: "solid 1px #C6C6C6", display: "flex", borderRadius: "5px" }}></Input>
+            </Box>
+          </Box>
+          <Box sx={{ display: "flex", justifyContent: "space-between", marginLeft: "20px",marginTop:"20px", marginRight: "20px",marginBottom: "30px"}}>
+              <Box sx={{ width: "100%", marginRight: "22px"}}>
+              <Typography sx={{ marginBottom: "10px", fontSize: "18px", display:"flex"}} component="p" color= "black" >
+                Cidade  <Typography sx={{color: "red", marginLeft: "5px"}}>*</Typography>
+              </Typography>
+              <Input sx={{ marginTop:"10px",marginBottom: "20px", width: "100%", color: "black", border: "solid 1px #C6C6C6", display: "flex", borderRadius: "5px" }}></Input>
+            </Box>
+
+              <Box sx={{ width: "100%", marginRight: "22px"}}>
+              <Typography sx={{ marginBottom: "10px", fontSize: "18px", display:"flex"}} component="p" color= "black" >
+                Estado  <Typography sx={{color: "red", marginLeft: "5px"}}>*</Typography>
+              </Typography>
+              <Input sx={{ marginTop:"10px",marginBottom: "20px", width: "100%", color: "black", border: "solid 1px #C6C6C6", display: "flex", borderRadius: "5px" }}></Input>
+            </Box>
+          </Box>
+          <Typography sx={{ marginLeft: "18px",marginTop:"15px", marginRight: "50px", fontSize: "18px", display: "flex"}} component="p" color= "black" >
+            Complemento/Referencia
+          </Typography>
+          
+          <Input sx={{ marginLeft: "20px",marginTop:"10px", marginRight: "20px",marginBottom: "20px", width: "auto", height: "40px", color: "#C6C6C6", border: "solid 1px", display: "flex" , borderRadius: "5px"}}  />
+          </Box>
+          <Box sx={{ display: "flex", justifyContent: "center", marginBottom: "50px", backgroundColor: "#27A8AD", width: "206px", height: "82px", borderRadius: "10px", cursor: "pointer", margin: "auto", textAlign: "center", alignItems: "center"}}>
+            <Typography sx={{ marginLeft: "18px",marginTop:"15px", marginRight: "50px",marginBottom: "15px", fontSize: "25px", fontWeight: "bold"}}  >
+              Finalizar
+            </Typography>
+            </Box>
       </Box>
       
     </Container>

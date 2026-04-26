@@ -11,7 +11,7 @@ import { CloseOutlined, RoomOutlined } from '@mui/icons-material';
 export function CardAdocao(){
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'row', marginTop: '10px', border: '1px solid #ccc', borderRadius: '8px', padding: '16px', backgroundColor: '#fff' }}> 
+        <Box sx={{ display: 'flex', flexDirection: 'row', marginTop: '10px', border: '1px solid #ccc', borderRadius: '8px', padding: '16px', backgroundColor: '#fff', marginLeft: "20px", marginRight: "20px"}}> 
             <Box component= "img" sx={{ width: 200, height: 200 }} src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Imagem de Adoção">
             </Box>
             <Box sx={{marginLeft: '20px', marginmTop: '19.5px'}}>
@@ -29,7 +29,7 @@ export function CardAdocao(){
                 </Box>
             </Box>
             <Box sx={{ marginLeft: 'auto', marginRight: '20px', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-                <CloseOutlined color='primary'/>
+                <CloseOutlined sx={{color: '#808080'}}/>
             </Box>
         </Box>
     )

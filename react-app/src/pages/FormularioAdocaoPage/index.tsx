@@ -140,11 +140,19 @@ export const FormularioAdocaoPage: React.FC = () => {
           
           <Input sx={{ marginLeft: "20px",marginTop:"10px", marginRight: "20px",marginBottom: "20px", width: "auto", height: "40px", color: "#C6C6C6", border: "solid 1px", display: "flex" , borderRadius: "5px"}}  />
           </Box>
-          <Box sx={{ display: "flex", justifyContent: "center", marginBottom: "50px", backgroundColor: "#27A8AD", width: "206px", height: "82px", borderRadius: "10px", cursor: "pointer", margin: "auto", textAlign: "center", alignItems: "center"}}>
-            <Typography sx={{ marginLeft: "18px",marginTop:"15px", marginRight: "50px",marginBottom: "15px", fontSize: "25px", fontWeight: "bold"}}  >
-              Finalizar
-            </Typography>
-            </Box>
+          <Box
+  sx={{
+    display: "flex", justifyContent: "flex-end", marginBottom: "50px", backgroundColor: "#27A8AD", width: "206px", height: "52px", borderRadius: "10px", cursor: "pointer", textAlign: "center", alignItems: "center",marginLeft: "auto",marginRight: "50px"
+  }}
+>
+  <Typography
+    sx={{
+      marginLeft: "18px", marginTop: "15px", marginRight: "50px", marginBottom: "15px", fontSize: "25px", fontWeight: "bold"
+    }}
+  >
+    Finalizar
+  </Typography>
+</Box>
       </Box>
       
     </Container>

@@ -1,3 +1,4 @@
+import { colors } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
 // Tema customizado para a aplicação de proteção animal
@@ -91,8 +92,34 @@ const theme = createTheme({
             color: '#27A8AD',
         },
       }, 
+    },
+    MuiSelect: {
+      styleOverrides: {
+        root: {
+          borderRadius: 15,
+        },
+        icon: {
+          color: '#545252',
+        },
+        select: {
+          color: '#545252',
+        }
+      }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: 15,
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: '#545252',
+          },
+          "&:hover .MuiOutlinedInput-notchedOutline": { 
+            borderColor: '#545252',
+          },
+        },
+      },
     }
-  },
+  }
 });
 
 export default theme;

@@ -11,8 +11,8 @@ import { CloseOutlined, RoomOutlined } from '@mui/icons-material';
 export function CardAdocao(){
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'row', marginTop: '10px', border: '1px solid #ccc', borderRadius: '8px', padding: '16px', backgroundColor: '#fff', marginLeft: "20px", marginRight: "20px"}}> 
-            <Box component= "img" sx={{ width: 200, height: 200 }} src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Imagem de Adoção">
+        <Box sx={{ display: 'flex', flexDirection: 'row', marginTop: '10px', border: '1px solid #ccc', borderRadius: '8px', padding:{ md:'16px', xs: "10px"}, backgroundColor: '#fff', marginLeft:{ md: "20px", xs: "10px"}, marginRight:{ md: "20px", xs: "10px"}, alignItems: "center"}}> 
+            <Box component= "img" sx={{ width:{xs:60, md:200}, height: {xs:60, md:200} }} src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Imagem de Adoção">
             </Box>
             <Box sx={{marginLeft: '20px', marginmTop: '19.5px'}}>
                 <Typography variant="h5" component="h5">
@@ -28,7 +28,7 @@ export function CardAdocao(){
                     </Typography>  
                 </Box>
             </Box>
-            <Box sx={{ marginLeft: 'auto', marginRight: '20px', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+            <Box sx={{ marginLeft: 'auto', marginRight: '20px', justifyContent: 'center', alignItems: 'center', display: 'flex', cursor: 'pointer' }}>
                 <CloseOutlined sx={{color: '#808080'}}/>
             </Box>
         </Box>

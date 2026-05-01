@@ -157,16 +157,16 @@ export const FormularioAdocaoPage: React.FC = () => {
         <Box>
           <Box sx={{ bgcolor: "white", marginLeft: "31px", marginTop: "38px", marginRight: "31px", marginBottom: "30px", display: "grid", gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" }, gap: "20px", alignItems: "stretch", paddingLeft: "28px", paddingRight: "28px", paddingBottom: "34px", paddingTop: "35px" }}>
             <Box sx={{ minWidth: 0, height: "56px" }}>
-              <FilterAnimais />
+              <FilterAnimais label="Todas as espécies" opcoes={[{ valor: 'cachorro', label: 'Cachorro' }, { valor: 'gato', label: 'Gato' }]} />
             </Box>
             <Box sx={{ minWidth: 0, height: "56px" }}>
-              <FilterAnimais />
+              <FilterAnimais label="Todos os sexos" opcoes={[{ valor: "Macho", label: "Macho"}, { valor: "Fêmea", label: "Fêmea"}]} />
             </Box>
             <Box sx={{ minWidth: 0, height: "56px" }}>
-              <FilterAnimais />
+              <FilterAnimais label="Todas as categorias " opcoes={[{ valor: "Grande", label: "Grande"}, { valor: "Médio", label: "Médio"}, { valor: "Pequeno", label: "Pequeno"}]} />
             </Box>
             <Box sx={{ minWidth: 0, height: "56px" }}>
-              <FilterAnimais />
+              <FilterAnimais label="Todos os locais" opcoes={[{ valor: "Centro", label: "Centro"}, { valor: "Várzea dos Espinhos", label: "Várzea dos Espinhos"}, {valor: "Martinslândia", label: "Martinslândia"}, {valor: "Morrinhos Novos", label: "Morrinhos Novos"}]} />
             </Box>
             <Box sx={{ minWidth: 0, height: "56px", display: "flex", alignItems: "stretch" }}>
               <Input placeholder="Nome do Bicho" sx={{ width: "100%", height: "100%", boxSizing: "border-box", border: "1px solid #C6C6C6", borderRadius: "5px", px: 2, color: "black" }} />

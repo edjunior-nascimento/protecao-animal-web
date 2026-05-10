@@ -6,7 +6,7 @@ export function CardAdocao({ temBotao = false }){
     return (
         <Box sx={{ display: 'flex', flexDirection: 'row', marginTop: '10px', border: '1px solid #ccc', borderRadius: '8px', padding:{ md:'16px', xs: "10px"}, backgroundColor: '#fff', marginLeft:{ md: "20px", xs: "10px"}, marginRight:{ md: "20px", xs: "10px"}, alignItems: "center"}}> 
             
-            <Box component="img" sx={{ width:{xs:60, md:200}, height: {xs:60, md:200} }} src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Imagem de Adoção" />
+            <Box component="img" sx={{ width:{xs:60, md:150}, height: {xs:60, md:150} }} src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Imagem de Adoção" />
 
             <Box sx={{marginLeft: '20px', marginTop: '19.5px'}}>
                 <Typography variant="h5">

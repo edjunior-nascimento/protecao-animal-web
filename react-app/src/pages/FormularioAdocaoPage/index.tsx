@@ -6,9 +6,17 @@ import { FilterAnimais } from "../../components/features/FilterAnimais";
 import { CardTutor } from "../../components/features/CardTutor";
 import { CardContato } from "../../components/features/CardContato";
 import { CardEndereco } from "../../components/features/CardEndereco";
+import { CardAgradecimento } from "../../components/features/CardAgradecimento";
 
 export const FormularioAdocaoPage: React.FC = () => {
   const [abrirModal, setAbrirModal] = React.useState(false);
+  const [abrirAgradecimento, setAbrirAgradecimento] = React.useState(false);
+
+  function finalizarFormulario() {
+    console.log("abrindo modal");
+    setAbrirAgradecimento(true);
+  }
+
   return (
     <Container sx={{ pb: { xs: 8, md: 4 } }}>
       <Box sx={{ display: "flex", justifyContent: "center", width: "100%", marginBottom: "30px" }}>
@@ -44,7 +52,7 @@ export const FormularioAdocaoPage: React.FC = () => {
         <CardContato/>
         
         <CardEndereco/>
-        <Box
+        <Box onClick={() => setAbrirAgradecimento(true)}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -74,8 +82,30 @@ export const FormularioAdocaoPage: React.FC = () => {
       </Box>
       <Modal
         open={abrirModal}
+        onClose={() => setAbrirModal(false)}
+        sx={{
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "center",
+          p: { xs: 1.5, md: 0 },
+        }}
       >
-        <Box sx={{backgroundColor: "#EFEFEF", maxHeight: '90vh', overflowY: 'auto', margin: "auto", marginTop: "5vh", borderRadius: "10px", width: { xs: "90%", md: "80%" }}}>
+        <Box
+          sx={{
+            backgroundColor: "#EFEFEF",
+            maxHeight: { xs: "calc(100dvh - 24px)", md: "90vh" },
+            overflowY: "auto",
+            WebkitOverflowScrolling: "touch",
+            overscrollBehavior: "contain",
+            marginTop: { xs: 0, md: "5vh" },
+            marginBottom: { xs: 0, md: "5vh" },
+            borderRadius: "10px",
+            width: { xs: "100%", md: "80%" },
+            boxSizing: "border-box",
+            pb: { xs: 3, md: 0 },
+            outline: 0,
+          }}
+        >
           <Button onClick={()=>setAbrirModal(false)} sx={{ marginLeft: 'auto', marginRight: '20px', marginTop: '', display: 'flex', cursor: 'pointer' }}>
             <CloseOutlined sx={{color: '#808080'}}/>
           </Button>
@@ -97,8 +127,8 @@ export const FormularioAdocaoPage: React.FC = () => {
                 <Input placeholder="Nome do Bicho" sx={{ width: "100%", height: "100%", boxSizing: "border-box", border: "1px solid #C6C6C6", borderRadius: "5px", px: 2, color: "black" }} />
               </Box>
               <Box sx={{ minWidth: 0, height: "56px", display: "flex" }}>
-                    Buscar
-              <button style={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "5px", cursor: "pointer", background: "#27A8AD", border: "none", color: "white", fontWeight: 700, fontSize: "25px" }}>
+                <button style={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "5px", cursor: "pointer", background: "#27A8AD", border: "none", color: "white", fontWeight: 700, fontSize: "25px" }}>
+                  Buscar
                 </button>
               </Box>
             </Box>
@@ -113,6 +143,12 @@ export const FormularioAdocaoPage: React.FC = () => {
         </Box>
 
       </Modal>
+
+      <CardAgradecimento
+        open={abrirAgradecimento}
+        onClose={() => setAbrirAgradecimento(false)}
+        tipo="adocao"
+      />
     </Container>
   );
 }

@@ -35,7 +35,7 @@ export const FormularioCastracaoPage: React.FC = () => {
         <CardTutor />
         <CardContato />
         <CardEndereco />
-        <Box sx={{ marginTop: "26px", backgroundColor: "white", marginLeft: "50px", marginRight: "50px", marginBottom: "26px", paddingTop: "10px", paddingBottom: "35px" }}>
+        <Box sx={{ marginTop: "26px", backgroundColor: "white", marginLeft: {xs: "10px", md: "80px"}, marginRight:  {xs: "10px", md: "80px"}, marginBottom: "26px", paddingTop: "10px", paddingBottom: "35px" }}>
           <Typography sx={{ marginLeft: "18px", marginTop: "15px", marginRight: "50px", marginBottom: "15px", fontSize: "25px", fontWeight: "bold" }} component="p" color="black">
             Informações sobre os Animais
           </Typography>
@@ -46,8 +46,8 @@ export const FormularioCastracaoPage: React.FC = () => {
                 Nome do Animal<Typography sx={{ color: "red", marginLeft: "5px" }}>*</Typography>
               </Typography>
               <Input sx={{ marginTop: "10px", marginBottom: "20px", width: "100%", color: "black", border: "solid 1px #C6C6C6", display: "flex", borderRadius: "5px" }}></Input>
-              <Box sx={{ display: "flex", justifyContent: "space-between", marginLeft: "20px", marginTop: "20px", marginRight: "20px", marginBottom: "30px" }}>
-                <Box sx={{ width: "100%", marginRight: "22px" }}>
+              <Box sx={{ display: { xs: "block", md: "flex" }, justifyContent: "space-between", marginTop: "20px", marginRight: "0px", marginBottom: "30px" }}>
+                <Box sx={{ width: "100%", marginRight: { xs: 0, md: "22px" }, marginBottom: { xs: "20px", md: 0 } }}>
                   <Typography sx={{ marginBottom: "10px", fontSize: "18px", display: "flex" }} component="p" color="black" >
                     Espécie <Typography sx={{ color: "red", marginLeft: "5px" }}>*</Typography>
                   </Typography>
@@ -76,7 +76,7 @@ export const FormularioCastracaoPage: React.FC = () => {
                   </TextField>
                 </Box>
 
-                <Box sx={{ width: "100%", marginRight: "22px" }}>
+                <Box sx={{ width: "100%" }}>
                   <Typography sx={{ marginBottom: "10px", fontSize: "18px", display: "flex" }} component="p" color="black" >
                     Sexo  <Typography sx={{ color: "red", marginLeft: "5px" }}>*</Typography>
                   </Typography>

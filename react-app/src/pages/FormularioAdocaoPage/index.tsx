@@ -106,7 +106,7 @@ export const FormularioAdocaoPage: React.FC = () => {
             outline: 0,
           }}
         >
-          <Button onClick={()=>setAbrirModal(false)} sx={{ marginLeft: 'auto', marginRight: '20px', marginTop: '', display: 'flex', cursor: 'pointer' }}>
+          <Button onClick={()=>setAbrirModal(false)} sx={{ position: 'sticky', top: 0, zIndex: 10, marginLeft: 'auto', marginRight: '20px', marginTop: '', display: 'flex', cursor: 'pointer', backgroundColor: '#EFEFEF' }}>
             <CloseOutlined sx={{color: '#808080'}}/>
           </Button>
           <Box>
@@ -127,9 +127,9 @@ export const FormularioAdocaoPage: React.FC = () => {
                 <Input placeholder="Nome do Bicho" sx={{ width: "100%", height: "100%", boxSizing: "border-box", border: "1px solid #C6C6C6", borderRadius: "5px", px: 2, color: "black" }} />
               </Box>
               <Box sx={{ minWidth: 0, height: "56px", display: "flex" }}>
-                <button style={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "5px", cursor: "pointer", background: "#27A8AD", border: "none", color: "white", fontWeight: 700, fontSize: "25px" }}>
+                <Button sx={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "5px", cursor: "pointer", background: "#27A8AD", border: "none", color: "white", fontWeight: 700, fontSize: "25px" }}>
                   Buscar
-                </button>
+                </Button>
               </Box>
             </Box>
             <Typography sx={{ marginLeft: "18px", marginTop: "15px", marginRight: "50px", marginBottom: "15px", fontSize: "25px", fontWeight: "bold" }} component="p" color="black">

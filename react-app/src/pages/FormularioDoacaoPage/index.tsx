@@ -81,14 +81,26 @@ export const FormularioDoacaoPage: React.FC = () => {
               </Select>
             </FormControl>
             <Box sx={{
-            marginLeft: { md: '42px', xs: '20px' },
+            marginLeft: { md: '42px', xs: '7.5px' },
+            marginRight: { md: '42px', xs: '7.5px' },
             marginTop: "37px",
             }}>
-              <ul style={{ listStyleType: 'none', display: 'flex', gap: '15px', paddingLeft: 0, flexWrap: 'wrap' }}>
+              <Box
+                component="ul"
+                sx={{
+                  listStyleType: 'none',
+                  display: { xs: 'grid', sm: 'flex' },
+                  gridTemplateColumns: { xs: 'repeat(3, minmax(0, 1fr))', sm: 'none' },
+                  gap: '15px',
+                  paddingLeft: 0,
+                  flexWrap: { xs: 'wrap', sm: 'nowrap' },
+                  width: '100%',
+                }}
+              >
                 <Box component="li" onClick={() => handleValueClick('R$ 10')} sx={{
                   color: selectedValue === 'R$ 10' ? 'white' : 'black',
                   backgroundColor: selectedValue === 'R$ 10' ? '#27A8AD' : '#B0AFAF',
-                  width: '162px',
+                  width: { xs: '100%', sm: 'calc((100% - 75px) / 6)' },
                   height: '56px',
                   cursor: 'pointer',
                   transition: 'all 0.15s ease',
@@ -102,7 +114,7 @@ export const FormularioDoacaoPage: React.FC = () => {
                 <Box component="li" onClick={() => handleValueClick('R$ 20')} sx={{
                   color: selectedValue === 'R$ 20' ? 'white' : 'black',
                   backgroundColor: selectedValue === 'R$ 20' ? '#27A8AD' : '#B0AFAF',
-                  width: '162px',
+                  width: { xs: '100%', sm: 'calc((100% - 75px) / 6)' },
                   height: '56px',
                   cursor: 'pointer',
                   transition: 'all 0.15s ease',
@@ -116,7 +128,7 @@ export const FormularioDoacaoPage: React.FC = () => {
                 <Box component="li" onClick={() => handleValueClick('R$ 50')} sx={{
                   color: selectedValue === 'R$ 50' ? 'white' : 'black',
                   backgroundColor: selectedValue === 'R$ 50' ? '#27A8AD' : '#B0AFAF',
-                  width: '162px',
+                  width: { xs: '100%', sm: 'calc((100% - 75px) / 6)' },
                   height: '56px',
                   cursor: 'pointer',
                   transition: 'all 0.15s ease',
@@ -130,7 +142,7 @@ export const FormularioDoacaoPage: React.FC = () => {
                 <Box component="li" onClick={() => handleValueClick('R$ 100')} sx={{
                   color: selectedValue === 'R$ 100' ? 'white' : 'black',
                   backgroundColor: selectedValue === 'R$ 100' ? '#27A8AD' : '#B0AFAF',
-                  width: '162px',
+                  width: { xs: '100%', sm: 'calc((100% - 75px) / 6)' },
                   height: '56px',
                   cursor: 'pointer',
                   transition: 'all 0.15s ease',
@@ -144,7 +156,7 @@ export const FormularioDoacaoPage: React.FC = () => {
                 <Box component="li" onClick={() => handleValueClick('R$ 200')} sx={{
                   color: selectedValue === 'R$ 200' ? 'white' : 'black',
                   backgroundColor: selectedValue === 'R$ 200' ? '#27A8AD' : '#B0AFAF',
-                  width: '162px',
+                  width: { xs: '100%', sm: 'calc((100% - 75px) / 6)' },
                   height: '56px',
                   cursor: 'pointer',
                   transition: 'all 0.15s ease',
@@ -158,7 +170,7 @@ export const FormularioDoacaoPage: React.FC = () => {
                 <Box component="li" onClick={() => handleValueClick('Outro valor')} sx={{
                   color: selectedValue === 'Outro valor' ? 'white' : 'black',
                   backgroundColor: selectedValue === 'Outro valor' ? '#27A8AD' : '#B0AFAF',
-                  width: '162px',
+                  width: { xs: '100%', sm: 'calc((100% - 75px) / 6)' },
                   height: '56px',
                   cursor: 'pointer',
                   transition: 'all 0.15s ease',
@@ -169,7 +181,7 @@ export const FormularioDoacaoPage: React.FC = () => {
                 }}>
                   <Typography sx={{fontWeight: 'bold'}}>Outro valor</Typography>
                 </Box>
-              </ul>
+              </Box>
             </Box>
             <Typography sx={{
               marginLeft: { md: '42px', xs: '20px' },
@@ -212,7 +224,7 @@ export const FormularioDoacaoPage: React.FC = () => {
               }} />
             </Box>
           </Box>
-          <Box sx={{ backgroundColor: "white", color: "black", marginBottom: "60px", paddingBottom: "87px" }}>
+          <Box sx={{ backgroundColor: "white", color: "black", marginBottom: "60px", paddingBottom: "87px",  }}>
             <Typography sx={{ marginBottom: "30px", marginLeft: { md: '50px', xs: '20px' }, marginRight: { md: '50px', xs: '20px' }, paddingTop: "58px", fontSize: "20px", fontWeight: "bold" }} component="p" color="black">
               Escolha a forma de doação:
             </Typography>
@@ -230,53 +242,58 @@ export const FormularioDoacaoPage: React.FC = () => {
                 boxSizing: 'border-box'
               }} />
             </Box>
-            <Typography sx={{ marginLeft: "50px", marginRight: "50px", paddingTop: "20px" }} component="p" color="black">
+            <Typography sx={{ marginLeft: { md: '50px', xs: '20px' }, marginRight: { md: '50px', xs: '20px' }, paddingTop: "20px" }} component="p" color="black">
               Formas de doação <Typography component="span" color="red">*</Typography>
             </Typography>
-            <FormControl
-              variant="outlined"
-              fullWidth
-              sx={{
-                maxWidth: 586,
-                marginLeft: { md: '50px', xs: '20px' },
-                marginTop: '10px',
-              }}
-            >
-              <InputLabel id="pagamento-label" sx={{ display: 'none' }} />
-
-              <Select
-                labelId="pagamento-label"
-                defaultValue=""
-                label="Selecione"
+            <Box sx={{ marginLeft: { md: '50px', xs: '20px' }, marginRight: { md: '50px', xs: '20px' } }}>
+              <FormControl
+                variant="outlined"
+                fullWidth
                 sx={{
-                  height: "78px",
-                  borderRadius: "8px",
-                  backgroundColor: "#FFFFFF",
-                  '& .MuiSelect-select': {
-                    paddingLeft: '14px'
-                  },
-                  '& .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#B0AFAF'
-                  },
-                  '&:hover .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#B0AFAF'
-                  },
-                  '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#B0AFAF'
-                  },
-                  '& .MuiSvgIcon-root': {
-                    color: '#545252'
-                  },
-                  '&.Mui-focused': {
-                    boxShadow: 'none'
-                  }
+                  display: 'block',
+                  width: '100%',
+                  minWidth: 0,
+                  maxWidth: 586,
+                  marginTop: '10px',
                 }}
               >
-                <MenuItem value="credito">Cartão de Crédito</MenuItem>
-              </Select>
-            </FormControl>
+                <InputLabel id="pagamento-label" sx={{ display: 'none' }} />
 
-            <Typography sx={{ marginLeft: "50px", marginRight: "50px", paddingTop: "20px" }} component="p" color="black">
+                <Select
+                  labelId="pagamento-label"
+                  defaultValue=""
+                  label="Selecione"
+                  sx={{
+                    width: '100%',
+                    height: "78px",
+                    borderRadius: "8px",
+                    backgroundColor: "#FFFFFF",
+                    '& .MuiSelect-select': {
+                      paddingLeft: '14px'
+                    },
+                    '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#B0AFAF'
+                    },
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#B0AFAF'
+                    },
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#B0AFAF'
+                    },
+                    '& .MuiSvgIcon-root': {
+                      color: '#545252'
+                    },
+                    '&.Mui-focused': {
+                      boxShadow: 'none'
+                    }
+                  }}
+                >
+                  <MenuItem value="credito">Cartão de Crédito</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+
+            <Typography sx={{ marginLeft: { md: '50px', xs: '20px' }, marginRight: { md: '50px', xs: '20px' }, paddingTop: "20px" }} component="p" color="black">
               Número do cartão* <Typography component="span" color="red">*</Typography>
             </Typography>
             <Box sx={{ marginLeft: { md: '50px', xs: '20px' }, marginRight: { md: '50px', xs: '20px' } }}>
@@ -290,7 +307,7 @@ export const FormularioDoacaoPage: React.FC = () => {
               }} />
             </Box>
 
-            <Typography sx={{ marginLeft: "50px", marginRight: "50px", paddingTop: "20px" }} component="p" color="black">Nome do cartão
+            <Typography sx={{ marginLeft: { md: '50px', xs: '20px' }, marginRight: { md: '50px', xs: '20px' }, paddingTop: "20px" }} component="p" color="black">Nome do cartão
               <Typography component="span" color="red">*</Typography>
             </Typography>
             <Box sx={{ marginLeft: { md: '50px', xs: '20px' }, marginRight: { md: '50px', xs: '20px' } }}>
@@ -319,48 +336,53 @@ export const FormularioDoacaoPage: React.FC = () => {
             <Typography sx={{ marginLeft: { md: '50px', xs: '20px' }, marginRight: { md: '50px', xs: '20px' }, paddingTop: "20px" }} component="p" color="black">
               Dia da doação <Typography component="span" color="red">*</Typography>
             </Typography>
-            <FormControl
-              variant="outlined"
-              fullWidth
-              sx={{
-                maxWidth: 586,
-                marginLeft: { md: '50px', xs: '20px' },
-                marginTop: '10px',
-              }}
-            >
-              <InputLabel id="pagamento-label" sx={{ display: 'none' }} />
-
-              <Select
-                labelId="pagamento-label"
-                defaultValue=""
-                label="Selecione"
+            <Box sx={{ marginLeft: { md: '50px', xs: '20px' }, marginRight: { md: '50px', xs: '20px' } }}>
+              <FormControl
+                variant="outlined"
+                fullWidth
                 sx={{
-                  height: "78px",
-                  borderRadius: "8px",
-                  backgroundColor: "#FFFFFF",
-                  '& .MuiSelect-select': {
-                    paddingLeft: '14px'
-                  },
-                  '& .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#B0AFAF'
-                  },
-                  '&:hover .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#B0AFAF'
-                  },
-                  '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#B0AFAF'
-                  },
-                  '& .MuiSvgIcon-root': {
-                    color: '#545252'
-                  },
-                  '&.Mui-focused': {
-                    boxShadow: 'none'
-                  }
+                  display: 'block',
+                  width: '100%',
+                  minWidth: 0,
+                  maxWidth: 586,
+                  marginTop: '10px',
                 }}
               >
-                <MenuItem value="credito">Cartão de Crédito</MenuItem>
-              </Select>
-            </FormControl>
+                <InputLabel id="pagamento-label" sx={{ display: 'none' }} />
+
+                <Select
+                  labelId="pagamento-label"
+                  defaultValue=""
+                  label="Selecione"
+                  sx={{
+                    width: '100%',
+                    height: "78px",
+                    borderRadius: "8px",
+                    backgroundColor: "#FFFFFF",
+                    '& .MuiSelect-select': {
+                      paddingLeft: '14px'
+                    },
+                    '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#B0AFAF'
+                    },
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#B0AFAF'
+                    },
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#B0AFAF'
+                    },
+                    '& .MuiSvgIcon-root': {
+                      color: '#545252'
+                    },
+                    '&.Mui-focused': {
+                      boxShadow: 'none'
+                    }
+                  }}
+                >
+                  <MenuItem value="credito">Cartão de Crédito</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
           </Box>
             <Box sx={{backgroundColor: "#D9D9D9", color: "black", display: "flex", justifyContent: "space-between", alignItems: "center", paddingLeft: { md: '50px', xs: '20px' }, paddingRight: { md: '50px', xs: '20px' }, boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}}>
             <Box sx={{padding: { md: '30px', xs: '16px' }}}>

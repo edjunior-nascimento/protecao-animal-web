@@ -8,7 +8,7 @@ import { DoacaoPage } from "./pages/DoacaoPage";
 import { FormularioAdocaoPage } from "./pages/FormularioAdocaoPage";
 import { FormularioCastracaoPage } from "./pages/FormularioCastracaoPage";
 import { FormularioDoacaoPage } from "./pages/FormularioDoacaoPage";
-import { GaleriaPage } from "./pages/GaleriaPage";
+import { GaleriaPage } from "./pages/GaleriaPage/index";
 
 function RouterApp(){
     return(
@@ -19,14 +19,13 @@ function RouterApp(){
                 <Route path="/sobre" element={<SobrePage />} />
                 <Route path="/adocao" element={<AdocaoPage />} />
                 <Route path="/detalhes/:codigo" element={<DetalhesAdocaoPage />} />
-                <Route path="/ajudar" element={<DoacaoPage />} />
                 <Route path="/doacao" element={<DoacaoPage />} />
                 <Route path="/formulario-adocao" element={<FormularioAdocaoPage />} />
                 <Route path="/formulario-castracao" element={<FormularioCastracaoPage />} />
                 <Route path="/formulario-doacao" element={<FormularioDoacaoPage />} />
                 <Route path="/galeria" element={<GaleriaPage />} />
             </Routes>
-       </BrowserRouter>
+        </BrowserRouter>
     )
 }
 

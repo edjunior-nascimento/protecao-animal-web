@@ -34,12 +34,12 @@ export const FormularioAdocaoPage: React.FC = () => {
           </Typography>
           <hr />
           <Box>
-            <CardAdocao temBotao />
+            <CardAdocao editavel={true} nome="Pietro" imagem="https://st.depositphotos.com/1732831/1261/i/950/depositphotos_12617876-stock-photo-portrait-of-smoking-dog.jpg" especie="cachoro" sexo="macho" idade="2 anos" porte="Grande" localizacao="Centro" />
           </Box>
           <Box>
-            <CardAdocao temBotao />
+            <CardAdocao editavel={true} nome="Piaba" imagem="https://tse4.mm.bing.net/th/id/OIP.Ta3B3LJEwKBw9CyFsOJMYwHaJ3?r=0&cb=thfvnextfalcon&w=563&h=750&rs=1&pid=ImgDetMain&o=7&rm=3" especie="cachoro" sexo="macho" idade="1 anos" porte="Medio" localizacao="Bananeira" />
           </Box>
-          <Box onClick={()=>setAbrirModal(true)} sx={{ border: "solid 2px #27A8AD", display: "flex", justifyContent: "center", alignItems: "center", width: "200px", height: "50px", borderRadius: "10px", cursor: "pointer", margin: "auto", marginTop: "40px", }}>
+          <Box onClick={() => setAbrirModal(true)} sx={{ border: "solid 2px #27A8AD", display: "flex", justifyContent: "center", alignItems: "center", width: "200px", height: "50px", borderRadius: "10px", cursor: "pointer", margin: "auto", marginTop: "40px", }}>
             <AddCircleOutlineOutlined sx={{ color: "#27A8AD" }} />
             <Typography sx={{ color: "#27A8AD", fontSize: "18px", fontWeight: "bold" }} component="p">
               Incluir Animal
@@ -49,9 +49,9 @@ export const FormularioAdocaoPage: React.FC = () => {
 
         <CardTutor />
 
-        <CardContato/>
-        
-        <CardEndereco/>
+        <CardContato />
+
+        <CardEndereco />
         <Box onClick={() => setAbrirAgradecimento(true)}
           sx={{
             display: "flex",
@@ -106,8 +106,8 @@ export const FormularioAdocaoPage: React.FC = () => {
             outline: 0,
           }}
         >
-          <Button onClick={()=>setAbrirModal(false)} sx={{ position: 'sticky', top: 0, zIndex: 10, marginLeft: 'auto', marginRight: '20px', marginTop: '', display: 'flex', cursor: 'pointer', backgroundColor: '#EFEFEF' }}>
-            <CloseOutlined sx={{color: '#808080'}}/>
+          <Button onClick={() => setAbrirModal(false)} sx={{ position: 'sticky', top: 0, zIndex: 10, marginLeft: 'auto', marginRight: '20px', marginTop: '', display: 'flex', cursor: 'pointer', backgroundColor: '#EFEFEF' }}>
+            <CloseOutlined sx={{ color: '#808080' }} />
           </Button>
           <Box>
             <Box sx={{ bgcolor: "white", marginLeft: "31px", marginRight: "31px", marginBottom: "30px", display: "grid", gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" }, gap: "20px", alignItems: "stretch", paddingLeft: "28px", paddingRight: "28px", paddingBottom: "34px", paddingTop: "35px" }}>
@@ -137,8 +137,8 @@ export const FormularioAdocaoPage: React.FC = () => {
             </Typography>
           </Box>
           <Box sx={{ bgcolor: "white", marginLeft: "31px", marginRight: "31px", marginTop: "26px", marginBottom: "38px", paddingTop: "20px", paddingBottom: "20px" }}>
-            <CardAdocao />
-            <CardAdocao />
+              <CardAdocao  nome="Pietro" imagem="https://st.depositphotos.com/1732831/1261/i/950/depositphotos_12617876-stock-photo-portrait-of-smoking-dog.jpg" especie="cachoro" sexo="macho" idade="2 anos" porte="Grande"  />
+                <CardAdocao editavel={false} nome="Pietro" imagem="https://st.depositphotos.com/1732831/1261/i/950/depositphotos_12617876-stock-photo-portrait-of-smoking-dog.jpg" especie="cachoro" sexo="macho" idade="2 anos" porte="Grande" localizacao="Centro" />
           </Box>
         </Box>
 
@@ -147,7 +147,9 @@ export const FormularioAdocaoPage: React.FC = () => {
       <CardAgradecimento
         open={abrirAgradecimento}
         onClose={() => setAbrirAgradecimento(false)}
-        tipo="adocao"
+        titulo="Muito Bem!"
+        descricao="Agora entre em contato conosco para que possamos entregar o seu novo bichinho!"
+        pedido={123456}
       />
     </Container>
   );

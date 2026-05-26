@@ -1,31 +1,24 @@
 import { CheckCircleOutline, CloseOutlined } from "@mui/icons-material";
 import { Box, Button, Modal, Typography } from "@mui/material";
 
-type TipoAgradecimento = "adocao" | "doacao" | "castracao";
-
-interface CardAgradecimentoProps {
+type CardAgradecimentoProps = {
+    titulo: string;
+    descricao: string;
     open: boolean;
+    pedido?: number;
     onClose: () => void;
-    tipo: TipoAgradecimento;
 }
 
-const mensagensPorTipo: Record<TipoAgradecimento, { titulo: string; descricao: string }> = {
-    adocao: {
-        titulo: "Ficha enviada com sucesso!",
-        descricao: "Recebemos suas informacoes de adocao. Nossa equipe vai analisar e entrar em contato.",
-    },
-    doacao: {
-        titulo: "Doacao recebida!",
-        descricao: "Sua contribuicao ajuda diretamente os animais acolhidos. Obrigado por apoiar esta causa.",
-    },
-    castracao: {
-        titulo: "Solicitacao registrada!",
-        descricao: "Seu pedido de castracao foi enviado. Em breve voce recebera retorno com os proximos passos.",
-    },
-};
 
-export function CardAgradecimento({ open, onClose, tipo }: CardAgradecimentoProps) {
-    const mensagem = mensagensPorTipo[tipo];
+
+export function CardAgradecimento({
+    titulo,
+    descricao,
+    open,
+    pedido,
+
+    onClose
+}: CardAgradecimentoProps) {
 
     return (
         <Modal
@@ -68,15 +61,22 @@ export function CardAgradecimento({ open, onClose, tipo }: CardAgradecimentoProp
                 <CheckCircleOutline sx={{ color: "#27A8AD", fontSize: { xs: 66, md: 74 }, mb: 2 }} />
 
                 <Typography sx={{ fontSize: { xs: 24, md: 30 }, fontWeight: 700, color: "#27A8AD", mb: 2 }}>
-                    Obrigado!
+                    {titulo}
                 </Typography>
+                {pedido !==undefined &&(
+                <Box>
+                    <Typography sx={{ fontSize: { xs: 16, md: 18 }, color: "#27A8AD", fontWeight: 700, mb: 1 }}>
+                        Número do Pedido
+                    </Typography>
 
-                <Typography sx={{ fontSize: { xs: 19, md: 22 }, fontWeight: 700, color: "#3D3D3D", mb: 1 }}>
-                    {mensagem.titulo}
-                </Typography>
+                    <Typography sx={{ fontSize: { xs: 16, md: 18 }, color: "#27A8AD", fontWeight: 700, mb: 3 }}>
+                        {pedido}
+                    </Typography>
+                </Box>
+                )}
 
                 <Typography sx={{ fontSize: { xs: 15, md: 17 }, color: "#666666", lineHeight: 1.6, mb: 3 }}>
-                    {mensagem.descricao}
+                    {descricao}
                 </Typography>
 
                 <Button

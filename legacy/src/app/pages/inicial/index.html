@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../styles/style.css">
+  <link rel="stylesheet" href="style.css">
+</head>]
+
+<body>
+  <header class="cabecalho"><div>
+    <cabecalho-component></cabecalho-component>
+  </div>
+    <section>
+        <h1>"Doe esperanças, doe para salvar vidas."</h1>
+        <a href="../formulario-castracao/index.html">
+          <button>FAÇA SUA DOAÇÃO</button>
+        </a>
+    </section>
+  </header>
+  <section class="sobre-nos">
+    <p>
+      Nossa ONG sobrevive graças à generosidade de 
+      pessoas como você, que acreditam no poder da 
+      solidariedade. Seja adotando, doando ou se 
+      voluntariando, cada gesto faz a diferença na 
+      construção de um futuro mais digno para os 
+      animais.
+    </p>
+    <img src="../../../assets/images/gatosobrenos.png" alt="Gato" />
+  </section>
+  <section class="ajuda">
+    <h2 class="pro-titulo">Quer Ajudar?</h2>
+     <div>
+    <a href="../adocao/index.html">
+      <pata-component img="../../../assets/images/botao_adote.png" text="Adote"></pata-component>
+    </a>
+    <a href="../doacao/index.html" >
+      <pata-component class="pata-alta" img="../../../assets/images/botao_doe.png" text="Doe"></pata-component>
+    </a>
+    <a href="../../pages/sobre/"><pata-component img="../../../assets/images/botao_voluntario.png" text="Seja um voluntário"></pata-component></a>
+  </div>
+  </section>
+  <section class="galeria">
+    <h2 class="pro-titulo">Galeria de fotos</h2>
+    <div>
+      <i class="setas fa-solid fa-angle-left" onclick="window.inicialView.botaoAnterior()"></i>
+      <div id="colecao-galeria"></div>
+      <i class="setas fa-solid fa-angle-right" onclick="window.inicialView.botaoProximo()"></i>
+    </div>
+  </section>
+  <div  style="justify-self: right;">
+    <img src="../../../assets/images/paw print.png" alt="">
+  </div>
+  
+  <rodape-component></rodape-component>
+
+</body>
+<script  type="module" src="inicial.view.js"></script>
+
+</html>

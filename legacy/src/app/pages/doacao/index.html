@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet" />
+  <title>Proteção Animal</title>
+</head>
+<body>
+  <header>
+  <div>
+    <img class="logo" src="../../../assets/images/logo_protecao.png" alt="logo Protecao animal" />
+        <button class="open-modal">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </button>
+        <div id="fade"></div>
+        <div class="modal">
+          <div class="textModal"><img src="../../../assets/icons/game-icons_dog-house.png" alt="">
+            <p> Pagina Inicial</p>
+          </div>
+          <div class="textModal"><img src="../../../assets/icons/Vector.png" alt="">
+          <p>Quero Adotar</p>
+          </div>
+          <div class="textModal"><img src="../../../assets/icons/bxs_donate-heart.png" alt="">
+            <p>Quero Doar</p>
+          </div>
+          <div class="textModal"><img src="../../../assets/icons/ic_baseline-diversity-3.png" alt="">
+            <p>Quem Somos</p>
+          </div>
+        </div>
+      <nav>
+        <ul>
+        <li><a href="../inicial/index.html">Pagina inicial</a></li>
+        <li><a href="../doacao/index.html">Quero ajudar</a></li>
+        <li><a href="../adocao/index.html">Quero adotar</a></li>
+        <li><a href="../sobre/index.html">Quem somos</a></li>
+        </ul>
+      </nav>
+  </header>
+  <div class="inicial">
+     
+            <a href="../inicial/index.html">Pagina Inicial</a> 
+            <a>/</a>
+            <a href="../adocao/index.html">Doacão</a>
+              
+  </div>
+  <section>
+    <main class="container">
+       <div class="title-container">
+      <h2 class="title">Faça sua doação</h2>
+      <p class="subtitle">
+        "Sua contribuição faz toda a diferença. Ajude-nos a continuar nossa
+        missão."
+      </p>
+    </div>
+     <div class="container-box">
+  <card-doacao
+    valor="10,00"
+    descricao="Você contribui para a alimentação de um animal por 2 dias."
+    icone="../../../assets/images/icone_doacao.png">
+  </card-doacao>
+
+  <card-doacao
+    valor="20,00"
+    descricao="Você contribui na compra de medicamentos essenciais para um animal resgatado."
+    icone="../../../assets/images/icone_doacao.png">
+  </card-doacao>
+
+  <card-doacao
+    valor="50,00"
+    descricao="Você contribui na alimentação de um animal por uma semana, garantindo sua saúde e bem-estar."
+    icone="../../../assets/images/icone_doacao.png">
+  </card-doacao>
+
+  <card-doacao
+    valor="100,00"
+    descricao="Você contribui para os cuidados veterinários básicos para um animal resgatado."
+    icone="../../../assets/images/icone_doacao.png">
+  </card-doacao>
+
+  <card-doacao
+    valor="+ de 100,00"
+    descricao="Você ajuda com todos os custos de uma castração segura e nos cuidados do pós-operatório."
+    icone="../../../assets/images/icone_doacao.png">
+  </card-doacao>
+
+  <div class="box-pix">
+  </div>
+</div>
+    </main>
+  </section>
+  <rodape-component></rodape-component>
+  <script type="module" src="../../components/card.doacao.componente .js"></script>
+  <script type="module" src="../../components/rodape.component.js"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>

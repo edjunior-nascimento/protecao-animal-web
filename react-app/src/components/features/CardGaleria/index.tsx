@@ -14,11 +14,11 @@ type PropsCardGaleria = {
 }
 export const CardGaleria: React.FC<PropsCardGaleria> = ({ codigo, nome, foto }) => {
 
-  foto =  foto ? foto : './assets/sem_imagem.png';
+  foto = foto ? foto : './assets/sem_imagem.png';
 
   return (
-     <Link to={`/detalhes/${codigo}`} style={{ textDecoration: 'none' }}>
-      <Box sx={{ 
+    <Link to={`/detalhes/${codigo}`} style={{ textDecoration: 'none' }}>
+      <Box sx={{
         position: 'relative',
         '&::before': {
           content: '""',
@@ -32,31 +32,31 @@ export const CardGaleria: React.FC<PropsCardGaleria> = ({ codigo, nome, foto }) 
           zIndex: -1,
         }
       }}>
-        <Card sx={{ 
-          maxWidth:'300px', 
+        <Card sx={{
+          maxWidth: '300px',
           borderRadius: 1,
           position: 'relative',
           backgroundColor: 'white',
           boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
         }}>
           <CardActionArea>
-            <CardContent sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              textAlign: 'center', 
-              gap: 3 
+            <CardContent sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              textAlign: 'center',
+              gap: 3
             }}>
-              <Box 
-                component="img" 
-                src={foto} 
-                alt={nome} 
-                sx={{ 
-                  width: '100%', 
-                  height: '100%', 
-                  objectFit: 'cover', 
-                }} 
+              <Box
+                component="img"
+                src={foto}
+                alt={nome}
+                sx={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
               />
-              <Typography sx={{ color: 'black'}}>
+              <Typography sx={{ color: 'black' }}>
                 {nome}
               </Typography>
             </CardContent>

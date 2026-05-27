@@ -8,19 +8,19 @@ export const GaleriaPage: React.FC = () => {
     ];
 
     return (
-        <Container>
-            <Box sx={{ py: 4,
-                    marginLeft: "67px",
-                    marginRight: "67px",
+        <Container sx={{ paddingLeft: { md: "67px", xs: "10px" }, paddingRight: { md: "67px", xs: "10px" } }}>
+            <Box sx={{
+                py: 4,
+
             }}>
                 <Box sx={{ marginLeft: "14px" }}>
-                <Typography component="p" gutterBottom>
-                    Página inicial / Galeria de fotos
-                </Typography>
+                    <Typography component="p" gutterBottom>
+                        Página inicial / Galeria de fotos
+                    </Typography>
 
-                <Typography variant="h5" gutterBottom sx={{ marginTop: "22px", marginBottom: "69px" }}>
-                    Feiras de Adoção
-                </Typography>
+                    <Typography variant="h5" gutterBottom sx={{ marginTop: "22px", marginBottom: "69px" }}>
+                        Feiras de Adoção
+                    </Typography>
                 </Box>
 
                 <Box

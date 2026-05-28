@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
 
     return (
         <AppBar position="absolute" color="transparent" sx={{ boxShadow: 'none' }} >
-            <Toolbar sx={{ px: { xs: 2, md: 4 } }}>
+            <Toolbar sx={{ px: { xs: 2, md: "80px" } }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', minWidth: 128 }}>
                     <RouterLink to="/">
                         <Box

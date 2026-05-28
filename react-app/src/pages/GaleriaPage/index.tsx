@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Card, CardMedia, Container, Typography } from "@mui/material";
+import BasicModal from "../../components/features/ModalGaleria";
+
 
 export const GaleriaPage: React.FC = () => {
     const imagens = [
@@ -7,8 +9,11 @@ export const GaleriaPage: React.FC = () => {
         "https://2.bp.blogspot.com/-SqLttsLOfls/VwetM_VKQmI/AAAAAAAAQGk/cbVm21-kJhohiewulTBY9ug1QK52XpUpA/s1600/pedigree.jpg", "https://2.bp.blogspot.com/-SqLttsLOfls/VwetM_VKQmI/AAAAAAAAQGk/cbVm21-kJhohiewulTBY9ug1QK52XpUpA/s1600/pedigree.jpg", "https://2.bp.blogspot.com/-SqLttsLOfls/VwetM_VKQmI/AAAAAAAAQGk/cbVm21-kJhohiewulTBY9ug1QK52XpUpA/s1600/pedigree.jpg", "https://2.bp.blogspot.com/-SqLttsLOfls/VwetM_VKQmI/AAAAAAAAQGk/cbVm21-kJhohiewulTBY9ug1QK52XpUpA/s1600/pedigree.jpg", "https://2.bp.blogspot.com/-SqLttsLOfls/VwetM_VKQmI/AAAAAAAAQGk/cbVm21-kJhohiewulTBY9ug1QK52XpUpA/s1600/pedigree.jpg",
     ];
 
+    const [open, setOpen] = useState(false);
+    const [selectedIndex, setSelectedIndex] = useState(0);
+
     return (
-        <Container sx={{ paddingLeft: { md: "67px", xs: "10px" }, paddingRight: { md: "67px", xs: "10px" } }}>
+        <Container sx={{ paddingLeft: { md: "67px", xs: "20px" }, paddingRight: { md: "67px", xs: "20px" } }}>
             <Box sx={{
                 py: 4,
 
@@ -22,32 +27,35 @@ export const GaleriaPage: React.FC = () => {
                         Feiras de Adoção
                     </Typography>
                 </Box>
+                <BasicModal  />
 
                 <Box
                     sx={{
                         display: "grid",
                         gap: 2,
                         gridTemplateColumns: {
-                            xs: "1fr",
-                            sm: "repeat(2, minmax(0, 1fr))",
+                            xs: "repeat(2, minmax(0, 1fr))",
                             md: "repeat(3, minmax(0, 1fr))",
                         },
                     }}
                 >
                     {imagens.map((url, index) => (
-                        <Card key={index} sx={{ overflow: "hidden", borderRadius: 0 }}>
+                        <Card key={index} sx={{ overflow: "hidden", borderRadius: 0, cursor: 'pointer' }} onClick={() => { setSelectedIndex(index); setOpen(true); }}>
                             <CardMedia
                                 component="img"
-                                height="381"
-                                width="413"
+                                height="381px"
+                                width="auto"
                                 image={url}
                                 alt={`Imagem ${index + 1}`}
-                                sx={{ borderRadius: 0, width: "100%", display: "block" }}
+                                sx={{ borderRadius: 0, width: "100%", display: "block", height: { md: "413px", xs: "124px" } }}
                             />
                         </Card>
                     ))}
                 </Box>
+
             </Box>
         </Container>
     );
 };
+
+// estados para o modal

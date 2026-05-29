@@ -27,7 +27,13 @@ export const GaleriaPage: React.FC = () => {
                         Feiras de Adoção
                     </Typography>
                 </Box>
-                <BasicModal  />
+                <BasicModal
+                    open={open}
+                    onClose={() => setOpen(false)}
+                    image={imagens[selectedIndex]}
+                    onPrev={() => setSelectedIndex(i => (i === 0 ? imagens.length - 1 : i - 1))}
+                    onNext={() => setSelectedIndex(i => (i === imagens.length - 1 ? 0 : i + 1))}
+                />
 
                 <Box
                     sx={{

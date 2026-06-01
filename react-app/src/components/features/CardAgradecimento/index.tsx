@@ -11,7 +11,7 @@ interface CardAgradecimentoProps {
 
 const mensagensPorTipo: Record<TipoAgradecimento, { titulo: string; descricao: string }> = {
     adocao: {
-        titulo: "Ficha enviada com sucesso!",
+        titulo: "Ficha 9enviada com sucesso!",
         descricao: "Recebemos suas informacoes de adocao. Nossa equipe vai analisar e entrar em contato.",
     },
     doacao: {

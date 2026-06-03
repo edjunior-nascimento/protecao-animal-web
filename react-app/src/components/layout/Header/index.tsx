@@ -68,25 +68,6 @@ export const Header: React.FC = () => {
                             </Button>
 
                             <Button
-                                key='/ajudar'
-                                component={RouterLink}
-                                to='/ajudar'
-                                sx={{
-                                    color: 'text.primary',
-                                    textTransform: 'none',
-                                    fontFamily: 'Jockey One, Arial, sans-serif',
-                                    fontSize: '1.1rem',
-                                    fontWeight: 200,
-                                    '&:hover': {
-                                        color: 'text.secondary',
-                                        backgroundColor: 'transparent'
-                                    }
-                                }}
-                            >
-                                Quero ajudar
-                            </Button>
-
-                            <Button
                                 key='/adocao'
                                 component={RouterLink}
                                 to='/adocao'
@@ -103,6 +84,25 @@ export const Header: React.FC = () => {
                                 }}
                             >
                                 Quero adotar
+                            </Button>
+
+                            <Button
+                                key='/doacao'
+                                component={RouterLink}
+                                to='/doacao'
+                                sx={{
+                                    color: 'text.primary',
+                                    textTransform: 'none',
+                                    fontFamily: 'Jockey One, Arial, sans-serif',
+                                    fontSize: '1.1rem',
+                                    fontWeight: 200,
+                                    '&:hover': {
+                                        color: 'text.secondary',
+                                        backgroundColor: 'transparent'
+                                    }
+                                }}
+                            >
+                                Quero doar
                             </Button>
 
                             <Button
@@ -147,10 +147,10 @@ export const Header: React.FC = () => {
                                 top: 68,
                             }}
                         >
-                            <MenuItem>Página inicial</MenuItem>
-                            <MenuItem>Quero ajudar</MenuItem>
-                            <MenuItem>Quero adotar</MenuItem>
-                            <MenuItem>Quem somos</MenuItem>
+                            <MenuItem component={RouterLink} to='/'>Página inicial</MenuItem>
+                            <MenuItem component={RouterLink} to='/adocao'>Quero adotar</MenuItem>
+                            <MenuItem component={RouterLink} to='/doacao'>Quero doar</MenuItem>
+                            <MenuItem component={RouterLink} to='/sobre'>Quem somos</MenuItem>
 
                         </Menu>
                     </Box>

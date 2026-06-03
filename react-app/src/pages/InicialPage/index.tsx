@@ -54,7 +54,7 @@ export const InicialPage: React.FC = () => {
             <Typography variant="h4" component="h4" sx={{color:'#994900'}}>
               "Doe esperanças, doe para salvar vidas."
             </Typography>
-            <Button size='large' variant="contained" color="primary">FAÇA SUA DOAÇÃO</Button>
+            <Button component={Link} to="/doacao" size='large' variant="contained" color="primary">FAÇA SUA DOAÇÃO</Button>
           </Box>
         </Box>
       </Box>

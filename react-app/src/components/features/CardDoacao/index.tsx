@@ -1,34 +1,23 @@
 import { Box, Typography } from "@mui/material";
 
-type CardDocaoProps = {
+type Props = {
   titulo: string;
   descricao: string;
-  onClick?: () => void;
+  onClick: () => void;
+  
 };
 
-export function CardDocao({ titulo, descricao, onClick }: CardDocaoProps) {
+
+export function CardDocao( { titulo, descricao, onClick }: Props) {
   return (
-    <Box
-      role={onClick ? "button" : undefined}
-      tabIndex={onClick ? 0 : undefined}
-      onClick={onClick}
-      onKeyDown={
-        onClick
-          ? (event) => {
-            if (event.key === "Enter" || event.key === " ") {
-              event.preventDefault();
-              onClick();
-            }
-          }
-          : undefined
-      }
+    <Box onClick={onClick}
       sx={{
         bgcolor: "#FFFFFF",
         width: "100%",
         maxWidth: "405px",
         height: "366px",
         borderRadius: "8px",
-        cursor: onClick ? "pointer" : "default",
+        cursor: "pointer" ,
         alignItems: "center",
         textAlign: "center",
         padding: "0 16px",

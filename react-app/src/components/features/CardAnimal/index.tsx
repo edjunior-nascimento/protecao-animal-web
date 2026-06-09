@@ -10,10 +10,9 @@ type CardAnimalProps = {
 };
 
 export function CardAnimal({ nome, cidade, imagem, onClick, adotado = false }: CardAnimalProps) {
-  const navigate = useNavigate();
 
   return (
-    <Card onClick={onClick ?? (() => navigate(`/detalhes/${encodeURIComponent(nome)}`))}
+    <Card onClick={onClick}
       sx={{ cursor: "pointer", width: "px", height: "350px", bgcolor: "#FFFFFF" }}
     >
       <Box sx={{ position: "relative" }}>

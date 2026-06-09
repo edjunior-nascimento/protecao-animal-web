@@ -4,6 +4,7 @@ import {
   PaginationItem,
   Stack,
 } from "@mui/material";
+import { KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from "@mui/icons-material";
 
 export default function CustomPagination() {
   const [page, setPage] = useState(4);
@@ -20,8 +21,8 @@ export default function CustomPagination() {
           <PaginationItem
             {...item}
             slots={{
-              previous: () => <span>{"<<"}</span>,
-              next: () => <span>{">>"}</span>,
+              previous: () => <KeyboardDoubleArrowLeft/>,
+              next: () => <KeyboardDoubleArrowRight/>,
             }}
           />
         )}
@@ -33,14 +34,15 @@ export default function CustomPagination() {
           },
 
           "& .Mui-selected": {
-  backgroundColor: "cyan !important",
-  color: "white !important",
-  borderColor: "cyan",
-},
+            backgroundColor: "cyan !important",
+            color: "white !important",
+            borderColor: "cyan",
+          },
 
-"& .Mui-selected:hover": {
-  backgroundColor: "cyan !important",
-  color: "white !important",},
+          "& .Mui-selected:hover": {
+            backgroundColor: "cyan !important",
+            color: "white !important",
+          },
         }}
       />
     </Stack>

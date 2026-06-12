@@ -1,19 +1,20 @@
+
 import { Box, Card, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 
 type CardAnimalProps = {
   nome: string;
   cidade: string;
   imagem: string;
-  adotado: boolean;
+  adotado?: boolean;
   onClick?: () => void;
 };
 
 export function CardAnimal({ nome, cidade, imagem, onClick, adotado = false }: CardAnimalProps) {
 
   return (
-    <Card onClick={onClick}
-      sx={{ cursor: "pointer", width: "px", height: "350px", bgcolor: "#FFFFFF" }}
+    <Card
+      onClick={onClick}
+      sx={{ cursor: onClick ? "pointer" : "default", width: "300px", height: "350px", bgcolor: "#FFFFFF" }}
     >
       <Box sx={{ position: "relative" }}>
         <Box
@@ -40,7 +41,7 @@ export function CardAnimal({ nome, cidade, imagem, onClick, adotado = false }: C
       </Box>
       <Box sx={{ gap: 0.5, justifyContent: "flex-start", ml: 2, alignItems: "center", display: "flex", flexDirection: "column", pt: 1 }}>
         <Typography variant="h6" sx={{ mt: 0 }}>{nome}</Typography>
-        <Typography sx={{ color: "#000000", mt: 0.25 }}>{cidade}</Typography>
+        <Typography sx={{ color: "#000000", mt: 2 }}>{cidade}</Typography>
       </Box>
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Container, Modal, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
-import { Pets, RoomOutlined, ShareOutlined } from "@mui/icons-material";
+import { ContactSupportOutlined, ContactSupportRounded, MailOutlined, Pets, RoomOutlined, ShareOutlined, WhatsApp } from "@mui/icons-material";
 import { CardAnimal } from "../../components/features/CardAnimal";
 
 export const DetalhesAdocaoPage: React.FC = () => {
@@ -17,8 +17,31 @@ export const DetalhesAdocaoPage: React.FC = () => {
 
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const style = {
+    position: 'absolute' as const,
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: '#FFFFFF',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
   return (
-    <Container sx={{ paddingLeft: { xs: 2, md: "67px" }, paddingRight: { xs: 2, md: "67px" }, paddingTop: { xs: 4, md: "71px" }, paddingBottom: { xs: 4, md: 8 } }}>
+    <Container
+      maxWidth="xl"
+      sx={{
+        paddingLeft: { xs: "18px", md: "67px" },
+        paddingRight: { xs: "18px", md: "67px" },
+        paddingTop: { xs: 4, md: "71px" },
+        boxSizing: "border-box"
+      }}
+    >
       <p>Código do animal: {codigo}</p>
       <Box>
         <Box display="flex" alignItems="center" marginBottom="28px">
@@ -35,6 +58,7 @@ export const DetalhesAdocaoPage: React.FC = () => {
           <Typography variant="body1">/ Adote</Typography>
         </Box>
       </Box>
+
       <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: "24px" }}>
         <Box sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 2 }}>
           <Box component="img" src={images[selectedIndex]} sx={{ width: "100%", height: { xs: 260, md: 520 }, objectFit: "cover", borderRadius: 2 }} />
@@ -57,15 +81,16 @@ export const DetalhesAdocaoPage: React.FC = () => {
             ))}
           </Box>
         </Box>
+
         <Box sx={{ flex: 1 }}>
           <Box sx={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "23px" }}>
-            <Typography variant="h4" >
-              Pietro
-            </Typography>
-            <Button variant="contained" color="primary" sx={{ marginTop: "16px" }}>
+            <Typography variant="h4">Pietro</Typography>
+            <Button variant="contained" color="primary">
               <ShareOutlined />
             </Button>
-          </Box><Typography variant="body1" marginTop="8px" sx={{ marginBottom: "23px" }} >
+
+          </Box>
+          <Typography variant="body1" marginTop="8px" sx={{ marginBottom: "23px" }} >
             Cachorro | Golden | Macho | 2 anos | Porte grande
           </Typography>
           <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -74,7 +99,7 @@ export const DetalhesAdocaoPage: React.FC = () => {
               Está em Guaraciaba do Norte
             </Typography>
           </Box>
-          <Typography variant="h4" marginTop="16px" sx={{ color: "#FFFF", marginTop: "83px" }}>
+          <Typography variant="h4" sx={{ color: "#FFFF", marginTop: "83px" }}>
             Temperamento do Pietro
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "row", gap: "15px", marginTop: "20px" }}>
@@ -82,17 +107,45 @@ export const DetalhesAdocaoPage: React.FC = () => {
             <Box sx={{ display: "flex", flexDirection: "row" }}><Pets color="primary" /><Typography sx={{ marginLeft: "5px" }}>Dócil </Typography></Box>
             <Box sx={{ display: "flex", flexDirection: "row" }}><Pets color="primary" /><Typography sx={{ marginLeft: "5px" }}>Carente </Typography></Box>
           </Box>
-          <Typography variant="h4" marginTop="16px" sx={{ color: "#FFFF", marginTop: "83px", marginBottom: "30px" }}>
+          <Typography variant="h4" sx={{ color: "#FFFF", marginTop: "83px", marginBottom: "30px" }}>
             Situação do Pietro
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "row", gap: "15px", marginTop: "8px" }}>
             <Box sx={{ display: "flex", flexDirection: "row" }}><Pets color="primary" /><Typography sx={{ marginLeft: "5px" }}>Castrado </Typography></Box>
             <Box sx={{ display: "flex", flexDirection: "row" }}><Pets color="primary" /><Typography sx={{ marginLeft: "5px" }}>Vermifungado </Typography></Box>
           </Box>
-          <Button sx={{ bgcolor: "#27A8AD", width: "100%", marginTop: "83px" }}>Entrar em contato</Button>
-
+          <Button onClick={handleOpen} sx={{ bgcolor: "#27A8AD", color: "#FFF", width: "100%", marginTop: "83px" }}>Entrar em contato</Button>
         </Box>
+        <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <Box sx={style}>
+                <Box display="flex" alignItems="center" gap="8px">
+                  <ContactSupportRounded color="primary" sx={{fontSize:"30px"}}/>
+                <Typography id="modal-modal-title" variant="h5" component="h2"sx={{color: "#27A8AD", fontFamily: "bold", }}>
+                  Quer adotar?
+                </Typography>
+                </Box>
+                <Typography id="modal-modal-description" sx={{ mt: 2, color: "#191A21" }} >
+                  Para adotar esse pet ou saber mais sobre ele, entre em contato com o protetor:
+                </Typography>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "20px", color: "#191A21" }}>
+                  <MailOutlined/><Typography id="modal-modal-description"  >
+                  protecaoanimal@gmail.com
+                </Typography></Box>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "20px", color: "#191A21" }}>
+                  <WhatsApp/>
+                  <Typography id="modal-modal-description"  >
+                  (88) 9 99309 - 9381
+                </Typography></Box>
+                <button onClick={handleClose} style={{ marginTop: "20px", backgroundColor: "#27A8AD", color: "#FFF", border: "none", padding: "10px 20px", cursor: "pointer" }}>Cancelar</button>
+              </Box>
+            </Modal>
       </Box>
+
       <Box marginTop="32px" >
         <Typography variant="h4" marginBottom="47px" color="#FFFF">Historia</Typography>
         <Typography variant="body1" color="#FFFF">
@@ -105,10 +158,21 @@ export const DetalhesAdocaoPage: React.FC = () => {
           Se dá bem com outros cães e é ideal para famílias que buscam um companheiro ativo e leal. Pietro já está vacinado, castrado e pronto para encontrar um lar cheio de amor.
         </Typography>
       </Box>
+
       <Box>
         <Typography variant="h5" color="primary" marginTop="69px" marginBottom="30px">Outros peludos esperando seu clique</Typography>
-        <Box sx={{ display: "grid", gridTemplateColumns: { xs: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }, gap: "13px", alignItems: "stretch", paddingBottom: "34px" }}>
 
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: { xs: "repeat(2, 1fr)", md: "repeat(4, 1fr)" },
+            gap: "13px",
+            alignItems: "stretch",
+            paddingBottom: "34px",
+            width: "100%"
+          }}
+        >
+          <CardAnimal nome="jonas" cidade="guaraciaba" adotado={true} imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
           <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
           <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
           <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
@@ -116,9 +180,8 @@ export const DetalhesAdocaoPage: React.FC = () => {
           <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
           <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
           <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
-          <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" /></Box>
+        </Box>
       </Box>
-
     </Container>
   );
 };

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Box, Button, Container, Modal, Typography } from "@mui/material";
+import { Box, Button, Container, IconButton, Modal, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
-import { ContactSupportOutlined, ContactSupportRounded, MailOutlined, Pets, RoomOutlined, ShareOutlined, WhatsApp } from "@mui/icons-material";
+import { CloseRounded, CloseTwoTone, ContactSupportRounded, DisabledByDefaultSharp, MailOutlined, Pets, RoomOutlined, ShareOutlined, WhatsApp } from "@mui/icons-material";
 import { CardAnimal } from "../../components/features/CardAnimal";
+import { CardPost } from "../../components/features/CardPost";
 
 export const DetalhesAdocaoPage: React.FC = () => {
   const { codigo } = useParams();
@@ -18,10 +19,13 @@ export const DetalhesAdocaoPage: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   const [open, setOpen] = useState(false);
+  const [openCardPost, setOpenCardPost] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const handleOpenCardPost = () => setOpenCardPost(true);
+  const handleCloseCardPost = () => setOpenCardPost(false);
 
-  const style = {
+  const styleMOdal = {
     position: 'absolute' as const,
     top: '50%',
     left: '50%',
@@ -85,7 +89,7 @@ export const DetalhesAdocaoPage: React.FC = () => {
         <Box sx={{ flex: 1 }}>
           <Box sx={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "23px" }}>
             <Typography variant="h4">Pietro</Typography>
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" onClick={handleOpenCardPost}>
               <ShareOutlined />
             </Button>
 
@@ -116,34 +120,121 @@ export const DetalhesAdocaoPage: React.FC = () => {
           </Box>
           <Button onClick={handleOpen} sx={{ bgcolor: "#27A8AD", color: "#FFF", width: "100%", marginTop: "83px" }}>Entrar em contato</Button>
         </Box>
+
+
+
+
+
         <Modal
-              open={open}
-              onClose={handleClose}
-              aria-labelledby="modal-modal-title"
-              aria-describedby="modal-modal-description"
+          open={openCardPost}
+          onClose={handleCloseCardPost}
+          aria-labelledby="cardpost-modal-title"
+          aria-describedby="cardpost-modal-description"
+          sx={{
+
+          }}>
+
+          <Box sx={{ height: "95vh", display: "flex", flexDirection: "column", width: "100vw", bgcolor: "rgba(0, 0, 0, 0.8)", position: "fixed", top: 0, left: 0, zIndex: 1300 }}>
+            <IconButton
+              onClick={handleCloseCardPost}
+              sx={{
+                position: "absolute",
+                top: "15px",
+                right: "15px",
+                bgcolor: "#777575",
+                color: "white",
+                zIndex: 1400,
+                borderRadius: "0px",
+              }}
             >
-              <Box sx={style}>
-                <Box display="flex" alignItems="center" gap="8px">
-                  <ContactSupportRounded color="primary" sx={{fontSize:"30px"}}/>
-                <Typography id="modal-modal-title" variant="h5" component="h2"sx={{color: "#27A8AD", fontFamily: "bold", }}>
-                  Quer adotar?
-                </Typography>
-                </Box>
-                <Typography id="modal-modal-description" sx={{ mt: 2, color: "#191A21" }} >
-                  Para adotar esse pet ou saber mais sobre ele, entre em contato com o protetor:
-                </Typography>
-                <Box sx={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "20px", color: "#191A21" }}>
-                  <MailOutlined/><Typography id="modal-modal-description"  >
-                  protecaoanimal@gmail.com
-                </Typography></Box>
-                <Box sx={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "20px", color: "#191A21" }}>
-                  <WhatsApp/>
-                  <Typography id="modal-modal-description"  >
-                  (88) 9 99309 - 9381
-                </Typography></Box>
-                <button onClick={handleClose} style={{ marginTop: "20px", backgroundColor: "#27A8AD", color: "#FFF", border: "none", padding: "10px 20px", cursor: "pointer" }}>Cancelar</button>
-              </Box>
-            </Modal>
+              <CloseRounded />
+            </IconButton>
+            <Typography variant="body1" color="#FFFF" ml="20px" mt="31px">Escolha o estilo que deseja compartilhas nas redes sociais</Typography>
+
+            <Box
+              sx={{
+                position: "absolute" as const,
+                top: "55%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                outline: "none",
+                maxWidth: "90vw",
+                maxHeight: "90vh",
+                overflowY: "auto",
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                gap: "20px",
+              }}
+            >
+              <CardPost
+                nome="biu"
+                sexo="macho"
+                imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+                idade="2 meses"
+                porte="pequeno"
+                cor="#1cb3b1"
+                onClick={handleCloseCardPost}
+              />
+              <CardPost
+                nome="que late"
+                sexo="macho"
+                imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+                idade="1 ano"
+                porte="Grande"
+                cor="#000000"
+                onClick={handleCloseCardPost}
+              />
+              <CardPost
+                nome="ágatah"
+                sexo="fêmea"
+                imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+                idade="3 anos"
+                porte="Médio"
+                cor="#D63EC2"
+                onClick={handleCloseCardPost}
+              />
+              <CardPost
+                nome="popó"
+                sexo="macho"
+                imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+                idade="4 anos"
+                porte="Grande"
+                cor="#2764E9"
+                onClick={handleCloseCardPost}
+              />
+            </Box>
+          </Box>
+        </Modal>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={styleMOdal}>
+            <Box display="flex" alignItems="center" gap="8px">
+              <ContactSupportRounded color="primary" sx={{ fontSize: "30px" }} />
+              <Typography id="modal-modal-title" variant="h5" component="h2" sx={{ color: "#27A8AD", fontWeight: "500", }}>
+                Quer adotar?
+              </Typography>
+            </Box>
+            <Typography id="modal-modal-description" sx={{ mt: 2, color: "#191A21" }} >
+              Para adotar esse pet ou saber mais sobre ele, entre em contato com o protetor:
+            </Typography>
+            <Box sx={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "20px", color: "#191A21" }}>
+              <MailOutlined /><Typography id="modal-modal-description"  >
+                protecaoanimal@gmail.com
+              </Typography></Box>
+            <Box sx={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "20px", color: "#191A21" }}>
+              <WhatsApp />
+              <Typography id="modal-modal-description"  >
+                (88) 9 99309 - 9381
+              </Typography></Box>
+            <button onClick={handleClose} style={{ marginTop: "20px", backgroundColor: "#27A8AD", color: "#FFF", border: "none", padding: "10px 20px", cursor: "pointer" }}>Cancelar</button>
+          </Box>
+        </Modal>
+
       </Box>
 
       <Box marginTop="32px" >

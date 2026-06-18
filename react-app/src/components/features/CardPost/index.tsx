@@ -1,5 +1,4 @@
 import { Box, Card, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 
 type CardPostProps = {
   nome: string;
@@ -11,65 +10,159 @@ type CardPostProps = {
   onClick?: () => void;
 };
 
-export function CardPost({ nome, sexo, imagem, idade, porte, cor="#00b3a6", onClick }: CardPostProps) {
-
+export function CardPost({ nome, sexo, imagem, idade, porte, cor , onClick }: CardPostProps) {
   return (
-    <Card 
-      
+    <Card
+      onClick={onClick}
       sx={{
         width: 320,
-        borderRadius: 2,
-        boxShadow: 3,
+        boxShadow: 4,
         cursor: 'pointer',
-        overflow: 'visible',
-        bgcolor: cor,
-        height: "800px"
+        bgcolor: cor, // O fundo padrão do card inteiro se torna a cor da prop
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
+        
       }}
     >
-      <Box sx={{ bgcolor: '#f6a623', height: 110, display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
-        <Box
-          component="img"
-          src={imagem}
-          alt={nome}
-          sx={{
-            width: 180,
-            height: 180,
-            objectFit: 'cover',
-            borderRadius: 2,
-            boxShadow: 4,
-            transform: 'translateY(36px)'
-          }}
-        />
-      </Box>
-
-      <Box sx={{ mt: -6, px: 2, pb: 2, textAlign: 'center' }}>
-        <Typography
-          variant="subtitle1"
-          sx={{
+      <Box sx={{ pt: 3, pb: 4, textAlign: 'center', mb: "50px" }}>
+        <Typography 
+          variant="h3" 
+          sx={{ color: "#FFFFFF", fontWeight: 700, letterSpacing: 1, mb: 1 }}
+        >
+          ADOÇÃO
+        </Typography>
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            color: "#FFFFFF", 
+            bgcolor: "#f6a623", 
+            width: "fit-content", 
             display: 'inline-block',
-            bgcolor: '#00b3a6',
-            color: '#fff',
-            px: 2,
-            py: 0.5,
-            borderRadius: 2,
-            fontWeight: 700
+            px: 4, py: 0.5,
+            borderRadius: "12px", 
+            fontWeight: 700,
+            fontSize: '1.2rem'
           }}
         >
-          {nome}
+          RESPONSÁVEL
         </Typography>
+      </Box>
 
-        <Box sx={{ mt: 1, bgcolor: '#fff', borderRadius: 2, boxShadow: 1, p: 2, textAlign: 'left' }}>
-          <Typography variant="body2" sx={{ fontWeight: 700 }}>{sexo}</Typography>
-          <Typography variant="body2">{idade}</Typography>
-          <Typography variant="body2">{porte}</Typography>
+      <Box 
+        sx={{ 
+          bgcolor: '#f6a623', 
+          height: "168px", 
+          display: 'flex', 
+          justifyContent: 'center',
+          position: 'relative'
+        }}
+      >
+        
+        <Box 
+          sx={{ 
+            width: 200, 
+            height: 200, 
+            border: '6px solid #f6a623',
+            boxSizing: 'content-box',
+            mt: -8,
+            mb: -15,  
+            zIndex: 3,
+          }}
+        >
+          <Box
+            component="img"
+            src={imagem}
+            alt={nome}
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: 'cover',
+            }}
+          />
+        </Box>
+      </Box>
+
+      <Box 
+        sx={{
+          pb: 4, 
+          px: 3, 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'center',
+          zIndex: 5
+        }}
+      >
+        
+        <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', mt: "-20px" }}>
+          
+          <Typography
+            variant="subtitle1"
+            sx={{
+              bgcolor:"#00b3a6",
+              color: '#fff',
+              px: 3,
+              py: 0.6,
+              borderRadius: '8px',
+              fontWeight: 700,
+              textAlign: 'center',
+              zIndex: 5,
+              mb: -0.5,
+              mt: "-50px",
+              position: 'absolute',
+              width: 'fit-content',
+              
+            }}
+          >
+            {nome}
+          </Typography>
+
+          <Box 
+            sx={{ 
+              bgcolor: '#FFFF', 
+              borderRadius: 3, 
+              boxShadow: 2, 
+              p: 2, 
+              width: '65%',
+              textAlign: 'center', 
+              color: "#000000",
+              zIndex: 1,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 0.5,
+              mt: -3,
+              height: '102px',
+            }}
+          >
+            <Typography variant="body1" sx={{ fontWeight: 800, mt: -1 }}>{sexo}</Typography>
+            <Typography variant="body1" sx={{ fontWeight: 700 }}>{idade}</Typography>
+            <Typography variant="body1" sx={{ fontWeight: 700, mb: 2 }}>{porte}</Typography>
+          </Box>
         </Box>
 
-        <Box sx={{ mt: 1 }}>
-          <Typography variant="caption">Acesse o link:</Typography>
-          <Box sx={{ mt: 0.5, display: 'inline-block', bgcolor: '#f6a623', color: '#fff', px: 2, py: 0.5, borderRadius: 1, fontWeight: 700 }} onClick={onClick}>
+        
+        <Box sx={{ mt: 1, textAlign: 'center', width: '100%' }}>
+          <Typography variant="body2" sx={{ color: '#fff', fontWeight: 500 }}>
+            Acesse o link:
+          </Typography>
+          <Box 
+            sx={{ 
+              mt: 0.5, 
+              bgcolor: '#f6a623',
+              color: '#fff', 
+              py: 1, 
+              borderRadius: 2, 
+              fontWeight: 700,
+              fontSize: '0.95rem',
+              letterSpacing: 0.5,
+              width: '90%',
+              mx: 'auto'
+            }}
+          >
             protecaoanimal.com.br
           </Box>
         </Box>
+
       </Box>
     </Card>
   );

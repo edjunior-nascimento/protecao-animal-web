@@ -86,7 +86,7 @@ const theme = createTheme({
       },
     },
     MuiPaper: {
-       styleOverrides: {
+      styleOverrides: {
         root: {
             fontFamily: 'Arial, sans-serif',
             color: '#27A8AD',

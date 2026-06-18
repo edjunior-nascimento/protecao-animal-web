@@ -31,8 +31,6 @@ export const DoacaoPage: React.FC = () => {
                     <Typography variant="body1">/ Doação</Typography>
                 </Box>
 
-                <CardPost nome="biu" sexo="macho" imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3" idade= "2 meses" porte="pequeno" onClick={click}/>
-
                 <Box sx={{ marginTop: "130px", textAlign: "center", marginBottom: "130px" }}>
                     <Typography variant="h4" gutterBottom>
                         Faça sua doação

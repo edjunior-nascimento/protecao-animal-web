@@ -4,6 +4,12 @@ import { useParams } from "react-router-dom";
 import { CloseRounded, CloseTwoTone, ContactSupportRounded, DisabledByDefaultSharp, MailOutlined, Pets, RoomOutlined, ShareOutlined, WhatsApp } from "@mui/icons-material";
 import { CardAnimal } from "../../components/features/CardAnimal";
 import { CardPost } from "../../components/features/CardPost";
+import PhotoAlbum from "react-photo-album";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+
+
 
 export const DetalhesAdocaoPage: React.FC = () => {
   const { codigo } = useParams();
@@ -36,6 +42,25 @@ export const DetalhesAdocaoPage: React.FC = () => {
     boxShadow: 24,
     p: 4,
   };
+  const [index, setIndex] = useState(-1);
+
+  const photos = [
+    {
+      src: "https://picsum.photos/id/10/600/400",
+      width: 600,
+      height: 400,
+    },
+    {
+      src: "https://picsum.photos/id/20/600/400",
+      width: 600,
+      height: 400,
+    },
+    {
+      src: "https://picsum.photos/id/30/600/400",
+      width: 600,
+      height: 400,
+    },
+  ];
   return (
     <Container
       maxWidth="xl"
@@ -46,6 +71,15 @@ export const DetalhesAdocaoPage: React.FC = () => {
         boxSizing: "border-box"
       }}
     >
+      <Box>
+
+        <Lightbox
+          open={index >= 0}
+          close={() => setIndex(-1)}
+          slides={images.map((src) => ({ src }))}
+          index={index}
+        />
+      </Box>
       <p>Código do animal: {codigo}</p>
       <Box>
         <Box display="flex" alignItems="center" marginBottom="28px">
@@ -65,7 +99,7 @@ export const DetalhesAdocaoPage: React.FC = () => {
 
       <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: "24px" }}>
         <Box sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 2 }}>
-          <Box component="img" src={images[selectedIndex]} sx={{ width: "100%", height: { xs: 260, md: 520 }, objectFit: "cover", borderRadius: 2 }} />
+          <Box component="img" src={images[selectedIndex]} sx={{ width: "100%", height: { xs: 260, md: 520 }, objectFit: "cover", borderRadius: 2, cursor: "pointer" }} onClick={()=>{setIndex(selectedIndex)}} />
           <Box sx={{ display: "flex", gap: 1, overflowX: "auto", pt: 1 }}>
             {images.map((img, idx) => (
               <Box
@@ -134,7 +168,7 @@ export const DetalhesAdocaoPage: React.FC = () => {
 
           }}>
 
-          <Box sx={{ height: "95vh", display: "flex", flexDirection: "column", width: "100vw", bgcolor: "rgba(0, 0, 0, 0.8)", position: "fixed", top: 0, left: 0, zIndex: 1300 }}>
+          <Box sx={{ height: "100vh", display: "flex", flexDirection: "column", width: "100vw", bgcolor: "rgba(0, 0, 0, 0.8)", position: "fixed", top: 0, left: 0, zIndex: 1300 }}>
             <IconButton
               onClick={handleCloseCardPost}
               sx={{
@@ -159,7 +193,7 @@ export const DetalhesAdocaoPage: React.FC = () => {
                 transform: "translate(-50%, -50%)",
                 outline: "none",
                 maxWidth: "90vw",
-                maxHeight: "90vh",
+                maxHeight: "85vh",
                 overflowY: "auto",
                 display: "flex",
                 flexDirection: "row",
@@ -204,6 +238,9 @@ export const DetalhesAdocaoPage: React.FC = () => {
                 onClick={handleCloseCardPost}
               />
             </Box>
+            <Button sx={{
+              marginTop: "85vh", backgroundColor: "#27A8AD", color: "#FFF", border: "none", cursor: "pointer", zIndex: 1400, width: "15%", alignSelf: "center",
+            }}><Typography component="h5"><strong>Compartilhar</strong></Typography></Button>
           </Box>
         </Modal>
         <Modal
@@ -213,8 +250,8 @@ export const DetalhesAdocaoPage: React.FC = () => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={styleMOdal}>
-            <Box display="flex" alignItems="center" gap="8px">
-              <ContactSupportRounded color="primary" sx={{ fontSize: "30px" }} />
+            <Box display="flex" alignItems="center" gap="8px" >
+              <ContactSupportRounded color="primary" sx={{ fontSize: "30px", }} />
               <Typography id="modal-modal-title" variant="h5" component="h2" sx={{ color: "#27A8AD", fontWeight: "500", }}>
                 Quer adotar?
               </Typography>
@@ -231,7 +268,7 @@ export const DetalhesAdocaoPage: React.FC = () => {
               <Typography id="modal-modal-description"  >
                 (88) 9 99309 - 9381
               </Typography></Box>
-            <button onClick={handleClose} style={{ marginTop: "20px", backgroundColor: "#27A8AD", color: "#FFF", border: "none", padding: "10px 20px", cursor: "pointer" }}>Cancelar</button>
+            <button onClick={handleClose} style={{ marginTop: "20px", backgroundColor: "#27A8AD", color: "#FFF", border: "none", padding: "10px 20px", cursor: "pointer", }}  >Cancelar</button>
           </Box>
         </Modal>
 

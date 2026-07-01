@@ -28,7 +28,7 @@ export function CardPost({ nome, sexo, imagem, idade, porte, cor , onClick }: Ca
       <Box sx={{ pt: 3, pb: 4, textAlign: 'center', mb: "50px" }}>
         <Typography 
           variant="h3" 
-          sx={{ color: "#FFFFFF", fontWeight: 700, letterSpacing: 1, mb: 1 }}
+          sx={{ color: "#FFFFFF", fontWeight: 500, letterSpacing: 1, mb: 1 }}
         >
           ADOÇÃO
         </Typography>
@@ -52,7 +52,7 @@ export function CardPost({ nome, sexo, imagem, idade, porte, cor , onClick }: Ca
       <Box 
         sx={{ 
           bgcolor: '#f6a623', 
-          height: "168px", 
+          height: "150px", 
           display: 'flex', 
           justifyContent: 'center',
           position: 'relative'
@@ -61,9 +61,9 @@ export function CardPost({ nome, sexo, imagem, idade, porte, cor , onClick }: Ca
         
         <Box 
           sx={{ 
-            width: 200, 
-            height: 200, 
-            border: '6px solid #f6a623',
+            width: 150, 
+            height: 150, 
+            border: '4px solid #f6a623',
             boxSizing: 'content-box',
             mt: -8,
             mb: -15,  
@@ -94,7 +94,7 @@ export function CardPost({ nome, sexo, imagem, idade, porte, cor , onClick }: Ca
         }}
       >
         
-        <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', mt: "-20px" }}>
+        <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', mt: "-40px" }}>
           
           <Typography
             variant="subtitle1"
@@ -108,7 +108,7 @@ export function CardPost({ nome, sexo, imagem, idade, porte, cor , onClick }: Ca
               textAlign: 'center',
               zIndex: 5,
               mb: -0.5,
-              mt: "-50px",
+              mt: "-80px",
               position: 'absolute',
               width: 'fit-content',
               
@@ -123,14 +123,14 @@ export function CardPost({ nome, sexo, imagem, idade, porte, cor , onClick }: Ca
               borderRadius: 3, 
               boxShadow: 2, 
               p: 2, 
-              width: '65%',
+              width: '50%',
               textAlign: 'center', 
               color: "#000000",
               zIndex: 1,
               display: 'flex',
               flexDirection: 'column',
               gap: 0.5,
-              mt: -3,
+              mt: -7,
               height: '102px',
             }}
           >

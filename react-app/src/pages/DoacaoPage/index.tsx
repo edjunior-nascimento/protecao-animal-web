@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import { Box, Button, Container, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { CardDocao } from "../../components/features/CardDoacao";

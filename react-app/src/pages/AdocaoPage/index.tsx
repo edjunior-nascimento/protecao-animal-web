@@ -39,16 +39,16 @@ export const AdocaoPage: React.FC = () => {
           <Box sx={{ minWidth: 0, height: "56px" }}>
             <FilterAnimais label="Todos os sexos" opcoes={["Macho", "Fêmea"]} />
           </Box>
-          {/* <Box sx={{ minWidth: 0, height: "56px" }}>
-            <FilterAnimais label="Todos os sexos" opcoes={[{ valor: "Macho", label: "Macho" }, { valor: "Fêmea", label: "Fêmea" }]} />
+          <Box sx={{ minWidth: 0, height: "56px" }}>
+            <FilterAnimais label="Todos os sexos" opcoes={[ "Macho","Fêmea" ]} />
           </Box>
           <Box sx={{ minWidth: 0, height: "56px" }}>
-            <FilterAnimais label="Todas as categorias " opcoes={[{ valor: "Grande", label: "Grande" }, { valor: "Médio", label: "Médio" }, { valor: "Pequeno", label: "Pequeno" }]} />
+            <FilterAnimais label="Todas as categorias " opcoes={["Grande", "Médio", "Pequeno" ]} />
           </Box>
           <Box sx={{ minWidth: 0, height: "56px" }}>
-            <FilterAnimais label="Todos os locais" opcoes={[{ valor: "Centro", label: "Centro" }, { valor: "Várzea dos Espinhos", label: "Várzea dos Espinhos" }, { valor: "Martinslândia", label: "Martinslândia" }, { valor: "Morrinhos Novos", label: "Morrinhos Novos" }]} />
+            <FilterAnimais label="Todos os locais" opcoes={["Centro", "Várzea dos Espinhos", "Martinslândia", "Morrinhos Novos" ]} />
             
-          </Box> */}
+          </Box> 
           <Box sx={{ minWidth: 0, height: "56px", display: "flex", alignItems: "stretch" }}>
             <Input placeholder="Nome do Bicho" sx={{ width: "100%", height: "100%", boxSizing: "border-box", border: "1px solid #C6C6C6", borderRadius: "5px", px: 2, color: "black" }} />
           </Box>

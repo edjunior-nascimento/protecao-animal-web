@@ -1,7 +1,7 @@
 import { CloseOutlined, RoomOutlined } from "@mui/icons-material";
 import { Box, Input, Typography } from "@mui/material";
 
-export function CardEndereco({ temBotao = false }) {
+export function CardEndereco() {
 
     return (
         <Box sx={{ marginTop: "26px", backgroundColor: "white", marginLeft: { xs: "10px", md: "81px" }, marginRight: { xs: "10px", md: "81px" }, marginBottom: "26px", paddingTop: "10px", paddingBottom: "35px" }}>

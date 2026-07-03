@@ -7,7 +7,7 @@ type FiltroAnimalProps = {
 export function FilterAnimais({ label, opcoes }: FiltroAnimalProps) {
 
     return (
-        <Box sx={{ minWidth: 120 }}>
+        <Box sx={{ minWidth: 120, width: "100%", height: "100%", display: "flex", alignItems: "stretch" }}>
             <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">{label}</InputLabel>
                 <Select

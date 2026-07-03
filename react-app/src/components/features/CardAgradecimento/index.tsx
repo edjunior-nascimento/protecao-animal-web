@@ -1,31 +1,20 @@
-import { CheckCircleOutline, CloseOutlined } from "@mui/icons-material";
+import { CheckCircleOutline, CloseOutlined, Favorite } from "@mui/icons-material";
 import { Box, Button, Modal, Typography } from "@mui/material";
 
-type TipoAgradecimento = "adocao" | "doacao" | "castracao";
+type Props = {
+    titulo: string;
+    descricao: string;
+
+};
 
 interface CardAgradecimentoProps {
     open: boolean;
     onClose: () => void;
-    tipo: TipoAgradecimento;
+    titulo: string;
+    descricao: string;
 }
 
-const mensagensPorTipo: Record<TipoAgradecimento, { titulo: string; descricao: string }> = {
-    adocao: {
-        titulo: "Ficha 9enviada com sucesso!",
-        descricao: "Recebemos suas informacoes de adocao. Nossa equipe vai analisar e entrar em contato.",
-    },
-    doacao: {
-        titulo: "Doacao recebida!",
-        descricao: "Sua contribuicao ajuda diretamente os animais acolhidos. Obrigado por apoiar esta causa.",
-    },
-    castracao: {
-        titulo: "Solicitacao registrada!",
-        descricao: "Seu pedido de castracao foi enviado. Em breve voce recebera retorno com os proximos passos.",
-    },
-};
-
-export function CardAgradecimento({ open, onClose, tipo }: CardAgradecimentoProps) {
-    const mensagem = mensagensPorTipo[tipo];
+export function CardAgradecimento({ open, onClose, titulo, descricao }: CardAgradecimentoProps) {
 
     return (
         <Modal
@@ -72,30 +61,16 @@ export function CardAgradecimento({ open, onClose, tipo }: CardAgradecimentoProp
                 </Typography>
 
                 <Typography sx={{ fontSize: { xs: 19, md: 22 }, fontWeight: 700, color: "#3D3D3D", mb: 1 }}>
-                    {mensagem.titulo}
+                    {titulo}
                 </Typography>
 
-                <Typography sx={{ fontSize: { xs: 15, md: 17 }, color: "#666666", lineHeight: 1.6, mb: 3 }}>
-                    {mensagem.descricao}
+                <Typography sx={{ fontSize: { xs: 15, md: 17 }, color: "#666666", lineHeight: 1.6, mb: 3, display: "flex", flexDirection: "column", }}>
+                    {descricao}
+                    <Favorite sx={{ color: "red", ml: "10px" }} />
                 </Typography>
 
-                <Button
-                    onClick={onClose}
-                    sx={{
-                        bgcolor: "#27A8AD",
-                        color: "#FFFFFF",
-                        borderRadius: "8px",
-                        px: 4,
-                        py: 1.2,
-                        fontWeight: 700,
-                        textTransform: "none",
-                        "&:hover": {
-                            bgcolor: "#1E8C90",
-                        },
-                    }}
-                >
-                    Fechar
-                </Button>
+
+
             </Box>
         </Modal>
     );

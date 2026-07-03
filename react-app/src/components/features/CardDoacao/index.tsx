@@ -3,25 +3,41 @@ import { Box, Typography } from "@mui/material";
 type Props = {
   titulo: string;
   descricao: string;
-  onClick: () => void;
-  
+  onClick?: () => void;
 };
 
-
-export function CardDocao( { titulo, descricao, onClick }: Props) {
+export function CardDocao({ titulo, descricao, onClick }: Props) {
   return (
-    <Box onClick={onClick}
+    <Box
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onClick={onClick}
+      onKeyDown={
+        onClick
+          ? (event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                onClick();
+              }
+            }
+          : undefined
+      }
       sx={{
         bgcolor: "#FFFFFF",
         width: "100%",
         maxWidth: "405px",
         height: "366px",
         borderRadius: "8px",
-        cursor: "pointer" ,
+        cursor: onClick ? "pointer" : "default",
         alignItems: "center",
         textAlign: "center",
         padding: "0 16px",
         outline: "none",
+        transition: "outline 0.2s ease-in-out",
+        "&:focus-visible": {
+          outline: "3px solid #1976d2", // azul padrão MUI
+          outlineOffset: "4px",
+        },
       }}
     >
       <Box
@@ -38,10 +54,8 @@ export function CardDocao( { titulo, descricao, onClick }: Props) {
         }}
       />
       <Box>
-        <Typography variant="h5"
-          sx={{ marginBottom: "27px", }}>
+        <Typography variant="h5" sx={{ marginBottom: "27px" }}>
           {titulo}
-
         </Typography>
       </Box>
       <Box>

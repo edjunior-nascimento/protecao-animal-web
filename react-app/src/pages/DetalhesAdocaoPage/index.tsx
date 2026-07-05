@@ -61,6 +61,7 @@ export const DetalhesAdocaoPage: React.FC = () => {
       height: 400,
     },
   ];
+  const [selectedCard, setSelectedCard] = useState(0);
   return (
     <Container
       maxWidth="xl"
@@ -99,7 +100,7 @@ export const DetalhesAdocaoPage: React.FC = () => {
 
       <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: "24px" }}>
         <Box sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 2 }}>
-          <Box component="img" src={images[selectedIndex]} sx={{ width: "100%", height: { xs: 260, md: 520 }, objectFit: "cover", borderRadius: 2, cursor: "pointer" }} onClick={()=>{setIndex(selectedIndex)}} />
+          <Box component="img" src={images[selectedIndex]} sx={{ width: "100%", height: { xs: 260, md: 520 }, objectFit: "cover", borderRadius: 2, cursor: "pointer" }} onClick={() => { setIndex(selectedIndex) }} />
           <Box sx={{ display: "flex", gap: 1, overflowX: "auto", pt: 1 }}>
             {images.map((img, idx) => (
               <Box
@@ -183,22 +184,38 @@ export const DetalhesAdocaoPage: React.FC = () => {
             >
               <CloseRounded />
             </IconButton>
-            <Typography variant="body1" color="#FFFF" ml="20px" mt="31px">Escolha o estilo que deseja compartilhas nas redes sociais</Typography>
+            <Typography variant="body1" color="#FFFF" ml="20px" mt="31px" sx={{
+              display: {
+                xs: "none",
+              },
+            }}>Escolha o estilo que deseja compartilhas nas redes sociais</Typography>
 
             <Box
+              onClick={(e) => e.stopPropagation()}
               sx={{
-                position: "absolute" as const,
+                position: "absolute",
                 top: "55%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
                 outline: "none",
-                maxWidth: "90vw",
-                maxHeight: "85vh",
-                overflowY: "auto",
+
+                width: "90vw",
+
                 display: "flex",
                 flexDirection: "row",
-                alignItems: "center",
-                gap: "20px",
+                gap: 3,
+
+                overflowX: "auto",
+                overflowY: "hidden",
+
+                scrollBehavior: "smooth",
+
+                "&::-webkit-scrollbar": {
+                  display: "none",
+                },
+
+                msOverflowStyle: "none",
+                scrollbarWidth: "none",
               }}
             >
               <CardPost
@@ -208,7 +225,9 @@ export const DetalhesAdocaoPage: React.FC = () => {
                 idade="2 meses"
                 porte="pequeno"
                 cor="#1cb3b1"
-                onClick={handleCloseCardPost}
+                selected={selectedCard === 0}
+                onClick={() => setSelectedCard(0)}
+
               />
               <CardPost
                 nome="que late"
@@ -217,7 +236,9 @@ export const DetalhesAdocaoPage: React.FC = () => {
                 idade="1 ano"
                 porte="Grande"
                 cor="#000000"
-                onClick={handleCloseCardPost}
+                selected={selectedCard === 0}
+                onClick={() => setSelectedCard(0)}
+
               />
               <CardPost
                 nome="ágatah"
@@ -226,7 +247,9 @@ export const DetalhesAdocaoPage: React.FC = () => {
                 idade="3 anos"
                 porte="Médio"
                 cor="#D63EC2"
-                onClick={handleCloseCardPost}
+                selected={selectedCard === 0}
+                onClick={() => setSelectedCard(0)}
+
               />
               <CardPost
                 nome="popó"
@@ -235,11 +258,18 @@ export const DetalhesAdocaoPage: React.FC = () => {
                 idade="4 anos"
                 porte="Grande"
                 cor="#2764E9"
-                onClick={handleCloseCardPost}
+                selected={selectedCard === 0}
+                onClick={() => setSelectedCard(0)}
+
               />
             </Box>
+            <Typography variant="body1" color="#FFFF" ml="20px" mt="31px" sx={{
+              display: {
+                md: "none",
+              },
+            }}>Escolha o estilo que deseja compartilhas nas redes sociais</Typography>
             <Button sx={{
-              marginTop: "85vh", backgroundColor: "#27A8AD", color: "#FFF", border: "none", cursor: "pointer", zIndex: 1400, width: "15%", alignSelf: "center",
+              marginTop: "85vh", backgroundColor: "#27A8AD", color: "#FFF", border: "none", cursor: "pointer", zIndex: 1400, width: "fit-content", alignSelf: "center",
             }}><Typography component="h5"><strong>Compartilhar</strong></Typography></Button>
           </Box>
         </Modal>

@@ -161,118 +161,144 @@ export const DetalhesAdocaoPage: React.FC = () => {
 
 
         <Modal
-          open={openCardPost}
-          onClose={handleCloseCardPost}
-          aria-labelledby="cardpost-modal-title"
-          aria-describedby="cardpost-modal-description"
-          sx={{
+  open={openCardPost}
+  onClose={handleCloseCardPost}
+>
+  <Box
+    sx={{
+      height: "100vh",
+      width: "100vw",
+      bgcolor: "rgba(0,0,0,0.8)",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      position: "relative",
+    }}
+  >
+    <IconButton
+      onClick={handleCloseCardPost}
+      sx={{
+        position: "absolute",
+        top: 15,
+        right: 15,
+        bgcolor: "#777575",
+        color: "#fff",
+        borderRadius: 0,
+      }}
+    >
+      <CloseRounded />
+    </IconButton>
 
-          }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: {
+          xs: "column-reverse",
+          md: "column",
+        },
+        alignItems: "center",
+        gap: 3,
+        width: "100%",
+      }}
+    >
+      
+      <Typography
+        variant="body1"
+        color="#FFF"
+        sx={{
+          alignSelf: {
+            md: "flex-start",
+            xs: "center",
+          },
+          ml: {
+            xs: 2,
+            md: 0,
+          },
+        }}
+      >
+        Escolha o estilo que deseja compartilhar nas redes sociais
+      </Typography>
+      <Box
+        onClick={(e) => e.stopPropagation()}
+        sx={{
+          display: "flex",
+          gap: 3,
+          width: "90vw",
+          overflowX: "auto",
+          overflowY: "hidden",
+          scrollBehavior: "smooth",
 
-          <Box sx={{ height: "100vh", display: "flex", flexDirection: "column", width: "100vw", bgcolor: "rgba(0, 0, 0, 0.8)", position: "fixed", top: 0, left: 0, zIndex: 1300 }}>
-            <IconButton
-              onClick={handleCloseCardPost}
-              sx={{
-                position: "absolute",
-                top: "15px",
-                right: "15px",
-                bgcolor: "#777575",
-                color: "white",
-                zIndex: 1400,
-                borderRadius: "0px",
-              }}
-            >
-              <CloseRounded />
-            </IconButton>
-            <Typography variant="body1" color="#FFFF" ml="20px" mt="31px" sx={{
-              display: {
-                xs: "none",
-              },
-            }}>Escolha o estilo que deseja compartilhas nas redes sociais</Typography>
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+          msOverflowStyle: "none",
+          scrollbarWidth: "none",
+        }}
+      >
+        <CardPost
+          nome="biu"
+          sexo="macho"
+          imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+          idade="2 meses"
+          porte="pequeno"
+          cor="#1cb3b1"
+          selected={selectedCard === 0}
+          onClick={() => setSelectedCard(0)}
+        />
 
-            <Box
-              onClick={(e) => e.stopPropagation()}
-              sx={{
-                position: "absolute",
-                top: "55%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                outline: "none",
+        <CardPost
+          nome="que late"
+          sexo="macho"
+          imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+          idade="1 ano"
+          porte="Grande"
+          cor="#000000"
+          selected={selectedCard === 1}
+          onClick={() => setSelectedCard(1)}
+        />
 
-                width: "90vw",
+        <CardPost
+          nome="ágatah"
+          sexo="fêmea"
+          imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+          idade="3 anos"
+          porte="Médio"
+          cor="#D63EC2"
+          selected={selectedCard === 2}
+          onClick={() => setSelectedCard(2)}
+        />
 
-                display: "flex",
-                flexDirection: "row",
-                gap: 3,
+        <CardPost
+          nome="popó"
+          sexo="macho"
+          imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+          idade="4 anos"
+          porte="Grande"
+          cor="#2764E9"
+          selected={selectedCard === 3}
+          onClick={() => setSelectedCard(3)}
+        />
+      </Box>
+    </Box>
 
-                overflowX: "auto",
-                overflowY: "hidden",
-
-                scrollBehavior: "smooth",
-
-                "&::-webkit-scrollbar": {
-                  display: "none",
-                },
-
-                msOverflowStyle: "none",
-                scrollbarWidth: "none",
-              }}
-            >
-              <CardPost
-                nome="biu"
-                sexo="macho"
-                imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
-                idade="2 meses"
-                porte="pequeno"
-                cor="#1cb3b1"
-                selected={selectedCard === 0}
-                onClick={() => setSelectedCard(0)}
-
-              />
-              <CardPost
-                nome="que late"
-                sexo="macho"
-                imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
-                idade="1 ano"
-                porte="Grande"
-                cor="#000000"
-                selected={selectedCard === 0}
-                onClick={() => setSelectedCard(0)}
-
-              />
-              <CardPost
-                nome="ágatah"
-                sexo="fêmea"
-                imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
-                idade="3 anos"
-                porte="Médio"
-                cor="#D63EC2"
-                selected={selectedCard === 0}
-                onClick={() => setSelectedCard(0)}
-
-              />
-              <CardPost
-                nome="popó"
-                sexo="macho"
-                imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
-                idade="4 anos"
-                porte="Grande"
-                cor="#2764E9"
-                selected={selectedCard === 0}
-                onClick={() => setSelectedCard(0)}
-
-              />
-            </Box>
-            <Typography variant="body1" color="#FFFF" ml="20px" mt="31px" sx={{
-              display: {
-                md: "none",
-              },
-            }}>Escolha o estilo que deseja compartilhas nas redes sociais</Typography>
-            <Button sx={{
-              marginTop: "85vh", backgroundColor: "#27A8AD", color: "#FFF", border: "none", cursor: "pointer", zIndex: 1400, width: "fit-content", alignSelf: "center",
-            }}><Typography component="h5"><strong>Compartilhar</strong></Typography></Button>
-          </Box>
-        </Modal>
+    <Button
+      sx={{
+        mt: 5,
+        backgroundColor: "#27A8AD",
+        color: "#FFF",
+        width: "fit-content",
+        "&:hover": {
+          backgroundColor: "#1f8b8f",
+        },
+      }}
+    >
+      <Typography component="h5">
+        <strong>Compartilhar</strong>
+      </Typography>
+    </Button>
+  </Box>
+</Modal>
         <Modal
           open={open}
           onClose={handleClose}

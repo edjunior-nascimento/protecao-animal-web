@@ -2,6 +2,7 @@ import { CabecalhoComponent } from '../../components/cabecalho.component.js';
 import { RodapeComponent } from '../../components/rodape.component.js';
 import { CardGaleriaComponent } from "../../components/card-galeria.component.js";
 import { GaleriaUsecase } from '../../use-case/galeria.usecase.js';
+import{CardAdocaoComponent} from '../../components/card-adocao.component.js'
 class InicialView {
 
    

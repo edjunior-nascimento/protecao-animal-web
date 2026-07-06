@@ -81,3 +81,4 @@ export class CardGaleriaComponent extends HTMLElement{
     
 }
 customElements.define('card-galeria-component', CardGaleriaComponent);
+

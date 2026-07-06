@@ -2,6 +2,8 @@ import { CabecalhoComponent} from '../../components/cabecalho.component.js'
 import {CardAdocaoComponent} from '../../components/card-adocao.component.js'
 import { AnimaisUsecase } from '../../use-case/animais.usecase.js';
 import { LocaisUsecase } from '../../use-case/locais.usecase.js';
+import { CardPostComponent } from '../../components/card-post.component.js';
+import { CardConfirmacaoComponent } from '../../components/card-confirmacao.coponent.js';
 
 
 class AdocaoView{
@@ -34,9 +36,9 @@ class AdocaoView{
         
     }
 
-    #cardAdocao(){
+   #cardAdocao(){
 
-        this.cardAdocaoComponent.limpar()
+        //this.cardAdocaoComponent.limpar()
         let galeria = document.querySelector(".galery")
         galeria.innerHTML = ""
 
@@ -45,10 +47,13 @@ class AdocaoView{
         let animaisVisiveis = this.listaAnimais.slice(init, fim)
 
         animaisVisiveis.forEach(animal => {
-
-            this.cardAdocaoComponent.criar(animal.id, animal.fotos[0], animal.nome, animal.local, animal.adotado);
+            galeria.appendChild(this.#criarAdocao(animal.id, animal.fotos[0], animal.nome, animal.local, animal.adotado));
+        
 
         }) 
+
+       
+           
 
     }
 
@@ -86,6 +91,17 @@ class AdocaoView{
         paginationContainer.appendChild(right)
 
     
+    }
+
+    #criarAdocao(codigo, foto, nome, local, adotado) {
+        const cardAdocao = document.createElement('card-adocao-component');
+        cardAdocao.setAttribute('codigo', codigo);
+        cardAdocao.setAttribute('foto', foto);
+        cardAdocao.setAttribute('nome', nome);
+        cardAdocao.setAttribute('local', local);
+        cardAdocao.setAttribute('adotado', adotado);
+      
+        return cardAdocao;
     }
 
     //Functions da pagination
@@ -188,7 +204,6 @@ class AdocaoView{
        filtroNome !== '' ? animal.nome.toUpperCase() == filtroNome.toUpperCase() : true
    
     )
-
     }
 
   

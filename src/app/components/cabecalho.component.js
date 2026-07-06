@@ -184,6 +184,52 @@ export class CabecalhoComponent extends HTMLElement {
     }
 }
 
-
-
 customElements.define('cabecalho-component', CabecalhoComponent);
+ 
+
+/*
+
+
+import { AnimaisUsecase } from '../../use-case/animais.usecase.js';
+import { LocaisUsecase } from '../../use-case/locais.usecase.js'
+
+-----------------
+cardAdocaoComponent = {}
+listaAnimais = []
+
+listaLocais = []
+
+--------------------
+
+async #init(){
+        this.cardAdocaoComponent =  new CardAdocaoComponent("lista-card-adocao");
+        this.listaAnimais = await new AnimaisUsecase().listaAnimais()
+        this.listaLocais = await new LocaisUsecase().listLocais()
+
+        this.#cardAdocao()
+        
+         #cardAdocao(){
+
+        this.cardAdocaoComponent.limpar()
+        let galeria = document.querySelector(".galery")
+        galeria.innerHTML = ""
+
+        let init = this.indice
+        let fim = this.indice + this.itensPaginas
+        let animaisVisiveis = this.listaAnimais.slice(init, fim)
+
+        animaisVisiveis.forEach(animal => {
+
+            this.cardAdocaoComponent.criar(animal.id, animal.fotos[0], animal.nome, animal.local, animal.adotado);
+
+        }) 
+
+    }
+
+
+
+    }
+
+
+
+*/

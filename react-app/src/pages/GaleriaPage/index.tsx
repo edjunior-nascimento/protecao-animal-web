@@ -3,7 +3,7 @@ import { Box, Card, CardMedia, Container, Typography } from "@mui/material";
 import BasicModal from "../../components/features/ModalGaleria";
 
 
-export const GaleriaPage: React.FC = () => {
+export function GaleriaPage() {
     const imagens = [
         "https://2.bp.blogspot.com/-SqLttsLOfls/VwetM_VKQmI/AAAAAAAAQGk/cbVm21-kJhohiewulTBY9ug1QK52XpUpA/s1600/pedigree.jpg",
         "https://2.bp.blogspot.com/-SqLttsLOfls/VwetM_VKQmI/AAAAAAAAQGk/cbVm21-kJhohiewulTBY9ug1QK52XpUpA/s1600/pedigree.jpg", "https://2.bp.blogspot.com/-SqLttsLOfls/VwetM_VKQmI/AAAAAAAAQGk/cbVm21-kJhohiewulTBY9ug1QK52XpUpA/s1600/pedigree.jpg", "https://2.bp.blogspot.com/-SqLttsLOfls/VwetM_VKQmI/AAAAAAAAQGk/cbVm21-kJhohiewulTBY9ug1QK52XpUpA/s1600/pedigree.jpg", "https://2.bp.blogspot.com/-SqLttsLOfls/VwetM_VKQmI/AAAAAAAAQGk/cbVm21-kJhohiewulTBY9ug1QK52XpUpA/s1600/pedigree.jpg", "https://2.bp.blogspot.com/-SqLttsLOfls/VwetM_VKQmI/AAAAAAAAQGk/cbVm21-kJhohiewulTBY9ug1QK52XpUpA/s1600/pedigree.jpg",

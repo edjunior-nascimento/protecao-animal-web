@@ -27,7 +27,7 @@ import { CarrosselGaleria } from '../../components/layout/CarrosselGaleria';
   ]
 
 
-export const InicialPage: React.FC = () => {   
+export function InicialPage() {   
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
       <Box>

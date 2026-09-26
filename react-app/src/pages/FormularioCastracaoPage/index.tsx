@@ -7,7 +7,7 @@ import { AddCircleOutlineOutlined } from "@mui/icons-material";
 import { Form } from "react-router-dom";
 import { FormAnimal } from "../../components/features/Formanimal";
 
-export const FormularioCastracaoPage: React.FC = () => {
+export function FormularioCastracaoPage() {
   
 
 

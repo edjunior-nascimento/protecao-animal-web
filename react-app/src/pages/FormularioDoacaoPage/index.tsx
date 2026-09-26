@@ -3,7 +3,7 @@ import { Box, Button, colors, Container, FormControl, InputLabel, MenuItem, Sele
 import type { SelectChangeEvent } from "@mui/material/Select";
 import { Margin } from "@mui/icons-material";
 
-export const FormularioDoacaoPage: React.FC = () => {
+export function FormularioDoacaoPage() {
   const [frequencia, setFrequencia] = useState("Única");
   const [selectedValue, setSelectedValue] = useState<string | null>(null);
 

@@ -11,7 +11,7 @@ import "yet-another-react-lightbox/styles.css";
 
 
 
-export const DetalhesAdocaoPage: React.FC = () => {
+export function DetalhesAdocaoPage() {
   const { codigo } = useParams();
 
   const images = [

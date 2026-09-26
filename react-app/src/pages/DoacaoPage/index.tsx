@@ -6,7 +6,7 @@ import { QRCodeCanvas } from "qrcode.react";
 import { CardPost } from "../../components/features/CardPost";
 import { click } from "@testing-library/user-event/dist/click";
 
-export const DoacaoPage: React.FC = () => {
+export function DoacaoPage() {
     const navigate = useNavigate();
     const chavePix = "00.00.000/0000-00";
 

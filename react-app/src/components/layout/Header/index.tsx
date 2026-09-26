@@ -15,7 +15,7 @@ import {
 import { Menu as MenuIcon } from '@mui/icons-material';
 
 
-export const Header: React.FC = () => {
+export function Header() {
     const isMobile = useMediaQuery(useTheme().breakpoints.down('md'));
     const [showMenu, setShowMenu] = useState(false);
     const abrirMenu = () => {

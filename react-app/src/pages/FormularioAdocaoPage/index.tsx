@@ -8,7 +8,7 @@ import { CardContato } from "../../components/features/CardContato";
 import { CardEndereco } from "../../components/features/CardEndereco";
 import { CardAgradecimento } from "../../components/features/CardAgradecimento";
 
-export const FormularioAdocaoPage: React.FC = () => {
+export function FormularioAdocaoPage() {
   const [abrirModal, setAbrirModal] = React.useState(false);
   const [abrirAgradecimento, setAbrirAgradecimento] = React.useState(false);
 

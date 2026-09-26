@@ -8,11 +8,11 @@ import Box from '@mui/material/Box';
 import React from 'react';
 
 type PropsCardGaleria = {
-  codigo: number,
+  codigo: string,
   nome: string,
   foto: string
 }
-export const CardGaleria: React.FC<PropsCardGaleria> = ({ codigo, nome, foto }) => {
+export function CardGaleria({ codigo, nome, foto }: PropsCardGaleria) {
 
   foto = foto ? foto : './assets/sem_imagem.png';
 

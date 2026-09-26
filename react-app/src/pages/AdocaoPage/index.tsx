@@ -7,7 +7,7 @@ import PaginationCarousel from "../../components/features/CarrocelTelas";
 import PaginationRounded from "../../components/features/CarrocelTelas";
 import { useNavigate } from "react-router-dom";
 
-export const AdocaoPage: React.FC = () => {
+export function AdocaoPage() {
   const navigate = useNavigate();
 
   return (

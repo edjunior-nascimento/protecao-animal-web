@@ -2,7 +2,7 @@ import {  } from "@mui/icons-material";
 import { Box, Input, MenuItem, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
-export function FormAnimal({ temBotao = false }) {
+export function FormAnimal() {
     const [especie, setEspecie] = useState("");
     const [sexo, setSexo] = useState("");
     const [porte, setPorte] = useState("");

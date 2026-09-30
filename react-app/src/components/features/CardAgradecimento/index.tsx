@@ -1,11 +1,7 @@
 import { CheckCircleOutline, CloseOutlined, Favorite } from "@mui/icons-material";
 import { Box, Button, Modal, Typography } from "@mui/material";
 
-type Props = {
-    titulo: string;
-    descricao: string;
 
-};
 
 interface CardAgradecimentoProps {
     open: boolean;

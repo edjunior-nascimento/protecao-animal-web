@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Box, Button, colors, Container, FormControl, InputLabel, MenuItem, Select, styled, Typography } from "@mui/material";
 import type { SelectChangeEvent } from "@mui/material/Select";
 import { Margin } from "@mui/icons-material";
+import { CardAgradecimento } from "../../components/features/CardAgradecimento";
 
 export function FormularioDoacaoPage() {
+  const [abrirAgradecimento, setAbrirAgradecimento] = React.useState(false);
   const [frequencia, setFrequencia] = useState("Única");
   const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
@@ -390,7 +392,7 @@ export function FormularioDoacaoPage() {
               <Typography>R$ Via cartão de crédito</Typography>
             </Box>
             <Box>
-              <Button variant="contained" color="primary" sx={{
+              <Button variant="contained" color="primary" onClick={() => setAbrirAgradecimento(true)}sx={{
                 backgroundColor: "#27A8AD",
                 color: "white",
                 width: "206px",
@@ -401,8 +403,12 @@ export function FormularioDoacaoPage() {
             </Box>
           </Box>
         </Box>
-
-
+        <CardAgradecimento
+                open={abrirAgradecimento}
+                onClose={() => setAbrirAgradecimento(false)}
+                titulo="Você é incrível!"
+                descricao="Obrigada(o) por espalhar amor e esperança. Sua ajuda faz toda a diferença! "
+              />
       </Box>
     </Container>
   );

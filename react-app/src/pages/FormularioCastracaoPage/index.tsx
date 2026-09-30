@@ -6,9 +6,10 @@ import { CardContato } from "../../components/features/CardContato";
 import { AddCircleOutlineOutlined } from "@mui/icons-material";
 import { Form } from "react-router-dom";
 import { FormAnimal } from "../../components/features/Formanimal";
+import { CardAgradecimento } from "../../components/features/CardAgradecimento";
 
 export function FormularioCastracaoPage() {
-  
+  const [abrirAgradecimento, setAbrirAgradecimento] = React.useState(false);
 
 
   return (
@@ -39,7 +40,7 @@ export function FormularioCastracaoPage() {
               </Typography>
             </Box>
         </Box>
-        <Box
+        <Box onClick={() => setAbrirAgradecimento(true)}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -65,6 +66,12 @@ export function FormularioCastracaoPage() {
             Finalizar
           </Typography>
         </Box>
+        <CardAgradecimento
+                        open={abrirAgradecimento}
+                        onClose={() => setAbrirAgradecimento(false)}
+                        titulo="Muito Bem!"
+                        descricao="Agora entre em contato conosco para que possamos entregar o seu novo bichinho! "
+                      />
       </Box>
     </Container>
 

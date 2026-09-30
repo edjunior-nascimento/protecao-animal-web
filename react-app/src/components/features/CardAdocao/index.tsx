@@ -14,7 +14,7 @@ export function CardAdocao({ temBotao = false }){
                 </Typography>
 
                 <Typography sx={{marginTop: '23px'}} variant="body1" color='black'>
-                    Cachorro | Golden | Macho | 2 anos | Porte grande 
+                    Cachorro | Macho | 2 anos | Porte grande 
                 </Typography>    
 
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: '5px', marginTop:'24.5px' }}>

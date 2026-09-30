@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Box, Button, Container, IconButton, Modal, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
-import { CloseRounded, CloseTwoTone, ContactSupportRounded, DisabledByDefaultSharp, MailOutlined, Pets, RoomOutlined, ShareOutlined, WhatsApp } from "@mui/icons-material";
+import { CloseRounded, ContactSupportRounded, MailOutlined, Pets, RoomOutlined, ShareOutlined, WhatsApp } from "@mui/icons-material";
 import { CardAnimal } from "../../components/features/CardAnimal";
 import { CardPost } from "../../components/features/CardPost";
-import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -130,7 +129,7 @@ export function DetalhesAdocaoPage() {
 
           </Box>
           <Typography variant="body1" marginTop="8px" sx={{ marginBottom: "23px" }} >
-            Cachorro | Golden | Macho | 2 anos | Porte grande
+            Cachorro  | Macho | 2 anos | Porte grande
           </Typography>
           <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <RoomOutlined color="primary" />
@@ -155,11 +154,6 @@ export function DetalhesAdocaoPage() {
           </Box>
           <Button onClick={handleOpen} sx={{ bgcolor: "#27A8AD", color: "#FFF", width: "100%", marginTop: "83px" }}>Entrar em contato</Button>
         </Box>
-
-
-
-
-
         <Modal
   open={openCardPost}
   onClose={handleCloseCardPost}

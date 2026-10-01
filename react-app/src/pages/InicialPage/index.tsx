@@ -27,7 +27,7 @@ import { CarrosselGaleria } from '../../components/layout/CarrosselGaleria';
   ]
 
 
-export const InicialPage: React.FC = () => {   
+export function InicialPage() {   
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
       <Box>
@@ -54,7 +54,7 @@ export const InicialPage: React.FC = () => {
             <Typography variant="h4" component="h4" sx={{color:'#994900'}}>
               "Doe esperanças, doe para salvar vidas."
             </Typography>
-            <Button size='large' variant="contained" color="primary">FAÇA SUA DOAÇÃO</Button>
+            <Button component={Link} to="/doacao" size='large' variant="contained" color="primary">FAÇA SUA DOAÇÃO</Button>
           </Box>
         </Box>
       </Box>

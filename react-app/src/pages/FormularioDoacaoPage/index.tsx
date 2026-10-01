@@ -406,7 +406,8 @@ export function FormularioDoacaoPage() {
         <CardAgradecimento
                 open={abrirAgradecimento}
                 onClose={() => setAbrirAgradecimento(false)}
-                titulo="Você é incrível!"
+                titulo="Tudo Certo!"
+                numeroPet="500"
                 descricao="Obrigada(o) por espalhar amor e esperança. Sua ajuda faz toda a diferença! "
               />
       </Box>

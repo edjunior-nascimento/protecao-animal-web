@@ -162,7 +162,8 @@ export function FormularioAdocaoPage() {
       <CardAgradecimento
         open={abrirAgradecimento}
         onClose={() => setAbrirAgradecimento(false)}
-        titulo="Muito Bem!"
+        titulo="Tudo Certo!"
+        numeroPet="500"
         descricao="Agora entre em contato conosco para que possamos entregar o seu novo bichinho!"
       />
     </Container>

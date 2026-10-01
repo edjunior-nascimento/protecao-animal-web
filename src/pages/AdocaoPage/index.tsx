@@ -12,7 +12,7 @@ export function AdocaoPage() {
 
   return (
     <Container>
-      <Box sx={{ paddingLeft: { xs: 2, md: "51px" }, paddingRight: { xs: 2, md: "51px" }, paddingTop: { xs: 4, md: "71px" }, paddingBottom: { xs: 4, md: 8 } }}>
+       <Box sx={{ paddingLeft: { xs: 2, md: "51px" }, paddingRight: { xs: 2, md: "51px" }, paddingTop: { xs: 4, md: "71px" }, paddingBottom: { xs: 4, md: 8 } }}>
         <Box>
           <Box display="flex" alignItems="center" marginBottom="28px">
             <a

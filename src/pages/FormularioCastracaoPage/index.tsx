@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import { Box, Container, Input, MenuItem, TextField, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { CardTutor } from "../../components/features/CardTutor";
 import { CardEndereco } from "../../components/features/CardEndereco";
 import { CardContato } from "../../components/features/CardContato";
 import { AddCircleOutlineOutlined } from "@mui/icons-material";
-import { Form } from "react-router-dom";
 import { FormAnimal } from "../../components/features/Formanimal";
 import { CardAgradecimento } from "../../components/features/CardAgradecimento";
+import React from "react";
 
 export function FormularioCastracaoPage() {
   const [abrirAgradecimento, setAbrirAgradecimento] = React.useState(false);

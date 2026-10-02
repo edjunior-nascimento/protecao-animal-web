@@ -3,8 +3,6 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { CardDocao } from "../../components/features/CardDoacao";
 import { QRCodeCanvas } from "qrcode.react";
-import { CardPost } from "../../components/features/CardPost";
-import { click } from "@testing-library/user-event/dist/click";
 
 export function DoacaoPage() {
     const navigate = useNavigate();
@@ -13,7 +11,7 @@ export function DoacaoPage() {
     const copiarChavePix = async () => {
         await navigator.clipboard.writeText(chavePix);
     };
-    const click= ()=>console.log("clicou")
+    
     return (
         <Container disableGutters sx={{ width: "100%", overflowX: "clip" }}>
             <Box sx={{ px: "67px", boxSizing: "border-box" }}>

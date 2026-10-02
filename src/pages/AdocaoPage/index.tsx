@@ -2,8 +2,6 @@ import React from "react";
 import { Box, Button, Container, Input, Typography } from "@mui/material";
 import { FilterAnimais } from "../../components/features/FilterAnimais";
 import { CardAnimal } from "../../components/features/CardAnimal";
-import CarouselMui from "../../components/features/CarrocelTelas";
-import PaginationCarousel from "../../components/features/CarrocelTelas";
 import PaginationRounded from "../../components/features/CarrocelTelas";
 import { useNavigate } from "react-router-dom";
 
@@ -12,7 +10,7 @@ export function AdocaoPage() {
 
   return (
     <Container>
-       <Box sx={{ paddingLeft: { xs: 2, md: "51px" }, paddingRight: { xs: 2, md: "51px" }, paddingTop: { xs: 4, md: "71px" }, paddingBottom: { xs: 4, md: 8 } }}>
+      <Box sx={{ paddingLeft: { xs: 2, md: "51px" }, paddingRight: { xs: 2, md: "51px" }, paddingTop: { xs: 4, md: "71px" }, paddingBottom: { xs: 4, md: 8 } }}>
         <Box>
           <Box display="flex" alignItems="center" marginBottom="28px">
             <a

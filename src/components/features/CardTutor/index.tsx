@@ -1,4 +1,3 @@
-import { CloseOutlined, RoomOutlined } from "@mui/icons-material";
 import { Box, Input, Typography } from "@mui/material";
 
 export function CardTutor() {

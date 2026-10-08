@@ -1,4 +1,3 @@
-import { colors } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
 // Tema customizado para a aplicação de proteção animal

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Box, Button, colors, Container, FormControl, InputLabel, MenuItem, Select, styled, Typography } from "@mui/material";
+import { Box, Button,  Container, FormControl, InputLabel, MenuItem, Select,  Typography } from "@mui/material";
 import type { SelectChangeEvent } from "@mui/material/Select";
-import { Margin } from "@mui/icons-material";
 import { CardAgradecimento } from "../../components/features/CardAgradecimento";
 
 export function FormularioDoacaoPage() {

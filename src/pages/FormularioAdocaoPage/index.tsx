@@ -12,11 +12,6 @@ export function FormularioAdocaoPage() {
   const [abrirModal, setAbrirModal] = React.useState(false);
   const [abrirAgradecimento, setAbrirAgradecimento] = React.useState(false);
 
-  function finalizarFormulario() {
-    console.log("abrindo modal");
-    setAbrirAgradecimento(true);
-  }
-
   return (
     <Container sx={{ pb: { xs: 8, md: 4 },}}>
       <Box sx={{ display: "flex", justifyContent: "center", width: "100%", marginBottom: "30px" }}>

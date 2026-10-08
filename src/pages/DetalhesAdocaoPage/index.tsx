@@ -43,23 +43,7 @@ export function DetalhesAdocaoPage() {
   };
   const [index, setIndex] = useState(-1);
 
-  const photos = [
-    {
-      src: "https://picsum.photos/id/10/600/400",
-      width: 600,
-      height: 400,
-    },
-    {
-      src: "https://picsum.photos/id/20/600/400",
-      width: 600,
-      height: 400,
-    },
-    {
-      src: "https://picsum.photos/id/30/600/400",
-      width: 600,
-      height: 400,
-    },
-  ];
+  
   const [selectedCard, setSelectedCard] = useState(0);
   return (
     <Container

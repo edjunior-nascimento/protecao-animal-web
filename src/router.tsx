@@ -10,23 +10,26 @@ import { FormularioCastracaoPage } from "./pages/FormularioCastracaoPage";
 import { FormularioDoacaoPage } from "./pages/FormularioDoacaoPage";
 import { GaleriaPage } from "./pages/GaleriaPage/index";
 
-function RouterApp(){
-    return(
-        <BrowserRouter>
-            <Header />
-            <Routes>
-                <Route path="/" element={<InicialPage />} />
-                <Route path="/sobre" element={<SobrePage />} />
-                <Route path="/adocao" element={<AdocaoPage />} />
-                <Route path="/detalhes/:codigo" element={<DetalhesAdocaoPage />} />
-                <Route path="/doacao" element={<DoacaoPage />} />
-                <Route path="/formulario-adocao" element={<FormularioAdocaoPage />} />
-                <Route path="/formulario-castracao" element={<FormularioCastracaoPage />} />
-                <Route path="/formulario-doacao" element={<FormularioDoacaoPage />} />
-                <Route path="/galeria" element={<GaleriaPage />} />
-            </Routes>
-        </BrowserRouter>
-    )
+function RouterApp() {
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<InicialPage />} />
+        <Route path="/sobre" element={<SobrePage />} />
+        <Route path="/adocao" element={<AdocaoPage />} />
+        <Route path="/detalhes/:codigo" element={<DetalhesAdocaoPage />} />
+        <Route path="/doacao" element={<DoacaoPage />} />
+        <Route path="/formulario-adocao" element={<FormularioAdocaoPage />} />
+        <Route
+          path="/formulario-castracao"
+          element={<FormularioCastracaoPage />}
+        />
+        <Route path="/formulario-doacao" element={<FormularioDoacaoPage />} />
+        <Route path="/galeria" element={<GaleriaPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default RouterApp;

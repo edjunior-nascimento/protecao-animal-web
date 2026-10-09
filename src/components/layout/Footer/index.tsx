@@ -1,12 +1,9 @@
-
-import React from 'react';
-
+import React from "react";
 
 export function Footer() {
-
   return (
     <div>
-        <span> Footer </span>
+      <span> Footer </span>
     </div>
   );
 }

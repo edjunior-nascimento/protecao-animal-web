@@ -14,17 +14,8 @@ type CardPostProps = {
 
 export const CardPost = forwardRef<HTMLDivElement, CardPostProps>(
   (
-    {
-      nome,
-      sexo,
-      imagem,
-      idade,
-      porte,
-      cor,
-      selected = false,
-      onClick,
-    },
-    ref
+    { nome, sexo, imagem, idade, porte, cor, selected = false, onClick },
+    ref,
   ) => {
     return (
       <Card
@@ -45,9 +36,7 @@ export const CardPost = forwardRef<HTMLDivElement, CardPostProps>(
 
           opacity: selected ? 1 : 0.55,
 
-          border: selected
-            ? "5px solid #27A8AD"
-            : "5px solid transparent",
+          border: selected ? "5px solid #27A8AD" : "5px solid transparent",
 
           boxShadow: selected
             ? "0 18px 40px rgba(0,0,0,.35)"
@@ -185,10 +174,7 @@ export const CardPost = forwardRef<HTMLDivElement, CardPostProps>(
                 width: "fit-content",
               }}
             >
-              <Typography
-                variant="body1"
-                sx={{ fontWeight: 800, mt: -1 }}
-              >
+              <Typography variant="body1" sx={{ fontWeight: 800, mt: -1 }}>
                 {sexo}
               </Typography>
 
@@ -196,10 +182,7 @@ export const CardPost = forwardRef<HTMLDivElement, CardPostProps>(
                 {idade}
               </Typography>
 
-              <Typography
-                variant="body1"
-                sx={{ fontWeight: 700, mb: 2 }}
-              >
+              <Typography variant="body1" sx={{ fontWeight: 700, mb: 2 }}>
                 {porte}
               </Typography>
             </Box>
@@ -232,7 +215,7 @@ export const CardPost = forwardRef<HTMLDivElement, CardPostProps>(
                 borderRadius: 2,
                 fontWeight: 700,
                 fontSize: ".95rem",
-                letterSpacing: .5,
+                letterSpacing: 0.5,
                 width: "fit-content",
                 mx: "auto",
               }}
@@ -243,7 +226,7 @@ export const CardPost = forwardRef<HTMLDivElement, CardPostProps>(
         </Box>
       </Card>
     );
-  }
+  },
 );
 
 CardPost.displayName = "CardPost";

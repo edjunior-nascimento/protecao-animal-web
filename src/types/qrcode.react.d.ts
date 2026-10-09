@@ -1,10 +1,10 @@
-declare module 'qrcode.react' {
-  import * as React from 'react';
+declare module "qrcode.react" {
+  import * as React from "react";
 
   export type QRCodeProps = {
     value: string;
     size?: number;
-    level?: 'L' | 'M' | 'Q' | 'H';
+    level?: "L" | "M" | "Q" | "H";
     bgColor?: string;
     fgColor?: string;
     includeMargin?: boolean;

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
+import { Pagination, PaginationItem, Stack } from "@mui/material";
 import {
-  Pagination,
-  PaginationItem,
-  Stack,
-} from "@mui/material";
-import { KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from "@mui/icons-material";
+  KeyboardDoubleArrowLeft,
+  KeyboardDoubleArrowRight,
+} from "@mui/icons-material";
 
 export default function CustomPagination() {
   const [page, setPage] = useState(4);
@@ -21,8 +20,8 @@ export default function CustomPagination() {
           <PaginationItem
             {...item}
             slots={{
-              previous: () => <KeyboardDoubleArrowLeft/>,
-              next: () => <KeyboardDoubleArrowRight/>,
+              previous: () => <KeyboardDoubleArrowLeft />,
+              next: () => <KeyboardDoubleArrowRight />,
             }}
           />
         )}

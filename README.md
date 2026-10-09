@@ -21,6 +21,7 @@ Conectar pessoas apaixonadas por animais com ONGs e projetos que promovem sua pr
 - **Hospedagem**: HostGator
 
 ## Como Rodar o Projeto Localmente
+
 1. Clone o repositório:
    ```bash
    git clone https://github.com/edjunior-nascimento/protecao-animal-web.git
@@ -35,7 +36,9 @@ Conectar pessoas apaixonadas por animais com ONGs e projetos que promovem sua pr
    npm start
    ```
 4. Acesse no navegador: `http://localhost:3000`
+
 ### rodar Backend Mockado
+
 1. Instale as dependências:
    ```bash
    cd backend-mock
@@ -47,6 +50,7 @@ Conectar pessoas apaixonadas por animais com ONGs e projetos que promovem sua pr
    npm run start:back
    ```
 3. Acesse no navegador: `http://localhost:3001`
+
 <!-- ## Estrutura de Pastas Proposta
 
 ```plaintext

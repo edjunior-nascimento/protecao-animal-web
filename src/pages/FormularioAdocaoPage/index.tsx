@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Button, Container, Input, Modal, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Input,
+  Modal,
+  Typography,
+} from "@mui/material";
 import { CardAdocao } from "../../components/features/CardAdocao";
 import { AddCircleOutlineOutlined, CloseOutlined } from "@mui/icons-material";
 import { FilterAnimais } from "../../components/features/FilterAnimais";
@@ -13,18 +20,58 @@ export function FormularioAdocaoPage() {
   const [abrirAgradecimento, setAbrirAgradecimento] = React.useState(false);
 
   return (
-    <Container sx={{ pb: { xs: 8, md: 4 },}}>
-      <Box sx={{ display: "flex", justifyContent: "center", width: "100%", marginBottom: "30px" }}>
+    <Container sx={{ pb: { xs: 8, md: 4 } }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          width: "100%",
+          marginBottom: "30px",
+        }}
+      >
         <Typography variant="h4" component="h4">
           Ficha de Adoção
         </Typography>
       </Box>
-      <Box sx={{ backgroundColor: "#EFEFEF", marginTop: "38px",paddingBottom: "50px", marginLeft: { md: "43px", xs: "20px" }, marginRight: { md: "43px", xs: "20px" } }}>
-        <Typography sx={{ marginBottom: '30px', marginLeft: "50px", marginRight: "50px", paddingTop: "58px", fontSize: "25px", fontWeight: "bold" }} component="p" color="black">
-          Preencha a ficha de adoção com as suas informações, para que possamos conhecer você melhor e garantir a combinação perfeita com o seu novo amigo.
+      <Box
+        sx={{
+          backgroundColor: "#EFEFEF",
+          marginTop: "38px",
+          paddingBottom: "50px",
+          marginLeft: { md: "43px", xs: "20px" },
+          marginRight: { md: "43px", xs: "20px" },
+        }}
+      >
+        <Typography
+          sx={{
+            marginBottom: "30px",
+            marginLeft: "50px",
+            marginRight: "50px",
+            paddingTop: "58px",
+            fontSize: "25px",
+            fontWeight: "bold",
+          }}
+          component="p"
+          color="black"
+        >
+          Preencha a ficha de adoção com as suas informações, para que possamos
+          conhecer você melhor e garantir a combinação perfeita com o seu novo
+          amigo.
         </Typography>
-        <Box sx={{ backgroundColor: "white", marginLeft: { md: "81px", xs: "10px" }, marginRight: { md: "81px", xs: "10px" }, paddingBottom: "26px", paddingTop: "10px" }}>
-          <Typography sx={{ fontSize: "25px", fontWeight: "bold", marginLeft: "18px" }} component="p" color="black">
+        <Box
+          sx={{
+            backgroundColor: "white",
+            marginLeft: { md: "81px", xs: "10px" },
+            marginRight: { md: "81px", xs: "10px" },
+            paddingBottom: "26px",
+            paddingTop: "10px",
+          }}
+        >
+          <Typography
+            sx={{ fontSize: "25px", fontWeight: "bold", marginLeft: "18px" }}
+            component="p"
+            color="black"
+          >
             Adoções
           </Typography>
           <hr />
@@ -34,9 +81,26 @@ export function FormularioAdocaoPage() {
           <Box>
             <CardAdocao temBotao />
           </Box>
-          <Box onClick={() => setAbrirModal(true)} sx={{ border: "solid 2px #27A8AD", display: "flex", justifyContent: "center", alignItems: "center", width: "200px", height: "50px", borderRadius: "10px", cursor: "pointer", margin: "auto", marginTop: "40px", }}>
+          <Box
+            onClick={() => setAbrirModal(true)}
+            sx={{
+              border: "solid 2px #27A8AD",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "200px",
+              height: "50px",
+              borderRadius: "10px",
+              cursor: "pointer",
+              margin: "auto",
+              marginTop: "40px",
+            }}
+          >
             <AddCircleOutlineOutlined sx={{ color: "#27A8AD" }} />
-            <Typography sx={{ color: "#27A8AD", fontSize: "18px", fontWeight: "bold" }} component="p">
+            <Typography
+              sx={{ color: "#27A8AD", fontSize: "18px", fontWeight: "bold" }}
+              component="p"
+            >
               Incluir Animal
             </Typography>
           </Box>
@@ -47,7 +111,8 @@ export function FormularioAdocaoPage() {
         <CardContato />
 
         <CardEndereco />
-        <Box onClick={() => setAbrirAgradecimento(true)}
+        <Box
+          onClick={() => setAbrirAgradecimento(true)}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -61,7 +126,6 @@ export function FormularioAdocaoPage() {
             alignItems: "center",
             marginLeft: "auto",
             marginRight: { xs: "auto", md: "50px" },
-
           }}
         >
           <Typography
@@ -73,7 +137,6 @@ export function FormularioAdocaoPage() {
             Finalizar
           </Typography>
         </Box>
-
       </Box>
       <Modal
         open={abrirModal}
@@ -101,8 +164,21 @@ export function FormularioAdocaoPage() {
             outline: 0,
           }}
         >
-          <Button onClick={() => setAbrirModal(false)} sx={{ position: 'sticky', top: 0, zIndex: 10, marginLeft: 'auto', marginRight: '20px', marginTop: '', display: 'flex', cursor: 'pointer', backgroundColor: '#EFEFEF' }}>
-            <CloseOutlined sx={{ color: '#808080' }} />
+          <Button
+            onClick={() => setAbrirModal(false)}
+            sx={{
+              position: "sticky",
+              top: 0,
+              zIndex: 10,
+              marginLeft: "auto",
+              marginRight: "20px",
+              marginTop: "",
+              display: "flex",
+              cursor: "pointer",
+              backgroundColor: "#EFEFEF",
+            }}
+          >
+            <CloseOutlined sx={{ color: "#808080" }} />
           </Button>
           <Box>
             <Box
@@ -112,7 +188,11 @@ export function FormularioAdocaoPage() {
                 marginRight: "31px",
                 marginBottom: "30px",
                 display: "grid",
-                gridTemplateColumns: { xs: "1fr", sm: "repeat(2, 1fr)", md: "repeat(3, 1fr)" },
+                gridTemplateColumns: {
+                  xs: "1fr",
+                  sm: "repeat(2, 1fr)",
+                  md: "repeat(3, 1fr)",
+                },
                 gap: "20px",
                 alignItems: "stretch",
                 paddingLeft: "28px",
@@ -121,37 +201,135 @@ export function FormularioAdocaoPage() {
                 paddingTop: "35px",
               }}
             >
-              <Box sx={{ minWidth: 0, height: "56px", display: "flex", alignItems: "stretch" }}>
-                <FilterAnimais label="Todas as espécies" opcoes={["Cachorro", "Gato"]} />
+              <Box
+                sx={{
+                  minWidth: 0,
+                  height: "56px",
+                  display: "flex",
+                  alignItems: "stretch",
+                }}
+              >
+                <FilterAnimais
+                  label="Todas as espécies"
+                  opcoes={["Cachorro", "Gato"]}
+                />
               </Box>
-              <Box sx={{ minWidth: 0, height: "56px", display: "flex", alignItems: "stretch" }}>
-                <FilterAnimais label="Todos os sexos" opcoes={["Macho", "Fêmea"]} />
+              <Box
+                sx={{
+                  minWidth: 0,
+                  height: "56px",
+                  display: "flex",
+                  alignItems: "stretch",
+                }}
+              >
+                <FilterAnimais
+                  label="Todos os sexos"
+                  opcoes={["Macho", "Fêmea"]}
+                />
               </Box>
-              <Box sx={{ minWidth: 0, height: "56px", display: "flex", alignItems: "stretch" }}>
-                <FilterAnimais label="Todas as categorias" opcoes={["Grande", "Médio", "Pequeno"]} />
+              <Box
+                sx={{
+                  minWidth: 0,
+                  height: "56px",
+                  display: "flex",
+                  alignItems: "stretch",
+                }}
+              >
+                <FilterAnimais
+                  label="Todas as categorias"
+                  opcoes={["Grande", "Médio", "Pequeno"]}
+                />
               </Box>
-              <Box sx={{ minWidth: 0, height: "56px", display: "flex", alignItems: "stretch" }}>
-                <FilterAnimais label="Todos os locais" opcoes={["Centro", "Várzea dos Espinhos", "Martinslândia", "Morrinhos Novos"]}/>
+              <Box
+                sx={{
+                  minWidth: 0,
+                  height: "56px",
+                  display: "flex",
+                  alignItems: "stretch",
+                }}
+              >
+                <FilterAnimais
+                  label="Todos os locais"
+                  opcoes={[
+                    "Centro",
+                    "Várzea dos Espinhos",
+                    "Martinslândia",
+                    "Morrinhos Novos",
+                  ]}
+                />
               </Box>
-              <Box sx={{ minWidth: 0, height: "56px", display: "flex", alignItems: "stretch" }}>
-                <Input placeholder="Nome do Bicho" sx={{ width: "100%", height: "100%", boxSizing: "border-box", border: "1px solid #C6C6C6", borderRadius: "5px", px: 2, color: "black" }} />
+              <Box
+                sx={{
+                  minWidth: 0,
+                  height: "56px",
+                  display: "flex",
+                  alignItems: "stretch",
+                }}
+              >
+                <Input
+                  placeholder="Nome do Bicho"
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    boxSizing: "border-box",
+                    border: "1px solid #C6C6C6",
+                    borderRadius: "5px",
+                    px: 2,
+                    color: "black",
+                  }}
+                />
               </Box>
               <Box sx={{ minWidth: 0, height: "56px", display: "flex" }}>
-                <Button sx={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "5px", cursor: "pointer", background: "#27A8AD", border: "none", color: "white", fontWeight: 700, fontSize: "25px" }}>
+                <Button
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    borderRadius: "5px",
+                    cursor: "pointer",
+                    background: "#27A8AD",
+                    border: "none",
+                    color: "white",
+                    fontWeight: 700,
+                    fontSize: "25px",
+                  }}
+                >
                   Buscar
                 </Button>
               </Box>
             </Box>
-            <Typography sx={{ marginLeft: "18px", marginTop: "15px", marginRight: "50px", marginBottom: "15px", fontSize: "25px", fontWeight: "bold" }} component="p" color="black">
+            <Typography
+              sx={{
+                marginLeft: "18px",
+                marginTop: "15px",
+                marginRight: "50px",
+                marginBottom: "15px",
+                fontSize: "25px",
+                fontWeight: "bold",
+              }}
+              component="p"
+              color="black"
+            >
               Incluir Animal
             </Typography>
           </Box>
-          <Box sx={{ bgcolor: "white", marginLeft: "31px", marginRight: "31px", marginTop: "26px", marginBottom: "38px", paddingTop: "20px", paddingBottom: "20px" }}>
+          <Box
+            sx={{
+              bgcolor: "white",
+              marginLeft: "31px",
+              marginRight: "31px",
+              marginTop: "26px",
+              marginBottom: "38px",
+              paddingTop: "20px",
+              paddingBottom: "20px",
+            }}
+          >
             <CardAdocao />
             <CardAdocao />
           </Box>
         </Box>
-
       </Modal>
 
       <CardAgradecimento

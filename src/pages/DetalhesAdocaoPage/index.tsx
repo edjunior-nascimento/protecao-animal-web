@@ -1,14 +1,26 @@
 import React, { useState } from "react";
-import { Box, Button, Container, IconButton, Modal, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  IconButton,
+  Modal,
+  Typography,
+} from "@mui/material";
 import { useParams } from "react-router-dom";
-import { CloseRounded, ContactSupportRounded, MailOutlined, Pets, RoomOutlined, ShareOutlined, WhatsApp } from "@mui/icons-material";
+import {
+  CloseRounded,
+  ContactSupportRounded,
+  MailOutlined,
+  Pets,
+  RoomOutlined,
+  ShareOutlined,
+  WhatsApp,
+} from "@mui/icons-material";
 import { CardAnimal } from "../../components/features/CardAnimal";
 import { CardPost } from "../../components/features/CardPost";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-
-
-
 
 export function DetalhesAdocaoPage() {
   const { codigo } = useParams();
@@ -31,19 +43,18 @@ export function DetalhesAdocaoPage() {
   const handleCloseCardPost = () => setOpenCardPost(false);
 
   const styleMOdal = {
-    position: 'absolute' as const,
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
+    position: "absolute" as const,
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
     width: 400,
-    bgcolor: '#FFFFFF',
-    border: '2px solid #000',
+    bgcolor: "#FFFFFF",
+    border: "2px solid #000",
     boxShadow: 24,
     p: 4,
   };
   const [index, setIndex] = useState(-1);
 
-  
   const [selectedCard, setSelectedCard] = useState(0);
   return (
     <Container
@@ -52,11 +63,10 @@ export function DetalhesAdocaoPage() {
         paddingLeft: { xs: "18px", md: "67px" },
         paddingRight: { xs: "18px", md: "67px" },
         paddingTop: { xs: 4, md: "71px" },
-        boxSizing: "border-box"
+        boxSizing: "border-box",
       }}
     >
       <Box>
-
         <Lightbox
           open={index >= 0}
           close={() => setIndex(-1)}
@@ -81,9 +91,28 @@ export function DetalhesAdocaoPage() {
         </Box>
       </Box>
 
-      <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: "24px" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          gap: "24px",
+        }}
+      >
         <Box sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 2 }}>
-          <Box component="img" src={images[selectedIndex]} sx={{ width: "100%", height: { xs: 260, md: 520 }, objectFit: "cover", borderRadius: 2, cursor: "pointer" }} onClick={() => { setIndex(selectedIndex) }} />
+          <Box
+            component="img"
+            src={images[selectedIndex]}
+            sx={{
+              width: "100%",
+              height: { xs: 260, md: 520 },
+              objectFit: "cover",
+              borderRadius: 2,
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              setIndex(selectedIndex);
+            }}
+          />
           <Box sx={{ display: "flex", gap: 1, overflowX: "auto", pt: 1 }}>
             {images.map((img, idx) => (
               <Box
@@ -97,7 +126,10 @@ export function DetalhesAdocaoPage() {
                   objectFit: "cover",
                   borderRadius: 1,
                   cursor: "pointer",
-                  border: idx === selectedIndex ? "3px solid #27A8AD" : "2px solid transparent",
+                  border:
+                    idx === selectedIndex
+                      ? "3px solid #27A8AD"
+                      : "2px solid transparent",
                 }}
               />
             ))}
@@ -105,178 +137,230 @@ export function DetalhesAdocaoPage() {
         </Box>
 
         <Box sx={{ flex: 1 }}>
-          <Box sx={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "23px" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: "16px",
+              marginBottom: "23px",
+            }}
+          >
             <Typography variant="h4">Pietro</Typography>
-            <Button variant="contained" color="primary" onClick={handleOpenCardPost}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleOpenCardPost}
+            >
               <ShareOutlined />
             </Button>
-
           </Box>
-          <Typography variant="body1" marginTop="8px" sx={{ marginBottom: "23px" }} >
-            Cachorro  | Macho | 2 anos | Porte grande
+          <Typography
+            variant="body1"
+            marginTop="8px"
+            sx={{ marginBottom: "23px" }}
+          >
+            Cachorro | Macho | 2 anos | Porte grande
           </Typography>
           <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <RoomOutlined color="primary" />
-            <Typography variant="body1" sx={{ textAlign: "center" }} >
+            <Typography variant="body1" sx={{ textAlign: "center" }}>
               Está em Guaraciaba do Norte
             </Typography>
           </Box>
           <Typography variant="h4" sx={{ color: "#FFFF", marginTop: "83px" }}>
             Temperamento do Pietro
           </Typography>
-          <Box sx={{ display: "flex", flexDirection: "row", gap: "15px", marginTop: "20px" }}>
-            <Box sx={{ display: "flex", flexDirection: "row" }}><Pets color="primary" /><Typography sx={{ marginLeft: "5px" }}>Calmo </Typography></Box>
-            <Box sx={{ display: "flex", flexDirection: "row" }}><Pets color="primary" /><Typography sx={{ marginLeft: "5px" }}>Dócil </Typography></Box>
-            <Box sx={{ display: "flex", flexDirection: "row" }}><Pets color="primary" /><Typography sx={{ marginLeft: "5px" }}>Carente </Typography></Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "15px",
+              marginTop: "20px",
+            }}
+          >
+            <Box sx={{ display: "flex", flexDirection: "row" }}>
+              <Pets color="primary" />
+              <Typography sx={{ marginLeft: "5px" }}>Calmo </Typography>
+            </Box>
+            <Box sx={{ display: "flex", flexDirection: "row" }}>
+              <Pets color="primary" />
+              <Typography sx={{ marginLeft: "5px" }}>Dócil </Typography>
+            </Box>
+            <Box sx={{ display: "flex", flexDirection: "row" }}>
+              <Pets color="primary" />
+              <Typography sx={{ marginLeft: "5px" }}>Carente </Typography>
+            </Box>
           </Box>
-          <Typography variant="h4" sx={{ color: "#FFFF", marginTop: "83px", marginBottom: "30px" }}>
+          <Typography
+            variant="h4"
+            sx={{ color: "#FFFF", marginTop: "83px", marginBottom: "30px" }}
+          >
             Situação do Pietro
           </Typography>
-          <Box sx={{ display: "flex", flexDirection: "row", gap: "15px", marginTop: "8px" }}>
-            <Box sx={{ display: "flex", flexDirection: "row" }}><Pets color="primary" /><Typography sx={{ marginLeft: "5px" }}>Castrado </Typography></Box>
-            <Box sx={{ display: "flex", flexDirection: "row" }}><Pets color="primary" /><Typography sx={{ marginLeft: "5px" }}>Vermifungado </Typography></Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "15px",
+              marginTop: "8px",
+            }}
+          >
+            <Box sx={{ display: "flex", flexDirection: "row" }}>
+              <Pets color="primary" />
+              <Typography sx={{ marginLeft: "5px" }}>Castrado </Typography>
+            </Box>
+            <Box sx={{ display: "flex", flexDirection: "row" }}>
+              <Pets color="primary" />
+              <Typography sx={{ marginLeft: "5px" }}>Vermifungado </Typography>
+            </Box>
           </Box>
-          <Button onClick={handleOpen} sx={{ bgcolor: "#27A8AD", color: "#FFF", width: "100%", marginTop: "83px" }}>Entrar em contato</Button>
+          <Button
+            onClick={handleOpen}
+            sx={{
+              bgcolor: "#27A8AD",
+              color: "#FFF",
+              width: "100%",
+              marginTop: "83px",
+            }}
+          >
+            Entrar em contato
+          </Button>
         </Box>
-        <Modal
-  open={openCardPost}
-  onClose={handleCloseCardPost}
->
-  <Box
-    sx={{
-      height: "100vh",
-      width: "100vw",
-      bgcolor: "rgba(0,0,0,0.8)",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      position: "relative",
-    }}
-  >
-    <IconButton
-      onClick={handleCloseCardPost}
-      sx={{
-        position: "absolute",
-        top: 15,
-        right: 15,
-        bgcolor: "#777575",
-        color: "#fff",
-        borderRadius: 0,
-      }}
-    >
-      <CloseRounded />
-    </IconButton>
+        <Modal open={openCardPost} onClose={handleCloseCardPost}>
+          <Box
+            sx={{
+              height: "100vh",
+              width: "100vw",
+              bgcolor: "rgba(0,0,0,0.8)",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
+            }}
+          >
+            <IconButton
+              onClick={handleCloseCardPost}
+              sx={{
+                position: "absolute",
+                top: 15,
+                right: 15,
+                bgcolor: "#777575",
+                color: "#fff",
+                borderRadius: 0,
+              }}
+            >
+              <CloseRounded />
+            </IconButton>
 
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: {
-          xs: "column-reverse",
-          md: "column",
-        },
-        alignItems: "center",
-        gap: 3,
-        width: "100%",
-      }}
-    >
-      
-      <Typography
-        variant="body1"
-        color="#FFF"
-        sx={{
-          alignSelf: {
-            md: "flex-start",
-            xs: "center",
-          },
-          ml: {
-            xs: 2,
-            md: 0,
-          },
-        }}
-      >
-        Escolha o estilo que deseja compartilhar nas redes sociais
-      </Typography>
-      <Box
-        onClick={(e) => e.stopPropagation()}
-        sx={{
-          display: "flex",
-          gap: 3,
-          width: "90vw",
-          overflowX: "auto",
-          overflowY: "hidden",
-          scrollBehavior: "smooth",
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: {
+                  xs: "column-reverse",
+                  md: "column",
+                },
+                alignItems: "center",
+                gap: 3,
+                width: "100%",
+              }}
+            >
+              <Typography
+                variant="body1"
+                color="#FFF"
+                sx={{
+                  alignSelf: {
+                    md: "flex-start",
+                    xs: "center",
+                  },
+                  ml: {
+                    xs: 2,
+                    md: 0,
+                  },
+                }}
+              >
+                Escolha o estilo que deseja compartilhar nas redes sociais
+              </Typography>
+              <Box
+                onClick={(e) => e.stopPropagation()}
+                sx={{
+                  display: "flex",
+                  gap: 3,
+                  width: "90vw",
+                  overflowX: "auto",
+                  overflowY: "hidden",
+                  scrollBehavior: "smooth",
 
-          "&::-webkit-scrollbar": {
-            display: "none",
-          },
-          msOverflowStyle: "none",
-          scrollbarWidth: "none",
-        }}
-      >
-        <CardPost
-          nome="biu"
-          sexo="macho"
-          imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
-          idade="2 meses"
-          porte="pequeno"
-          cor="#1cb3b1"
-          selected={selectedCard === 0}
-          onClick={() => setSelectedCard(0)}
-        />
+                  "&::-webkit-scrollbar": {
+                    display: "none",
+                  },
+                  msOverflowStyle: "none",
+                  scrollbarWidth: "none",
+                }}
+              >
+                <CardPost
+                  nome="biu"
+                  sexo="macho"
+                  imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+                  idade="2 meses"
+                  porte="pequeno"
+                  cor="#1cb3b1"
+                  selected={selectedCard === 0}
+                  onClick={() => setSelectedCard(0)}
+                />
 
-        <CardPost
-          nome="que late"
-          sexo="macho"
-          imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
-          idade="1 ano"
-          porte="Grande"
-          cor="#000000"
-          selected={selectedCard === 1}
-          onClick={() => setSelectedCard(1)}
-        />
+                <CardPost
+                  nome="que late"
+                  sexo="macho"
+                  imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+                  idade="1 ano"
+                  porte="Grande"
+                  cor="#000000"
+                  selected={selectedCard === 1}
+                  onClick={() => setSelectedCard(1)}
+                />
 
-        <CardPost
-          nome="ágatah"
-          sexo="fêmea"
-          imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
-          idade="3 anos"
-          porte="Médio"
-          cor="#D63EC2"
-          selected={selectedCard === 2}
-          onClick={() => setSelectedCard(2)}
-        />
+                <CardPost
+                  nome="ágatah"
+                  sexo="fêmea"
+                  imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+                  idade="3 anos"
+                  porte="Médio"
+                  cor="#D63EC2"
+                  selected={selectedCard === 2}
+                  onClick={() => setSelectedCard(2)}
+                />
 
-        <CardPost
-          nome="popó"
-          sexo="macho"
-          imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
-          idade="4 anos"
-          porte="Grande"
-          cor="#2764E9"
-          selected={selectedCard === 3}
-          onClick={() => setSelectedCard(3)}
-        />
-      </Box>
-    </Box>
+                <CardPost
+                  nome="popó"
+                  sexo="macho"
+                  imagem="https://tse3.mm.bing.net/th/id/OIP.1XplgCxHapxtpPWO5arxvQHaLH?r=0&cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+                  idade="4 anos"
+                  porte="Grande"
+                  cor="#2764E9"
+                  selected={selectedCard === 3}
+                  onClick={() => setSelectedCard(3)}
+                />
+              </Box>
+            </Box>
 
-    <Button
-      sx={{
-        mt: 5,
-        backgroundColor: "#27A8AD",
-        color: "#FFF",
-        width: "fit-content",
-        "&:hover": {
-          backgroundColor: "#1f8b8f",
-        },
-      }}
-    >
-      <Typography component="h5">
-        <strong>Compartilhar</strong>
-      </Typography>
-    </Button>
-  </Box>
-</Modal>
+            <Button
+              sx={{
+                mt: 5,
+                backgroundColor: "#27A8AD",
+                color: "#FFF",
+                width: "fit-content",
+                "&:hover": {
+                  backgroundColor: "#1f8b8f",
+                },
+              }}
+            >
+              <Typography component="h5">
+                <strong>Compartilhar</strong>
+              </Typography>
+            </Button>
+          </Box>
+        </Modal>
         <Modal
           open={open}
           onClose={handleClose}
@@ -284,45 +368,102 @@ export function DetalhesAdocaoPage() {
           aria-describedby="modal-modal-description"
         >
           <Box sx={styleMOdal}>
-            <Box display="flex" alignItems="center" gap="8px" >
-              <ContactSupportRounded color="primary" sx={{ fontSize: "30px", }} />
-              <Typography id="modal-modal-title" variant="h5" component="h2" sx={{ color: "#27A8AD", fontWeight: "500", }}>
+            <Box display="flex" alignItems="center" gap="8px">
+              <ContactSupportRounded
+                color="primary"
+                sx={{ fontSize: "30px" }}
+              />
+              <Typography
+                id="modal-modal-title"
+                variant="h5"
+                component="h2"
+                sx={{ color: "#27A8AD", fontWeight: "500" }}
+              >
                 Quer adotar?
               </Typography>
             </Box>
-            <Typography id="modal-modal-description" sx={{ mt: 2, color: "#191A21" }} >
-              Para adotar esse pet ou saber mais sobre ele, entre em contato com o protetor:
+            <Typography
+              id="modal-modal-description"
+              sx={{ mt: 2, color: "#191A21" }}
+            >
+              Para adotar esse pet ou saber mais sobre ele, entre em contato com
+              o protetor:
             </Typography>
-            <Box sx={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "20px", color: "#191A21" }}>
-              <MailOutlined /><Typography id="modal-modal-description"  >
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                marginTop: "20px",
+                color: "#191A21",
+              }}
+            >
+              <MailOutlined />
+              <Typography id="modal-modal-description">
                 protecaoanimal@gmail.com
-              </Typography></Box>
-            <Box sx={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "20px", color: "#191A21" }}>
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                marginTop: "20px",
+                color: "#191A21",
+              }}
+            >
               <WhatsApp />
-              <Typography id="modal-modal-description"  >
+              <Typography id="modal-modal-description">
                 (88) 9 99309 - 9381
-              </Typography></Box>
-            <button onClick={handleClose} style={{ marginTop: "20px", backgroundColor: "#27A8AD", color: "#FFF", border: "none", padding: "10px 20px", cursor: "pointer", }}  >Cancelar</button>
+              </Typography>
+            </Box>
+            <button
+              onClick={handleClose}
+              style={{
+                marginTop: "20px",
+                backgroundColor: "#27A8AD",
+                color: "#FFF",
+                border: "none",
+                padding: "10px 20px",
+                cursor: "pointer",
+              }}
+            >
+              Cancelar
+            </button>
           </Box>
         </Modal>
-
       </Box>
 
-      <Box marginTop="32px" >
-        <Typography variant="h4" marginBottom="47px" color="#FFFF">Historia</Typography>
+      <Box marginTop="32px">
+        <Typography variant="h4" marginBottom="47px" color="#FFFF">
+          Historia
+        </Typography>
         <Typography variant="body1" color="#FFFF">
-          Pietro é um cachorro alegre e cheio de energia, com um olhar que derrete corações. Apesar de viver no abrigo, ele nunca perdeu a esperança de encontrar uma família. Pietro adora brincar, é extremamente carinhoso e está sempre pronto para te acompanhar em qualquer aventura.
+          Pietro é um cachorro alegre e cheio de energia, com um olhar que
+          derrete corações. Apesar de viver no abrigo, ele nunca perdeu a
+          esperança de encontrar uma família. Pietro adora brincar, é
+          extremamente carinhoso e está sempre pronto para te acompanhar em
+          qualquer aventura.
         </Typography>
         <Typography variant="h4" color="#FFFF" marginTop="47px">
           Observações
         </Typography>
         <Typography variant="body1" color="#FFFF" marginTop="8px">
-          Se dá bem com outros cães e é ideal para famílias que buscam um companheiro ativo e leal. Pietro já está vacinado, castrado e pronto para encontrar um lar cheio de amor.
+          Se dá bem com outros cães e é ideal para famílias que buscam um
+          companheiro ativo e leal. Pietro já está vacinado, castrado e pronto
+          para encontrar um lar cheio de amor.
         </Typography>
       </Box>
 
       <Box>
-        <Typography variant="h5" color="primary" marginTop="69px" marginBottom="30px">Outros peludos esperando seu clique</Typography>
+        <Typography
+          variant="h5"
+          color="primary"
+          marginTop="69px"
+          marginBottom="30px"
+        >
+          Outros peludos esperando seu clique
+        </Typography>
 
         <Box
           sx={{
@@ -331,19 +472,52 @@ export function DetalhesAdocaoPage() {
             gap: "13px",
             alignItems: "stretch",
             paddingBottom: "34px",
-            width: "100%"
+            width: "100%",
           }}
         >
-          <CardAnimal nome="jonas" cidade="guaraciaba" adotado={true} imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
-          <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
-          <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
-          <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
-          <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
-          <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
-          <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
-          <CardAnimal nome="jonas" cidade="guaraciaba" imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0" />
+          <CardAnimal
+            nome="jonas"
+            cidade="guaraciaba"
+            adotado={true}
+            imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0"
+          />
+          <CardAnimal
+            nome="jonas"
+            cidade="guaraciaba"
+            imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0"
+          />
+          <CardAnimal
+            nome="jonas"
+            cidade="guaraciaba"
+            imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0"
+          />
+          <CardAnimal
+            nome="jonas"
+            cidade="guaraciaba"
+            imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0"
+          />
+          <CardAnimal
+            nome="jonas"
+            cidade="guaraciaba"
+            imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0"
+          />
+          <CardAnimal
+            nome="jonas"
+            cidade="guaraciaba"
+            imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0"
+          />
+          <CardAnimal
+            nome="jonas"
+            cidade="guaraciaba"
+            imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0"
+          />
+          <CardAnimal
+            nome="jonas"
+            cidade="guaraciaba"
+            imagem="https://th.bing.com/th/id/R.baa69032e7ad3f1054c9c56d02934ede?rik=mUnFcjElPE5ACQ&riu=http%3a%2f%2fopentextbc.ca%2fstrategicmanagement%2fwp-content%2fuploads%2fsites%2f30%2f2014%2f07%2fbasset-hound.jpg%23fixme&ehk=ZNfCpg2Hr6K9jZq%2fKICC486iI%2fTUf0aIiqWTnE5iM1k%3d&risl=&pid=ImgRaw&r=0"
+          />
         </Box>
       </Box>
     </Container>
   );
-};
+}

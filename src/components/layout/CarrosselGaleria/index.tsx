@@ -1,21 +1,16 @@
-
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import {
-  Box,
-  Button,
-} from '@mui/material';
-import { ChevronRight, ChevronLeft, } from '@mui/icons-material';
-import { CardGaleria } from '../../features/CardGaleria';
+import React, { useEffect, useState, useCallback, useMemo } from "react";
+import { Box, Button } from "@mui/material";
+import { ChevronRight, ChevronLeft } from "@mui/icons-material";
+import { CardGaleria } from "../../features/CardGaleria";
 
 type carrosselGaleriaProps = {
   galeria: {
-    codigo: string,
-    nome: string,
-    foto: string
-  }[]
-}
+    codigo: string;
+    nome: string;
+    foto: string;
+  }[];
+};
 export function CarrosselGaleria({ galeria }: carrosselGaleriaProps) {
-
   const [indice, setIndice] = useState(0);
   const isMobile = useMemo(() => window.innerWidth < 800, []);
   const tamanho = isMobile ? 1 : 3;
@@ -27,11 +22,11 @@ export function CarrosselGaleria({ galeria }: carrosselGaleriaProps) {
   }, [galeria, indice, tamanho]);
 
   const botaoProximo = useCallback(() => {
-    setIndice(prevIndice => prevIndice + 1);
+    setIndice((prevIndice) => prevIndice + 1);
   }, []);
 
   const botaoAnterior = useCallback(() => {
-    setIndice(prevIndice => prevIndice - 1);
+    setIndice((prevIndice) => prevIndice - 1);
   }, []);
 
   useEffect(() => {
@@ -39,18 +34,31 @@ export function CarrosselGaleria({ galeria }: carrosselGaleriaProps) {
   }, [galeria]);
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2 }}>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: 2,
+      }}
+    >
       <Button onClick={botaoAnterior} disabled={indice <= 0}>
         <ChevronLeft fontSize="large" color="primary" />
       </Button>
-      <Box sx={{ display: 'flex', gap: 3 }}>
-        {
-          galeriaVisivel.map((item) => (
-            <CardGaleria key={item.codigo} codigo={item.codigo} nome={item.nome} foto={item.foto}></CardGaleria>
-          ))
-        }
+      <Box sx={{ display: "flex", gap: 3 }}>
+        {galeriaVisivel.map((item) => (
+          <CardGaleria
+            key={item.codigo}
+            codigo={item.codigo}
+            nome={item.nome}
+            foto={item.foto}
+          ></CardGaleria>
+        ))}
       </Box>
-      <Button onClick={botaoProximo} disabled={indice + tamanho >= galeria.length}>
+      <Button
+        onClick={botaoProximo}
+        disabled={indice + tamanho >= galeria.length}
+      >
         <ChevronRight fontSize="large" color="primary" />
       </Button>
     </Box>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Box, Button, Typography } from "@mui/material";
 import { CarrosselGaleria } from "../../components/layout/CarrosselGaleria";
+import theme from "../../theme";
 
 let galeriaMock = [
   {
@@ -91,7 +92,7 @@ export function InicialPage() {
             flexDirection: "column",
           }}
         >
-          <Typography sx={{ fontSize: "1.3rem" }}>
+          <Typography sx={{ fontSize: "1.8rem" }}>
             Nossa ONG sobrevive graças à generosidade de pessoas como você, que
             acreditam no poder da solidariedade. Seja adotando, doando ou se
             voluntariando, cada gesto faz a diferença na construção de um futuro
@@ -122,66 +123,66 @@ export function InicialPage() {
           gap: 4,
         }}
       >
-        <Typography variant="h4" component="h4">
+        <Typography variant="h1" component="h1">
           Quer Ajudar?
         </Typography>
-        <Box
-          px={10}
-          sx={{
-            height: { md: "400px" },
+      </Box>
+      <Box
+        px={10}
+        sx={{
+          height: { md: "400px" },
+          display: "flex",
+          flexDirection: { md: "row", xs: "column" },
+          justifyContent: "center",
+          gap: 3,
+          textAlign: "center",
+        }}
+      >
+        <Link
+          style={{
             display: "flex",
-            flexDirection: { md: "row", xs: "column" },
+            alignItems: "end",
             justifyContent: "center",
-            gap: 3,
-            textAlign: "center",
           }}
+          to="/sobre"
         >
-          <Link
-            style={{
-              display: "flex",
-              alignItems: "end",
-              justifyContent: "center",
-            }}
-            to="/sobre"
-          >
-            <Box
-              component="img"
-              sx={{ maxWidth: "220px" }}
-              src="/assets/botao_adote.png"
-              alt="Adote"
-            />
-          </Link>
-          <Link
-            style={{
-              display: "flex",
-              alignItems: "start",
-              justifyContent: "center",
-            }}
-            to="/sobre"
-          >
-            <Box
-              component="img"
-              sx={{ maxWidth: "220px" }}
-              src="/assets/botao_doe.png"
-              alt="Doe"
-            />
-          </Link>
-          <Link
-            style={{
-              display: "flex",
-              alignItems: "end",
-              justifyContent: "center",
-            }}
-            to="/sobre"
-          >
-            <Box
-              component="img"
-              sx={{ maxWidth: "220px" }}
-              src="/assets/botao_voluntario.png"
-              alt="Seja voluntário"
-            />
-          </Link>
-        </Box>
+          <Box
+            component="img"
+            sx={{ maxWidth: "220px" }}
+            src="/assets/botao_adote.png"
+            alt="Adote"
+          />
+        </Link>
+        <Link
+          style={{
+            display: "flex",
+            alignItems: "start",
+            justifyContent: "center",
+          }}
+          to="/sobre"
+        >
+          <Box
+            component="img"
+            sx={{ maxWidth: "220px" }}
+            src="/assets/botao_doe.png"
+            alt="Doe"
+          />
+        </Link>
+        <Link
+          style={{
+            display: "flex",
+            alignItems: "end",
+            justifyContent: "center",
+          }}
+          to="/sobre"
+        >
+          <Box
+            component="img"
+            sx={{ maxWidth: "220px" }}
+            src="/assets/botao_voluntario.png"
+            alt="Seja voluntário"
+          />
+        </Link>
       </Box>
       <Box
         sx={{

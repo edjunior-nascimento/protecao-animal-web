@@ -347,7 +347,7 @@ export function FormularioDoacaoPage() {
                 marginRight: { md: "50px", xs: "20px" },
                 paddingTop: "20px",
               }}
-              component="p"
+              variant="body2"
               color="black"
             >
               Numero de telefone{" "}

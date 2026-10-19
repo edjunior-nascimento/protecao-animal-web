@@ -41,25 +41,23 @@ const theme = createTheme({
       styleOverrides: {
         h1: {
           fontFamily: "Jockey One, Arial, sans-serif",
+          fontSize: "35px",
           color: "#27A8AD",
+          height: "400",
         },
         h2: {
           fontFamily: "Jockey One, Arial, sans-serif",
-          color: "#27A8AD",
+          fontSize: "25px",
         },
         h3: {
           fontFamily: "Jockey One, Arial, sans-serif",
-          color: "#27A8AD",
+          fontSize: "18px",
         },
-        h4: {
-          fontFamily: "Jockey One, Arial, sans-serif",
-          color: "#27A8AD",
-        },
-        h5: {
-          fontFamily: "Jockey One, Arial, sans-serif",
-          color: "#27A8AD",
-        },
-      },
+        body2: {
+          fontFamily: "Arial, sans-serif",
+          size: "16px",
+        }
+      }
     },
     MuiButton: {
       styleOverrides: {
@@ -74,7 +72,16 @@ const theme = createTheme({
           borderColor: "#27A8AD",
           color: "#27A8AD",
         },
-      },
+        sizeSmall: {
+          fontSize: "16px",
+        },
+        sizeMedium: {
+          fontSize: "18px",
+        },
+        sizeLarge: {
+          fontSize: "20px",
+        },
+      }
     },
     MuiCard: {
       styleOverrides: {
@@ -96,6 +103,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 15,
+          fontSize: "18px",
         },
         icon: {
           color: "#545252",
@@ -108,6 +116,7 @@ const theme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
+          fontSize: "18px",
           borderRadius: 15,
           "& .MuiOutlinedInput-notchedOutline": {
             borderColor: "#545252",

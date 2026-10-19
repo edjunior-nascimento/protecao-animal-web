@@ -82,10 +82,10 @@ export function InicialPage() {
           display: { md: "flex", xs: "block" },
           flexDirection: "row",
           alignItems: "center",
+          position: "relative", // necessário para o posicionamento absoluto
         }}
       >
         <Box
-          px={5}
           sx={{
             width: { md: "50%", xs: "100%" },
             display: "flex",
@@ -105,15 +105,98 @@ export function InicialPage() {
             alt="patas animal"
           />
         </Box>
+
+        {/* Imagem do gato sobreposta */}
         <Box
-          sx={{
-            width: { md: "50%", xs: "100%" },
-            display: "flex",
-            alignItems: "start",
-          }}
           component="img"
           src="/assets/gatosobrenos.png"
+          alt="gato sobre a caixa"
+          sx={{
+            position: "absolute",
+            bottom: "px",
+            right: { md: "0%", xs: "0" },
+            width: { md: "652px", xs: "200px" },
+            zIndex: 3,
+            height: { md: "693px", xs: "200px" },
+          }}
         />
+      </Box>
+      <Box sx={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/background_black.png)`,
+        position: "relative",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}>
+        <Box
+          sx={{
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            gap: 4,
+            marginBottom: "70px",
+          }}
+        >
+          <Typography variant="h1" component="h1">
+            Quer Ajudar?
+          </Typography>
+        </Box>
+        <Box
+          px={10}
+          sx={{
+            height: { md: "400px" },
+            display: "flex",
+            flexDirection: { md: "row", xs: "column" },
+            justifyContent: "center",
+            gap: 3,
+            textAlign: "center",
+          }}
+        >
+          <Link
+            style={{
+              display: "flex",
+              alignItems: "end",
+              justifyContent: "center",
+            }}
+            to="/sobre"
+          >
+            <Box
+              component="img"
+              sx={{ maxWidth: "220px" }}
+              src="/assets/botao_adote.png"
+              alt="Adote"
+            />
+          </Link>
+          <Link
+            style={{
+              display: "flex",
+              alignItems: "start",
+              justifyContent: "center",
+            }}
+            to="/sobre"
+          >
+            <Box
+              component="img"
+              sx={{ maxWidth: "220px" }}
+              src="/assets/botao_doe.png"
+              alt="Doe"
+            />
+          </Link>
+          <Link
+            style={{
+              display: "flex",
+              alignItems: "end",
+              justifyContent: "center",
+            }}
+            to="/sobre"
+          >
+            <Box
+              component="img"
+              sx={{ maxWidth: "220px" }}
+              src="/assets/botao_voluntario.png"
+              alt="Seja voluntário"
+            />
+          </Link>
+        </Box>
       </Box>
       <Box
         sx={{
@@ -124,75 +207,6 @@ export function InicialPage() {
         }}
       >
         <Typography variant="h1" component="h1">
-          Quer Ajudar?
-        </Typography>
-      </Box>
-      <Box
-        px={10}
-        sx={{
-          height: { md: "400px" },
-          display: "flex",
-          flexDirection: { md: "row", xs: "column" },
-          justifyContent: "center",
-          gap: 3,
-          textAlign: "center",
-        }}
-      >
-        <Link
-          style={{
-            display: "flex",
-            alignItems: "end",
-            justifyContent: "center",
-          }}
-          to="/sobre"
-        >
-          <Box
-            component="img"
-            sx={{ maxWidth: "220px" }}
-            src="/assets/botao_adote.png"
-            alt="Adote"
-          />
-        </Link>
-        <Link
-          style={{
-            display: "flex",
-            alignItems: "start",
-            justifyContent: "center",
-          }}
-          to="/sobre"
-        >
-          <Box
-            component="img"
-            sx={{ maxWidth: "220px" }}
-            src="/assets/botao_doe.png"
-            alt="Doe"
-          />
-        </Link>
-        <Link
-          style={{
-            display: "flex",
-            alignItems: "end",
-            justifyContent: "center",
-          }}
-          to="/sobre"
-        >
-          <Box
-            component="img"
-            sx={{ maxWidth: "220px" }}
-            src="/assets/botao_voluntario.png"
-            alt="Seja voluntário"
-          />
-        </Link>
-      </Box>
-      <Box
-        sx={{
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          gap: 4,
-        }}
-      >
-        <Typography variant="h4" component="h4">
           Galeria de fotos
         </Typography>
 

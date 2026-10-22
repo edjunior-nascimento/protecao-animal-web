@@ -78,20 +78,22 @@ export function InicialPage() {
       </Box>
       <Box
         sx={{
-          display: { md: "flex", xs: "block" },
-          flexDirection: "row",
+          display: "flex",
+          flexDirection: {xs: "column", md:"row"},
           alignItems: "center",
+          position: "relative",
+          marginLeft: {xs: "20px", md:"74px"},
+          gap: {xs: 0, md: 2},
         }}
       >
         <Box
-          px={5}
           sx={{
             width: { md: "50%", xs: "100%" },
             display: "flex",
             flexDirection: "column",
           }}
         >
-          <Typography sx={{ fontSize: "1.3rem" }}>
+          <Typography variant="h2" component="h2" sx={{ fontFamily: "Arial, sans-serif", }}>
             Nossa ONG sobrevive graças à generosidade de pessoas como você, que
             acreditam no poder da solidariedade. Seja adotando, doando ou se
             voluntariando, cada gesto faz a diferença na construção de um futuro
@@ -100,31 +102,46 @@ export function InicialPage() {
           <Box
             component="img"
             src="/assets/patas-marrom.png"
-            sx={{ maxWidth: "64px" }}
+            sx={{ maxWidth: "64px", marginTop: "50px" }}
             alt="patas animal"
           />
         </Box>
+
+        <Box sx={{ width: { md: "50%", xs: "100%" }, display: "flex", justifyContent: "right" }}>
+          <Box
+            component="img"
+            src="/assets/gatosobrenos.png"
+            alt="gato sobre a caixa"
+            sx={{
+              position: "relayive",
+              bottom: "px",
+              right: { md: "0%", xs: "0" },
+              width: { md: "652px", xs: "250px" },
+              zIndex: 3,
+              justifyContent: "right",
+            }}
+          />
+        </Box>
+      </Box>
+      <Box sx={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/background_black.png)`,
+        position: "relative",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}>
         <Box
           sx={{
-            width: { md: "50%", xs: "100%" },
+            textAlign: "center",
             display: "flex",
-            alignItems: "start",
+            flexDirection: "column",
+            gap: 4,
+            marginBottom: "70px",
           }}
-          component="img"
-          src="/assets/gatosobrenos.png"
-        />
-      </Box>
-      <Box
-        sx={{
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          gap: 4,
-        }}
-      >
-        <Typography variant="h4" component="h4">
-          Quer Ajudar?
-        </Typography>
+        >
+          <Typography variant="h1" component="h1">
+            Quer Ajudar?
+          </Typography>
+        </Box>
         <Box
           px={10}
           sx={{
@@ -191,7 +208,7 @@ export function InicialPage() {
           gap: 4,
         }}
       >
-        <Typography variant="h4" component="h4">
+        <Typography variant="h1" component="h1">
           Galeria de fotos
         </Typography>
 

@@ -36,7 +36,7 @@ export function SobrePage() {
       >
         <Box>
           <Typography variant="h4" component="h4">
-            Quem somos
+             Quem somos
           </Typography>
           <Typography sx={{ fontSize: "1.3rem" }}>
             Somos a Proteção Animal, uma ONG dedicada a resgatar, cuidar e

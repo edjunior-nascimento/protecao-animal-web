@@ -1,10 +1,15 @@
 import { createTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
 // Tema customizado para a aplicação de proteção animal
 const theme = createTheme({
   palette: {
     mode: "dark",
+    mode: "dark",
     primary: {
+      main: "#27A8AD", // Verde para ações principais
+      light: "#27A8AD",
+      dark: "#27A8AD",
       main: "#27A8AD", // Verde para ações principais
       light: "#27A8AD",
       dark: "#27A8AD",
@@ -13,12 +18,19 @@ const theme = createTheme({
       main: "#777575", // Cinza para ações secundárias
       light: "#777575",
       dark: "#777575",
+      main: "#777575", // Cinza para ações secundárias
+      light: "#777575",
+      dark: "#777575",
     },
     background: {
       default: "#1e1e1e",
       paper: "#efefef",
+      default: "#1e1e1e",
+      paper: "#efefef",
     },
     text: {
+      primary: "#ffffff",
+      secondary: "#b0b0b0",
       primary: "#ffffff",
       secondary: "#b0b0b0",
     },
@@ -63,9 +75,12 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           fontFamily: "Jockey One, Arial, sans-serif",
+          fontFamily: "Jockey One, Arial, sans-serif",
           borderRadius: 8,
           textTransform: "none",
+          textTransform: "none",
           fontWeight: 400,
+          color: "#FFFFFF",
           color: "#FFFFFF",
         },
         outlined: {
@@ -88,6 +103,7 @@ const theme = createTheme({
         root: {
           borderRadius: 12,
           boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
+          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
         },
       },
     },
@@ -96,7 +112,10 @@ const theme = createTheme({
         root: {
           fontFamily: "Arial, sans-serif",
           color: "#27A8AD",
+          fontFamily: "Arial, sans-serif",
+          color: "#27A8AD",
         },
+      },
       },
     },
     MuiSelect: {
@@ -107,8 +126,12 @@ const theme = createTheme({
         },
         icon: {
           color: "#545252",
+          color: "#545252",
         },
         select: {
+          color: "#545252",
+        },
+      },
           color: "#545252",
         },
       },
@@ -120,7 +143,10 @@ const theme = createTheme({
           borderRadius: 15,
           "& .MuiOutlinedInput-notchedOutline": {
             borderColor: "#545252",
+            borderColor: "#545252",
           },
+          "&:hover .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#545252",
           "&:hover .MuiOutlinedInput-notchedOutline": {
             borderColor: "#545252",
           },
@@ -128,6 +154,9 @@ const theme = createTheme({
       },
     },
   },
+    },
+  },
 });
 
 export default theme;
+

@@ -59,16 +59,15 @@ export function CardAgradecimento({
         </Button>
 
         <CheckCircleOutline
-          sx={{ color: "#27A8AD", fontSize: { xs: 66, md: 74 }, mb: 2 }}
+          sx={{ color: "#27A8AD", fontSize: { xs: 66, md: 74 }, mb: 2, }}
         />
 
         <Typography
           sx={{
             fontSize: { xs: 24, md: 35 },
-            fontWeight: 700,
-            color: "#27A8AD",
-            mb: 2,
+            fontWeight: 500,
           }}
+          variant="h1"
         >
           {titulo}
         </Typography>
@@ -115,6 +114,7 @@ export function CardAgradecimento({
             flexDirection: "column",
             fontWeight: 700,
           }}
+          variant="body2"
         >
           {descricao}
           <Favorite sx={{ color: "red", ml: "10px", width: 48, height: 48 }} />

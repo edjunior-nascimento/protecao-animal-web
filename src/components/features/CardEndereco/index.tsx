@@ -22,7 +22,7 @@ export function CardEndereco() {
           fontSize: "25px",
           fontWeight: "bold",
         }}
-        component="p"
+        variant= "body2"
         color="black"
       >
         Endereço
@@ -40,8 +40,8 @@ export function CardEndereco() {
       >
         <Box sx={{ width: "100%", marginRight: "22px" }}>
           <Typography
-            sx={{ marginBottom: "10px", fontSize: "18px", display: "flex" }}
-            component="p"
+            sx={{ marginBottom: "10px", display: "flex" }}
+            variant= "body2"
             color="black"
           >
             Endereço{" "}
@@ -61,8 +61,8 @@ export function CardEndereco() {
         </Box>
         <Box sx={{ width: "100%", marginRight: "22px" }}>
           <Typography
-            sx={{ marginBottom: "10px", fontSize: "18px", display: "flex" }}
-            component="p"
+            sx={{ marginBottom: "10px", display: "flex" }}
+            variant= "body2"
             color="black"
           >
             Numero{" "}
@@ -94,8 +94,8 @@ export function CardEndereco() {
       >
         <Box sx={{ width: "100%", marginRight: "22px" }}>
           <Typography
-            sx={{ marginBottom: "10px", fontSize: "18px", display: "flex" }}
-            component="p"
+            sx={{ marginBottom: "10px", display: "flex" }}
+            variant= "body2"
             color="black"
           >
             Bairro/Distrito{" "}
@@ -116,8 +116,8 @@ export function CardEndereco() {
 
         <Box sx={{ width: "100%", marginRight: "22px" }}>
           <Typography
-            sx={{ marginBottom: "10px", fontSize: "18px", display: "flex" }}
-            component="p"
+            sx={{ marginBottom: "10px", display: "flex" }}
+            variant= "body2"
             color="black"
           >
             CEP{" "}
@@ -148,8 +148,8 @@ export function CardEndereco() {
       >
         <Box sx={{ width: "100%", marginRight: "22px" }}>
           <Typography
-            sx={{ marginBottom: "10px", fontSize: "18px", display: "flex" }}
-            component="p"
+            sx={{ marginBottom: "10px", display: "flex" }}
+            variant= "body2"
             color="black"
           >
             Cidade{" "}
@@ -170,8 +170,8 @@ export function CardEndereco() {
 
         <Box sx={{ width: "100%", marginRight: "22px" }}>
           <Typography
-            sx={{ marginBottom: "10px", fontSize: "18px", display: "flex" }}
-            component="p"
+            sx={{ marginBottom: "10px", display: "flex" }}
+            variant= "body2"
             color="black"
           >
             Estado{" "}
@@ -195,10 +195,9 @@ export function CardEndereco() {
           marginLeft: "18px",
           marginTop: "15px",
           marginRight: "50px",
-          fontSize: "18px",
           display: "flex",
         }}
-        component="p"
+        variant= "body2"
         color="black"
       >
         Complemento/Referencia

@@ -36,10 +36,10 @@ export function DoacaoPage() {
             marginBottom: "130px",
           }}
         >
-          <Typography variant="h4" gutterBottom>
+          <Typography variant="h4" sx={{ color: "#27A8AD",mb: "60px" }}>
             Faça sua doação
           </Typography>
-          <Typography variant="h6">
+          <Typography variant="h1" component="h2" sx={{ fontSize: "30px", color: "#FFFFFF" }}>
             "Sua contribuição faz toda a diferença. Ajude-nos a continuar nossa
             missão."
           </Typography>
@@ -128,8 +128,9 @@ export function DoacaoPage() {
               </Box>
 
               <Typography
-                variant="h5"
-                sx={{ ml: 2, mb: 0, alignItems: "center", textAlign: "center" }}
+                variant="h2"
+                component="h2"
+                sx={{ ml: 2, mb: 0, alignItems: "center", textAlign: "center", color: "#27A8AD" }}
               >
                 Doe pelo PIX
               </Typography>
@@ -137,9 +138,10 @@ export function DoacaoPage() {
 
             <Box sx={{ mt: 1.5 }}>
               <Typography
+              variant="h3"
                 sx={{
                   lineHeight: 1.5,
-                  fontSize: "14px",
+                  fontSize: "18px",
                   color: "#FFFFFF",
                   marginTop: "-5px",
                 }}
@@ -181,7 +183,7 @@ export function DoacaoPage() {
                 "&:hover": { bgcolor: "#1f8f93" },
               }}
             >
-              <Typography>Copiar Chave Pix</Typography>
+              <Typography variant="h2" component="h3" sx={{fontSize: "18px"}}>Copiar Chave Pix</Typography>
             </Button>
           </Box>
         </Box>

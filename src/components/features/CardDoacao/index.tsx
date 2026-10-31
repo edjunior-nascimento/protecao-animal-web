@@ -54,12 +54,12 @@ export function CardDocao({ titulo, descricao, onClick }: Props) {
         }}
       />
       <Box>
-        <Typography variant="h5" sx={{ marginBottom: "27px" }}>
+        <Typography sx={{ marginBottom: "27px", color: "#27A8AD", fontSize: "25px", fontFamily: " Arial, sans-serif" }}>
           {titulo}
         </Typography>
       </Box>
       <Box>
-        <Typography variant="body1" sx={{ color: "#000000", lineHeight: 1.6 }}>
+        <Typography  sx={{ color: "#000000", fontSize: "23px", fontFamily: "Arial, sans-serif", lineHeight: 1.5, marginBottom: "32px" }}>
           {descricao}
         </Typography>
       </Box>

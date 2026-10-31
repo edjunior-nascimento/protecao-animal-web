@@ -21,7 +21,7 @@ export function CardContato() {
           fontSize: "25px",
           fontWeight: "bold",
         }}
-        component="p"
+        variant= "body2"
         color="black"
       >
         Contato
@@ -39,8 +39,8 @@ export function CardContato() {
       >
         <Box sx={{ width: "100%", marginRight: "22px" }}>
           <Typography
-            sx={{ marginBottom: "10px", fontSize: "18px", display: "flex" }}
-            component="p"
+            sx={{ marginBottom: "10px", display: "flex" }}
+            variant= "body2"
             color="black"
           >
             Telefone{" "}
@@ -61,8 +61,8 @@ export function CardContato() {
 
         <Box sx={{ width: "100%" }}>
           <Typography
-            sx={{ marginBottom: "10px", fontSize: "18px" }}
-            component="p"
+            sx={{ marginBottom: "10px", }}
+            variant= "body2"
             color="black"
           >
             Email

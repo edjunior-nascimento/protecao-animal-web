@@ -32,7 +32,7 @@ export function AdocaoPage() {
             </a>
             <Typography variant="body1">/ Adote</Typography>
           </Box>
-          <Typography variant="h4">Encontre seu novo amigo</Typography>
+          <Typography variant="h2" component= "h2">Encontre seu novo amigo</Typography>
         </Box>
         <Box
           sx={{
@@ -51,8 +51,8 @@ export function AdocaoPage() {
             borderRadius: "8px",
           }}
         >
-          <Box sx={{ minWidth: 0, height: "56px" }}>
-            <FilterAnimais
+          <Box sx={{ minWidth: 0, height: "56px", }}>
+            <FilterAnimais 
               label="Todas as espécies"
               opcoes={["Cachorro", "Gato"]}
             />
@@ -60,9 +60,7 @@ export function AdocaoPage() {
           <Box sx={{ minWidth: 0, height: "56px" }}>
             <FilterAnimais label="Todos os sexos" opcoes={["Macho", "Fêmea"]} />
           </Box>
-          <Box sx={{ minWidth: 0, height: "56px" }}>
-            <FilterAnimais label="Todos os sexos" opcoes={["Macho", "Fêmea"]} />
-          </Box>
+          
           <Box sx={{ minWidth: 0, height: "56px" }}>
             <FilterAnimais
               label="Todas as categorias "

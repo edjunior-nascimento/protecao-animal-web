@@ -9,16 +9,6 @@ import {
   Select,
   Typography,
 } from "@mui/material";
-import {
-  Box,
-  Button,
-  Container,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  Typography,
-} from "@mui/material";
 import type { SelectChangeEvent } from "@mui/material/Select";
 import { CardAgradecimento } from "../../components/features/CardAgradecimento";
 
@@ -37,7 +27,6 @@ export function FormularioDoacaoPage() {
 
   return (
     <Container>
-    <Container>
       <Box>
         <Box
           sx={{
@@ -50,18 +39,7 @@ export function FormularioDoacaoPage() {
             marginRight: { md: "43px", xs: "20px" },
           }}
         >
-        <Box
-          sx={{
-            display: "flex",
-            width: "auto",
-            boxSizing: "border-box",
-            marginBottom: "30px",
-            marginTop: "30px",
-            marginLeft: { md: "43px", xs: "20px" },
-            marginRight: { md: "43px", xs: "20px" },
-          }}
-        >
-          <Typography component="p">
+          <Typography component="h2" sx={{ fontSize: "20px", }}>
             <strong>Página inicial / Doação / Pagamento</strong>
           </Typography>
         </Box>
@@ -84,41 +62,13 @@ export function FormularioDoacaoPage() {
               fontSize: "25px",
               fontWeight: "bold",
             }}
-            sx={{
-              marginBottom: "30px",
-              paddingTop: "58px",
-              fontSize: "25px",
-              fontWeight: "bold",
-            }}
-            component="p"
+            component="h2"
             color="black"
           >
             Além da opção de doação única, você pode escolher a opção de apoiar
             nossos projetos mensalmente!
-            Além da opção de doação única, você pode escolher a opção de apoiar
-            nossos projetos mensalmente!
           </Typography>
 
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              marginTop: "60px",
-              backgroundColor: "#D9D9D9",
-              marginBottom: "60px",
-            }}
-          >
-            <FormControl
-              fullWidth
-              variant="outlined"
-              size="small"
-              sx={{
-                maxWidth: { md: "300px", xs: "90%" },
-                marginLeft: { md: "42px", xs: "20px" },
-                marginRight: { md: "42px", xs: "20px" },
-                marginTop: "37px",
-              }}
-            >
           <Box
             sx={{
               display: "flex",
@@ -182,39 +132,8 @@ export function FormularioDoacaoPage() {
                 >
                   Única
                 </MenuItem>
-                <MenuItem
-                  value="Mensal"
-                  sx={{
-                    color: "#545252",
-                    "&.Mui-selected": {
-                      backgroundColor: "rgba(84,82,82,0.12)",
-                      color: "black",
-                    },
-                  }}
-                >
-                  Mensal
-                </MenuItem>
-                <MenuItem
-                  value="Única"
-                  sx={{
-                    color: "#545252",
-                    "&.Mui-selected": {
-                      backgroundColor: "rgba(84,82,82,0.12)",
-                      color: "black",
-                    },
-                  }}
-                >
-                  Única
-                </MenuItem>
               </Select>
             </FormControl>
-            <Box
-              sx={{
-                marginLeft: { md: "42px", xs: "7.5px" },
-                marginRight: { md: "42px", xs: "7.5px" },
-                marginTop: "37px",
-              }}
-            >
             <Box
               sx={{
                 marginLeft: { md: "42px", xs: "7.5px" },
@@ -232,16 +151,7 @@ export function FormularioDoacaoPage() {
                     sm: "none",
                   },
                   gap: "15px",
-                  listStyleType: "none",
-                  display: { xs: "grid", sm: "flex" },
-                  gridTemplateColumns: {
-                    xs: "repeat(3, minmax(0, 1fr))",
-                    sm: "none",
-                  },
-                  gap: "15px",
                   paddingLeft: 0,
-                  flexWrap: { xs: "wrap", sm: "nowrap" },
-                  width: "100%",
                   flexWrap: { xs: "wrap", sm: "nowrap" },
                   width: "100%",
                 }}
@@ -263,25 +173,7 @@ export function FormularioDoacaoPage() {
                     "&:hover": { backgroundColor: "#27A8AD", color: "white" },
                   }}
                 >
-                  <Typography sx={{ fontWeight: "bold" }}>R$ 10</Typography>
-                <Box
-                  component="li"
-                  onClick={() => handleValueClick("R$ 10")}
-                  sx={{
-                    color: selectedValue === "R$ 10" ? "white" : "black",
-                    backgroundColor:
-                      selectedValue === "R$ 10" ? "#27A8AD" : "#B0AFAF",
-                    width: { xs: "100%", sm: "calc((100% - 75px) / 6)" },
-                    height: "56px",
-                    cursor: "pointer",
-                    transition: "all 0.15s ease",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    "&:hover": { backgroundColor: "#27A8AD", color: "white" },
-                  }}
-                >
-                  <Typography sx={{ fontWeight: "bold" }}>R$ 10</Typography>
+                  <Typography variant="body2" sx={{ fontWeight: "bold" }}>R$ 10</Typography>
                 </Box>
                 <Box
                   component="li"
@@ -300,25 +192,7 @@ export function FormularioDoacaoPage() {
                     "&:hover": { backgroundColor: "#27A8AD", color: "white" },
                   }}
                 >
-                  <Typography sx={{ fontWeight: "bold" }}>R$ 20</Typography>
-                <Box
-                  component="li"
-                  onClick={() => handleValueClick("R$ 20")}
-                  sx={{
-                    color: selectedValue === "R$ 20" ? "white" : "black",
-                    backgroundColor:
-                      selectedValue === "R$ 20" ? "#27A8AD" : "#B0AFAF",
-                    width: { xs: "100%", sm: "calc((100% - 75px) / 6)" },
-                    height: "56px",
-                    cursor: "pointer",
-                    transition: "all 0.15s ease",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    "&:hover": { backgroundColor: "#27A8AD", color: "white" },
-                  }}
-                >
-                  <Typography sx={{ fontWeight: "bold" }}>R$ 20</Typography>
+                  <Typography variant="body2" sx={{ fontWeight: "bold" }}>R$ 20</Typography>
                 </Box>
                 <Box
                   component="li"
@@ -337,25 +211,7 @@ export function FormularioDoacaoPage() {
                     "&:hover": { backgroundColor: "#27A8AD", color: "white" },
                   }}
                 >
-                  <Typography sx={{ fontWeight: "bold" }}>R$ 50</Typography>
-                <Box
-                  component="li"
-                  onClick={() => handleValueClick("R$ 50")}
-                  sx={{
-                    color: selectedValue === "R$ 50" ? "white" : "black",
-                    backgroundColor:
-                      selectedValue === "R$ 50" ? "#27A8AD" : "#B0AFAF",
-                    width: { xs: "100%", sm: "calc((100% - 75px) / 6)" },
-                    height: "56px",
-                    cursor: "pointer",
-                    transition: "all 0.15s ease",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    "&:hover": { backgroundColor: "#27A8AD", color: "white" },
-                  }}
-                >
-                  <Typography sx={{ fontWeight: "bold" }}>R$ 50</Typography>
+                  <Typography variant="body2" sx={{ fontWeight: "bold" }}>R$ 50</Typography>
                 </Box>
                 <Box
                   component="li"
@@ -374,25 +230,7 @@ export function FormularioDoacaoPage() {
                     "&:hover": { backgroundColor: "#27A8AD", color: "white" },
                   }}
                 >
-                  <Typography sx={{ fontWeight: "bold" }}>R$ 100</Typography>
-                <Box
-                  component="li"
-                  onClick={() => handleValueClick("R$ 100")}
-                  sx={{
-                    color: selectedValue === "R$ 100" ? "white" : "black",
-                    backgroundColor:
-                      selectedValue === "R$ 100" ? "#27A8AD" : "#B0AFAF",
-                    width: { xs: "100%", sm: "calc((100% - 75px) / 6)" },
-                    height: "56px",
-                    cursor: "pointer",
-                    transition: "all 0.15s ease",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    "&:hover": { backgroundColor: "#27A8AD", color: "white" },
-                  }}
-                >
-                  <Typography sx={{ fontWeight: "bold" }}>R$ 100</Typography>
+                  <Typography variant="body2" sx={{ fontWeight: "bold" }}>R$ 100</Typography>
                 </Box>
                 <Box
                   component="li"
@@ -411,25 +249,7 @@ export function FormularioDoacaoPage() {
                     "&:hover": { backgroundColor: "#27A8AD", color: "white" },
                   }}
                 >
-                  <Typography sx={{ fontWeight: "bold" }}>R$ 200</Typography>
-                <Box
-                  component="li"
-                  onClick={() => handleValueClick("R$ 200")}
-                  sx={{
-                    color: selectedValue === "R$ 200" ? "white" : "black",
-                    backgroundColor:
-                      selectedValue === "R$ 200" ? "#27A8AD" : "#B0AFAF",
-                    width: { xs: "100%", sm: "calc((100% - 75px) / 6)" },
-                    height: "56px",
-                    cursor: "pointer",
-                    transition: "all 0.15s ease",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    "&:hover": { backgroundColor: "#27A8AD", color: "white" },
-                  }}
-                >
-                  <Typography sx={{ fontWeight: "bold" }}>R$ 200</Typography>
+                  <Typography variant="body2" sx={{ fontWeight: "bold" }}>R$ 200</Typography>
                 </Box>
                 <Box
                   component="li"
@@ -448,50 +268,20 @@ export function FormularioDoacaoPage() {
                     "&:hover": { backgroundColor: "#27A8AD", color: "white" },
                   }}
                 >
-                  <Typography sx={{ fontWeight: "bold" }}>
-                    Outro valor
-                  </Typography>
-                <Box
-                  component="li"
-                  onClick={() => handleValueClick("Outro valor")}
-                  sx={{
-                    color: selectedValue === "Outro valor" ? "white" : "black",
-                    backgroundColor:
-                      selectedValue === "Outro valor" ? "#27A8AD" : "#B0AFAF",
-                    width: { xs: "100%", sm: "calc((100% - 75px) / 6)" },
-                    height: "56px",
-                    cursor: "pointer",
-                    transition: "all 0.15s ease",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    "&:hover": { backgroundColor: "#27A8AD", color: "white" },
-                  }}
-                >
-                  <Typography sx={{ fontWeight: "bold" }}>
+                  <Typography variant="body2" sx={{ fontWeight: "bold" }}>
                     Outro valor
                   </Typography>
                 </Box>
               </Box>
             </Box>
-            <Typography
+            <Typography variant="body2"
               sx={{
                 marginLeft: { md: "42px", xs: "20px" },
                 marginTop: "37px",
                 color: "black",
                 fontWeight: "bold",
                 marginBottom: "30px",
-              }}
-            >
-              Faça uma doação de 10,00
-            </Typography>
-            <Typography
-              sx={{
-                marginLeft: { md: "42px", xs: "20px" },
-                marginTop: "37px",
-                color: "black",
-                fontWeight: "bold",
-                marginBottom: "30px",
+                fontSize: "20px",
               }}
             >
               Faça uma doação de 10,00
@@ -505,33 +295,14 @@ export function FormularioDoacaoPage() {
               marginBottom: "60px",
             }}
           >
-            <Typography
+            <Typography variant="h2" content="h2"
               sx={{
                 marginBottom: "30px",
                 marginLeft: { md: "50px", xs: "20px" },
                 marginRight: { md: "50px", xs: "20px" },
                 paddingTop: "58px",
-                fontSize: "20px",
                 fontWeight: "bold",
-              }}
-              component="p"
-              color="black"
-            >
-          <Box
-            sx={{
-              backgroundColor: "#FFFFFF",
-              marginTop: "60px",
-              marginBottom: "60px",
-            }}
-          >
-            <Typography
-              sx={{
-                marginBottom: "30px",
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-                paddingTop: "58px",
-                fontSize: "20px",
-                fontWeight: "bold",
+                fontFamily: "Arial, sans-serif",
               }}
               component="p"
               color="black"
@@ -545,20 +316,7 @@ export function FormularioDoacaoPage() {
                 marginRight: { md: "50px", xs: "20px" },
                 paddingTop: "58px",
               }}
-              component="p"
-              color="black"
-            >
-              Nome{" "}
-              <Typography component="span" color="red">
-                *
-              </Typography>
-            <Typography
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-                paddingTop: "58px",
-              }}
-              component="p"
+              variant="body2"
               color="black"
             >
               Nome{" "}
@@ -566,23 +324,6 @@ export function FormularioDoacaoPage() {
                 *
               </Typography>
             </Typography>
-            <Box
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-              }}
-            >
-              <input
-                type="text"
-                style={{
-                  width: "100%",
-                  maxWidth: 586,
-                  height: "50px",
-                  borderRadius: "8px",
-                  border: "1px solid #B0AFAF",
-                  boxSizing: "border-box",
-                }}
-              />
             <Box
               sx={{
                 marginLeft: { md: "50px", xs: "20px" },
@@ -605,7 +346,7 @@ export function FormularioDoacaoPage() {
               sx={{
                 marginLeft: { md: "50px", xs: "20px" },
                 marginRight: { md: "50px", xs: "20px" },
-                paddingTop: "20px",
+                paddingTop: "20px", marginBottom: {xs: "20px", md: "0px"},
               }}
               variant="body2"
               color="black"
@@ -631,24 +372,7 @@ export function FormularioDoacaoPage() {
                   borderRadius: "8px",
                   border: "1px solid #B0AFAF",
                   boxSizing: "border-box",
-                }}
-              />
-            <Box
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-                marginBottom: "60px",
-              }}
-            >
-              <input
-                type="text"
-                style={{
-                  width: "100%",
-                  maxWidth: 586,
-                  height: "50px",
-                  borderRadius: "8px",
-                  border: "1px solid #B0AFAF",
-                  boxSizing: "border-box",
+                  marginBottom: "60px",
                 }}
               />
             </Box>
@@ -670,27 +394,7 @@ export function FormularioDoacaoPage() {
                 fontSize: "20px",
                 fontWeight: "bold",
               }}
-              component="p"
-              color="black"
-            >
-          <Box
-            sx={{
-              backgroundColor: "white",
-              color: "black",
-              marginBottom: "60px",
-              paddingBottom: "87px",
-            }}
-          >
-            <Typography
-              sx={{
-                marginBottom: "30px",
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-                paddingTop: "58px",
-                fontSize: "20px",
-                fontWeight: "bold",
-              }}
-              component="p"
+              variant="body2"
               color="black"
             >
               Escolha a forma de doação:
@@ -702,20 +406,7 @@ export function FormularioDoacaoPage() {
                 marginRight: { md: "50px", xs: "20px" },
                 paddingTop: "20px",
               }}
-              component="p"
-              color="black"
-            >
-              CPF{" "}
-              <Typography component="span" color="red">
-                *
-              </Typography>
-            <Typography
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-                paddingTop: "20px",
-              }}
-              component="p"
+              variant="body2"
               color="black"
             >
               CPF{" "}
@@ -740,23 +431,6 @@ export function FormularioDoacaoPage() {
                   boxSizing: "border-box",
                 }}
               />
-            <Box
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-              }}
-            >
-              <input
-                type="text"
-                style={{
-                  width: "100%",
-                  maxWidth: 586,
-                  height: "78px",
-                  borderRadius: "8px",
-                  border: "1px solid #B0AFAF",
-                  boxSizing: "border-box",
-                }}
-              />
             </Box>
             <Typography
               sx={{
@@ -764,20 +438,7 @@ export function FormularioDoacaoPage() {
                 marginRight: { md: "50px", xs: "20px" },
                 paddingTop: "20px",
               }}
-              component="p"
-              color="black"
-            >
-              Formas de doação{" "}
-              <Typography component="span" color="red">
-                *
-              </Typography>
-            <Typography
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-                paddingTop: "20px",
-              }}
-              component="p"
+              variant="body2"
               color="black"
             >
               Formas de doação{" "}
@@ -791,27 +452,17 @@ export function FormularioDoacaoPage() {
                 marginRight: { md: "50px", xs: "20px" },
               }}
             >
-            <Box
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-              }}
-            >
               <FormControl
                 variant="outlined"
                 fullWidth
                 sx={{
                   display: "block",
                   width: "100%",
-                  display: "block",
-                  width: "100%",
                   minWidth: 0,
                   maxWidth: 586,
                   marginTop: "10px",
-                  marginTop: "10px",
                 }}
               >
-                <InputLabel id="pagamento-label" sx={{ display: "none" }} />
                 <InputLabel id="pagamento-label" sx={{ display: "none" }} />
 
                 <Select
@@ -820,37 +471,23 @@ export function FormularioDoacaoPage() {
                   label="Selecione"
                   sx={{
                     width: "100%",
-                    width: "100%",
                     height: "78px",
                     borderRadius: "8px",
                     backgroundColor: "#FFFFFF",
                     "& .MuiSelect-select": {
                       paddingLeft: "14px",
-                    "& .MuiSelect-select": {
-                      paddingLeft: "14px",
                     },
-                    "& .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#B0AFAF",
                     "& .MuiOutlinedInput-notchedOutline": {
                       borderColor: "#B0AFAF",
                     },
                     "&:hover .MuiOutlinedInput-notchedOutline": {
                       borderColor: "#B0AFAF",
-                    "&:hover .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#B0AFAF",
                     },
-                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#B0AFAF",
                     "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                       borderColor: "#B0AFAF",
                     },
                     "& .MuiSvgIcon-root": {
                       color: "#545252",
-                    "& .MuiSvgIcon-root": {
-                      color: "#545252",
-                    },
-                    "&.Mui-focused": {
-                      boxShadow: "none",
                     },
                     "&.Mui-focused": {
                       boxShadow: "none",
@@ -868,20 +505,7 @@ export function FormularioDoacaoPage() {
                 marginRight: { md: "50px", xs: "20px" },
                 paddingTop: "20px",
               }}
-              component="p"
-              color="black"
-            >
-              Número do cartão*{" "}
-              <Typography component="span" color="red">
-                *
-              </Typography>
-            <Typography
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-                paddingTop: "20px",
-              }}
-              component="p"
+              variant="body2"
               color="black"
             >
               Número do cartão*{" "}
@@ -906,23 +530,6 @@ export function FormularioDoacaoPage() {
                   boxSizing: "border-box",
                 }}
               />
-            <Box
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-              }}
-            >
-              <input
-                type="text"
-                style={{
-                  width: "100%",
-                  maxWidth: 586,
-                  height: "78px",
-                  borderRadius: "8px",
-                  border: "1px solid #B0AFAF",
-                  boxSizing: "border-box",
-                }}
-              />
             </Box>
 
             <Typography
@@ -931,20 +538,8 @@ export function FormularioDoacaoPage() {
                 marginRight: { md: "50px", xs: "20px" },
                 paddingTop: "20px",
               }}
-              component="p"
-              color="black"
-            >
-              Nome do cartão
-              <Typography component="span" color="red">
-                *
-              </Typography>
-            <Typography
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-                paddingTop: "20px",
-              }}
-              component="p"
+                            variant="body2"
+
               color="black"
             >
               Nome do cartão
@@ -969,23 +564,6 @@ export function FormularioDoacaoPage() {
                   boxSizing: "border-box",
                 }}
               />
-            <Box
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-              }}
-            >
-              <input
-                type="text"
-                style={{
-                  width: "100%",
-                  maxWidth: 586,
-                  height: "78px",
-                  borderRadius: "8px",
-                  border: "1px solid #B0AFAF",
-                  boxSizing: "border-box",
-                }}
-              />
             </Box>
             <Typography
               sx={{
@@ -993,20 +571,8 @@ export function FormularioDoacaoPage() {
                 marginRight: { md: "50px", xs: "20px" },
                 paddingTop: "20px",
               }}
-              component="p"
-              color="black"
-            >
-              Validade do cartão{" "}
-              <Typography component="span" color="red">
-                *
-              </Typography>
-            <Typography
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-                paddingTop: "20px",
-              }}
-              component="p"
+                            variant="body2"
+
               color="black"
             >
               Validade do cartão{" "}
@@ -1031,23 +597,6 @@ export function FormularioDoacaoPage() {
                   boxSizing: "border-box",
                 }}
               />
-            <Box
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-              }}
-            >
-              <input
-                type="text"
-                style={{
-                  width: "100%",
-                  maxWidth: 586,
-                  height: "78px",
-                  borderRadius: "8px",
-                  border: "1px solid #B0AFAF",
-                  boxSizing: "border-box",
-                }}
-              />
             </Box>
             <Typography
               sx={{
@@ -1055,20 +604,8 @@ export function FormularioDoacaoPage() {
                 marginRight: { md: "50px", xs: "20px" },
                 paddingTop: "20px",
               }}
-              component="p"
-              color="black"
-            >
-              Dia da doação{" "}
-              <Typography component="span" color="red">
-                *
-              </Typography>
-            <Typography
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-                paddingTop: "20px",
-              }}
-              component="p"
+                            variant="body2"
+
               color="black"
             >
               Dia da doação{" "}
@@ -1076,12 +613,6 @@ export function FormularioDoacaoPage() {
                 *
               </Typography>
             </Typography>
-            <Box
-              sx={{
-                marginLeft: { md: "50px", xs: "20px" },
-                marginRight: { md: "50px", xs: "20px" },
-              }}
-            >
             <Box
               sx={{
                 marginLeft: { md: "50px", xs: "20px" },
@@ -1094,15 +625,11 @@ export function FormularioDoacaoPage() {
                 sx={{
                   display: "block",
                   width: "100%",
-                  display: "block",
-                  width: "100%",
                   minWidth: 0,
                   maxWidth: 586,
                   marginTop: "10px",
-                  marginTop: "10px",
                 }}
               >
-                <InputLabel id="pagamento-label" sx={{ display: "none" }} />
                 <InputLabel id="pagamento-label" sx={{ display: "none" }} />
 
                 <Select
@@ -1111,37 +638,23 @@ export function FormularioDoacaoPage() {
                   label="Selecione"
                   sx={{
                     width: "100%",
-                    width: "100%",
                     height: "78px",
                     borderRadius: "8px",
                     backgroundColor: "#FFFFFF",
                     "& .MuiSelect-select": {
                       paddingLeft: "14px",
-                    "& .MuiSelect-select": {
-                      paddingLeft: "14px",
                     },
-                    "& .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#B0AFAF",
                     "& .MuiOutlinedInput-notchedOutline": {
                       borderColor: "#B0AFAF",
                     },
                     "&:hover .MuiOutlinedInput-notchedOutline": {
                       borderColor: "#B0AFAF",
-                    "&:hover .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#B0AFAF",
                     },
-                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#B0AFAF",
                     "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                       borderColor: "#B0AFAF",
                     },
                     "& .MuiSvgIcon-root": {
                       color: "#545252",
-                    "& .MuiSvgIcon-root": {
-                      color: "#545252",
-                    },
-                    "&.Mui-focused": {
-                      boxShadow: "none",
                     },
                     "&.Mui-focused": {
                       boxShadow: "none",
@@ -1154,81 +667,54 @@ export function FormularioDoacaoPage() {
             </Box>
           </Box>
           <Box
-            sx={{
-              backgroundColor: "#D9D9D9",
-              color: "black",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              paddingLeft: { md: "50px", xs: "20px" },
-              paddingRight: { md: "50px", xs: "20px" },
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-            }}
-          >
-            <Box sx={{ padding: { md: "30px", xs: "16px" } }}>
-              <Typography>
-                <h3>R$ 10,00 Mensais</h3>
-              </Typography>
-          <Box
-            sx={{
-              backgroundColor: "#D9D9D9",
-              color: "black",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              paddingLeft: { md: "50px", xs: "20px" },
-              paddingRight: { md: "50px", xs: "20px" },
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-            }}
-          >
-            <Box sx={{ padding: { md: "30px", xs: "16px" } }}>
-              <Typography>
-                <h3>R$ 10,00 Mensais</h3>
-              </Typography>
-              <Typography>R$ Via cartão de crédito</Typography>
-            </Box>
-            <Box>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => setAbrirAgradecimento(true)}
-                sx={{
-                  backgroundColor: "#27A8AD",
-                  color: "white",
-                  width: "206px",
-                  height: "52px",
-                  borderRadius: "8px",
-                }}
-              >
-                <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>
-                  Doar
-                </Typography>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => setAbrirAgradecimento(true)}
-                sx={{
-                  backgroundColor: "#27A8AD",
-                  color: "white",
-                  width: "206px",
-                  height: "52px",
-                  borderRadius: "8px",
-                }}
-              >
-                <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>
-                  Doar
-                </Typography>
-              </Button>
-            </Box>
-          </Box>
+  sx={{
+    backgroundColor: "#D9D9D9",
+    color: "black",
+    display: "flex",
+    // Empilha no mobile (xs) e coloca lado a lado no desktop (md)
+    flexDirection: { xs: "column", md: "row" }, 
+    justifyContent: "space-between",
+    alignItems: { xs: "flex-start", md: "center" }, // Alinha à esquerda no mobile e ao centro no desktop
+    paddingLeft: { md: "50px", xs: "20px" },
+    paddingRight: { md: "50px", xs: "20px" },
+    paddingY: { xs: "20px", md: "0" }, // Adiciona um respiro vertical no mobile
+    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+  }}
+>
+  {/* Bloco de Texto */}
+  <Box sx={{ padding: { md: "30px", xs: "0" }, mb: { xs: "20px", md: "0" } }}>
+    <Typography variant="body2" sx={{ fontWeight: "bold", fontSize: "25px", mb: "12px" }}>
+      R$ 10,00 Mensais
+    </Typography>
+    <Typography variant="body2" sx={{ fontSize: "18px" }}>
+      Via cartão de crédito {/* Removido o "R$" duplicado */}
+    </Typography>
+  </Box>
+
+  <Box sx={{ width: { xs: "100%", md: "auto" } }}>
+    <Button
+      variant="contained"
+      color="primary"
+      onClick={() => setAbrirAgradecimento(true)}
+      sx={{
+        backgroundColor: "#27A8AD",
+        color: "white",
+        width: { xs: "100%", md: "206px" }, 
+        height: "52px",
+        borderRadius: "8px",
+        "&:hover": {
+          backgroundColor: "#218f93", 
+        },
+      }}
+    >
+      <Typography variant="body2" sx={{ fontWeight: "bold", fontSize: "18px" }}>
+        Doar
+      </Typography>
+    </Button>
+  </Box>
+</Box>
         </Box>
         <CardAgradecimento
-          open={abrirAgradecimento}
-          onClose={() => setAbrirAgradecimento(false)}
-          titulo="Tudo Certo!"
-          numeroPet="500"
-          descricao="Obrigada(o) por espalhar amor e esperança. Sua ajuda faz toda a diferença! "
-        />
           open={abrirAgradecimento}
           onClose={() => setAbrirAgradecimento(false)}
           titulo="Tudo Certo!"
@@ -1238,6 +724,4 @@ export function FormularioDoacaoPage() {
       </Box>
     </Container>
   );
-}
-
 }

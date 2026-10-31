@@ -21,7 +21,7 @@ export function CardTutor() {
           fontSize: "25px",
           fontWeight: "bold",
         }}
-        component="p"
+        variant= "body2"
         color="black"
       >
         Informações sobre o Tutor
@@ -32,10 +32,9 @@ export function CardTutor() {
           marginLeft: "18px",
           marginTop: "15px",
           marginRight: "50px",
-          fontSize: "18px",
           display: "flex",
         }}
-        component="p"
+        variant= "body2"
         color="black"
       >
         Nome Completo{" "}
@@ -69,8 +68,8 @@ export function CardTutor() {
       >
         <Box sx={{ width: "100%", marginRight: "22px" }}>
           <Typography
-            sx={{ marginBottom: "10px", fontSize: "18px", display: "flex" }}
-            component="p"
+            sx={{ marginBottom: "10px", display: "flex" }}
+            variant= "body2"
             color="black"
           >
             CPF
@@ -89,8 +88,8 @@ export function CardTutor() {
         </Box>
         <Box sx={{ width: "100%" }}>
           <Typography
-            sx={{ marginBottom: "10px", fontSize: "18px" }}
-            component="p"
+            sx={{ marginBottom: "10px", }}
+            variant= "body2"
             color="black"
           >
             RG

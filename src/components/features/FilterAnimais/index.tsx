@@ -13,7 +13,7 @@ export function FilterAnimais({ label, opcoes }: FiltroAnimalProps) {
         height: "100%",
         display: "flex",
         alignItems: "stretch",
-      }}
+      }} 
     >
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">{label}</InputLabel>

@@ -25,9 +25,9 @@ export function CardAdocao({ temBotao = false }) {
       />
 
       <Box sx={{ marginLeft: "20px", marginTop: "19.5px" }}>
-        <Typography variant="h5">Pietro</Typography>
+        <Typography variant="h1" component= "h1">Pietro</Typography>
 
-        <Typography sx={{ marginTop: "23px" }} variant="body1" color="black">
+        <Typography sx={{ marginTop: "23px", fontSize: "18px" }} variant="body2" color="black">
           Cachorro | Macho | 2 anos | Porte grande
         </Typography>
 
@@ -40,7 +40,7 @@ export function CardAdocao({ temBotao = false }) {
           }}
         >
           <RoomOutlined color="primary" />
-          <Typography variant="body1" color="black">
+          <Typography variant="body2" color="black" sx={{ fontSize: "18px" }}>
             Está em Guaraciaba do Norte
           </Typography>
         </Box>

@@ -29,7 +29,7 @@ export function FormularioAdocaoPage() {
           marginBottom: "30px",
         }}
       >
-        <Typography variant="h4" component="h4">
+        <Typography variant="h1" component="h1" sx={{ fontSiz: "35px"}}>
           Ficha de Adoção
         </Typography>
       </Box>
@@ -51,7 +51,8 @@ export function FormularioAdocaoPage() {
             fontSize: "25px",
             fontWeight: "bold",
           }}
-          component="p"
+          variant="h2"
+          component="h2"
           color="black"
         >
           Preencha a ficha de adoção com as suas informações, para que possamos
@@ -69,7 +70,7 @@ export function FormularioAdocaoPage() {
         >
           <Typography
             sx={{ fontSize: "25px", fontWeight: "bold", marginLeft: "18px" }}
-            component="p"
+            variant="body2"
             color="black"
           >
             Adoções
@@ -98,8 +99,8 @@ export function FormularioAdocaoPage() {
           >
             <AddCircleOutlineOutlined sx={{ color: "#27A8AD" }} />
             <Typography
-              sx={{ color: "#27A8AD", fontSize: "18px", fontWeight: "bold" }}
-              component="p"
+              sx={{ color: "#27A8AD", fontSize: "20px", fontWeight: "bold" }}
+              variant="h2"
             >
               Incluir Animal
             </Typography>
@@ -130,9 +131,10 @@ export function FormularioAdocaoPage() {
         >
           <Typography
             sx={{
-              fontSize: "25px",
+              fontSize: "18px",
               fontWeight: "bold",
             }}
+            variant= "body2"
           >
             Finalizar
           </Typography>
@@ -335,8 +337,7 @@ export function FormularioAdocaoPage() {
       <CardAgradecimento
         open={abrirAgradecimento}
         onClose={() => setAbrirAgradecimento(false)}
-        titulo="Tudo Certo!"
-        numeroPet="500"
+        titulo="Muito Bem!"
         descricao="Agora entre em contato conosco para que possamos entregar o seu novo bichinho!"
       />
     </Container>
